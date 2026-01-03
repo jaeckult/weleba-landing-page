@@ -3,7 +3,7 @@
 @import url('https://api.fontshare.com/v2/css?f[]=recoleta@400,500,600,700&display=swap');
 
 @import "tailwindcss";
-@plugin "@tailwindcss/typography";
+/* @plugin "@tailwindcss/typography"; */
 
 /* Recoleta Font (Fallback) */
 @font-face {
@@ -24,27 +24,149 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #222222;
   --font-recoleta: 'Recoleta', Georgia, serif;
-  --font-satoshi: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-satoshi: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-satoshi);
+  --font-serif: var(--font-recoleta);
   --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;
+    --foreground: #222222;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-satoshi);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-recoleta);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  display: flex;
+  width: max-content;
+  animation: scroll 40s linear infinite;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+/* Modern Blog Styling (Custom Prose) */
+.prose-custom {
+  color: #374151;
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+
+.prose-custom h1,
+.prose-custom h2,
+.prose-custom h3 {
+  font-family: var(--font-recoleta);
+  color: #0a1628;
+  font-weight: 400;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
+  scroll-margin-top: 100px;
+}
+
+.prose-custom h1 {
+  font-size: 2.5rem;
+}
+
+.prose-custom h2 {
+  font-size: 2rem;
+  border-bottom: 1px solid #f1f5f9;
+  padding-bottom: 0.5rem;
+}
+
+.prose-custom h3 {
+  font-size: 1.5rem;
+}
+
+.prose-custom p {
+  margin-bottom: 1.5rem;
+}
+
+.prose-custom ul,
+.prose-custom ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.prose-custom li {
+  margin-bottom: 0.5rem;
+}
+
+.prose-custom strong {
+  color: #0a1628;
+  font-weight: 600;
+}
+
+.prose-custom blockquote {
+  border-left: 4px solid #0066FF;
+  padding-left: 1.5rem;
+  font-style: italic;
+  margin: 2rem 0;
+  color: #4b5563;
+}
+
+.prose-custom img {
+  border-radius: 1.5rem;
+  margin: 2.5rem 0;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+}
+
+.prose-custom a {
+  color: #0066FF;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.prose-custom a:hover {
+  color: #0052D1;
+}
+
+/* TOC Animations */
+.toc-item {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border-left: 2px solid #f1f5f9;
+  padding-left: 1rem;
+}
+
+.toc-item-active {
+  color: #0066FF;
+  border-left: 3px solid #0066FF;
+  padding-left: 1.5rem;
+  font-weight: 600;
+  background: linear-gradient(90deg, #f8fafc 0%, rgba(248, 250, 252, 0) 100%);
 }

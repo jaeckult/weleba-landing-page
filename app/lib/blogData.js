@@ -4,7 +4,7 @@ export const blogPosts = [
         title: 'Best Hotel Metasearch Management Software In 2026',
         slug: 'best-hotel-metasearch-management-software-2026',
         excerpt: 'Discover the top hotel metasearch management tools that help you maximize visibility and drive direct bookings in 2026.',
-        date: 'December 20, 2025',
+        date: 'January 02, 2026',
         readTime: '15 min read',
         category: 'Hotel Technology',
         image: '/blog/image.png',

@@ -3,12 +3,12 @@
 import { forwardRef } from 'react';
 
 const variants = {
-  primary: 'bg-[#00d4a4] hover:bg-[#00b890] text-white',
+  primary: 'bg-[#0066FF] hover:bg-blue-700 text-white',
   secondary: 'bg-white hover:bg-gray-50 text-[#0a1628] border border-gray-200',
-  outline: 'bg-transparent border-2 border-[#00d4a4] text-[#00d4a4] hover:bg-[#00d4a4] hover:text-white',
+  outline: 'bg-transparent border-2 border-[#0066FF] text-[#0066FF] hover:bg-[#0066FF] hover:text-white',
   ghost: 'bg-transparent hover:bg-gray-100 text-[#0a1628]',
   dark: 'bg-[#0a1628] hover:bg-[#1a2638] text-white',
-  link: 'bg-transparent text-[#00d4a4] hover:underline p-0',
+  link: 'bg-transparent text-[#0066FF] hover:underline p-0',
 };
 
 const sizes = {
@@ -36,7 +36,7 @@ const Button = forwardRef(({
         inline-flex items-center justify-center gap-2
         font-semibold rounded-lg
         transition-all duration-200
-        focus:outline-none focus:ring-2 focus:ring-[#00d4a4] focus:ring-offset-2
+        focus:outline-none focus:ring-2 focus:ring-[#0066FF] focus:ring-offset-2
         disabled:opacity-50 disabled:cursor-not-allowed
         ${variants[variant]}
         ${sizes[size]}

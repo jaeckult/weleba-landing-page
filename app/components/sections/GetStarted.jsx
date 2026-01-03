@@ -1,5 +1,7 @@
 'use client';
 
+import { useState, useEffect } from 'react';
+
 const GetStarted = () => {
   const steps = [
     {
@@ -22,6 +24,18 @@ const GetStarted = () => {
     },
   ];
 
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsLargeScreen(window.innerWidth >= 992);
+    };
+
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
+
   return (
     <section className="py-24 bg-[#f9f7f2] overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -31,7 +45,7 @@ const GetStarted = () => {
             <div className="w-2 h-2 bg-blue-600 rounded-full" />
             <span className="text-sm font-medium text-blue-600">Experience weleba</span>
           </div>
-          <h2 
+          <h2
             className="text-4xl md:text-5xl lg:text-6xl text-[#0a1628] leading-tight max-w-4xl mx-auto"
             style={{ fontFamily: 'Recoleta, Georgia, serif' }}
           >
@@ -46,7 +60,7 @@ const GetStarted = () => {
               key={step.number}
               className={`${step.bgColor} rounded-3xl lg:rounded-none p-8 lg:p-12 relative min-h-[400px] flex flex-col justify-between`}
               style={{
-                clipPath: window.innerWidth >= 992 ? step.clipPath : 'none',
+                clipPath: isLargeScreen ? step.clipPath : 'none',
               }}
             >
               {/* Step Number Badge */}
@@ -56,7 +70,7 @@ const GetStarted = () => {
 
               {/* Step Content */}
               <div>
-                <h3 
+                <h3
                   className="text-2xl lg:text-3xl text-[#0a1628] leading-tight"
                   style={{ fontFamily: 'Recoleta, Georgia, serif' }}
                 >

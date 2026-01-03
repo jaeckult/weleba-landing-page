@@ -1,8 +1,10 @@
 'use client';
 
-import { useState } from 'react';
+
+import { useState, useMemo, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   ChevronDown,
   Menu,
@@ -32,10 +34,12 @@ import {
   Video,
   Calculator,
   Book,
-  ArrowLeftRight
+  ArrowLeftRight,
+  ArrowRight
 } from 'lucide-react';
 import { Button, Badge } from '../ui';
 import { navigation, heroContent } from '../../lib/constants';
+import { blogPosts } from '../../lib/blogData';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const productIcons = {
@@ -51,12 +55,74 @@ const productIcons = {
   'Hotel Guest App': Smartphone,
 };
 
+const integrations = [
+  '/INTEGRATION/image.png',
+  '/INTEGRATION/image copy.png',
+  '/INTEGRATION/image copy 2.png',
+  '/INTEGRATION/image copy 3.png',
+  '/INTEGRATION/image copy 4.png',
+  '/INTEGRATION/image copy 5.png',
+  '/INTEGRATION/image copy 6.png',
+  '/INTEGRATION/image copy 7.png',
+  '/INTEGRATION/image copy 8.png',
+  '/INTEGRATION/image copy 9.png',
+  '/INTEGRATION/image copy 10.png',
+  '/INTEGRATION/image copy 11.png',
+  '/INTEGRATION/image copy 12.png',
+  '/INTEGRATION/image copy 13.png',
+  '/INTEGRATION/image copy 14.png',
+  '/INTEGRATION/image copy 15.png',
+  '/INTEGRATION/image copy 16.png',
+  '/INTEGRATION/image copy 17.png',
+  '/INTEGRATION/image copy 18.png',
+  '/INTEGRATION/image copy 19.png',
+  '/INTEGRATION/image copy 20.png',
+  '/INTEGRATION/image copy 21.png',
+  '/INTEGRATION/image copy 22.png',
+];
+
 const Header = () => {
   const pathname = usePathname();
   const isHomePage = pathname === '/';
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [dismissedSlug, setDismissedSlug] = useState(null);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [closeTimeout, setCloseTimeout] = useState(null);
+
+  useEffect(() => {
+    const dismissed = localStorage.getItem('dismissed-announcement-slug');
+    if (dismissed) setDismissedSlug(dismissed);
+  }, []);
+
+  // Close menus on route change
+  useEffect(() => {
+    setActiveDropdown(null);
+    setMobileMenuOpen(false);
+  }, [pathname]);
+
+  const newBlogPost = useMemo(() => {
+    if (!blogPosts || blogPosts.length === 0) return null;
+
+    // Sort by date descending
+    const sorted = [...blogPosts].sort((a, b) => new Date(b.date) - new Date(a.date));
+    const latest = sorted[0];
+
+    const postDate = new Date(latest.date);
+    const now = new Date();
+    const diffTime = Math.abs(now - postDate);
+    const diffDays = diffTime / (1000 * 60 * 60 * 24);
+
+    return diffDays <= 2 ? latest : null;
+  }, []);
+
+  const showBanner = newBlogPost && dismissedSlug !== newBlogPost.slug;
+
+  const handleDismiss = () => {
+    if (newBlogPost) {
+      localStorage.setItem('dismissed-announcement-slug', newBlogPost.slug);
+      setDismissedSlug(newBlogPost.slug);
+    }
+  };
 
   const handleMouseEnter = (dropdown) => {
     // Clear any pending close timeout
@@ -79,29 +145,62 @@ const Header = () => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
   };
 
+  const closeMenus = () => {
+    setActiveDropdown(null);
+    setMobileMenuOpen(false);
+  };
+
   return (
     <>
       {/* Backdrop Blur Overlay */}
       {activeDropdown && (
         <div
-          className="fixed inset-0 bg-black/30 backdrop-blur-md z-40 transition-all duration-200"
-          onClick={() => setActiveDropdown(null)}
+          className="fixed inset-0 bg-black/10 backdrop-blur-[2px] z-40 transition-all duration-300"
+          onMouseEnter={handleMouseLeave}
+          onClick={closeMenus}
         />
       )}
 
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
-        {/* Announcement Banner */}
-        <div className={
-          isHomePage
-            ? 'bg-[#0a1628] text-white py-2 px-4 text-center text-sm'
-            : 'bg-white/95 backdrop-blur-sm text-gray-700 border-b border-gray-100 py-2 px-4 text-center text-sm'
-        }>
-          <Link href={heroContent.announcement.href} className="inline-flex items-center gap-2 hover:underline">
-            <Sparkles className={`w-4 h-4 ${isHomePage ? 'text-[#00d4a4]' : 'text-[#0a1628]'}`} />
-            <span>New Update: {heroContent.announcement.text}</span>
-            <span className={isHomePage ? 'text-[#00d4a4]' : 'text-[#0a1628] font-semibold'}>Learn More</span>
-          </Link>
-        </div>
+        {/* Dynamic Announcement Banner */}
+        <AnimatePresence>
+          {showBanner && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: 'auto', opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              className={
+                isHomePage
+                  ? 'bg-[#0a1628] text-white py-2 px-4 text-center text-sm relative'
+                  : 'bg-white/95 backdrop-blur-sm text-gray-700 border-b border-gray-100 py-2 px-4 text-center text-sm relative'
+              }
+            >
+              <div className="flex items-center justify-center gap-2 pr-8">
+                <Sparkles className={`w-4 h-4 ${isHomePage ? 'text-[#0066FF]' : 'text-[#0a1628]'}`} />
+                <span className="font-medium">New Update:</span>
+                <Link href="/blog" className="hover:underline opacity-90">
+                  {newBlogPost.title}
+                </Link>
+                <Link
+                  href={`/blog/${newBlogPost.slug}`}
+                  className={`${isHomePage ? 'text-[#0066FF]' : 'text-[#0a1628]'} font-bold ml-2 inline-flex items-center gap-1 hover:underline`}
+                >
+                  Read Post <ArrowRight className="w-3 h-3" />
+                </Link>
+              </div>
+              <button
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleDismiss();
+                }}
+                className="absolute right-4 top-1/2 -translate-y-1/2 p-1 hover:bg-white/10 rounded-full transition-colors"
+                title="Dismiss"
+              >
+                <X className={`w-4 h-4 ${isHomePage ? 'text-white/60' : 'text-gray-400'}`} />
+              </button>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         {/* Main Navigation */}
         <nav>
@@ -136,28 +235,30 @@ const Header = () => {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -10 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute top-full left-1/2 -translate-x-[45%] pt-8"
+                        className="absolute top-full left-1/2 -translate-x-1/2 pt-6"
+                        style={{ width: 'min(1312px, 95vw)' }}
                       >
-                        <div className="w-[1312px] h-[648px] bg-white rounded-xl shadow-2xl border border-gray-100 p-10">
+                        <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-8 lg:p-10">
                           <div className="grid grid-cols-4 gap-10">
                             {/* Operations */}
                             <div>
-                              <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-5">Operations</h4>
-                              <div className="space-y-2">
+                              <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-6">Operations</h4>
+                              <div className="space-y-1">
                                 {navigation.products.operations.map((product) => {
                                   const Icon = productIcons[product.title] || LayoutDashboard;
                                   return (
                                     <Link
                                       key={product.title}
                                       href={product.href}
-                                      className="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 transition-colors group"
+                                      onClick={closeMenus}
+                                      className="flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 transition-all group"
                                     >
-                                      <div className="p-2 rounded-lg bg-gray-100 text-gray-600 group-hover:bg-[#00d4a4] group-hover:text-white transition-colors flex-shrink-0">
-                                        <Icon className="w-4 h-4" />
+                                      <div className="p-2 rounded-lg bg-gray-100 text-[#0a1628] flex-shrink-0 group-hover:bg-[#0066FF] group-hover:text-white transition-colors">
+                                        <Icon className="w-5 h-5" />
                                       </div>
                                       <div className="flex-1 min-w-0">
                                         <div className="flex items-center gap-2">
-                                          <span className="font-semibold text-gray-900 text-sm">{product.title}</span>
+                                          <span className="font-bold text-gray-900 text-[15px]">{product.title}</span>
                                           {product.badge && (
                                             <Badge variant={product.badge === 'New' ? 'new' : 'updated'} size="sm">
                                               {product.badge}
@@ -174,22 +275,23 @@ const Header = () => {
 
                             {/* Marketing & Distribution */}
                             <div>
-                              <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-5">Marketing & Distribution</h4>
-                              <div className="space-y-2">
+                              <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-6">Marketing & Distribution</h4>
+                              <div className="space-y-1">
                                 {navigation.products.marketing.map((product) => {
                                   const Icon = productIcons[product.title] || Calendar;
                                   return (
                                     <Link
                                       key={product.title}
                                       href={product.href}
-                                      className="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 transition-colors group"
+                                      onClick={closeMenus}
+                                      className="flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 transition-all group"
                                     >
-                                      <div className="p-2 rounded-lg bg-gray-100 text-gray-600 group-hover:bg-[#00d4a4] group-hover:text-white transition-colors flex-shrink-0">
-                                        <Icon className="w-4 h-4" />
+                                      <div className="p-2 rounded-lg bg-gray-100 text-[#0a1628] flex-shrink-0 group-hover:bg-[#0066FF] group-hover:text-white transition-colors">
+                                        <Icon className="w-5 h-5" />
                                       </div>
                                       <div className="flex-1 min-w-0">
                                         <div className="flex items-center gap-2">
-                                          <span className="font-semibold text-gray-900 text-sm">{product.title}</span>
+                                          <span className="font-bold text-gray-900 text-[15px]">{product.title}</span>
                                           {product.badge && (
                                             <Badge variant={product.badge === 'New' ? 'new' : 'updated'} size="sm">
                                               {product.badge}
@@ -206,22 +308,23 @@ const Header = () => {
 
                             {/* Revenue & Finance */}
                             <div>
-                              <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-5">Revenue & Finance</h4>
-                              <div className="space-y-2">
+                              <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-6">Revenue & Finance</h4>
+                              <div className="space-y-1">
                                 {navigation.products.revenue.map((product) => {
                                   const Icon = productIcons[product.title] || LineChart;
                                   return (
                                     <Link
                                       key={product.title}
                                       href={product.href}
-                                      className="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 transition-colors group"
+                                      onClick={closeMenus}
+                                      className="flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 transition-all group"
                                     >
-                                      <div className="p-2 rounded-lg bg-gray-100 text-gray-600 group-hover:bg-[#00d4a4] group-hover:text-white transition-colors flex-shrink-0">
-                                        <Icon className="w-4 h-4" />
+                                      <div className="p-2 rounded-lg bg-gray-100 text-[#0a1628] flex-shrink-0 group-hover:bg-[#0066FF] group-hover:text-white transition-colors">
+                                        <Icon className="w-5 h-5" />
                                       </div>
                                       <div className="flex-1 min-w-0">
                                         <div className="flex items-center gap-2">
-                                          <span className="font-semibold text-gray-900 text-sm">{product.title}</span>
+                                          <span className="font-bold text-gray-900 text-[15px]">{product.title}</span>
                                           {product.badge && (
                                             <Badge variant={product.badge === 'New' ? 'new' : 'updated'} size="sm">
                                               {product.badge}
@@ -238,22 +341,23 @@ const Header = () => {
 
                             {/* Guest Experience */}
                             <div>
-                              <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-5">Guest Experience</h4>
-                              <div className="space-y-2">
+                              <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-6">Guest Experience</h4>
+                              <div className="space-y-1">
                                 {navigation.products.guest.map((product) => {
                                   const Icon = productIcons[product.title] || Bot;
                                   return (
                                     <Link
                                       key={product.title}
                                       href={product.href}
-                                      className="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 transition-colors group"
+                                      onClick={closeMenus}
+                                      className="flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 transition-all group"
                                     >
-                                      <div className="p-2 rounded-lg bg-gray-100 text-gray-600 group-hover:bg-[#00d4a4] group-hover:text-white transition-colors flex-shrink-0">
-                                        <Icon className="w-4 h-4" />
+                                      <div className="p-2 rounded-lg bg-gray-100 text-[#0a1628] flex-shrink-0 group-hover:bg-[#0066FF] group-hover:text-white transition-colors">
+                                        <Icon className="w-5 h-5" />
                                       </div>
                                       <div className="flex-1 min-w-0">
                                         <div className="flex items-center gap-2">
-                                          <span className="font-semibold text-gray-900 text-sm">{product.title}</span>
+                                          <span className="font-bold text-gray-900 text-[15px]">{product.title}</span>
                                           {product.badge && (
                                             <Badge variant={product.badge === 'New' ? 'new' : 'updated'} size="sm">
                                               {product.badge}
@@ -270,24 +374,28 @@ const Header = () => {
                           </div>
 
                           {/* Footer with integrations */}
-                          <div className="mt-6 pt-6 border-t border-gray-100 flex items-center justify-between">
-                            <div className="flex items-center gap-3">
-                              <div className="p-2 rounded-lg bg-gray-100">
-                                <ArrowLeftRight className="w-4 h-4 text-gray-600" />
+                          <div className="mt-8 pt-8 border-t border-gray-100">
+                            <div className="flex items-center gap-8">
+                              <div className="flex items-center gap-3 pr-8 border-r border-gray-100">
+                                <div className="p-2 rounded-lg bg-gray-100">
+                                  <ArrowLeftRight className="w-5 h-5 text-[#0a1628]" />
+                                </div>
+                                <div className="min-w-max">
+                                  <Link href="/integrations" onClick={closeMenus} className="font-bold text-gray-900 hover:text-[#0066FF] transition-colors block leading-tight">
+                                    All Integrations
+                                  </Link>
+                                  <p className="text-[11px] text-gray-400 font-medium uppercase tracking-wider mt-0.5">Connect Your Stack</p>
+                                </div>
                               </div>
-                              <div>
-                                <Link href="/integrations" className="font-semibold text-gray-900 hover:text-[#00d4a4] transition-colors">
-                                  All Integrations
-                                </Link>
-                                <p className="text-xs text-gray-500">Manage and grow your people.</p>
-                              </div>
-                            </div>
-                            <div className="flex items-center gap-2">
-                              {/* Integration logos placeholder */}
-                              <div className="flex -space-x-2">
-                                {[1, 2, 3, 4, 5, 6].map((i) => (
-                                  <div key={i} className="w-8 h-8 rounded-full bg-gray-100 border-2 border-white" />
-                                ))}
+
+                              <div className="flex-1 overflow-hidden relative">
+                                <div className="flex gap-8 items-center animate-scroll">
+                                  {[...integrations, ...integrations].map((src, index) => (
+                                    <div key={index} className="relative h-6 w-20 flex-shrink-0 grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all">
+                                      <Image src={src} alt="Integration" fill className="object-contain" />
+                                    </div>
+                                  ))}
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -317,25 +425,27 @@ const Header = () => {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -10 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute top-full left-1/2 -translate-x-1/2 pt-8"
+                        className="absolute top-full left-1/2 -translate-x-[45%] lg:-translate-x-1/2 pt-6"
+                        style={{ width: 'min(1000px, 95vw)' }}
                       >
-                        <div className="w-[900px] bg-white rounded-xl shadow-2xl border border-gray-100 p-10">
-                          <div className="grid grid-cols-3 gap-8">
+                        <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-8 lg:p-10">
+                          <div className="grid grid-cols-3 gap-12">
                             {/* By Property Type */}
                             <div>
-                              <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-5">By Property Type</h4>
-                              <div className="space-y-2">
+                              <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-6">By Property Type</h4>
+                              <div className="space-y-1">
                                 {navigation.solutions.byProperty.map((item) => (
                                   <Link
                                     key={item.title}
                                     href={item.href}
-                                    className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group"
+                                    onClick={closeMenus}
+                                    className="flex items-start gap-4 p-3 rounded-xl hover:bg-gray-50 transition-all group"
                                   >
-                                    <div className="p-2 rounded-lg bg-gray-100 text-gray-600 group-hover:bg-[#00d4a4] group-hover:text-white transition-colors flex-shrink-0">
-                                      <Building2 className="w-4 h-4" />
+                                    <div className="p-2 rounded-lg bg-gray-100 text-[#0a1628] flex-shrink-0 group-hover:bg-[#0066FF] group-hover:text-white transition-colors">
+                                      <Building2 className="w-5 h-5" />
                                     </div>
                                     <div className="flex-1 min-w-0">
-                                      <span className="font-semibold text-gray-900 text-sm block">{item.title}</span>
+                                      <span className="font-bold text-gray-900 text-[15px] block">{item.title}</span>
                                       <p className="text-xs text-gray-500 mt-1 leading-relaxed">{item.description}</p>
                                     </div>
                                   </Link>
@@ -345,19 +455,20 @@ const Header = () => {
 
                             {/* By Role */}
                             <div>
-                              <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-5">By Role</h4>
-                              <div className="space-y-2">
+                              <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-6">By Role</h4>
+                              <div className="space-y-1">
                                 {navigation.solutions.byRole.map((item) => (
                                   <Link
                                     key={item.title}
                                     href={item.href}
-                                    className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group"
+                                    onClick={closeMenus}
+                                    className="flex items-start gap-4 p-3 rounded-xl hover:bg-gray-50 transition-all group"
                                   >
-                                    <div className="p-2 rounded-lg bg-gray-100 text-gray-600 group-hover:bg-[#00d4a4] group-hover:text-white transition-colors flex-shrink-0">
-                                      <Users className="w-4 h-4" />
+                                    <div className="p-2 rounded-lg bg-gray-100 text-[#0a1628] flex-shrink-0 group-hover:bg-[#0066FF] group-hover:text-white transition-colors">
+                                      <Users className="w-5 h-5" />
                                     </div>
                                     <div className="flex-1 min-w-0">
-                                      <span className="font-semibold text-gray-900 text-sm block">{item.title}</span>
+                                      <span className="font-bold text-gray-900 text-[15px] block">{item.title}</span>
                                       <p className="text-xs text-gray-500 mt-1 leading-relaxed">{item.description}</p>
                                     </div>
                                   </Link>
@@ -365,28 +476,34 @@ const Header = () => {
                               </div>
                             </div>
 
-                            {/* Featured */}
+                            {/* Featured Card */}
                             <div>
-                              <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-5">Featured</h4>
-                              <div className="bg-gray-50 rounded-lg overflow-hidden">
-                                <div className="aspect-video bg-gradient-to-br from-[#0a1628] to-[#00d4a4] relative">
-                                  <div className="absolute inset-0 flex items-center justify-center">
-                                    <Hotel className="w-16 h-16 text-white/20" />
+                              <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-6">Featured</h4>
+                              <div className="bg-gray-50 rounded-2xl overflow-hidden group/card relative shadow-sm border border-gray-100">
+                                <div className="aspect-[4/3] relative overflow-hidden">
+                                  <Image
+                                    src="/featured/wood-river-inn.png"
+                                    alt="Customer Story"
+                                    fill
+                                    className="object-cover group-hover/card:scale-105 transition-transform duration-500"
+                                  />
+                                  <div className="absolute top-4 left-4">
+                                    <div className="px-3 py-1 bg-blue-100 text-[#0066FF] text-[10px] font-bold rounded-full uppercase tracking-wider backdrop-blur-md">
+                                      Customer Story
+                                    </div>
                                   </div>
                                 </div>
-                                <div className="p-4">
-                                  <div className="inline-block px-2 py-1 bg-[#00d4a4] text-white text-xs font-semibold rounded mb-2">
-                                    Customer Story
-                                  </div>
-                                  <h5 className="font-semibold text-gray-900 text-sm mb-2">
+                                <div className="p-6">
+                                  <h5 className="font-bold text-gray-900 text-lg leading-tight mb-4 group-hover/card:text-[#0066FF] transition-colors">
                                     How Wood River Inn Gained Confidence With weleba
                                   </h5>
                                   <Link
                                     href="/case-studies"
-                                    className="text-[#00d4a4] text-xs font-semibold hover:underline inline-flex items-center gap-1"
+                                    onClick={closeMenus}
+                                    className="text-[#0066FF] text-sm font-bold flex items-center gap-2 group/btn"
                                   >
                                     Read All Stories
-                                    <ChevronDown className="w-3 h-3 -rotate-90" />
+                                    <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                                   </Link>
                                 </div>
                               </div>
@@ -418,14 +535,15 @@ const Header = () => {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -10 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute top-full left-1/2 -translate-x-1/2 pt-8"
+                        className="absolute top-full left-1/2 -translate-x-[40%] lg:-translate-x-1/2 pt-6"
+                        style={{ width: 'min(900px, 95vw)' }}
                       >
-                        <div className="w-[800px] bg-white rounded-xl shadow-2xl border border-gray-100 p-10">
-                          <div className="grid grid-cols-2 gap-8">
+                        <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-8 lg:p-10">
+                          <div className="grid grid-cols-2 gap-12">
                             {/* Resource Type */}
                             <div>
-                              <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-5">Resource Type</h4>
-                              <div className="grid grid-cols-2 gap-3">
+                              <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-6">Resource Type</h4>
+                              <div className="grid grid-cols-2 gap-2">
                                 {navigation.resources.map((item) => {
                                   const iconMap = {
                                     'Blogs': Newspaper,
@@ -441,14 +559,15 @@ const Header = () => {
                                     <Link
                                       key={item.title}
                                       href={item.href}
-                                      className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group"
+                                      onClick={closeMenus}
+                                      className="flex items-start gap-4 p-4 rounded-xl hover:bg-gray-50 transition-all group"
                                     >
-                                      <div className="p-2 rounded-lg bg-gray-100 text-gray-600 group-hover:bg-[#00d4a4] group-hover:text-white transition-colors flex-shrink-0">
-                                        <Icon className="w-4 h-4" />
+                                      <div className="p-2 rounded-lg bg-gray-100 text-[#0a1628] flex-shrink-0 group-hover:bg-[#0066FF] group-hover:text-white transition-colors">
+                                        <Icon className="w-5 h-5" />
                                       </div>
                                       <div className="flex-1 min-w-0">
-                                        <span className="font-semibold text-gray-900 text-sm block">{item.title}</span>
-                                        <p className="text-xs text-gray-500 mt-1 leading-relaxed">{item.description}</p>
+                                        <span className="font-bold text-gray-900 text-[15px] block">{item.title}</span>
+                                        <p className="text-[11px] text-gray-500 mt-1 leading-tight">{item.description}</p>
                                       </div>
                                     </Link>
                                   );
@@ -458,35 +577,39 @@ const Header = () => {
 
                             {/* Featured Articles */}
                             <div>
-                              <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-5">Featured Articles</h4>
-                              <div className="space-y-4">
+                              <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-6">Featured Articles</h4>
+                              <div className="space-y-6">
                                 {/* Article 1 */}
-                                <Link href="/blog/ai-front-desk" className="flex gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group">
-                                  <div className="w-20 h-20 rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 flex-shrink-0 overflow-hidden">
-                                    <div className="w-full h-full flex items-center justify-center">
-                                      <Bot className="w-8 h-8 text-white/80" />
-                                    </div>
+                                <Link
+                                  href="/blog/ai-front-desk"
+                                  onClick={closeMenus}
+                                  className="flex gap-5 items-center group/art transition-all"
+                                >
+                                  <div className="w-24 h-24 rounded-2xl bg-gray-100 flex-shrink-0 overflow-hidden relative shadow-sm">
+                                    <Image src="/HOTELS/image.png" alt="AI Front Desk" fill className="object-cover group-hover/art:scale-110 transition-transform duration-500" />
                                   </div>
                                   <div className="flex-1 min-w-0">
-                                    <h5 className="font-semibold text-gray-900 text-sm mb-1 line-clamp-2">
+                                    <h5 className="font-bold text-gray-900 text-[15px] mb-2 leading-snug group-hover/art:text-[#0066FF] transition-colors">
                                       AI Front Desk: How weleba Concierge Makes It Easy
                                     </h5>
-                                    <p className="text-xs text-gray-500">July 18, 2025</p>
+                                    <p className="text-xs text-gray-400 font-medium">July 18, 2025</p>
                                   </div>
                                 </Link>
 
                                 {/* Article 2 */}
-                                <Link href="/blog/hotel-ai-agents" className="flex gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group">
-                                  <div className="w-20 h-20 rounded-lg bg-gradient-to-br from-teal-500 to-teal-600 flex-shrink-0 overflow-hidden">
-                                    <div className="w-full h-full flex items-center justify-center">
-                                      <Smartphone className="w-8 h-8 text-white/80" />
-                                    </div>
+                                <Link
+                                  href="/blog/hotel-ai-agents"
+                                  onClick={closeMenus}
+                                  className="flex gap-5 items-center group/art transition-all"
+                                >
+                                  <div className="w-24 h-24 rounded-2xl bg-gray-100 flex-shrink-0 overflow-hidden relative shadow-sm">
+                                    <Image src="/HOTELS/image copy.png" alt="AI Agents" fill className="object-cover group-hover/art:scale-110 transition-transform duration-500" />
                                   </div>
                                   <div className="flex-1 min-w-0">
-                                    <h5 className="font-semibold text-gray-900 text-sm mb-1 line-clamp-2">
+                                    <h5 className="font-bold text-gray-900 text-[15px] mb-2 leading-snug group-hover/art:text-[#0066FF] transition-colors">
                                       How Hotel AI Agents Improve Service And Bookings in 2025?
                                     </h5>
-                                    <p className="text-xs text-gray-500">July 15, 2025</p>
+                                    <p className="text-xs text-gray-400 font-medium">July 15, 2025</p>
                                   </div>
                                 </Link>
                               </div>
@@ -498,11 +621,21 @@ const Header = () => {
                   </AnimatePresence>
                 </div>
 
-                <Link href="/pricing" className="px-4 py-2 text-gray-700 hover:text-[#0a1628] font-medium transition-colors">
+                {/* Pricing Link */}
+                <Link
+                  href="/pricing"
+                  onMouseEnter={() => setActiveDropdown(null)}
+                  className="px-4 py-2 text-gray-700 hover:text-[#0a1628] font-medium transition-colors"
+                >
                   Pricing
                 </Link>
 
-                <Link href="/case-studies" className="px-4 py-2 text-gray-700 hover:text-[#0a1628] font-medium transition-colors">
+                {/* Case Studies Link */}
+                <Link
+                  href="/case-studies"
+                  onMouseEnter={() => setActiveDropdown(null)}
+                  className="px-4 py-2 text-gray-700 hover:text-[#0a1628] font-medium transition-colors"
+                >
                   Customer Stories
                 </Link>
 
@@ -526,9 +659,10 @@ const Header = () => {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -10 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute top-full left-1/2 -translate-x-1/2 pt-8"
+                        className="absolute top-full right-0 pt-6"
+                        style={{ width: 'min(320px, 95vw)' }}
                       >
-                        <div className="w-[320px] bg-white rounded-xl shadow-2xl border border-gray-100 p-8">
+                        <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-6">
                           <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-5">Company</h4>
                           <div className="space-y-2">
                             {navigation.company.map((item) => (
@@ -537,7 +671,7 @@ const Header = () => {
                                 href={item.href}
                                 className="flex items-start gap-3 p-4 rounded-lg hover:bg-gray-50 transition-colors group"
                               >
-                                <div className="p-2 rounded-lg bg-gray-100 text-gray-600 group-hover:bg-[#00d4a4] group-hover:text-white transition-colors flex-shrink-0">
+                                <div className="p-2 rounded-lg bg-gray-100 text-gray-600 group-hover:bg-[#0066FF] group-hover:text-white transition-colors flex-shrink-0">
                                   {item.title === 'About Us' ? (
                                     <Users className="w-4 h-4" />
                                   ) : (
@@ -606,7 +740,7 @@ const Header = () => {
                                 <Link
                                   key={product.title}
                                   href={product.href}
-                                  className="block py-2 text-gray-600 hover:text-[#00d4a4]"
+                                  className="block py-2 text-gray-600 hover:text-[#0066FF]"
                                 >
                                   {product.title}
                                 </Link>
@@ -617,11 +751,11 @@ const Header = () => {
                       )}
                     </div>
 
-                    <Link href="/pricing" className="block py-2 text-gray-700 font-medium">
+                    <Link href="/pricing" className="block py-3 text-[#0a1628] font-bold border-b border-gray-50">
                       Pricing
                     </Link>
 
-                    <Link href="/case-studies" className="block py-2 text-gray-700 font-medium">
+                    <Link href="/case-studies" className="block py-3 text-[#0a1628] font-bold border-b border-gray-50">
                       Customer Stories
                     </Link>
 

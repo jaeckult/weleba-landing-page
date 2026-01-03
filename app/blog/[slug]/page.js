@@ -3,8 +3,7 @@ import Link from 'next/link';
 import { ArrowLeft, Calendar, User, Clock } from 'lucide-react';
 import RelatedPosts from '../components/RelatedPosts';
 import BlogCTA from '../../components/sections/BlogCTA';
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
+import BlogContent from '../components/BlogContent';
 
 export async function generateStaticParams() {
     const slugs = getAllPostSlugs();
@@ -31,14 +30,21 @@ export async function generateMetadata({ params }) {
 
 export default async function BlogPostPage({ params }) {
     const { slug } = await params;
-    const postData = await getPostData(slug);
+    console.log('Fetching post for slug:', slug);
+    let postData = null;
+    try {
+        postData = await getPostData(slug);
+    } catch (error) {
+        console.error('Error fetching post data:', error);
+    }
 
     if (!postData) {
         return (
-            <div className="min-h-screen flex items-center justify-center">
-                <div className="text-center">
-                    <h1 className="text-4xl font-serif mb-4">Post Not Found</h1>
-                    <Link href="/blog" className="text-[#0052ff] hover:underline">
+            <div className="min-h-screen flex items-center justify-center p-6">
+                <div className="text-center bg-gray-50 p-12 rounded-3xl max-w-lg w-full">
+                    <h1 className="text-4xl font-serif text-[#0a1628] mb-6">Post Not Found</h1>
+                    <p className="text-gray-600 mb-8">The blog post you're looking for might have been moved or deleted.</p>
+                    <Link href="/blog" className="inline-flex items-center gap-2 bg-[#0052ff] text-white px-8 py-3 rounded-xl font-bold hover:bg-blue-700 transition-all">
                         Back to Blog
                     </Link>
                 </div>
@@ -95,24 +101,15 @@ export default async function BlogPostPage({ params }) {
 
             {/* Main Content */}
             <section className="px-6 py-16">
-                <div className="max-w-3xl mx-auto">
-                    <div className="prose prose-lg prose-blue max-w-none 
-                        prose-headings:font-serif prose-headings:text-[#0a1628] prose-headings:font-normal
-                        prose-p:text-gray-700 prose-p:leading-relaxed
-                        prose-a:text-[#0052ff] prose-a:no-underline hover:prose-a:underline
-                        prose-img:rounded-2xl prose-img:mx-auto
-                        prose-strong:text-[#0a1628] prose-strong:font-semibold">
-                        <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                            {postData.contentHtml}
-                        </ReactMarkdown>
-                    </div>
+                <div className="max-w-[1200px] mx-auto">
+                    <BlogContent contentHtml={postData.contentHtml} />
 
                     {/* Share / Tags section */}
                     <div className="mt-16 pt-8 border-t border-gray-100 flex flex-wrap items-center justify-between gap-4">
                         <div className="flex items-center gap-2">
                             <span className="text-sm font-semibold text-gray-400 uppercase tracking-wider">Tags:</span>
-                            <span className="text-sm text-gray-600 hover:text-[#0052ff] cursor-pointer">#{postData.category.replace(/\s+/g, '')}</span>
-                            <span className="text-sm text-gray-600 hover:text-[#0052ff] cursor-pointer">#Hospitality2026</span>
+                            <span className="text-sm text-gray-600 hover:text-[#0066FF] cursor-pointer">#{postData.category.replace(/\s+/g, '')}</span>
+                            <span className="text-sm text-gray-600 hover:text-[#0066FF] cursor-pointer">#Hospitality2026</span>
                         </div>
                     </div>
                 </div>

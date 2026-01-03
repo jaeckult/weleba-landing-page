@@ -1,7 +1,6 @@
 import NewsHero from './components/NewsHero';
 import NewsList from './components/NewsList';
 import NewsletterSubscribe from './components/NewsletterSubscribe';
-import BlogCTA from '../components/sections/BlogCTA';
 import { newsArticles, newsCategories } from '../lib/newsData';
 
 export const metadata = {
@@ -15,7 +14,6 @@ export default function NewsPage() {
             <NewsHero />
             <NewsList articles={newsArticles} categories={newsCategories} />
             <NewsletterSubscribe />
-            <BlogCTA />
         </main>
     );
 }

@@ -22,7 +22,7 @@ const RelatedPosts = ({ posts }) => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {posts.slice(0, 3).map((post) => (
                         <article
-                            key={post.id}
+                            key={post.slug}
                             className="group bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-xl transition-all duration-300"
                         >
                             <div className="relative h-48 overflow-hidden bg-gray-100">
