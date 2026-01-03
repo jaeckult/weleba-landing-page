@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header, Footer } from "./components/layout";
+import { Analytics } from "@vercel/analytics/next"
 
 const inter = Inter({
   variable: "--font-inter",
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
         <Header />
         <div className="max-w-[1320px] mx-auto">
           {children}
+          <Analytics/>
           <Footer />
         </div>
       </body>
