@@ -109,6 +109,18 @@ const Header = () => {
     setMobileMenuOpen(false);
   }, [pathname]);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [mobileMenuOpen]);
+
   const newBlogPost = useMemo(() => {
     if (!blogPosts || blogPosts.length === 0) return null;
 
@@ -723,64 +735,226 @@ const Header = () => {
             </div >
           </div >
 
-          {/* Mobile Menu */}
-          {
-            mobileMenuOpen && (
-              <div className="max-w-[1320px] mx-auto px-6 lg:px-8">
-                <div className="lg:hidden py-4 border-t border-gray-100">
-                  <div className="space-y-4">
-                    <div>
-                      <button
-                        onClick={() => toggleMobileDropdown('products-mobile')}
-                        className="flex items-center justify-between w-full py-2 text-gray-700 font-medium"
-                      >
-                        {labels.navigation.products}
-                        <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'products-mobile' ? 'rotate-180' : ''}`} />
-                      </button>
-                      {activeDropdown === 'products-mobile' && (
-                        <div className="pl-4 mt-2 space-y-3">
-                          {Object.entries(navigation.products).map(([category, products]) => (
-                            <div key={category}>
-                              <h5 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">
-                                {category === 'operations' ? 'Operations' :
-                                  category === 'marketing' ? 'Marketing & Distribution' :
-                                    category === 'revenue' ? 'Revenue & Finance' : 'Guest Experience'}
-                              </h5>
-                              {products.map((product) => (
-                                <Link
-                                  key={product.title}
-                                  href={product.href}
-                                  className="block py-2 text-gray-600 hover:text-[#0066FF]"
-                                >
-                                  {product.title}
-                                </Link>
-                              ))}
-                            </div>
-                          ))}
-                        </div>
+          {/* Mobile Menu has been moved to a Drawer */}
+        </nav >
+      </header >
+
+      {/* Mobile Menu Drawer */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <>
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setMobileMenuOpen(false)}
+              className="fixed inset-0 bg-black/20 backdrop-blur-sm z-50 lg:hidden"
+            />
+
+            {/* Drawer */}
+            <motion.div
+              initial={{ x: '100%' }}
+              animate={{ x: 0 }}
+              exit={{ x: '100%' }}
+              transition={{ type: 'spring', damping: 30, stiffness: 300 }}
+              className="fixed inset-y-0 right-0 w-full max-w-[340px] bg-white shadow-2xl z-50 overflow-y-auto lg:hidden"
+            >
+              <div className="flex flex-col min-h-full">
+                <div className="p-5 border-b border-gray-100 flex items-center justify-between sticky top-0 bg-white/95 backdrop-blur-sm z-10">
+                  <span className="text-xl font-bold text-[#0a1628]">Menu</span>
+                  <button
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="p-2 -mr-2 text-gray-500 hover:bg-gray-100 rounded-full transition-colors"
+                  >
+                    <X className="w-5 h-5" />
+                  </button>
+                </div>
+
+                <div className="flex-1 p-5 space-y-2">
+                  {/* Products */}
+                  <div className="border border-gray-100 rounded-xl overflow-hidden">
+                    <button
+                      onClick={() => toggleMobileDropdown('products')}
+                      className="flex items-center justify-between w-full p-4 bg-gray-50/50 hover:bg-gray-50 font-bold text-[#0a1628] text-sm"
+                    >
+                      {labels.navigation.products}
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'products' ? 'rotate-180' : ''}`} />
+                    </button>
+                    <AnimatePresence>
+                      {activeDropdown === 'products' && (
+                        <motion.div
+                          initial={{ height: 0 }}
+                          animate={{ height: 'auto' }}
+                          exit={{ height: 0 }}
+                          className="overflow-hidden"
+                        >
+                          <div className="p-4 bg-white space-y-6">
+                            {Object.entries(navigation.products).map(([category, products]) => (
+                              <div key={category}>
+                                <h5 className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-3">
+                                  {category === 'operations' ? 'Operations' :
+                                    category === 'marketing' ? 'Marketing' :
+                                      category === 'revenue' ? 'Revenue' : 'Experience'}
+                                </h5>
+                                <div className="space-y-3">
+                                  {products.map((product) => {
+                                    const Icon = productIcons[product.title] || LayoutDashboard;
+                                    return (
+                                      <Link
+                                        key={product.title}
+                                        href={product.href}
+                                        onClick={closeMenus}
+                                        className="flex items-center gap-3 group"
+                                      >
+                                        <div className="p-1.5 rounded-md bg-blue-50 text-[#0066FF] opacity-80 group-hover:opacity-100">
+                                          <Icon className="w-3.5 h-3.5" />
+                                        </div>
+                                        <span className="text-sm font-medium text-gray-600 group-hover:text-[#0066FF]">{product.title}</span>
+                                      </Link>
+                                    );
+                                  })}
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        </motion.div>
                       )}
-                    </div>
+                    </AnimatePresence>
+                  </div>
 
-                    <Link href="/pricing" className="block py-3 text-[#0a1628] font-bold border-b border-gray-50">
-                      {labels.navigation.pricing}
+                  {/* Solutions */}
+                  <div className="border border-gray-100 rounded-xl overflow-hidden">
+                    <button
+                      onClick={() => toggleMobileDropdown('solutions')}
+                      className="flex items-center justify-between w-full p-4 bg-gray-50/50 hover:bg-gray-50 font-bold text-[#0a1628] text-sm"
+                    >
+                      {labels.navigation.solutions}
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'solutions' ? 'rotate-180' : ''}`} />
+                    </button>
+                    <AnimatePresence>
+                      {activeDropdown === 'solutions' && (
+                        <motion.div
+                          initial={{ height: 0 }}
+                          animate={{ height: 'auto' }}
+                          exit={{ height: 0 }}
+                          className="overflow-hidden"
+                        >
+                          <div className="p-4 bg-white space-y-6">
+                            <div>
+                              <h5 className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-3">By Property</h5>
+                              <div className="space-y-3">
+                                {navigation.solutions.byProperty.map(item => (
+                                  <Link key={item.title} href={item.href} onClick={closeMenus} className="block text-sm font-medium text-gray-600 hover:text-[#0066FF]">{item.title}</Link>
+                                ))}
+                              </div>
+                            </div>
+                            <div>
+                              <h5 className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-3">By Role</h5>
+                              <div className="space-y-3">
+                                {navigation.solutions.byRole.map(item => (
+                                  <Link key={item.title} href={item.href} onClick={closeMenus} className="block text-sm font-medium text-gray-600 hover:text-[#0066FF]">{item.title}</Link>
+                                ))}
+                              </div>
+                            </div>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+
+                  {/* Pricing link */}
+                  <Link
+                    href="/pricing"
+                    onClick={closeMenus}
+                    className="flex items-center gap-3 w-full p-4 border border-gray-100 rounded-xl hover:border-blue-100 hover:bg-blue-50/50 font-bold text-[#0a1628] text-sm transition-all"
+                  >
+                    {labels.navigation.pricing}
+                  </Link>
+
+                  {/* Case Studies link */}
+                  <Link
+                    href="/case-studies"
+                    onClick={closeMenus}
+                    className="flex items-center gap-3 w-full p-4 border border-gray-100 rounded-xl hover:border-blue-100 hover:bg-blue-50/50 font-bold text-[#0a1628] text-sm transition-all"
+                  >
+                    {labels.navigation.caseStudies}
+                  </Link>
+
+                  {/* Resources */}
+                  <div className="border border-gray-100 rounded-xl overflow-hidden">
+                    <button
+                      onClick={() => toggleMobileDropdown('resources')}
+                      className="flex items-center justify-between w-full p-4 bg-gray-50/50 hover:bg-gray-50 font-bold text-[#0a1628] text-sm"
+                    >
+                      Resources
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'resources' ? 'rotate-180' : ''}`} />
+                    </button>
+                    <AnimatePresence>
+                      {activeDropdown === 'resources' && (
+                        <motion.div
+                          initial={{ height: 0 }}
+                          animate={{ height: 'auto' }}
+                          exit={{ height: 0 }}
+                          className="overflow-hidden"
+                        >
+                          <div className="p-4 bg-white grid grid-cols-2 gap-3">
+                            {navigation.resources.map(item => (
+                              <Link key={item.title} href={item.href} onClick={closeMenus} className="text-sm font-medium text-gray-600 hover:text-[#0066FF]">{item.title}</Link>
+                            ))}
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+
+                  {/* Company */}
+                  <div className="border border-gray-100 rounded-xl overflow-hidden">
+                    <button
+                      onClick={() => toggleMobileDropdown('company')}
+                      className="flex items-center justify-between w-full p-4 bg-gray-50/50 hover:bg-gray-50 font-bold text-[#0a1628] text-sm"
+                    >
+                      {labels.navigation.company}
+                      <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${activeDropdown === 'company' ? 'rotate-180' : ''}`} />
+                    </button>
+                    <AnimatePresence>
+                      {activeDropdown === 'company' && (
+                        <motion.div
+                          initial={{ height: 0 }}
+                          animate={{ height: 'auto' }}
+                          exit={{ height: 0 }}
+                          className="overflow-hidden"
+                        >
+                          <div className="p-4 bg-white space-y-3">
+                            {navigation.company.map(item => (
+                              <Link key={item.title} href={item.href} onClick={closeMenus} className="block text-sm font-medium text-gray-600 hover:text-[#0066FF]">{item.title}</Link>
+                            ))}
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                </div>
+
+                {/* Footer Buttons */}
+                <div className="p-5 border-t border-gray-100 bg-gray-50">
+                  <div className="space-y-3">
+                    <Link href="/book-a-demo" onClick={closeMenus}>
+                      <Button fullWidth size="lg">Get A Free Demo</Button>
                     </Link>
-
-                    <Link href="/case-studies" className="block py-3 text-[#0a1628] font-bold border-b border-gray-50">
-                      {labels.navigation.caseStudies}
-                    </Link>
-
-                    <div className="pt-4 space-y-3">
-                      <Link href="/book-a-demo" className="block">
-                        <Button fullWidth>{labels.buttons.getFreeDemo}</Button>
+                    <div className="flex items-center justify-between gap-3">
+                      <Link href="/support" onClick={closeMenus} className="flex-1">
+                        <Button variant="outline" fullWidth size="default">Support</Button>
                       </Link>
+                      <LanguageToggle />
                     </div>
                   </div>
                 </div>
               </div>
-            )
-          }
-        </nav >
-      </header >
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </>
   );
 };
