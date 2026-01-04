@@ -31,7 +31,7 @@ const GetStarted = () => {
 
   useEffect(() => {
     const checkScreenSize = () => {
-      setIsLargeScreen(window.innerWidth >= 992);
+      setIsLargeScreen(window.innerWidth >= 1024);
     };
 
     checkScreenSize();
@@ -61,7 +61,12 @@ const GetStarted = () => {
           {steps.map((step, index) => (
             <div
               key={step.number}
-              className={`${step.bgColor} rounded-3xl lg:rounded-none p-8 lg:p-12 relative min-h-[400px] flex flex-col justify-between`}
+              className={`${step.bgColor} rounded-3xl lg:rounded-none relative min-h-[400px] flex flex-col justify-between ${index === 0
+                ? 'p-8 lg:p-12 lg:pr-20'
+                : index === 1
+                  ? 'p-8 lg:p-12 lg:px-16'
+                  : 'p-8 lg:p-12 lg:pl-16'
+                }`}
               style={{
                 clipPath: isLargeScreen ? step.clipPath : 'none',
               }}

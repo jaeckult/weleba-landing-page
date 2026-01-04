@@ -267,7 +267,7 @@ export const customerStoriesContent = {
     },
     {
       title: 'How NUVO Suites Used weleba PMS to Elevate Their Guest Experience',
-      name: 'Jorge Venegas',
+      name: 'Yamlak Negash',
       role: 'General Manager at NUVO Suites',
       videoId: '21iGVj1UGq8',
     },

@@ -5,7 +5,7 @@ export const caseStudiesPageContent = {
         description: 'Discover how properties of all sizes use our platform to streamline operations, enhance guest experiences, and grow their bottom line.',
         featured: {
             tag: 'Featured Story',
-            title: 'Jorge Venegas, GM of NUVO Suites',
+            title: 'Yamlak Negash, Manager',
             image: '/featured/wood-river-inn.png'
         }
     },
@@ -48,7 +48,7 @@ export const caseStudies = [
             { label: "Bookings", value: "+15%" }
         ],
         summary: "NUVO Suites needed a unified system to manage their complex operations. weleba provided an all-in-one solution that streamlined guest engagement and boosted revenue.",
-        author: "Jorge Venegas",
+        author: "Yamlak Negash",
         date: "Dec 15, 2025",
         readTime: "6 min read",
         contentHtml: `
@@ -60,7 +60,7 @@ By implementing weleba's all-in-one platform, NUVO Suites was able to centralize
 
 > "weleba makes running Nuvo Suites so much easier, everything's in one place, from bookings to housekeeping. It's extremely customisable - they customised everything according to our needs."
 > 
-> — Jorge Venegas, General Manager
+> — Yamlak Negash, General Manager
 
 ## The Results
 Within the first six months, NUVO Suites saw a significant transformation in their key performance indicators. Direct bookings increased by 15%, reducing their reliance on high-commission OTAs. Most impressively, their RevPAR grew by 25% year-over-year.

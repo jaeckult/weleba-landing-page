@@ -4,7 +4,7 @@ export const testimonialsData = [
         company: 'NUVO',
         logo: '/nuvo-logo.png',
         quote: "weleba makes running Nuvo Suites so much easier, everything's in one place, from bookings to housekeeping. It's extremely customisable - they customised everything according to our needs.",
-        author: 'Jorge Venegas',
+        author: 'Yamlak Negash',
         position: 'General Manager',
         avatar: 'https://i.pravatar.cc/150?img=12'
     },
