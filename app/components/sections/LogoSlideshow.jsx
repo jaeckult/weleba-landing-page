@@ -2,7 +2,13 @@
 
 import { useEffect, useRef } from 'react';
 
-const LogoSlideshow = () => {
+import { labels as enLabels } from '../../lib/constants';
+import { labels as amLabels } from '../../lib/constants.am';
+import { useLanguage } from '../../context/LanguageContext';
+
+const LogoSlideshow = ({ showHeader = true }) => {
+  const { locale } = useLanguage();
+  const labels = locale === 'am' ? amLabels : enLabels;
   const scrollRef = useRef(null);
 
   // Partner/Client logos
@@ -27,12 +33,12 @@ const LogoSlideshow = () => {
 
     const scroll = () => {
       scrollPosition += scrollSpeed;
-      
+
       // Reset scroll position for infinite loop
       if (scrollPosition >= scrollContainer.scrollWidth / 3) {
         scrollPosition = 0;
       }
-      
+
       scrollContainer.scrollLeft = scrollPosition;
       requestAnimationFrame(scroll);
     };
@@ -46,11 +52,13 @@ const LogoSlideshow = () => {
     <section className="pt-4 pb-8 bg-white border-b border-gray-200">
       <div className="container mx-auto px-6 lg:px-8 max-w-7xl">
         {/* Optional Header */}
-        <div className="text-center mb-6">
-          <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider">
-            Trusted by Leading Hotels Worldwide
-          </p>
-        </div>
+        {showHeader && (
+          <div className="text-center mb-6">
+            <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider">
+              {labels.common.trustText}
+            </p>
+          </div>
+        )}
 
         {/* Logo Slideshow */}
         <div className="relative overflow-hidden">

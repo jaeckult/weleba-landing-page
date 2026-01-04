@@ -1,43 +1,38 @@
 'use client';
 
-  import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowUpRight } from 'lucide-react';
+import { propertyTypesContent as enProps } from '../../lib/constants';
+import { propertyTypesContent as amProps } from '../../lib/constants.am';
+import { useLanguage } from '../../context/LanguageContext';
 
 const PropertyTypes = () => {
-  const properties = [
-    { 
-      title: 'Independent Hotels', 
-      image: '/HOTELS/image.png',
-      href: '/independent-hotels-software'
-    },
-    { 
-      title: 'Hotel Groups', 
-      image: '/HOTELS/image copy.png',
-      href: '/pms-hotel-groups'
-    },
-    { 
-      title: 'B & B and Inns', 
-      image: '/HOTELS/image copy 2.png',
-      href: '/bed-breakfast-software'
-    },
-    { 
-      title: 'Parks', 
-      image: '/HOTELS/image copy 3.png',
-      href: '/parks'
-    },
-    { 
-      title: 'Resorts', 
-      image: '/HOTELS/image copy 4.png',
-      href: '/resorts-pms-software'
-    },
-    { 
-      title: 'Motels', 
-      image: '/HOTELS/image copy 5.png',
-      href: '/motel'
-    },
-  ];
+  const { locale } = useLanguage();
+  const content = locale === 'am' ? amProps : enProps;
+
+  const propertyImages = {
+    'Independent Hotels': '/HOTELS/image.png',
+    'Hotel Groups': '/HOTELS/image copy.png',
+    'B & B and Inns': '/HOTELS/image copy 2.png',
+    'Parks': '/HOTELS/image copy 3.png',
+    'Resorts': '/HOTELS/image copy 4.png',
+    'Motels': '/HOTELS/image copy 5.png',
+    // Amharic keys
+    'ገለልተኛ ሆቴሎች': '/HOTELS/image.png',
+    'የሆቴል ቡድኖች': '/HOTELS/image copy.png',
+    'አልጋ እና ቁርስ (B&B)': '/HOTELS/image copy 2.png',
+    'ፓርኮች': '/HOTELS/image copy 3.png',
+    'ሪዞርቶች': '/HOTELS/image copy 4.png',
+    'ሞቴሎች': '/HOTELS/image copy 5.png'
+  };
+
+  const properties = (content.types || []).map(f => ({
+    ...f,
+    image: propertyImages[f.title] || '/HOTELS/image.png'
+  }));
+
+  const tag = content.tag || (locale === 'am' ? 'የሚደገፉ ንብረቶች' : 'Properties Supported');
 
   return (
     <section className="py-20 bg-[#fbf9f4]">
@@ -46,17 +41,17 @@ const PropertyTypes = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-sm font-medium mb-6">
             <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-            Properties Supported
+            {tag}
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-[#0a1628] leading-tight">
-            Hotel Management Software for<br className="hidden md:block" /> Every Property Type
-          </h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-[#0a1628] leading-tight"
+            dangerouslySetInnerHTML={{ __html: content.title.replace('\n', '<br />') }}
+          />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {properties.map((item, index) => (
-            <Link 
-              key={index} 
+            <Link
+              key={index}
               href={item.href}
               className="group cursor-pointer"
             >
@@ -71,7 +66,7 @@ const PropertyTypes = () => {
 
                 {/* The Inset Cut-out (Top Right) */}
                 <div className="absolute top-0 right-0 w-0 h-0 bg-[#fbf9f4] transition-all duration-300 ease-in-out group-hover:w-32 group-hover:h-20 rounded-bl-[2rem] z-10" />
-                
+
                 {/* Dark Overlay on Hover */}
                 <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/10" />
               </div>

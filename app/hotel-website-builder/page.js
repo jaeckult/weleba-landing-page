@@ -1,3 +1,5 @@
+'use client';
+
 import BookingEngineHero from '../components/sections/BookingEngineHero';
 import FeatureCards from '../components/sections/FeatureCards';
 import PMSTransform from '../components/sections/PMSTransform';
@@ -6,46 +8,59 @@ import LogoSlideshow from '../components/sections/LogoSlideshow';
 import Testimonials from '../components/sections/Testimonials';
 import GetStarted from '../components/sections/GetStarted';
 import {
-    wbHeroContent,
-    wbWhyHelp,
-    wbJourney,
-    wbAnalytics,
-    wbConversion,
-    wbFaqs
+    wbHeroContent as enHero,
+    wbWhyHelp as enWhyHelp,
+    wbJourney as enJourney,
+    wbAnalytics as enAnalytics,
+    wbConversion as enConversion,
+    wbFaqs as enFaqs
 } from '../lib/websiteBuilderData';
-
-export const metadata = {
-    title: 'Hotel Website Builder & Design Services | weleba',
-    description: 'We help you build professional, mobile-friendly hotel websites that drive direct bookings and capture your brand identity.',
-};
+import {
+    wbHeroContent as amHero,
+    wbWhyHelp as amWhyHelp,
+    wbJourney as amJourney,
+    wbAnalytics as amAnalytics,
+    wbConversion as amConversion,
+    wbFaqs as amFaqs
+} from '../lib/websiteBuilderData.am';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function WebsiteBuilderPage() {
+    const { locale } = useLanguage();
+
+    const heroContent = locale === 'am' ? amHero : enHero;
+    const whyHelp = locale === 'am' ? amWhyHelp : enWhyHelp;
+    const journey = locale === 'am' ? amJourney : enJourney;
+    const analytics = locale === 'am' ? amAnalytics : enAnalytics;
+    const conversion = locale === 'am' ? amConversion : enConversion;
+    const faqs = locale === 'am' ? amFaqs : enFaqs;
+
     return (
         <main className="bg-white">
-            <BookingEngineHero heroContent={wbHeroContent} faqs={wbFaqs}>
+            <BookingEngineHero heroContent={heroContent} faqs={faqs}>
                 <LogoSlideshow />
                 <Testimonials />
 
                 <FeatureCards
-                    title={wbWhyHelp.title}
-                    subtitle={wbWhyHelp.subtitle}
-                    features={wbWhyHelp.features}
+                    title={whyHelp.title}
+                    subtitle={whyHelp.subtitle}
+                    features={whyHelp.features}
                 />
 
-                <PMSTransform content={wbJourney} />
+                <PMSTransform content={journey} />
 
                 <ContentBlock
-                    title={wbAnalytics.title}
-                    description={wbAnalytics.description}
-                    image={wbAnalytics.image}
-                    lists={wbAnalytics.lists}
-                    imageLeft={wbAnalytics.imageLeft}
+                    title={analytics.title}
+                    description={analytics.description}
+                    image={analytics.image}
+                    lists={analytics.lists}
+                    imageLeft={analytics.imageLeft}
                 />
 
                 <FeatureCards
-                    title={wbConversion.title}
-                    subtitle={wbConversion.subtitle}
-                    features={wbConversion.features}
+                    title={conversion.title}
+                    subtitle={conversion.subtitle}
+                    features={conversion.features}
                 />
                 <GetStarted />
             </BookingEngineHero>

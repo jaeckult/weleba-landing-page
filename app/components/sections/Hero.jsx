@@ -3,9 +3,14 @@
 import Link from 'next/link';
 import { ArrowRight, Play, CheckCircle } from 'lucide-react';
 import { Button } from '../ui';
-import { heroContent } from '../../lib/constants';
+import { heroContent as enHero } from '../../lib/constants';
+import { heroContent as amHero } from '../../lib/constants.am';
+import { useLanguage } from '../../context/LanguageContext';
 
-const Hero = ({ content = heroContent }) => {
+const Hero = ({ content: propContent }) => {
+  const { locale } = useLanguage();
+  const defaultContent = locale === 'am' ? amHero : enHero;
+  const content = propContent || defaultContent;
   return (
     <section className="relative min-h-screen pt-48 pb-20 overflow-x-clip">
 
@@ -21,8 +26,8 @@ const Hero = ({ content = heroContent }) => {
 
           {/* Main Heading */}
           <h1 className="text-4xl md:text-[56px] font-serif font-normal text-[#1a1a1a] mb-6 leading-tight text-center">
-            {(content?.title || heroContent.title).includes('actually work') ? (
-              (content?.title || heroContent.title).split('actually work').map((part, index) => (
+            {content.title.includes('actually work') ? (
+              content.title.split('actually work').map((part, index) => (
                 index === 0 ? (
                   <span key={index}>
                     {part}
@@ -30,24 +35,21 @@ const Hero = ({ content = heroContent }) => {
                   </span>
                 ) : part
               ))
-            ) : (
-              content?.title || heroContent.title
-            )}
+            ) : content.title}
           </h1>
 
           {/* Subtitle */}
           <p className="text-lg md:text-xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
-            {content?.subtitle || heroContent.subtitle}
+            {content.subtitle}
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-            <Link href={content?.cta?.primary?.href || heroContent.cta.primary.href}>
+            <Link href={content.cta?.primary?.href || '#'}>
               <Button size="lg" rightIcon={<ArrowRight className="w-5 h-5" />}>
-                {content?.cta?.primary?.text || heroContent.cta.primary.text}
+                {content.cta?.primary?.text}
               </Button>
             </Link>
-
           </div>
 
         </div>

@@ -1,25 +1,38 @@
+'use client';
+
 import ResourceHero from '../components/sections/ResourceHero';
 import SupportContent from './components/SupportContent';
 import GetStarted from '../components/sections/GetStarted';
-import { supportHero, supportContactMethods, supportResources } from '../lib/supportDemoData';
-
-export const metadata = {
-    title: 'Support | weleba - 24/7 Hospitality Expert Assistance',
-    description: 'Get 24/7 expert support for weleba. Access our knowledge base, contact our technical team, or explore training videos.',
-};
+import {
+    supportHero as enHero,
+    supportContactMethods as enMethods,
+    supportResources as enResources
+} from '../lib/supportDemoData';
+import {
+    supportHero as amHero,
+    supportContactMethods as amMethods,
+    supportResources as amResources
+} from '../lib/supportDemoData.am';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function SupportPage() {
+    const { locale } = useLanguage();
+
+    const hero = locale === 'am' ? amHero : enHero;
+    const contactMethods = locale === 'am' ? amMethods : enMethods;
+    const resources = locale === 'am' ? amResources : enResources;
+
     return (
         <main className="bg-white">
             <ResourceHero
-                tag={supportHero.tag}
-                title={supportHero.title}
-                description={supportHero.description}
+                tag={hero.tag}
+                title={hero.title}
+                description={hero.description}
             />
 
             <SupportContent
-                contactMethods={supportContactMethods}
-                resources={supportResources}
+                contactMethods={contactMethods}
+                resources={resources}
             />
 
             <GetStarted />

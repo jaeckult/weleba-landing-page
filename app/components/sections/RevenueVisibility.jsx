@@ -3,43 +3,34 @@
 import { useState } from 'react';
 import { Calendar, Share2, LineChart, Globe, ArrowUpRight } from 'lucide-react';
 
+import { revenueIntelligenceContent as enRev, labels as enLabels } from '../../lib/constants';
+import { revenueIntelligenceContent as amRev, labels as amLabels } from '../../lib/constants.am';
+import { useLanguage } from '../../context/LanguageContext';
+
 const RevenueVisibility = () => {
+  const { locale } = useLanguage();
+  const content = locale === 'am' ? amRev : enRev;
+  const labels = locale === 'am' ? amLabels : enLabels;
   const [activeTab, setActiveTab] = useState(0);
 
-  const tabs = [
-    {
-      id: 0,
-      icon: Calendar,
-      title: 'Booking Engine',
-      description: 'Enable direct bookings with a seamless, user-friendly interface for guests.',
-      link: '/products/booking-engine',
-      image: '/image copy 13.png',
-    },
-    {
-      id: 1,
-      icon: Share2,
-      title: 'Channel Manager',
-      description: 'Sync your inventory across all major OTAs and booking platforms in real-time.',
-      link: '/products/channel-manager',
-      image: '/image copy 14.png',
-    },
-    {
-      id: 2,
-      icon: LineChart,
-      title: 'Revenue Intelligence',
-      description: 'AI-powered pricing recommendations to maximize your RevPAR.',
-      link: '/products/revenue-intelligence',
-      image: '/image copy 13.png',
-    },
-    {
-      id: 3,
-      icon: Globe,
-      title: 'Hotel Website Builder',
-      description: 'Create stunning, conversion-optimized websites for your property.',
-      link: '/products/website-builder',
-      image: '/image copy 14.png',
-    },
-  ];
+  const iconMap = {
+    'Booking Engine': Calendar,
+    'የቦታ ማስያዣ ሞተር': Calendar,
+    'Channel Manager': Share2,
+    'የቻናል ማኔጀር': Share2,
+    'Revenue Intelligence': LineChart,
+    'የገቢ መረጃ': LineChart,
+    'Hotel Website Builder': Globe,
+    'የሆቴል ድረ-ገጽ ግንቢ': Globe,
+  };
+
+  const tabs = content.features.map((f, i) => ({
+    ...f,
+    id: i,
+    icon: iconMap[f.title] || Calendar,
+    image: `/image copy ${13 + (i % 2)}.png`, // Alternating images 13 and 14
+    link: f.href
+  }));
 
   return (
     <section className="py-24 bg-white">
@@ -48,16 +39,16 @@ const RevenueVisibility = () => {
         <div className="mb-12">
           <div className="inline-flex items-center gap-2 bg-blue-50 px-4 py-2 rounded-full mb-6">
             <div className="w-2 h-2 bg-blue-600 rounded-full" />
-            <span className="text-sm font-medium text-blue-600">Revenue Growth</span>
+            <span className="text-sm font-medium text-blue-600">{locale === 'am' ? 'የገቢ እድገት' : 'Revenue Growth'}</span>
           </div>
-          <h2 
+          <h2
             className="text-4xl md:text-5xl text-[#0a1628] mb-6 leading-tight max-w-xl"
             style={{ fontFamily: 'Recoleta, Georgia, serif' }}
           >
-            AI Revenue Intelligence & Hotel Visibility
+            {content.title}
           </h2>
           <p className="text-gray-600 text-lg max-w-md">
-            Powerful tools to maximize your revenue potential and expand your online presence.
+            {content.subtitle}
           </p>
         </div>
 
@@ -87,7 +78,7 @@ const RevenueVisibility = () => {
                       <div className="relative w-16 h-16">
                         <svg className="w-full h-full transform -rotate-90">
                           <circle cx="32" cy="32" r="28" fill="none" stroke="#e5e7eb" strokeWidth="6" />
-                          <circle cx="32" cy="32" r="28" fill="none" stroke="#0066FF" strokeWidth="6" 
+                          <circle cx="32" cy="32" r="28" fill="none" stroke="#0066FF" strokeWidth="6"
                             strokeDasharray="176" strokeDashoffset="44" strokeLinecap="round" />
                         </svg>
                       </div>
@@ -207,16 +198,15 @@ const RevenueVisibility = () => {
             {tabs.map((tab, index) => {
               const Icon = tab.icon;
               const isActive = activeTab === index;
-              
+
               return (
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(index)}
-                  className={`w-full text-left p-6 rounded-2xl transition-all ${
-                    isActive 
-                      ? 'bg-[#E8E6E1]' 
-                      : 'bg-gray-50 hover:bg-gray-100'
-                  }`}
+                  className={`w-full text-left p-6 rounded-2xl transition-all ${isActive
+                    ? 'bg-[#E8E6E1]'
+                    : 'bg-gray-50 hover:bg-gray-100'
+                    }`}
                 >
                   <div className="flex items-start justify-between">
                     <div className="flex items-start gap-4">
@@ -228,11 +218,11 @@ const RevenueVisibility = () => {
                         {isActive && (
                           <>
                             <p className="text-gray-600 text-sm mb-3">{tab.description}</p>
-                            <a 
+                            <a
                               href={tab.link}
                               className="inline-flex items-center gap-1 text-[#0a1628] font-medium text-sm hover:underline"
                             >
-                              Learn <ArrowUpRight size={14} />
+                              {locale === 'am' ? 'ተጨማሪ ዕወቅ' : 'Learn'} <ArrowUpRight size={14} />
                             </a>
                           </>
                         )}

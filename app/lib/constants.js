@@ -1,3 +1,40 @@
+export const labels = {
+  navigation: {
+    products: 'Products',
+    solutions: 'Solutions',
+    resources: 'Resources',
+    pricing: 'Pricing',
+    caseStudies: 'Customer Stories',
+    company: 'Company',
+    categories: {
+      operations: 'Operations',
+      marketing: 'Marketing',
+      revenue: 'Revenue',
+      guest: 'Guest',
+      byProperty: 'By Property Type',
+      byRole: 'By Role',
+    }
+  },
+  blog: {
+    newUpdate: 'New Update:',
+    readPost: 'Read Post',
+  },
+  buttons: {
+    bookDemo: 'Book A Demo',
+    getStarted: 'Get Started',
+    getFreeDemo: 'Get A Free Demo',
+    subscribe: 'Subscribe',
+  },
+  common: {
+    allRightsReserved: 'All Rights Reserved.',
+    trustText: 'Trusted by leading hotels worldwide',
+  },
+  legal: {
+    privacyPolicy: 'Privacy Policy',
+    termsOfService: 'Terms of Service',
+  }
+};
+
 // Navigation Data
 export const navigation = {
   products: {
@@ -285,55 +322,101 @@ export const supportContent = {
 // FAQ Section
 export const faqContent = {
   title: 'Answers to Your Questions About weleba',
-  tabs: ['Features', 'Setup', 'Support'],
-  faqs: {
-    features: [
-      {
-        question: 'What makes weleba different from other property management systems?',
-        answer: 'weleba was built specifically for hotels, not as a scaled-down enterprise system. We focus on reducing clicks and simplifying workflows to eliminate administrative burden. Our unified platform brings together PMS, booking engine, channel manager, and payments in one system giving hoteliers the operational backbone they need without unnecessary complexity or enterprise-level pricing.',
-      },
-      {
-        question: 'Can weleba integrate with our existing hotel technology stack?',
-        answer: 'Yes, weleba connects with over 100 third-party hospitality systems through our marketplace, including revenue management tools, guest communication platforms, and point-of-sale systems. Our open API architecture also allows for custom integrations tailored to your unique operational needs.',
-      },
-      {
-        question: 'Does weleba offer AI-powered features?',
-        answer: 'Yes, weleba incorporates AI technology in multiple areas: our AI Concierge handles guest calls and bookings 24/7, Revenue Intelligence automatically optimizes pricing based on demand patterns, and smart automation reduces manual tasks by up to 80%.',
-      },
-    ],
-    setup: [
-      {
-        question: 'How difficult is it to switch from our current PMS to weleba?',
-        answer: 'The transition to weleba is straightforward and efficient. Our implementation team handles data migration including reservations, guest profiles, and historical information. Most front desk staff become proficient with essential functions within a few hours of training.',
-      },
-      {
-        question: 'How long does implementation typically take?',
-        answer: 'Most properties are fully operational within 3-5 business days of signing up. Our implementation team handles data migration, system configuration, and staff training. For larger properties or complex integrations, the timeline may extend to 1-2 weeks.',
-      },
-      {
-        question: 'Do you provide training for our staff?',
-        answer: 'Yes, we provide comprehensive training tailored to each role at your property. Front desk staff typically become proficient with essential functions within hours, while managers receive advanced training on reporting and revenue management features.',
-      },
-    ],
-    support: [
-      {
-        question: 'What kind of support do you provide after implementation?',
-        answer: 'We offer 24/7 technical support via phone, email, and chat. All clients receive access to our knowledge base with video tutorials and guides, regular training webinars for new features, and a dedicated account manager.',
-      },
-      {
-        question: 'Is support available in different time zones?',
-        answer: 'Yes, our global support team operates 24/7/365 with specialists in North America, Europe, and Asia-Pacific regions. This ensures you always reach a live support agent familiar with your local hospitality practices and business hours.',
-      },
-      {
-        question: 'Can weleba handle seasonal fluctuations in our business?',
-        answer: 'Yes, weleba is designed for the cyclical nature of hospitality businesses. The intuitive interface means seasonal staff can be trained quickly. The system scales to accommodate fluctuations in booking volume.',
-      },
-    ],
-  },
+  categories: [
+    {
+      id: 'features',
+      name: 'Features',
+      items: [
+        {
+          question: 'What makes weleba different from other property management systems?',
+          answer: 'weleba was built specifically for hotels, not as a scaled-down enterprise system. We focus on reducing clicks and simplifying workflows to eliminate administrative burden. Our unified platform brings together PMS, booking engine, channel manager, and payments in one system giving hoteliers the operational backbone they need without unnecessary complexity or enterprise-level pricing.',
+        },
+        {
+          question: 'Can weleba integrate with our existing hotel technology stack?',
+          answer: 'Yes, weleba connects with over 100 third-party hospitality systems through our marketplace, including revenue management tools, guest communication platforms, and point-of-sale systems. Our open API architecture also allows for custom integrations tailored to your unique operational needs.',
+        },
+        {
+          question: 'Does weleba offer AI-powered features?',
+          answer: 'Yes, weleba incorporates AI technology in multiple areas: our AI Concierge handles guest calls and bookings 24/7, Revenue Intelligence automatically optimizes pricing based on demand patterns, and smart automation reduces manual tasks by up to 80%.',
+        },
+      ]
+    },
+    {
+      id: 'setup',
+      name: 'Setup',
+      items: [
+        {
+          question: 'How difficult is it to switch from our current PMS to weleba?',
+          answer: 'The transition to weleba is straightforward and efficient. Our implementation team handles data migration including reservations, guest profiles, and historical information. Most front desk staff become proficient with essential functions within a few hours of training.',
+        },
+        {
+          question: 'How long does implementation typically take?',
+          answer: 'Most properties are fully operational within 3-5 business days of signing up. Our implementation team handles data migration, system configuration, and staff training. For larger properties or complex integrations, the timeline may extend to 1-2 weeks.',
+        },
+        {
+          question: 'Do you provide training for our staff?',
+          answer: 'Yes, we provide comprehensive training tailored to each role at your property. Front desk staff typically become proficient with essential functions within hours, while managers receive advanced training on reporting and revenue management features.',
+        },
+      ]
+    },
+    {
+      id: 'support',
+      name: 'Support',
+      items: [
+        {
+          question: 'What kind of support do you provide after implementation?',
+          answer: 'We offer 24/7 technical support via phone, email, and chat. All clients receive access to our knowledge base with video tutorials and guides, regular training webinars for new features, and a dedicated account manager.',
+        },
+        {
+          question: 'Is support available in different time zones?',
+          answer: 'Yes, our global support team operates 24/7/365 with specialists in North America, Europe, and Asia-Pacific regions. This ensures you always reach a live support agent familiar with your local hospitality practices and business hours.',
+        },
+        {
+          question: 'Can weleba handle seasonal fluctuations in our business?',
+          answer: 'Yes, weleba is designed for the cyclical nature of hospitality businesses. The intuitive interface means seasonal staff can be trained quickly. The system scales to accommodate fluctuations in booking volume.',
+        },
+      ]
+    }
+  ]
+};
+
+// SUPPORT ...
+export const getStartedContent = {
+  tag: 'Experience weleba',
+  title: 'Get started with weleba in three easy steps',
+  steps: [
+    {
+      number: '01',
+      title: 'Set up a 30-minute call with a weleba expert.',
+    },
+    {
+      number: '02',
+      title: 'See a personalized demo of what weleba can do for you.',
+    },
+    {
+      number: '03',
+      title: 'Get onboarded quickly with support from our experts and start earning revenue.',
+    },
+  ]
 };
 
 // Footer Content
 export const footerContent = {
+  cta: {
+    title: 'Join Thousands of Hotels Thriving with weleba',
+    subtitle: "See how weleba's unified platform can work for your property. Our team will walk you through features tailored to your specific needs.",
+    buttonText: 'Book a Demo',
+    features: [
+      '100% safe & secure',
+      '360° property management',
+      '24/7 support'
+    ]
+  },
+  subscribe: {
+    title: 'Subscribe to our newsletter',
+    placeholder: 'Enter email address',
+    buttonText: 'Subscribe'
+  },
   sections: [
     {
       title: 'Products',

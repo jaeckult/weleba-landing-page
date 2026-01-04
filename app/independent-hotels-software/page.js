@@ -1,3 +1,5 @@
+'use client';
+
 import BookingEngineHero from '../components/sections/BookingEngineHero';
 import FeatureCards from '../components/sections/FeatureCards';
 import PMSTransform from '../components/sections/PMSTransform';
@@ -6,39 +8,50 @@ import LogoSlideshow from '../components/sections/LogoSlideshow';
 import Testimonials from '../components/sections/Testimonials';
 import GetStarted from '../components/sections/GetStarted';
 import {
-    ihHeroContent,
-    ihAdvantages,
-    ihPlatform,
-    ihGuestExperience,
-    ihFaqs
+    ihHeroContent as enHero,
+    ihAdvantages as enAdvantages,
+    ihPlatform as enPlatform,
+    ihGuestExperience as enGuest,
+    ihFaqs as enFaqs
 } from '../lib/independentHotelsData';
-
-export const metadata = {
-    title: 'Independent Hotel Management Software | weleba',
-    description: 'Empower your independent hotel with enterprise-level PMS, direct bookings, and channel distribution. Compete and thrive with our unified platform.',
-};
+import {
+    ihHeroContent as amHero,
+    ihAdvantages as amAdvantages,
+    ihPlatform as amPlatform,
+    ihGuestExperience as amGuest,
+    ihFaqs as amFaqs
+} from '../lib/independentHotelsData.am';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function IndependentHotelsPage() {
+    const { locale } = useLanguage();
+
+    const heroContent = locale === 'am' ? amHero : enHero;
+    const advantages = locale === 'am' ? amAdvantages : enAdvantages;
+    const platform = locale === 'am' ? amPlatform : enPlatform;
+    const guestExperience = locale === 'am' ? amGuest : enGuest;
+    const faqs = locale === 'am' ? amFaqs : enFaqs;
+
     return (
         <main className="bg-white">
-            <BookingEngineHero heroContent={ihHeroContent} faqs={ihFaqs}>
+            <BookingEngineHero heroContent={heroContent} faqs={faqs}>
                 <LogoSlideshow />
                 <Testimonials />
 
                 <FeatureCards
-                    title={ihAdvantages.title}
-                    subtitle={ihAdvantages.subtitle}
-                    features={ihAdvantages.features}
+                    title={advantages.title}
+                    subtitle={advantages.subtitle}
+                    features={advantages.features}
                 />
 
-                <PMSTransform content={ihPlatform} />
+                <PMSTransform content={platform} />
 
                 <ContentBlock
-                    title={ihGuestExperience.title}
-                    description={ihGuestExperience.description}
-                    image={ihGuestExperience.image}
-                    lists={ihGuestExperience.lists}
-                    imageLeft={ihGuestExperience.imageLeft}
+                    title={guestExperience.title}
+                    description={guestExperience.description}
+                    image={guestExperience.image}
+                    lists={guestExperience.lists}
+                    imageLeft={guestExperience.imageLeft}
                 />
                 <GetStarted />
             </BookingEngineHero>

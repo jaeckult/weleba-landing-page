@@ -1,3 +1,5 @@
+'use client';
+
 import BookingEngineHero from '../components/sections/BookingEngineHero';
 import FeatureCards from '../components/sections/FeatureCards';
 import PMSTransform from '../components/sections/PMSTransform';
@@ -6,39 +8,50 @@ import LogoSlideshow from '../components/sections/LogoSlideshow';
 import Testimonials from '../components/sections/Testimonials';
 import GetStarted from '../components/sections/GetStarted';
 import {
-    bbHeroContent,
-    bbAdvantages,
-    bbPlatform,
-    bbPersonalTouch,
-    bbFaqs
+    bbHeroContent as enHero,
+    bbAdvantages as enAdvantages,
+    bbPlatform as enPlatform,
+    bbPersonalTouch as enTouch,
+    bbFaqs as enFaqs
 } from '../lib/bbInnsData';
-
-export const metadata = {
-    title: 'Bed & Breakfast (B&B) Management Software | weleba',
-    description: 'Simplify B&B management with easy-to-use software for reservations, channel distribution, and guest engagement. spend more time with your guests.',
-};
+import {
+    bbHeroContent as amHero,
+    bbAdvantages as amAdvantages,
+    bbPlatform as amPlatform,
+    bbPersonalTouch as amTouch,
+    bbFaqs as amFaqs
+} from '../lib/bbInnsData.am';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function BedBreakfastPage() {
+    const { locale } = useLanguage();
+
+    const heroContent = locale === 'am' ? amHero : enHero;
+    const advantages = locale === 'am' ? amAdvantages : enAdvantages;
+    const platform = locale === 'am' ? amPlatform : enPlatform;
+    const personalTouch = locale === 'am' ? amTouch : enTouch;
+    const faqs = locale === 'am' ? amFaqs : enFaqs;
+
     return (
         <main className="bg-white">
-            <BookingEngineHero heroContent={bbHeroContent} faqs={bbFaqs}>
+            <BookingEngineHero heroContent={heroContent} faqs={faqs}>
                 <LogoSlideshow />
                 <Testimonials />
 
                 <FeatureCards
-                    title={bbAdvantages.title}
-                    subtitle={bbAdvantages.subtitle}
-                    features={bbAdvantages.features}
+                    title={advantages.title}
+                    subtitle={advantages.subtitle}
+                    features={advantages.features}
                 />
 
-                <PMSTransform content={bbPlatform} />
+                <PMSTransform content={platform} />
 
                 <ContentBlock
-                    title={bbPersonalTouch.title}
-                    description={bbPersonalTouch.description}
-                    image={bbPersonalTouch.image}
-                    lists={bbPersonalTouch.lists}
-                    imageLeft={bbPersonalTouch.imageLeft}
+                    title={personalTouch.title}
+                    description={personalTouch.description}
+                    image={personalTouch.image}
+                    lists={personalTouch.lists}
+                    imageLeft={personalTouch.imageLeft}
                 />
                 <GetStarted />
             </BookingEngineHero>

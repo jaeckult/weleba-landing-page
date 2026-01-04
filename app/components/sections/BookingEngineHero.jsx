@@ -2,16 +2,19 @@
 
 import { useState, useMemo } from 'react';
 import { Plus, X, ChevronRight } from 'lucide-react';
+import { useLanguage } from '../../context/LanguageContext';
 
 const BookingEngineHero = ({ children, heroContent, faqs = [] }) => {
+  const { locale } = useLanguage();
   const [openIndex, setOpenIndex] = useState(null);
-  const [activeTab, setActiveTab] = useState('General');
 
   // Get unique categories from FAQs
   const categories = useMemo(() => {
     const cats = [...new Set(faqs.map(faq => faq.category))];
     return cats.length > 0 ? cats : ['General'];
   }, [faqs]);
+
+  const [activeTab, setActiveTab] = useState(categories[0]);
 
   // Filter content based on active tab
   const filteredFaqs = useMemo(() => {
@@ -89,10 +92,10 @@ const BookingEngineHero = ({ children, heroContent, faqs = [] }) => {
                 <div>
                   <div className="inline-flex items-center gap-3 bg-[#e8e9e1] px-5 py-2.5 rounded-full mb-10 border border-black/5">
                     <div className="w-2.5 h-2.5 bg-blue-600 rounded-full animate-pulse" />
-                    <span className="text-sm font-bold text-[#0a1628] uppercase tracking-wider">Frequently Asked Questions</span>
+                    <span className="text-sm font-bold text-[#0a1628] uppercase tracking-wider">{locale === 'am' ? 'ተደጋጋሚ ጥያቄዎች' : 'Frequently Asked Questions'}</span>
                   </div>
                   <h2 className="text-6xl lg:text-[5rem] font-serif text-[#0a1628] leading-[1.05] tracking-tight mb-4">
-                    Answers to Your Questions About Booking Engine
+                    {locale === 'am' ? 'ስለ ቦታ ማስያዣ ሞተር ለሚነሱ ጥያቄዎች መልሶች' : 'Answers to Your Questions About Booking Engine'}
                   </h2>
                 </div>
               </div>
@@ -156,11 +159,11 @@ const BookingEngineHero = ({ children, heroContent, faqs = [] }) => {
                 <div className="relative">
                   <div className="bg-[#eeede8] p-12 rounded-[3rem] relative overflow-visible max-w-md ml-auto">
                     <p className="text-gray-600 text-xl leading-relaxed mb-6">
-                      Don't see your question answered?<br />
-                      Our team can provide personalized answers and guidance.
+                      {locale === 'am' ? 'የጥያቄዎን መልስ አላገኙም?' : "Don't see your question answered?"}<br />
+                      {locale === 'am' ? 'ቡድናችን ግላዊ መልሶችን እና መመሪያዎችን ሊሰጥዎ ይችላል።' : 'Our team can provide personalized answers and guidance.'}
                     </p>
                     <button className="bg-white text-[#0a1628] px-10 py-5 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all active:scale-95 flex items-center gap-3">
-                      Contact Us
+                      {locale === 'am' ? 'ያግኙን' : 'Contact Us'}
                       <ChevronRight size={20} />
                     </button>
                     <div className="absolute -bottom-4 right-16 w-10 h-10 bg-[#eeede8] rotate-45 rounded-sm" />
@@ -176,13 +179,13 @@ const BookingEngineHero = ({ children, heroContent, faqs = [] }) => {
       <section className="bg-[#0a1628] py-20 px-6 mx-6 rounded-[3rem] mb-24">
         <div className="container mx-auto max-w-[1400px] text-center">
           <h2 className="text-4xl lg:text-5xl font-serif text-white mb-6">
-            Ready to Boost Your Direct Bookings?
+            {locale === 'am' ? 'ቀጥታ ቦታ ማስያዝን ለማሳደግ ዝግጁ ነዎት?' : 'Ready to Boost Your Direct Bookings?'}
           </h2>
           <p className="text-lg text-gray-400 mb-10 max-w-2xl mx-auto">
-            Join thousands of hoteliers using weleba Booking Engine to capture commission-free direct bookings.
+            {locale === 'am' ? 'ያለ ኮሚሽን ቀጥታ ቦታ ማስያዣዎችን ለመቀበል welebaን የሚጠቀሙ በሺዎች የሚቆጠሩ ሆቴሎችን ይቀላቀሉ' : 'Join thousands of hoteliers using weleba Booking Engine to capture commission-free direct bookings.'}
           </p>
           <button className="bg-white text-[#0a1628] px-8 py-4 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all active:scale-95 flex items-center gap-3 mx-auto">
-            Book A Demo
+            {locale === 'am' ? 'ማሳያ ያስይዙ' : 'Book A Demo'}
             <ChevronRight size={20} />
           </button>
         </div>

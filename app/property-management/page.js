@@ -1,38 +1,53 @@
+'use client';
+
 import PMSHero from '../components/sections/PMSHero';
 import TabbedFeatures from '../components/sections/TabbedFeatures';
 import PMSTransform from '../components/sections/PMSTransform';
-import { pmFeatureGrid, pmTabbedFeatures, pmAlternatingFeatures, pmTransformContent } from '../lib/propertyManagementData';
-import { pmTransformContent as pmTransformData } from '../lib/newPmData';
+import {
+    pmFeatureGrid as enGrid,
+    pmTabbedFeatures as enTabbed,
+    pmAlternatingFeatures as enAlt
+} from '../lib/propertyManagementData';
+import {
+    pmFeatureGrid as amGrid,
+    pmTabbedFeatures as amTabbed,
+    pmAlternatingFeatures as amAlt
+} from '../lib/propertyManagementData.am';
+import { pmTransformContent as enTransform } from '../lib/newPmData';
+import { pmTransformContent as amTransform } from '../lib/newPmData.am';
+import { useLanguage } from '../context/LanguageContext';
 
 import ContentBlock from '../components/sections/ContentBlock';
 import Testimonials from '../components/sections/Testimonials';
 import LogoSlideshow from '../components/sections/LogoSlideshow';
 import GetStarted from '../components/sections/GetStarted';
 
-export const metadata = {
-    title: 'Hotel Property Management System (PMS) | weleba',
-    description: 'The complete cloud PMS for modern hotels.',
-};
-
 export default function PropertyManagementPage() {
+    const { locale } = useLanguage();
+
+    const grid = locale === 'am' ? amGrid : enGrid;
+    const tabbed = locale === 'am' ? amTabbed : enTabbed;
+    const alternating = locale === 'am' ? amAlt : enAlt;
+    const transform = locale === 'am' ? amTransform : enTransform;
+
     return (
         <main className="bg-white">
             <PMSHero>
                 <LogoSlideshow />
 
-                {/* Testimonial Section (Reusing existing component, might show random or specific) */}
+                {/* Testimonial Section */}
                 <Testimonials />
 
-                <PMSTransform content={pmTransformData} />
+                <PMSTransform content={transform} />
 
                 <TabbedFeatures
-                    title={pmTabbedFeatures.title}
-                    subtitle={pmTabbedFeatures.subtitle}
-                    tabs={pmTabbedFeatures.tabs}
+                    title={tabbed.title}
+                    subtitle={tabbed.subtitle}
+                    tabs={tabbed.tabs}
                 />
 
                 {/* Alternating Detail Sections */}
-                {pmAlternatingFeatures.map((feature, index) => (
+                {alternating.map((feature, index) => (
                     <ContentBlock
                         key={index}
                         title={feature.title}

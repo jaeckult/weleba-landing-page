@@ -1,3 +1,5 @@
+'use client';
+
 import BookingEngineHero from '../components/sections/BookingEngineHero';
 import FeatureCards from '../components/sections/FeatureCards';
 import PMSTransform from '../components/sections/PMSTransform';
@@ -6,39 +8,50 @@ import LogoSlideshow from '../components/sections/LogoSlideshow';
 import Testimonials from '../components/sections/Testimonials';
 import GetStarted from '../components/sections/GetStarted';
 import {
-    hgHeroContent,
-    hgAdvantages,
-    hgPlatform,
-    hgIntegration,
-    hgFaqs
+    hgHeroContent as enHero,
+    hgAdvantages as enAdvantages,
+    hgPlatform as enPlatform,
+    hgIntegration as enIntegration,
+    hgFaqs as enFaqs
 } from '../lib/hotelGroupsData';
-
-export const metadata = {
-    title: 'Hotel Group Management Software | weleba',
-    description: 'Centralized management and reporting for hotel portfolios. Gain portfolio-wide control and operational efficiency across all your properties.',
-};
+import {
+    hgHeroContent as amHero,
+    hgAdvantages as amAdvantages,
+    hgPlatform as amPlatform,
+    hgIntegration as amIntegration,
+    hgFaqs as amFaqs
+} from '../lib/hotelGroupsData.am';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function HotelGroupsPage() {
+    const { locale } = useLanguage();
+
+    const heroContent = locale === 'am' ? amHero : enHero;
+    const advantages = locale === 'am' ? amAdvantages : enAdvantages;
+    const platform = locale === 'am' ? amPlatform : enPlatform;
+    const integration = locale === 'am' ? amIntegration : enIntegration;
+    const faqs = locale === 'am' ? amFaqs : enFaqs;
+
     return (
         <main className="bg-white">
-            <BookingEngineHero heroContent={hgHeroContent} faqs={hgFaqs}>
+            <BookingEngineHero heroContent={heroContent} faqs={faqs}>
                 <LogoSlideshow />
                 <Testimonials />
 
                 <FeatureCards
-                    title={hgAdvantages.title}
-                    subtitle={hgAdvantages.subtitle}
-                    features={hgAdvantages.features}
+                    title={advantages.title}
+                    subtitle={advantages.subtitle}
+                    features={advantages.features}
                 />
 
-                <PMSTransform content={hgPlatform} />
+                <PMSTransform content={platform} />
 
                 <ContentBlock
-                    title={hgIntegration.title}
-                    description={hgIntegration.description}
-                    image={hgIntegration.image}
-                    lists={hgIntegration.lists}
-                    imageLeft={hgIntegration.imageLeft}
+                    title={integration.title}
+                    description={integration.description}
+                    image={integration.image}
+                    lists={integration.lists}
+                    imageLeft={integration.imageLeft}
                 />
                 <GetStarted />
             </BookingEngineHero>

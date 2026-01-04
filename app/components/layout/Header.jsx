@@ -38,9 +38,13 @@ import {
   ArrowRight
 } from 'lucide-react';
 import { Button, Badge } from '../ui';
-import { navigation, heroContent } from '../../lib/constants';
-import { blogPosts } from '../../lib/blogData';
+import { navigation as enNavigation, heroContent as enHeroContent, labels as enLabels } from '../../lib/constants';
+import { navigation as amNavigation, heroContent as amHeroContent, labels as amLabels } from '../../lib/constants.am';
+import { blogPosts as enBlogPosts } from '../../lib/blogData';
+import { blogPosts as amBlogPosts } from '../../lib/blogData.am';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useLanguage } from '../../context/LanguageContext';
+import LanguageToggle from './LanguageToggle';
 
 const productIcons = {
   'PMS': LayoutDashboard,
@@ -82,6 +86,11 @@ const integrations = [
 ];
 
 const Header = () => {
+  const { locale } = useLanguage();
+  const labels = locale === 'am' ? amLabels : enLabels;
+  const navigation = locale === 'am' ? amNavigation : enNavigation;
+  const blogPosts = locale === 'am' ? amBlogPosts : enBlogPosts;
+
   const pathname = usePathname();
   const isHomePage = pathname === '/';
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -177,7 +186,7 @@ const Header = () => {
             >
               <div className="flex items-center justify-center gap-2 pr-8">
                 <Sparkles className={`w-4 h-4 ${isHomePage ? 'text-[#0066FF]' : 'text-[#0a1628]'}`} />
-                <span className="font-medium">New Update:</span>
+                <span className="font-medium">{labels.blog.newUpdate}</span>
                 <Link href="/blog" className="hover:underline opacity-90">
                   {newBlogPost.title}
                 </Link>
@@ -185,7 +194,7 @@ const Header = () => {
                   href={`/blog/${newBlogPost.slug}`}
                   className={`${isHomePage ? 'text-[#0066FF]' : 'text-[#0a1628]'} font-bold ml-2 inline-flex items-center gap-1 hover:underline`}
                 >
-                  Read Post <ArrowRight className="w-3 h-3" />
+                  {labels.blog.readPost} <ArrowRight className="w-3 h-3" />
                 </Link>
               </div>
               <button
@@ -215,7 +224,7 @@ const Header = () => {
 
               {/* Desktop Navigation */}
               <div className="hidden lg:flex items-center gap-1">
-                {/* Products Dropdown */}
+                {/* {labels.navigation.products} Dropdown */}
                 <div
                   className="relative"
                   onMouseEnter={() => handleMouseEnter('products')}
@@ -224,7 +233,7 @@ const Header = () => {
                   <button
                     className="flex items-center gap-1 px-4 py-2 text-gray-700 hover:text-[#0a1628] font-medium transition-colors"
                   >
-                    Products
+                    {labels.navigation.products}
                     <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'products' ? 'rotate-180' : ''}`} />
                   </button>
 
@@ -235,14 +244,14 @@ const Header = () => {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -10 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute top-full left-1/2 -translate-x-1/2 pt-6"
+                        className="absolute top-full left-1/2 -translate-x-[35%] pt-6"
                         style={{ width: 'min(1312px, 95vw)' }}
                       >
                         <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-8 lg:p-10">
                           <div className="grid grid-cols-4 gap-10">
                             {/* Operations */}
                             <div>
-                              <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-6">Operations</h4>
+                              <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-6">{labels.navigation.categories.operations}</h4>
                               <div className="space-y-1">
                                 {navigation.products.operations.map((product) => {
                                   const Icon = productIcons[product.title] || LayoutDashboard;
@@ -414,7 +423,7 @@ const Header = () => {
                   <button
                     className="flex items-center gap-1 px-4 py-2 text-gray-700 hover:text-[#0a1628] font-medium transition-colors"
                   >
-                    Solutions
+                    {labels.navigation.solutions}
                     <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'solutions' ? 'rotate-180' : ''}`} />
                   </button>
 
@@ -432,7 +441,7 @@ const Header = () => {
                           <div className="grid grid-cols-3 gap-12">
                             {/* By Property Type */}
                             <div>
-                              <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-6">By Property Type</h4>
+                              <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-6">{labels.navigation.categories.byProperty}</h4>
                               <div className="space-y-1">
                                 {navigation.solutions.byProperty.map((item) => (
                                   <Link
@@ -621,13 +630,13 @@ const Header = () => {
                   </AnimatePresence>
                 </div>
 
-                {/* Pricing Link */}
+                {/* {labels.navigation.pricing} Link */}
                 <Link
                   href="/pricing"
                   onMouseEnter={() => setActiveDropdown(null)}
                   className="px-4 py-2 text-gray-700 hover:text-[#0a1628] font-medium transition-colors"
                 >
-                  Pricing
+                  {labels.navigation.pricing}
                 </Link>
 
                 {/* Case Studies Link */}
@@ -636,7 +645,7 @@ const Header = () => {
                   onMouseEnter={() => setActiveDropdown(null)}
                   className="px-4 py-2 text-gray-700 hover:text-[#0a1628] font-medium transition-colors"
                 >
-                  Customer Stories
+                  {labels.navigation.caseStudies}
                 </Link>
 
                 {/* Company Dropdown */}
@@ -648,7 +657,7 @@ const Header = () => {
                   <button
                     className="flex items-center gap-1 px-4 py-2 text-gray-700 hover:text-[#0a1628] font-medium transition-colors"
                   >
-                    Company
+                    {labels.navigation.company}
                     <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'company' ? 'rotate-180' : ''}`} />
                   </button>
 
@@ -694,6 +703,7 @@ const Header = () => {
 
               {/* CTA Buttons */}
               <div className="hidden lg:flex items-center gap-3">
+                <LanguageToggle />
                 <Link href="/support">
                   <Button variant="ghost" size="sm">Support</Button>
                 </Link>
@@ -724,7 +734,7 @@ const Header = () => {
                         onClick={() => toggleMobileDropdown('products-mobile')}
                         className="flex items-center justify-between w-full py-2 text-gray-700 font-medium"
                       >
-                        Products
+                        {labels.navigation.products}
                         <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'products-mobile' ? 'rotate-180' : ''}`} />
                       </button>
                       {activeDropdown === 'products-mobile' && (
@@ -752,16 +762,16 @@ const Header = () => {
                     </div>
 
                     <Link href="/pricing" className="block py-3 text-[#0a1628] font-bold border-b border-gray-50">
-                      Pricing
+                      {labels.navigation.pricing}
                     </Link>
 
                     <Link href="/case-studies" className="block py-3 text-[#0a1628] font-bold border-b border-gray-50">
-                      Customer Stories
+                      {labels.navigation.caseStudies}
                     </Link>
 
                     <div className="pt-4 space-y-3">
                       <Link href="/book-a-demo" className="block">
-                        <Button fullWidth>Get A Free Demo</Button>
+                        <Button fullWidth>{labels.buttons.getFreeDemo}</Button>
                       </Link>
                     </div>
                   </div>

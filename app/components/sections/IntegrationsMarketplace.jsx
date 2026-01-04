@@ -3,8 +3,13 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Grid3x3 } from 'lucide-react';
+import { integrationsContent as enInt } from '../../lib/constants';
+import { integrationsContent as amInt } from '../../lib/constants.am';
+import { useLanguage } from '../../context/LanguageContext';
 
 const IntegrationsMarketplace = () => {
+  const { locale } = useLanguage();
+  const content = locale === 'am' ? amInt : enInt;
   const integrations = [
     '/INTEGRATION/image.png',
     '/INTEGRATION/image copy.png',
@@ -38,10 +43,10 @@ const IntegrationsMarketplace = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-blue-50 px-4 py-2 rounded-full mb-6">
             <div className="w-2 h-2 bg-blue-600 rounded-full" />
-            <span className="text-sm font-bold text-blue-600 uppercase tracking-wider">Marketplace</span>
+            <span className="text-sm font-bold text-blue-600 uppercase tracking-wider">{locale === 'am' ? 'የገበያ ቦታ' : 'Marketplace'}</span>
           </div>
           <h2 className="text-5xl lg:text-6xl font-serif text-[#0a1628] leading-tight max-w-3xl mx-auto">
-            Create your perfect technology ecosystem
+            {content.title}
           </h2>
         </div>
 
@@ -57,22 +62,23 @@ const IntegrationsMarketplace = () => {
 
             {/* Content */}
             <h3 className="text-3xl lg:text-4xl font-bold mb-6 leading-tight">
-              Connect weleba with <span className="text-white/90">100+ third-party solutions</span>
+              {locale === 'am' ? 'welebaን ከ 100+ ' : 'Connect weleba with '}
+              <span className="text-white/90">{locale === 'am' ? 'ከሶስተኛ ወገን መፍትሄዎች ጋር ያገናኙ' : '100+ third-party solutions'}</span>
             </h3>
             <p className="text-white/80 text-lg mb-10 leading-relaxed">
-              from door locks, and point of sale to accounting systems, and marketing tools, so your hotel runs like a well-oiled machine.
+              {content.subtitle}
             </p>
 
             {/* CTA Section */}
             <div className="border-t border-white/20 pt-8">
               <p className="text-white/90 mb-4 font-medium">
-                See how weleba connects with your favorite tools
+                {locale === 'am' ? 'weleba ከሚወዷቸው መሳሪያዎች ጋር እንዴት እንደሚገናኝ ይመልከቱ' : 'See how weleba connects with your favorite tools'}
               </p>
               <Link
-                href="/marketplace"
+                href={content.cta.href}
                 className="inline-block bg-white text-[#0066FF] px-8 py-4 rounded-xl font-bold hover:bg-blue-50 transition-all hover:scale-105 active:scale-95"
               >
-                Visit Marketplace
+                {content.cta.text}
               </Link>
             </div>
           </div>

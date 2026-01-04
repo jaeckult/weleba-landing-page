@@ -1,28 +1,38 @@
+'use client';
+
 import ResourceHero from '../components/sections/ResourceHero';
 import ResourceGrid from '../components/sections/ResourceGrid';
-import { templatesHeader, templatesList } from '../lib/resourcesData';
-
-export const metadata = {
-    title: 'Hotel Templates & Checklists | weleba Resources',
-    description: 'Download free hotel housekeeping checklists, shift handover templates, and operational guides to improve your hotel management.',
-};
+import {
+    templatesHeader as enHeader,
+    templatesList as enList
+} from '../lib/resourcesData';
+import {
+    templatesHeader as amHeader,
+    templatesList as amList
+} from '../lib/resourcesData.am';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function TemplatesPage() {
-    const categories = [...new Set(templatesList.map(item => item.category))];
+    const { locale } = useLanguage();
+
+    const header = locale === 'am' ? amHeader : enHeader;
+    const list = locale === 'am' ? amList : enList;
+
+    const categories = [...new Set(list.map(item => item.category))];
 
     return (
         <main className="bg-white">
             <ResourceHero
-                tag={templatesHeader.tag}
-                title={templatesHeader.title}
-                description={templatesHeader.description}
+                tag={header.tag}
+                title={header.title}
+                description={header.description}
             />
 
             <ResourceGrid
-                items={templatesList}
+                items={list}
                 categories={categories}
                 type="template"
-                title="Templates & Guides"
+                title={locale === 'am' ? 'ንድፎች እና መመሪያዎች' : 'Templates & Guides'}
             />
         </main>
     );

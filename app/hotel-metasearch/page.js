@@ -1,3 +1,5 @@
+'use client';
+
 import BookingEngineHero from '../components/sections/BookingEngineHero';
 import FeatureCards from '../components/sections/FeatureCards';
 import PMSTransform from '../components/sections/PMSTransform';
@@ -6,39 +8,50 @@ import LogoSlideshow from '../components/sections/LogoSlideshow';
 import Testimonials from '../components/sections/Testimonials';
 import GetStarted from '../components/sections/GetStarted';
 import {
-    msHeroContent,
-    msAdvantages,
-    msPositioning,
-    msMarketing,
-    msFaqs
+    msHeroContent as enHero,
+    msAdvantages as enAdvantages,
+    msPositioning as enPositioning,
+    msMarketing as enMarketing,
+    msFaqs as enFaqs
 } from '../lib/metasearchData';
-
-export const metadata = {
-    title: 'Hotel Metasearch Management | weleba',
-    description: 'Establish your hotel on Google Hotel Ads, TripAdvisor, and Trivago. Drive direct bookings with integrated metasearch management and smart bidding.',
-};
+import {
+    msHeroContent as amHero,
+    msAdvantages as amAdvantages,
+    msPositioning as amPositioning,
+    msMarketing as amMarketing,
+    msFaqs as amFaqs
+} from '../lib/metasearchData.am';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function MetasearchPage() {
+    const { locale } = useLanguage();
+
+    const heroContent = locale === 'am' ? amHero : enHero;
+    const advantages = locale === 'am' ? amAdvantages : enAdvantages;
+    const positioning = locale === 'am' ? amPositioning : enPositioning;
+    const marketing = locale === 'am' ? amMarketing : enMarketing;
+    const faqs = locale === 'am' ? amFaqs : enFaqs;
+
     return (
         <main className="bg-white">
-            <BookingEngineHero heroContent={msHeroContent} faqs={msFaqs}>
+            <BookingEngineHero heroContent={heroContent} faqs={faqs}>
                 <LogoSlideshow />
                 <Testimonials />
 
                 <FeatureCards
-                    title={msAdvantages.title}
-                    subtitle={msAdvantages.subtitle}
-                    features={msAdvantages.features}
+                    title={advantages.title}
+                    subtitle={advantages.subtitle}
+                    features={advantages.features}
                 />
 
-                <PMSTransform content={msPositioning} />
+                <PMSTransform content={positioning} />
 
                 <ContentBlock
-                    title={msMarketing.title}
-                    description={msMarketing.description}
-                    image={msMarketing.image}
-                    lists={msMarketing.lists}
-                    imageLeft={msMarketing.imageLeft}
+                    title={marketing.title}
+                    description={marketing.description}
+                    image={marketing.image}
+                    lists={marketing.lists}
+                    imageLeft={marketing.imageLeft}
                 />
                 <GetStarted />
             </BookingEngineHero>

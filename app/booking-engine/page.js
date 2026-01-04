@@ -1,70 +1,89 @@
+'use client';
+
 import BookingEngineHero from '../components/sections/BookingEngineHero';
 import FeatureCards from '../components/sections/FeatureCards';
 import ContentBlock from '../components/sections/ContentBlock';
 import LogoSlideshow from '../components/sections/LogoSlideshow';
 import Testimonials from '../components/sections/Testimonials';
 import GetStarted from '../components/sections/GetStarted';
-import { 
-  beHeroContent, 
-  beBenefits, 
-  bePowerhouse, 
-  beMaximizeDirect, 
-  beBoostRevenue, 
-  beGroupBookings, 
-  beOptimizeStrategy,
-  beFaqs 
+import {
+    beHeroContent as enHero,
+    beBenefits as enBenefits,
+    bePowerhouse as enPowerhouse,
+    beMaximizeDirect as enMaximize,
+    beBoostRevenue as enBoost,
+    beGroupBookings as enGroup,
+    beOptimizeStrategy as enOptimize,
+    beFaqs as enFaqs
 } from '../lib/bookingEngineData';
-
-export const metadata = {
-    title: 'Commission-Free Direct Hotel Booking Engine | weleba',
-    description: 'Create guest-friendly booking pages with clear rate calendars. Customize to match your brand, add upsell options, and sync with your PMS.',
-};
+import {
+    beHeroContent as amHero,
+    beBenefits as amBenefits,
+    bePowerhouse as amPowerhouse,
+    beMaximizeDirect as amMaximize,
+    beBoostRevenue as amBoost,
+    beGroupBookings as amGroup,
+    beOptimizeStrategy as amOptimize,
+    beFaqs as amFaqs
+} from '../lib/bookingEngineData.am';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function BookingEnginePage() {
+    const { locale } = useLanguage();
+
+    const heroContent = locale === 'am' ? amHero : enHero;
+    const benefits = locale === 'am' ? amBenefits : enBenefits;
+    const powerhouse = locale === 'am' ? amPowerhouse : enPowerhouse;
+    const maximize = locale === 'am' ? amMaximize : enMaximize;
+    const boost = locale === 'am' ? amBoost : enBoost;
+    const group = locale === 'am' ? amGroup : enGroup;
+    const optimize = locale === 'am' ? amOptimize : enOptimize;
+    const faqs = locale === 'am' ? amFaqs : enFaqs;
+
     return (
         <main className="bg-white">
-            <BookingEngineHero heroContent={beHeroContent} faqs={beFaqs}>
+            <BookingEngineHero heroContent={heroContent} faqs={faqs}>
                 <LogoSlideshow />
                 <Testimonials />
-                
+
                 <FeatureCards
-                    title={beBenefits.title}
-                    subtitle={beBenefits.subtitle}
-                    features={beBenefits.features}
+                    title={benefits.title}
+                    subtitle={benefits.subtitle}
+                    features={benefits.features}
                 />
 
                 <ContentBlock
-                    title={bePowerhouse.title}
-                    description={bePowerhouse.description}
-                    image={bePowerhouse.image}
-                    lists={bePowerhouse.lists}
-                    imageLeft={bePowerhouse.imageLeft}
+                    title={powerhouse.title}
+                    description={powerhouse.description}
+                    image={powerhouse.image}
+                    lists={powerhouse.lists}
+                    imageLeft={powerhouse.imageLeft}
                 />
 
                 <FeatureCards
-                    title={beMaximizeDirect.title}
-                    subtitle={beMaximizeDirect.subtitle}
-                    features={beMaximizeDirect.features}
+                    title={maximize.title}
+                    subtitle={maximize.subtitle}
+                    features={maximize.features}
                 />
 
                 <FeatureCards
-                    title={beBoostRevenue.title}
-                    subtitle={beBoostRevenue.subtitle}
-                    features={beBoostRevenue.features}
+                    title={boost.title}
+                    subtitle={boost.subtitle}
+                    features={boost.features}
                 />
 
                 <ContentBlock
-                    title={beGroupBookings.title}
-                    description={beGroupBookings.description}
-                    image={beGroupBookings.image}
-                    lists={beGroupBookings.lists}
-                    imageLeft={beGroupBookings.imageLeft}
+                    title={group.title}
+                    description={group.description}
+                    image={group.image}
+                    lists={group.lists}
+                    imageLeft={group.imageLeft}
                 />
 
                 <FeatureCards
-                    title={beOptimizeStrategy.title}
-                    subtitle={beOptimizeStrategy.subtitle}
-                    features={beOptimizeStrategy.features}
+                    title={optimize.title}
+                    subtitle={optimize.subtitle}
+                    features={optimize.features}
                 />
 
                 <GetStarted />
@@ -72,4 +91,3 @@ export default function BookingEnginePage() {
         </main>
     );
 }
-

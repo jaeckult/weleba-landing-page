@@ -1,3 +1,5 @@
+'use client';
+
 import BookingEngineHero from '../components/sections/BookingEngineHero';
 import FeatureCards from '../components/sections/FeatureCards';
 import PMSTransform from '../components/sections/PMSTransform';
@@ -6,39 +8,50 @@ import LogoSlideshow from '../components/sections/LogoSlideshow';
 import Testimonials from '../components/sections/Testimonials';
 import GetStarted from '../components/sections/GetStarted';
 import {
-    gaHeroContent,
-    gaAdvantages,
-    gaFeatures,
-    gaOperations,
-    gaFaqs
+    gaHeroContent as enHero,
+    gaAdvantages as enAdvantages,
+    gaFeatures as enFeatures,
+    gaOperations as enOperations,
+    gaFaqs as enFaqs
 } from '../lib/guestAppData';
-
-export const metadata = {
-    title: 'Hotel Guest Mobile App | weleba',
-    description: 'Put your front desk in your guests pockets. Offer mobile check-in, digital room keys, and on-demand concierge services with our branded hotel app.',
-};
+import {
+    gaHeroContent as amHero,
+    gaAdvantages as amAdvantages,
+    gaFeatures as amFeatures,
+    gaOperations as amOperations,
+    gaFaqs as amFaqs
+} from '../lib/guestAppData.am';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function GuestAppPage() {
+    const { locale } = useLanguage();
+
+    const heroContent = locale === 'am' ? amHero : enHero;
+    const advantages = locale === 'am' ? amAdvantages : enAdvantages;
+    const features = locale === 'am' ? amFeatures : enFeatures;
+    const operations = locale === 'am' ? amOperations : enOperations;
+    const faqs = locale === 'am' ? amFaqs : enFaqs;
+
     return (
         <main className="bg-white">
-            <BookingEngineHero heroContent={gaHeroContent} faqs={gaFaqs}>
+            <BookingEngineHero heroContent={heroContent} faqs={faqs}>
                 <LogoSlideshow />
                 <Testimonials />
 
                 <FeatureCards
-                    title={gaAdvantages.title}
-                    subtitle={gaAdvantages.subtitle}
-                    features={gaAdvantages.features}
+                    title={advantages.title}
+                    subtitle={advantages.subtitle}
+                    features={advantages.features}
                 />
 
-                <PMSTransform content={gaFeatures} />
+                <PMSTransform content={features} />
 
                 <ContentBlock
-                    title={gaOperations.title}
-                    description={gaOperations.description}
-                    image={gaOperations.image}
-                    lists={gaOperations.lists}
-                    imageLeft={gaOperations.imageLeft}
+                    title={operations.title}
+                    description={operations.description}
+                    image={operations.image}
+                    lists={operations.lists}
+                    imageLeft={operations.imageLeft}
                 />
                 <GetStarted />
             </BookingEngineHero>

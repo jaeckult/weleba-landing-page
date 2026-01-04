@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header, Footer } from "./components/layout";
 import { Analytics } from "@vercel/analytics/next"
+import { LanguageProvider } from "./context/LanguageContext";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -26,12 +27,14 @@ export default function RootLayout({ children }) {
         <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.11/dist/dotlottie-wc.js" type="module" async />
       </head>
       <body className={`${inter.variable} antialiased bg-[#F7F6F3]`}>
-        <Header />
-        <div className="max-w-[1320px] mx-auto">
-          {children}
-          <Analytics/>
-          <Footer />
-        </div>
+        <LanguageProvider>
+          <Header />
+          <div className="max-w-[1320px] mx-auto">
+            {children}
+            <Analytics />
+            <Footer />
+          </div>
+        </LanguageProvider>
       </body>
     </html>
   );

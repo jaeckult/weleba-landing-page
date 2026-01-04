@@ -4,8 +4,10 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Search, Calendar, Clock, ArrowRight } from 'lucide-react';
+import { useLanguage } from '../../context/LanguageContext';
 
 const BlogList = ({ posts, categories }) => {
+    const { locale } = useLanguage();
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [searchQuery, setSearchQuery] = useState('');
 
@@ -15,6 +17,27 @@ const BlogList = ({ posts, categories }) => {
             post.excerpt?.toLowerCase().includes(searchQuery.toLowerCase())) ?? false;
         return matchesCategory && matchesSearch;
     });
+
+    const strings = {
+        en: {
+            searchPlaceholder: 'Search articles...',
+            showing: 'Showing',
+            records: filteredPosts.length === 1 ? 'article' : 'articles',
+            readMore: 'Read More',
+            noResults: 'No articles found',
+            noResultsDesc: "Try adjusting your search or filter to find what you're looking for.",
+            clearFilters: 'Clear Filters'
+        },
+        am: {
+            searchPlaceholder: 'ጽሁፎችን ይፈልጉ...',
+            showing: 'የሚታዩት',
+            records: 'ጽሁፎች',
+            readMore: 'ተጨማሪ ያንብቡ',
+            noResults: 'ምንም ጽሁፍ አልተገኘም',
+            noResultsDesc: 'እባክዎን ፍለጋዎን ወይም ምድብዎን በማስተካከል ይሞክሩ።',
+            clearFilters: 'ሁሉንም አሳይ'
+        }
+    }[locale];
 
     return (
         <section className="py-16 px-6 bg-white">
@@ -27,7 +50,7 @@ const BlogList = ({ posts, categories }) => {
                         <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
                         <input
                             type="text"
-                            placeholder="Search articles..."
+                            placeholder={strings.searchPlaceholder}
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
                             className="w-full pl-12 pr-4 py-4 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -54,7 +77,7 @@ const BlogList = ({ posts, categories }) => {
                 {/* Results Count */}
                 <div className="mb-8">
                     <p className="text-gray-600">
-                        Showing <span className="font-semibold text-gray-900">{filteredPosts.length}</span> {filteredPosts.length === 1 ? 'article' : 'articles'}
+                        {strings.showing} <span className="font-semibold text-gray-900">{filteredPosts.length}</span> {strings.records}
                     </p>
                 </div>
 
@@ -112,7 +135,7 @@ const BlogList = ({ posts, categories }) => {
                                     href={`/blog/${post.slug}`}
                                     className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:gap-3 transition-all"
                                 >
-                                    Read More
+                                    {strings.readMore}
                                     <ArrowRight className="w-4 h-4" />
                                 </Link>
                             </div>
@@ -126,8 +149,8 @@ const BlogList = ({ posts, categories }) => {
                         <div className="w-24 h-24 mx-auto mb-6 bg-gray-100 rounded-full flex items-center justify-center">
                             <Search className="w-12 h-12 text-gray-400" />
                         </div>
-                        <h3 className="text-2xl font-serif font-bold text-gray-900 mb-2">No articles found</h3>
-                        <p className="text-gray-600 mb-6">Try adjusting your search or filter to find what you're looking for.</p>
+                        <h3 className="text-2xl font-serif font-bold text-gray-900 mb-2">{strings.noResults}</h3>
+                        <p className="text-gray-600 mb-6">{strings.noResultsDesc}</p>
                         <button
                             onClick={() => {
                                 setSearchQuery('');
@@ -135,7 +158,7 @@ const BlogList = ({ posts, categories }) => {
                             }}
                             className="px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
                         >
-                            Clear Filters
+                            {strings.clearFilters}
                         </button>
                     </div>
                 )}

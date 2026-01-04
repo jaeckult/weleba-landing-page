@@ -1,28 +1,31 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { getStartedContent as enGetStarted } from '../../lib/constants';
+import { getStartedContent as amGetStarted } from '../../lib/constants.am';
+import { useLanguage } from '../../context/LanguageContext';
 
 const GetStarted = () => {
-  const steps = [
-    {
-      number: '01',
-      title: 'Set up a 30-minute call with a weleba expert.',
-      bgColor: 'bg-gray-200',
-      clipPath: 'polygon(0% 0%, 100% 0%, 100% 34.75%, 86.25% 34.75%, 86.25% 63.25%, 86.25% 100%, 0% 100%)',
-    },
-    {
-      number: '02',
-      title: 'See a personalized demo of what weleba can do for you.',
-      bgColor: 'bg-blue-100',
-      clipPath: 'polygon(13.75% 0%, 100% 0%, 100% 34.75%, 86.25% 34.75%, 86.25% 63.25%, 86.25% 100%, 0% 100%, 0% 42.64%, 13.75% 42.64%, 13.75% 15.94%)',
-    },
-    {
-      number: '03',
-      title: 'Get onboarded quickly with support from our experts and start earning revenue.',
-      bgColor: 'bg-blue-200',
-      clipPath: 'polygon(13.75% 0%, 100% 0%, 100% 34.75%, 100% 55%, 100% 69.75%, 100% 100%, 0% 100%, 0% 42.64%, 13.75% 42.64%, 13.75% 15.94%)',
-    },
-  ];
+  const { locale } = useLanguage();
+  const content = locale === 'am' ? amGetStarted : enGetStarted;
+
+  const steps = content.steps.map((step, index) => {
+    const decorations = [
+      {
+        bgColor: 'bg-gray-200',
+        clipPath: 'polygon(0% 0%, 100% 0%, 100% 34.75%, 86.25% 34.75%, 86.25% 63.25%, 86.25% 100%, 0% 100%)',
+      },
+      {
+        bgColor: 'bg-blue-100',
+        clipPath: 'polygon(13.75% 0%, 100% 0%, 100% 34.75%, 86.25% 34.75%, 86.25% 63.25%, 86.25% 100%, 0% 100%, 0% 42.64%, 13.75% 42.64%, 13.75% 15.94%)',
+      },
+      {
+        bgColor: 'bg-blue-200',
+        clipPath: 'polygon(13.75% 0%, 100% 0%, 100% 34.75%, 100% 55%, 100% 69.75%, 100% 100%, 0% 100%, 0% 42.64%, 13.75% 42.64%, 13.75% 15.94%)',
+      },
+    ];
+    return { ...step, ...decorations[index] };
+  });
 
   const [isLargeScreen, setIsLargeScreen] = useState(false);
 
@@ -43,13 +46,13 @@ const GetStarted = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-blue-50 px-4 py-2 rounded-full mb-6">
             <div className="w-2 h-2 bg-blue-600 rounded-full" />
-            <span className="text-sm font-medium text-blue-600">Experience weleba</span>
+            <span className="text-sm font-medium text-blue-600">{content.tag}</span>
           </div>
           <h2
             className="text-4xl md:text-5xl lg:text-6xl text-[#0a1628] leading-tight max-w-4xl mx-auto"
             style={{ fontFamily: 'Recoleta, Georgia, serif' }}
           >
-            Get started with weleba in three easy steps
+            {content.title}
           </h2>
         </div>
 

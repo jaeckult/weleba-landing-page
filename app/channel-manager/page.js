@@ -1,3 +1,5 @@
+'use client';
+
 import BookingEngineHero from '../components/sections/BookingEngineHero';
 import FeatureCards from '../components/sections/FeatureCards';
 import PMSTransform from '../components/sections/PMSTransform';
@@ -6,46 +8,59 @@ import LogoSlideshow from '../components/sections/LogoSlideshow';
 import Testimonials from '../components/sections/Testimonials';
 import GetStarted from '../components/sections/GetStarted';
 import {
-    cmHeroContent,
-    cmAdvantages,
-    cmTakeControl,
-    cmRevenueManagement,
-    cmReliability,
-    cmFaqs
+    cmHeroContent as enHero,
+    cmAdvantages as enAdvantages,
+    cmTakeControl as enTakeControl,
+    cmRevenueManagement as enRevenue,
+    cmReliability as enReliability,
+    cmFaqs as enFaqs
 } from '../lib/channelManagerData';
-
-export const metadata = {
-    title: 'Hotel Channel Manager Software | weleba',
-    description: 'Sync rates, prevent overbookings, and manage inventory across hundreds of OTAs and GDS platforms with no added commissions.',
-};
+import {
+    cmHeroContent as amHero,
+    cmAdvantages as amAdvantages,
+    cmTakeControl as amTakeControl,
+    cmRevenueManagement as amRevenue,
+    cmReliability as amReliability,
+    cmFaqs as amFaqs
+} from '../lib/channelManagerData.am';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function ChannelManagerPage() {
+    const { locale } = useLanguage();
+
+    const heroContent = locale === 'am' ? amHero : enHero;
+    const advantages = locale === 'am' ? amAdvantages : enAdvantages;
+    const takeControl = locale === 'am' ? amTakeControl : enTakeControl;
+    const revenue = locale === 'am' ? amRevenue : enRevenue;
+    const reliability = locale === 'am' ? amReliability : enReliability;
+    const faqs = locale === 'am' ? amFaqs : enFaqs;
+
     return (
         <main className="bg-white">
-            <BookingEngineHero heroContent={cmHeroContent} faqs={cmFaqs}>
+            <BookingEngineHero heroContent={heroContent} faqs={faqs}>
                 <LogoSlideshow />
                 <Testimonials />
 
                 <FeatureCards
-                    title={cmAdvantages.title}
-                    subtitle={cmAdvantages.subtitle}
-                    features={cmAdvantages.features}
+                    title={advantages.title}
+                    subtitle={advantages.subtitle}
+                    features={advantages.features}
                 />
 
-                <PMSTransform content={cmTakeControl} />
+                <PMSTransform content={takeControl} />
 
                 <ContentBlock
-                    title={cmRevenueManagement.title}
-                    description={cmRevenueManagement.description}
-                    image={cmRevenueManagement.image}
-                    lists={cmRevenueManagement.lists}
-                    imageLeft={cmRevenueManagement.imageLeft}
+                    title={revenue.title}
+                    description={revenue.description}
+                    image={revenue.image}
+                    lists={revenue.lists}
+                    imageLeft={revenue.imageLeft}
                 />
 
                 <FeatureCards
-                    title={cmReliability.title}
-                    subtitle={cmReliability.subtitle}
-                    features={cmReliability.features}
+                    title={reliability.title}
+                    subtitle={reliability.subtitle}
+                    features={reliability.features}
                 />
 
                 <GetStarted />

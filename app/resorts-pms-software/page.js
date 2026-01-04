@@ -1,3 +1,5 @@
+'use client';
+
 import BookingEngineHero from '../components/sections/BookingEngineHero';
 import FeatureCards from '../components/sections/FeatureCards';
 import PMSTransform from '../components/sections/PMSTransform';
@@ -6,39 +8,50 @@ import LogoSlideshow from '../components/sections/LogoSlideshow';
 import Testimonials from '../components/sections/Testimonials';
 import GetStarted from '../components/sections/GetStarted';
 import {
-    resortsHeroContent,
-    resortsAdvantages,
-    resortsPlatform,
-    resortsGuestApp,
-    resortsFaqs
+    resortsHeroContent as enHero,
+    resortsAdvantages as enAdvantages,
+    resortsPlatform as enPlatform,
+    resortsGuestApp as enGuest,
+    resortsFaqs as enFaqs
 } from '../lib/resortsData';
-
-export const metadata = {
-    title: 'Resort Property Management Software (PMS) | weleba',
-    description: 'All-in-one resort management software for lodging, activities, and spa. Streamline multi-department operations and enhance guest experiences.',
-};
+import {
+    resortsHeroContent as amHero,
+    resortsAdvantages as amAdvantages,
+    resortsPlatform as amPlatform,
+    resortsGuestApp as amGuest,
+    resortsFaqs as amFaqs
+} from '../lib/resortsData.am';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function ResortsPage() {
+    const { locale } = useLanguage();
+
+    const heroContent = locale === 'am' ? amHero : enHero;
+    const advantages = locale === 'am' ? amAdvantages : enAdvantages;
+    const platform = locale === 'am' ? amPlatform : enPlatform;
+    const guestApp = locale === 'am' ? amGuest : enGuest;
+    const faqs = locale === 'am' ? amFaqs : enFaqs;
+
     return (
         <main className="bg-white">
-            <BookingEngineHero heroContent={resortsHeroContent} faqs={resortsFaqs}>
+            <BookingEngineHero heroContent={heroContent} faqs={faqs}>
                 <LogoSlideshow />
                 <Testimonials />
 
                 <FeatureCards
-                    title={resortsAdvantages.title}
-                    subtitle={resortsAdvantages.subtitle}
-                    features={resortsAdvantages.features}
+                    title={advantages.title}
+                    subtitle={advantages.subtitle}
+                    features={advantages.features}
                 />
 
-                <PMSTransform content={resortsPlatform} />
+                <PMSTransform content={platform} />
 
                 <ContentBlock
-                    title={resortsGuestApp.title}
-                    description={resortsGuestApp.description}
-                    image={resortsGuestApp.image}
-                    lists={resortsGuestApp.lists}
-                    imageLeft={resortsGuestApp.imageLeft}
+                    title={guestApp.title}
+                    description={guestApp.description}
+                    image={guestApp.image}
+                    lists={guestApp.lists}
+                    imageLeft={guestApp.imageLeft}
                 />
                 <GetStarted />
             </BookingEngineHero>

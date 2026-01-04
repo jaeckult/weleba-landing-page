@@ -1,18 +1,28 @@
+'use client';
+
 import NewsHero from './components/NewsHero';
 import NewsList from './components/NewsList';
 import NewsletterSubscribe from './components/NewsletterSubscribe';
-import { newsArticles, newsCategories } from '../lib/newsData';
-
-export const metadata = {
-    title: 'News | weleba - Latest Updates & Announcements',
-    description: 'Stay informed with the latest weleba product updates, company announcements, and hospitality industry news. Get insights that matter to your hotel.',
-};
+import {
+    newsArticles as enArticles,
+    newsCategories as enCategories
+} from '../lib/newsData';
+import {
+    newsArticles as amArticles,
+    newsCategories as amCategories
+} from '../lib/newsData.am';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function NewsPage() {
+    const { locale } = useLanguage();
+
+    const articles = locale === 'am' ? amArticles : enArticles;
+    const categories = locale === 'am' ? amCategories : enCategories;
+
     return (
         <main>
             <NewsHero />
-            <NewsList articles={newsArticles} categories={newsCategories} />
+            <NewsList articles={articles} categories={categories} />
             <NewsletterSubscribe />
         </main>
     );

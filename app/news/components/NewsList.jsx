@@ -4,8 +4,10 @@ import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Calendar, Clock, ArrowRight, Filter } from 'lucide-react';
+import { useLanguage } from '../../context/LanguageContext';
 
 const NewsList = ({ articles, categories }) => {
+    const { locale } = useLanguage();
     const [selectedCategory, setSelectedCategory] = useState('all');
     const [displayCount, setDisplayCount] = useState(6);
 
@@ -20,6 +22,27 @@ const NewsList = ({ articles, categories }) => {
         setDisplayCount(prev => prev + 6);
     };
 
+    const strings = {
+        en: {
+            latestPosts: 'Latest Posts',
+            filterByCategory: 'Filter by category',
+            readMore: 'Read More',
+            loadMore: 'Load More',
+            noArticles: 'No news articles found',
+            tryDifferent: 'Try selecting a different category.',
+            viewAll: 'View All News'
+        },
+        am: {
+            latestPosts: 'የቅርብ ጊዜ ዜናዎች',
+            filterByCategory: 'በምድብ ይለዩ',
+            readMore: 'ተጨማሪ ያንብቡ',
+            loadMore: 'ተጨማሪ አሳይ',
+            noArticles: 'ምንም ዜና አልተገኘም',
+            tryDifferent: 'እባክዎን ሌላ ምድብ ይምረጡ።',
+            viewAll: 'ሁሉንም ዜናዎች አሳይ'
+        }
+    }[locale];
+
     return (
         <section className="py-16 px-6 bg-white">
             <div className="max-w-7xl mx-auto">
@@ -28,11 +51,11 @@ const NewsList = ({ articles, categories }) => {
                 <div className="mb-12">
                     <div className="flex items-center justify-between mb-6">
                         <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900">
-                            Latest Posts
+                            {strings.latestPosts}
                         </h2>
                         <div className="hidden md:flex items-center gap-2 text-gray-600">
                             <Filter className="w-5 h-5" />
-                            <span className="text-sm font-medium">Filter by category</span>
+                            <span className="text-sm font-medium">{strings.filterByCategory}</span>
                         </div>
                     </div>
 
@@ -46,8 +69,8 @@ const NewsList = ({ articles, categories }) => {
                                     setDisplayCount(6); // Reset display count when changing category
                                 }}
                                 className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all ${selectedCategory === category.slug
-                                        ? 'bg-green-600 text-white shadow-md'
-                                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                                    ? 'bg-green-600 text-white shadow-md'
+                                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                                     }`}
                             >
                                 {category.name}
@@ -111,7 +134,7 @@ const NewsList = ({ articles, categories }) => {
                                         href={`/news/${article.slug}`}
                                         className="inline-flex items-center gap-2 text-green-600 font-semibold hover:gap-3 transition-all"
                                     >
-                                        Read More
+                                        {strings.readMore}
                                         <ArrowRight className="w-4 h-4" />
                                     </Link>
                                 </div>
@@ -171,7 +194,7 @@ const NewsList = ({ articles, categories }) => {
                                         href={`/news/${article.slug}`}
                                         className="inline-flex items-center gap-2 text-green-600 font-semibold hover:gap-3 transition-all"
                                     >
-                                        Read More
+                                        {strings.readMore}
                                         <ArrowRight className="w-4 h-4" />
                                     </Link>
                                 </div>
@@ -187,7 +210,7 @@ const NewsList = ({ articles, categories }) => {
                             onClick={loadMore}
                             className="px-8 py-4 bg-gray-900 text-white rounded-xl font-bold hover:bg-gray-800 transition-all hover:scale-105 active:scale-95 shadow-lg"
                         >
-                            Load More
+                            {strings.loadMore}
                         </button>
                     </div>
                 )}
@@ -198,13 +221,13 @@ const NewsList = ({ articles, categories }) => {
                         <div className="w-24 h-24 mx-auto mb-6 bg-gray-100 rounded-full flex items-center justify-center">
                             <Filter className="w-12 h-12 text-gray-400" />
                         </div>
-                        <h3 className="text-2xl font-serif font-bold text-gray-900 mb-2">No news articles found</h3>
-                        <p className="text-gray-600 mb-6">Try selecting a different category.</p>
+                        <h3 className="text-2xl font-serif font-bold text-gray-900 mb-2">{strings.noArticles}</h3>
+                        <p className="text-gray-600 mb-6">{strings.tryDifferent}</p>
                         <button
                             onClick={() => setSelectedCategory('all')}
                             className="px-6 py-3 bg-green-600 text-white rounded-lg font-semibold hover:bg-green-700 transition-colors"
                         >
-                            View All News
+                            {strings.viewAll}
                         </button>
                     </div>
                 )}

@@ -1,20 +1,36 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
+import { useLanguage } from '../../context/LanguageContext';
 
 const RelatedPosts = ({ posts }) => {
+    const { locale } = useLanguage();
+
+    const strings = {
+        en: {
+            title: 'Related Articles',
+            viewAll: 'View All Articles'
+        },
+        am: {
+            title: 'ተዛማጅ ጽሁፎች',
+            viewAll: 'ሁሉንም ጽሁፎች አሳይ'
+        }
+    }[locale];
+
     return (
         <section className="py-16 px-6 bg-gray-50">
             <div className="max-w-7xl mx-auto">
                 <div className="flex items-center justify-between mb-12">
                     <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900">
-                        Related Articles
+                        {strings.title}
                     </h2>
                     <Link
                         href="/blog"
                         className="hidden md:flex items-center gap-2 text-blue-600 font-semibold hover:gap-3 transition-all"
                     >
-                        View All Articles
+                        {strings.viewAll}
                         <ArrowRight className="w-5 h-5" />
                     </Link>
                 </div>
@@ -53,7 +69,7 @@ const RelatedPosts = ({ posts }) => {
                         href="/blog"
                         className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:gap-3 transition-all"
                     >
-                        View All Articles
+                        {strings.viewAll}
                         <ArrowRight className="w-5 h-5" />
                     </Link>
                 </div>

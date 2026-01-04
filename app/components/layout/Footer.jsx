@@ -6,9 +6,16 @@ import {
   Plus, Minus, Shield, Globe, Headphones, ArrowUpRight,
   Linkedin, Youtube, Facebook, Instagram, MapPin
 } from 'lucide-react';
+import { footerContent as enFooterContent, labels as enLabels } from '../../lib/constants';
+import { footerContent as amFooterContent, labels as amLabels } from '../../lib/constants.am';
+import { useLanguage } from '../../context/LanguageContext';
 
 
 const Footer = () => {
+  const { locale } = useLanguage();
+  const footerContent = locale === 'am' ? amFooterContent : enFooterContent;
+  const labels = locale === 'am' ? amLabels : enLabels;
+
   const [openIndex, setOpenIndex] = useState(null);
 
   return (
@@ -32,14 +39,13 @@ const Footer = () => {
 
             <div className="relative z-10 px-12 lg:px-24 py-20 max-w-4xl">
               <h2 className="text-5xl lg:text-[5.5rem] font-serif text-white mb-10 leading-[1.05] tracking-tight">
-                Join Thousands of Hotels Thriving with weleba
+                {footerContent.cta.title}
               </h2>
               <p className="text-white/80 text-lg lg:text-xl mb-12 max-w-xl font-light">
-                See how weleba's unified platform can work for your property.
-                Our team will walk you through features tailored to your specific needs.
+                {footerContent.cta.subtitle}
               </p>
               <Link href="/book-a-demo" className="inline-block bg-white text-[#0066FF] px-12 py-5 rounded-2xl font-bold text-lg hover:bg-blue-50 transition-all hover:scale-105 active:scale-95 shadow-lg">
-                Book a Demo
+                {footerContent.cta.buttonText}
               </Link>
             </div>
 
@@ -47,17 +53,17 @@ const Footer = () => {
             <div className="hidden lg:block absolute right-24 h-full w-1/3">
               <div className="absolute top-[22%] right-0 bg-white/95 backdrop-blur-md px-5 py-3 rounded-xl shadow-2xl flex items-center gap-3 transform hover:translate-y-[-5px] transition-transform">
                 <Shield className="text-blue-600" size={20} />
-                <span className="text-sm font-bold text-[#0a1628]">100% safe & secure</span>
+                <span className="text-sm font-bold text-[#0a1628]">{footerContent.cta.features[0]}</span>
               </div>
 
               <div className="absolute top-[48%] left-[-10%] bg-white/95 backdrop-blur-md px-5 py-3 rounded-xl shadow-2xl flex items-center gap-3 transform hover:translate-y-[-5px] transition-transform">
                 <Globe className="text-blue-600" size={20} />
-                <span className="text-sm font-bold text-[#0a1628]">360° property management</span>
+                <span className="text-sm font-bold text-[#0a1628]">{footerContent.cta.features[1]}</span>
               </div>
 
               <div className="absolute bottom-[22%] right-10 bg-white/95 backdrop-blur-md px-5 py-3 rounded-xl shadow-2xl flex items-center gap-3 transform hover:translate-y-[-5px] transition-transform">
                 <Headphones className="text-blue-600" size={20} />
-                <span className="text-sm font-bold text-[#0a1628]">24/7 support</span>
+                <span className="text-sm font-bold text-[#0a1628]">{footerContent.cta.features[2]}</span>
               </div>
             </div>
           </div>
@@ -89,15 +95,15 @@ const Footer = () => {
                   <span className="text-4xl font-bold tracking-tighter">weleba</span>
                 </div>
 
-                <h4 className="text-xl font-medium mb-5">Subscribe to our newsletter</h4>
+                <h4 className="text-xl font-medium mb-5">{footerContent.subscribe.title}</h4>
                 <div className="flex gap-2 max-w-md bg-white rounded-2xl p-2 mb-10 shadow-xl">
                   <input
                     type="email"
-                    placeholder="Enter email address"
+                    placeholder={footerContent.subscribe.placeholder}
                     className="flex-1 bg-transparent px-5 text-gray-900 outline-none placeholder:text-gray-400 font-medium"
                   />
                   <button className="bg-blue-600 text-white px-8 py-3.5 rounded-xl font-bold hover:bg-blue-700 transition-all hover:shadow-lg active:scale-95">
-                    Subscribe
+                    {footerContent.subscribe.buttonText}
                   </button>
                 </div>
 
@@ -128,50 +134,22 @@ const Footer = () => {
               </div>
 
               {/* Link Columns */}
-              <div className="space-y-8">
-                <div>
-                  <h5 className="font-bold text-gray-500 mb-8 uppercase text-xs tracking-[0.2em]">Operations</h5>
-                  <ul className="space-y-5 text-gray-300 font-medium">
-                    {['Hotel PMS', 'AI Concierge', 'Frontdesk', 'Housekeeping', 'Reservations', 'Reporting'].map(item => (
-                      <li key={item} className="hover:text-blue-400 cursor-pointer transition-colors">{item}</li>
-                    ))}
-                  </ul>
+              {footerContent.sections.map((section) => (
+                <div key={section.title} className="space-y-8">
+                  <div>
+                    <h5 className="font-bold text-gray-500 mb-8 uppercase text-xs tracking-[0.2em]">{section.title}</h5>
+                    <ul className="space-y-5 text-gray-300 font-medium">
+                      {section.links.map((link) => (
+                        <li key={link.text}>
+                          <Link href={link.href} className="hover:text-blue-400 transition-colors">
+                            {link.text}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-              </div>
-
-              <div className="space-y-8">
-                <div>
-                  <h5 className="font-bold text-gray-500 mb-8 uppercase text-xs tracking-[0.2em]">Solutions</h5>
-                  <ul className="space-y-5 text-gray-300 font-medium">
-                    {['Independent Hotels', 'Hotel Groups', 'Bed & Breakfast', 'Parks', 'Resorts', 'Motels'].map(item => (
-                      <li key={item} className="hover:text-blue-400 cursor-pointer transition-colors">{item}</li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-
-              <div className="space-y-8">
-                <div>
-                  <h5 className="font-bold text-gray-500 mb-8 uppercase text-xs tracking-[0.2em]">Resources</h5>
-                  <ul className="space-y-5 text-gray-300 font-medium">
-                    {[
-                      { name: 'Blogs', href: '/blog' },
-                      { name: 'Templates', href: '/templates' },
-                      { name: 'Webinars', href: '/webinar' },
-                      { name: 'Calculators', href: '/calculators' },
-                      { name: 'E-books', href: '/ebooks' },
-                      { name: 'Alternatives', href: '/alternative' },
-                      { name: 'FAQs', href: '/faqs' }
-                    ].map(item => (
-                      <li key={item.name}>
-                        <Link href={item.href} className="hover:text-blue-400 transition-colors">
-                          {item.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+              ))}
             </div>
 
             {/* Location Bar */}
@@ -196,10 +174,10 @@ const Footer = () => {
 
             {/* Copyright Bar */}
             <div className="flex flex-col md:flex-row justify-between items-center gap-8 text-sm text-gray-500 pt-10 border-t border-white/5">
-              <p>© 2026 weleba. All Rights Reserved.</p>
+              <p>© {new Date().getFullYear()} weleba. {labels.common.allRightsReserved}</p>
               <div className="flex gap-10 font-medium">
-                <Link href="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
-                <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
+                <Link href="/privacy" className="hover:text-white transition-colors">{labels.legal.privacyPolicy}</Link>
+                <Link href="/terms" className="hover:text-white transition-colors">{labels.legal.termsOfService}</Link>
               </div>
             </div>
           </div>

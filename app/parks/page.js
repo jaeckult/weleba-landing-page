@@ -1,3 +1,5 @@
+'use client';
+
 import BookingEngineHero from '../components/sections/BookingEngineHero';
 import FeatureCards from '../components/sections/FeatureCards';
 import PMSTransform from '../components/sections/PMSTransform';
@@ -6,39 +8,50 @@ import LogoSlideshow from '../components/sections/LogoSlideshow';
 import Testimonials from '../components/sections/Testimonials';
 import GetStarted from '../components/sections/GetStarted';
 import {
-    parksHeroContent,
-    parksAdvantages,
-    parksPlatform,
-    parksReporting,
-    parksFaqs
+    parksHeroContent as enHero,
+    parksAdvantages as enAdvantages,
+    parksPlatform as enPlatform,
+    parksReporting as enReporting,
+    parksFaqs as enFaqs
 } from '../lib/parksData';
-
-export const metadata = {
-    title: 'Park & Campground Management Software | weleba',
-    description: 'Comprehensive PMS for state and national parks, RV parks, and campgrounds. Manage lodge rooms and tent sites with integrated booking solutions.',
-};
+import {
+    parksHeroContent as amHero,
+    parksAdvantages as amAdvantages,
+    parksPlatform as amPlatform,
+    parksReporting as amReporting,
+    parksFaqs as amFaqs
+} from '../lib/parksData.am';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function ParksPage() {
+    const { locale } = useLanguage();
+
+    const heroContent = locale === 'am' ? amHero : enHero;
+    const advantages = locale === 'am' ? amAdvantages : enAdvantages;
+    const platform = locale === 'am' ? amPlatform : enPlatform;
+    const reporting = locale === 'am' ? amReporting : enReporting;
+    const faqs = locale === 'am' ? amFaqs : enFaqs;
+
     return (
         <main className="bg-white">
-            <BookingEngineHero heroContent={parksHeroContent} faqs={parksFaqs}>
+            <BookingEngineHero heroContent={heroContent} faqs={faqs}>
                 <LogoSlideshow />
                 <Testimonials />
 
                 <FeatureCards
-                    title={parksAdvantages.title}
-                    subtitle={parksAdvantages.subtitle}
-                    features={parksAdvantages.features}
+                    title={advantages.title}
+                    subtitle={advantages.subtitle}
+                    features={advantages.features}
                 />
 
-                <PMSTransform content={parksPlatform} />
+                <PMSTransform content={platform} />
 
                 <ContentBlock
-                    title={parksReporting.title}
-                    description={parksReporting.description}
-                    image={parksReporting.image}
-                    lists={parksReporting.lists}
-                    imageLeft={parksReporting.imageLeft}
+                    title={reporting.title}
+                    description={reporting.description}
+                    image={reporting.image}
+                    lists={reporting.lists}
+                    imageLeft={reporting.imageLeft}
                 />
                 <GetStarted />
             </BookingEngineHero>

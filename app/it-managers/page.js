@@ -1,3 +1,5 @@
+'use client';
+
 import BookingEngineHero from '../components/sections/BookingEngineHero';
 import FeatureCards from '../components/sections/FeatureCards';
 import PMSTransform from '../components/sections/PMSTransform';
@@ -6,39 +8,50 @@ import LogoSlideshow from '../components/sections/LogoSlideshow';
 import Testimonials from '../components/sections/Testimonials';
 import GetStarted from '../components/sections/GetStarted';
 import {
-    itHeroContent,
-    itAdvantages,
-    itPlatform,
-    itIntegrations,
-    itFaqs
+    itHeroContent as enHero,
+    itAdvantages as enAdvantages,
+    itPlatform as enPlatform,
+    itIntegrations as enIntegrations,
+    itFaqs as enFaqs
 } from '../lib/itManagerData';
-
-export const metadata = {
-    title: 'Hospitality Technology Platform for IT Managers | weleba',
-    description: 'Enterprise-grade hotel IT infrastructure. Manage your entire property with a secure, scalable, and API-first platform built for modern hospitality.',
-};
+import {
+    itHeroContent as amHero,
+    itAdvantages as amAdvantages,
+    itPlatform as amPlatform,
+    itIntegrations as amIntegrations,
+    itFaqs as amFaqs
+} from '../lib/itManagerData.am';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function ITManagerPage() {
+    const { locale } = useLanguage();
+
+    const heroContent = locale === 'am' ? amHero : enHero;
+    const advantages = locale === 'am' ? amAdvantages : enAdvantages;
+    const platform = locale === 'am' ? amPlatform : enPlatform;
+    const integrations = locale === 'am' ? amIntegrations : enIntegrations;
+    const faqs = locale === 'am' ? amFaqs : enFaqs;
+
     return (
         <main className="bg-white">
-            <BookingEngineHero heroContent={itHeroContent} faqs={itFaqs}>
+            <BookingEngineHero heroContent={heroContent} faqs={faqs}>
                 <LogoSlideshow />
                 <Testimonials />
 
                 <FeatureCards
-                    title={itAdvantages.title}
-                    subtitle={itAdvantages.subtitle}
-                    features={itAdvantages.features}
+                    title={advantages.title}
+                    subtitle={advantages.subtitle}
+                    features={advantages.features}
                 />
 
-                <PMSTransform content={itPlatform} />
+                <PMSTransform content={platform} />
 
                 <ContentBlock
-                    title={itIntegrations.title}
-                    description={itIntegrations.description}
-                    image={itIntegrations.image}
-                    lists={itIntegrations.lists}
-                    imageLeft={itIntegrations.imageLeft}
+                    title={integrations.title}
+                    description={integrations.description}
+                    image={integrations.image}
+                    lists={integrations.lists}
+                    imageLeft={integrations.imageLeft}
                 />
                 <GetStarted />
             </BookingEngineHero>

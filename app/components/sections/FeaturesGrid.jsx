@@ -7,60 +7,58 @@ import Image from 'next/image';
  * Goal: very close visual replica of the stepped / separated cards UI
  */
 
+import { whyChooseContent as enWhy } from '../../lib/constants';
+import { whyChooseContent as amWhy } from '../../lib/constants.am';
+import { useLanguage } from '../../context/LanguageContext';
+
 export default function FeaturesGrid() {
+  const { locale } = useLanguage();
+  const content = locale === 'am' ? amWhy : enWhy;
+  const { features } = content;
+
   const rows = {
     top: [
       {
-        title: 'Helps Boost Revenue',
-        description:
-          'Our integrated solutions help increase RevPAR by up to 35% with commission-free direct bookings and AI-powered pricing strategies.',
+        ...features[0],
         image: '/image copy 5.png',
-        alt: 'Revenue dashboard showing 35% increase',
+        alt: features[0].title,
       },
       {
-        title: 'Built by Hoteliers for Hoteliers',
-        description:
-          "Building on our 30+ years of providing hospitality software, weleba understands your operational challenges because we've lived them.",
+        ...features[1],
         image: '/image copy 6.png',
-        alt: '30+ years of trust badge',
+        alt: features[1].title,
       },
     ],
     middle: {
-      title: 'All-in-One Platform',
-      description:
-        'Everything you need to run your hotel in one seamless platform; connecting PMS, booking engine, channel manager, and payments.',
+      ...features[2],
       image: '/image copy 7.png',
-      alt: 'Platform integration diagram',
+      alt: features[2].title,
     },
     bottom: [
       {
-        title: 'Easy to Learn',
-        description:
-          'Our system is so easy to use that staff can learn essential functions in hours, not weeks, reducing training time by up to 50%.',
+        ...features[3],
         image: '/image copy 9.png',
-        alt: 'Easy to learn training interface',
+        alt: features[3].title,
       },
       {
-        title: 'Accessible Anywhere, Anytime',
-        description:
-          'Access your property management system securely from anywhere, on any device. All updates and backups happen automatically with 99.95% uptime guaranteed.',
+        ...features[4],
         image: '/image copy 8.png',
-        alt: 'Multi-device accessibility',
+        alt: features[4].title,
       },
     ],
   };
 
   const Card = ({ title, description, image, alt, notchSide }) => (
-    <article 
+    <article
       className="bg-[#E8E6E1] p-8 md:p-10 lg:p-12 flex flex-col justify-between min-h-[500px] relative overflow-visible"
       style={{
-        clipPath: notchSide === 'right' 
+        clipPath: notchSide === 'right'
           ? 'polygon(0 0, 100% 0, 100% 45%, calc(100% - 32px) 45%, calc(100% - 32px) 100%, 0 100%)'
           : notchSide === 'left'
-          ? 'polygon(32px 0, 100% 0, 100% 100%, 0 100%, 0 45%, 32px 45%, 32px 0)'
-          : notchSide === 'both'
-          ? 'polygon(0 0, 50% 0, 50% 32px, 100% 32px, 100% 100%, 0 100%)'
-          : 'none'
+            ? 'polygon(32px 0, 100% 0, 100% 100%, 0 100%, 0 45%, 32px 45%, 32px 0)'
+            : notchSide === 'both'
+              ? 'polygon(0 0, 50% 0, 50% 32px, 100% 32px, 100% 100%, 0 100%)'
+              : 'none'
       }}
     >
 

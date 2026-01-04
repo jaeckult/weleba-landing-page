@@ -144,3 +144,8 @@ export const newsCategories = [
     { name: 'Partnerships', slug: 'Partnerships', count: 1 },
     { name: 'Industry Insights', slug: 'Industry Insights', count: 1 },
 ];
+export const newsHeroContent = {
+    tag: 'News',
+    title: 'Latest<br />News &<br />Updates',
+    description: 'Stay informed with the latest weleba product updates, company announcements, and hospitality industry news.'
+};

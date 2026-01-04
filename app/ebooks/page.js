@@ -1,28 +1,38 @@
+'use client';
+
 import ResourceHero from '../components/sections/ResourceHero';
 import ResourceGrid from '../components/sections/ResourceGrid';
-import { ebooksHeader, ebooksList } from '../lib/resourcesData';
-
-export const metadata = {
-    title: 'Hotel Management E-Books & Guides | weleba Resources',
-    description: 'Download comprehensive guides on hotel revenue management, contactless hospitality, and scaling hotel groups.',
-};
+import {
+    ebooksHeader as enHeader,
+    ebooksList as enList
+} from '../lib/resourcesData';
+import {
+    ebooksHeader as amHeader,
+    ebooksList as amList
+} from '../lib/resourcesData.am';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function EbooksPage() {
-    const categories = [...new Set(ebooksList.map(item => item.category))];
+    const { locale } = useLanguage();
+
+    const header = locale === 'am' ? amHeader : enHeader;
+    const list = locale === 'am' ? amList : enList;
+
+    const categories = [...new Set(list.map(item => item.category))];
 
     return (
         <main className="bg-white">
             <ResourceHero
-                tag={ebooksHeader.tag}
-                title={ebooksHeader.title}
-                description={ebooksHeader.description}
+                tag={header.tag}
+                title={header.title}
+                description={header.description}
             />
 
             <ResourceGrid
-                items={ebooksList}
+                items={list}
                 categories={categories}
                 type="ebook"
-                title="E-Books & Whitepapers"
+                title={locale === 'am' ? 'ኢ-መጽሐፍት እና ጥናቶች' : 'E-Books & Whitepapers'}
             />
         </main>
     );

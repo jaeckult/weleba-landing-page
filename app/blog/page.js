@@ -1,23 +1,28 @@
+'use client';
+
 import BlogHero from './components/BlogHero';
 import BlogList from './components/BlogList';
-import BlogCTA from '../components/sections/BlogCTA';
-import GetStarted from '../components/sections/GetStarted';
 import RelatedPosts from './components/RelatedPosts';
-import { blogCategories } from '../lib/blogData';
-import { getSortedPostsData } from '../lib/posts.js';
-
-export const metadata = {
-    title: 'Blog | weleba - Hotel Management Insights & Tips',
-    description: 'Expert insights, industry trends, and practical tips to help you optimize your hotel operations and maximize revenue.',
-};
+import {
+    blogCategories as enCategories,
+    blogPosts as enPosts
+} from '../lib/blogData';
+import {
+    blogCategories as amCategories,
+    blogPosts as amPosts
+} from '../lib/blogData.am';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function BlogPage() {
-    const posts = getSortedPostsData();
+    const { locale } = useLanguage();
+
+    const posts = locale === 'am' ? amPosts : enPosts;
+    const categories = locale === 'am' ? amCategories : enCategories;
 
     return (
         <main>
             <BlogHero />
-            <BlogList posts={posts} categories={blogCategories} />
+            <BlogList posts={posts} categories={categories} />
             <RelatedPosts posts={posts} />
         </main>
     );

@@ -1,3 +1,5 @@
+'use client';
+
 import Hero from "./components/sections/Hero";
 import LogoSlideshow from "./components/sections/LogoSlideshow";
 import Testimonials from "./components/sections/Testimonials";

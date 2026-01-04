@@ -1,24 +1,23 @@
 import Image from 'next/image';
 
-const AboutHero = () => {
+const AboutHero = ({ content }) => {
     return (
         <section className="bg-[#f5f5f0] pt-32 pb-16 px-6 relative overflow-hidden">
             <div className="max-w-7xl mx-auto relative z-10">
                 {/* Badge */}
                 <div className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full mb-8 shadow-sm">
                     <div className="w-2 h-2 bg-[#0066FF] rounded-full"></div>
-                    <span className="text-sm font-medium text-gray-700">About Us</span>
+                    <span className="text-sm font-medium text-gray-700">{content.tag}</span>
                 </div>
 
                 {/* Title */}
-                <h1 className="text-6xl md:text-7xl lg:text-8xl font-serif text-[#1a1a1a] leading-[1.1] max-w-4xl">
-                    Building the Future<br />
-                    of Hotel<br />
-                    Management
-                </h1>
+                <h1
+                    className="text-6xl md:text-7xl lg:text-8xl font-serif text-[#1a1a1a] leading-[1.1] max-w-4xl"
+                    dangerouslySetInnerHTML={{ __html: content.title }}
+                />
 
                 <p className="mt-8 text-xl text-gray-600 max-w-2xl">
-                    We're revolutionizing how hotels operate, one innovation at a time. Discover our story, our mission, and the team behind weleba.
+                    {content.description}
                 </p>
             </div>
 

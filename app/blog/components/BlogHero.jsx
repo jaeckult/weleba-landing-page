@@ -1,24 +1,41 @@
+'use client';
+
 import Image from 'next/image';
+import { useLanguage } from '../../context/LanguageContext';
 
 const BlogHero = () => {
+    const { locale } = useLanguage();
+
+    const strings = {
+        en: {
+            tag: 'Blog',
+            title: 'weleba<br />Blog & News<br />Updates',
+            description: 'Expert insights, industry trends, and practical tips to help you optimize your hotel operations and maximize revenue.'
+        },
+        am: {
+            tag: 'ብሎግ',
+            title: 'የweleba<br />ብሎግ እና ዜና<br />መረጃዎች',
+            description: 'የሆቴል ስራዎን ለማሻሻል እና ገቢዎን ለማሳደግ የሚረዱ የባለሙያ ግንዛቤዎች፣ የኢንዱስትሪ አዝማሚያዎች እና ተግባራዊ ምክሮች።'
+        }
+    }[locale];
+
     return (
         <section className="bg-[#f5f5f0] pt-32 pb-16 px-6 relative overflow-hidden">
             <div className="max-w-7xl mx-auto relative z-10">
                 {/* Badge */}
                 <div className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full mb-8 shadow-sm">
                     <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    <span className="text-sm font-medium text-gray-700">Blog</span>
+                    <span className="text-sm font-medium text-gray-700">{strings.tag}</span>
                 </div>
 
                 {/* Title */}
-                <h1 className="text-6xl md:text-7xl lg:text-8xl font-serif text-[#1a1a1a] leading-[1.1] max-w-4xl">
-                    weleba<br />
-                    Blog & News<br />
-                    Updates
-                </h1>
+                <h1
+                    className="text-6xl md:text-7xl lg:text-8xl font-serif text-[#1a1a1a] leading-[1.1] max-w-4xl"
+                    dangerouslySetInnerHTML={{ __html: strings.title }}
+                />
 
                 <p className="mt-8 text-xl text-gray-600 max-w-2xl">
-                    Expert insights, industry trends, and practical tips to help you optimize your hotel operations and maximize revenue.
+                    {strings.description}
                 </p>
             </div>
 

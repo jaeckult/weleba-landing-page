@@ -1,3 +1,5 @@
+'use client';
+
 import BookingEngineHero from '../components/sections/BookingEngineHero';
 import FeatureCards from '../components/sections/FeatureCards';
 import PMSTransform from '../components/sections/PMSTransform';
@@ -6,39 +8,50 @@ import LogoSlideshow from '../components/sections/LogoSlideshow';
 import Testimonials from '../components/sections/Testimonials';
 import GetStarted from '../components/sections/GetStarted';
 import {
-    gmHeroContent,
-    gmAdvantages,
-    gmPlatform,
-    gmPerformance,
-    gmFaqs
+    gmHeroContent as enHero,
+    gmAdvantages as enAdvantages,
+    gmPlatform as enPlatform,
+    gmPerformance as enPerformance,
+    gmFaqs as enFaqs
 } from '../lib/generalManagerData';
-
-export const metadata = {
-    title: 'Hotel Management Software for General Managers | weleba',
-    description: 'Streamline hotel operations and gain real-time visibility with weleba. Our all-in-one platform empowers GMs to lead with confidence and drive revenue.',
-};
+import {
+    gmHeroContent as amHero,
+    gmAdvantages as amAdvantages,
+    gmPlatform as amPlatform,
+    gmPerformance as amPerformance,
+    gmFaqs as amFaqs
+} from '../lib/generalManagerData.am';
+import { useLanguage } from '../context/LanguageContext';
 
 export default function GeneralManagerPage() {
+    const { locale } = useLanguage();
+
+    const heroContent = locale === 'am' ? amHero : enHero;
+    const advantages = locale === 'am' ? amAdvantages : enAdvantages;
+    const platform = locale === 'am' ? amPlatform : enPlatform;
+    const performance = locale === 'am' ? amPerformance : enPerformance;
+    const faqs = locale === 'am' ? amFaqs : enFaqs;
+
     return (
         <main className="bg-white">
-            <BookingEngineHero heroContent={gmHeroContent} faqs={gmFaqs}>
+            <BookingEngineHero heroContent={heroContent} faqs={faqs}>
                 <LogoSlideshow />
                 <Testimonials />
 
                 <FeatureCards
-                    title={gmAdvantages.title}
-                    subtitle={gmAdvantages.subtitle}
-                    features={gmAdvantages.features}
+                    title={advantages.title}
+                    subtitle={advantages.subtitle}
+                    features={advantages.features}
                 />
 
-                <PMSTransform content={gmPlatform} />
+                <PMSTransform content={platform} />
 
                 <ContentBlock
-                    title={gmPerformance.title}
-                    description={gmPerformance.description}
-                    image={gmPerformance.image}
-                    lists={gmPerformance.lists}
-                    imageLeft={gmPerformance.imageLeft}
+                    title={performance.title}
+                    description={performance.description}
+                    image={performance.image}
+                    lists={performance.lists}
+                    imageLeft={performance.imageLeft}
                 />
                 <GetStarted />
             </BookingEngineHero>

@@ -3,23 +3,67 @@
 import { useState } from 'react';
 import { CheckCircle2, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
+import { useLanguage } from '../../context/LanguageContext';
 
-const expectations = [
-    'Live, personalized tour of the weleba platform',
-    'Direct answers to your specific operational questions',
-    'Discover revenue growth and ROI potential',
-    'Custom success path mapping for your property'
-];
-
-const logos = [
-    { name: 'NUVO Suites', path: '/HOTELS/image.png' },
-    { name: 'ExplorUS', path: '/HOTELS/image copy.png' },
-    { name: 'Harrison Hall', path: '/HOTELS/image copy 2.png' },
-    { name: 'Seaboard Hotels', path: '/HOTELS/image copy 3.png' }
-];
-
-export default function DemoForm() {
+const DemoForm = () => {
+    const { locale } = useLanguage();
     const [numRooms, setNumRooms] = useState('');
+
+    const logos = [
+        { name: 'NUVO Suites', path: '/HOTELS/image.png' },
+        { name: 'ExplorUS', path: '/HOTELS/image copy.png' },
+        { name: 'Harrison Hall', path: '/HOTELS/image copy 2.png' },
+        { name: 'Seaboard Hotels', path: '/HOTELS/image copy 3.png' }
+    ];
+
+    const strings = {
+        en: {
+            title: 'Experience weleba Live',
+            description: 'See how our unified platform can transform your property operations and guest experience. Our experts will show you exactly what you need.',
+            whatToExpect: 'What to expect:',
+            expectations: [
+                'Live, personalized tour of the weleba platform',
+                'Direct answers to your specific operational questions',
+                'Discover revenue growth and ROI potential',
+                'Custom success path mapping for your property'
+            ],
+            trustedBy: 'Trusted by hoteliers worldwide',
+            personalize: 'Personalize your demo',
+            firstName: 'First Name',
+            lastName: 'Last Name',
+            email: 'Work Email',
+            phone: 'Phone Number',
+            propertyName: 'Property Name',
+            jobTitle: 'Job Title',
+            numRooms: 'Number of Rooms',
+            schedule: 'Schedule Your Demo',
+            privacy: 'By clicking "Schedule Your Demo", you agree to our Terms of Service and Privacy Policy.',
+            jobOptions: ['General Manager', 'Owner', 'IT Manager', 'Revenue Manager', 'Other']
+        },
+        am: {
+            title: 'welebaን በተግባር ይመልከቱ',
+            description: 'የእኛ የተቀናጀ መድረክ የሆቴል ስራዎን እና የእንግዳ ተሞክሮዎን እንዴት እንደሚለውጥ ይመልከቱ። ባለሙያዎቻችን የሚያስፈልግዎትን በትክክል ያሳዩዎታል።',
+            whatToExpect: 'ምን ይጠበቃል፡',
+            expectations: [
+                'የweleba መድረክ ግላዊ የቀጥታ ጉብኝት',
+                'ለእርስዎ ልዩ የስራ ጥያቄዎች ቀጥተኛ ምላሾች',
+                'የገቢ እድገት እና የትርፍ አቅምን ማወቅ',
+                'ለሆቴልዎ የሚስማማ የስኬት መንገድ ማቀድ'
+            ],
+            trustedBy: 'በዓለም ዙሪያ ባሉ የሆቴል ባለሙያዎች የታመነ',
+            personalize: 'ማሳያዎን ለፍላጎትዎ ያዘጋጁ',
+            firstName: 'ስም',
+            lastName: 'የአባት ስም',
+            email: 'የሥራ ኢሜል',
+            phone: 'የስልክ ቁጥር',
+            propertyName: 'የሆቴሉ ስም',
+            jobTitle: 'የሥራ መደብ',
+            numRooms: 'የክፍሎች ብዛት',
+            schedule: 'የማሳያ ጊዜ ያስይዙ',
+            privacy: '"የማሳያ ጊዜ ያስይዙ" የሚለውን በመጫን በአገልግሎት ውላችን እና በግላዊነት ፖሊሲያችን ተስማምተዋል።',
+            jobOptions: ['ጄኔራል ማናጀር', 'ባለቤት', 'የIT ማናጀር', 'የገቢ ማናጀር', 'ሌላ']
+        }
+    }[locale];
 
     return (
         <section className="bg-[#0066FF] min-h-screen pt-40 pb-24 px-6 overflow-hidden relative">
@@ -37,15 +81,15 @@ export default function DemoForm() {
                     {/* Left Side: Content */}
                     <div className="flex-1 text-white lg:pt-12">
                         <h1 className="text-5xl lg:text-7xl font-serif mb-8 leading-tight">
-                            Experience weleba Live
+                            {strings.title}
                         </h1>
                         <p className="text-xl text-blue-100 mb-12 max-w-xl leading-relaxed">
-                            See how our unified platform can transform your property operations and guest experience. Our experts will show you exactly what you need.
+                            {strings.description}
                         </p>
 
                         <div className="space-y-6 mb-16">
-                            <h3 className="text-2xl font-bold mb-4">What to expect:</h3>
-                            {expectations.map((item, idx) => (
+                            <h3 className="text-2xl font-bold mb-4">{strings.whatToExpect}</h3>
+                            {strings.expectations.map((item, idx) => (
                                 <div key={idx} className="flex items-start gap-4">
                                     <div className="mt-1 bg-white/10 rounded-full p-1">
                                         <CheckCircle2 className="w-5 h-5 text-blue-200" />
@@ -56,7 +100,7 @@ export default function DemoForm() {
                         </div>
 
                         <div className="pt-12 border-t border-white/10">
-                            <p className="text-sm font-bold uppercase tracking-widest text-blue-200 mb-8">Trusted by hoteliers worldwide</p>
+                            <p className="text-sm font-bold uppercase tracking-widest text-blue-200 mb-8">{strings.trustedBy}</p>
                             <div className="flex flex-wrap gap-8 items-center opacity-70">
                                 {logos.map((logo, idx) => (
                                     <div key={idx} className="relative h-8 w-32 filter grayscale brightness-200">
@@ -70,49 +114,47 @@ export default function DemoForm() {
                     {/* Right Side: Form */}
                     <div className="flex-1 w-full max-w-2xl">
                         <div className="bg-white rounded-[3rem] p-10 lg:p-14 shadow-2xl">
-                            <h2 className="text-3xl font-serif text-[#0a1628] mb-8">Personalize your demo</h2>
+                            <h2 className="text-3xl font-serif text-[#0a1628] mb-8">{strings.personalize}</h2>
 
                             <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                     <div className="space-y-2">
-                                        <label className="text-sm font-bold text-gray-700">First Name</label>
+                                        <label className="text-sm font-bold text-gray-700">{strings.firstName}</label>
                                         <input type="text" className="w-full px-6 py-4 rounded-xl bg-gray-50 border-none focus:ring-2 focus:ring-blue-500 transition-all text-gray-900" placeholder="Jane" required />
                                     </div>
                                     <div className="space-y-2">
-                                        <label className="text-sm font-bold text-gray-700">Last Name</label>
+                                        <label className="text-sm font-bold text-gray-700">{strings.lastName}</label>
                                         <input type="text" className="w-full px-6 py-4 rounded-xl bg-gray-50 border-none focus:ring-2 focus:ring-blue-500 transition-all text-gray-900" placeholder="Doe" required />
                                     </div>
                                 </div>
 
                                 <div className="space-y-2">
-                                    <label className="text-sm font-bold text-gray-700">Work Email</label>
+                                    <label className="text-sm font-bold text-gray-700">{strings.email}</label>
                                     <input type="email" className="w-full px-6 py-4 rounded-xl bg-gray-50 border-none focus:ring-2 focus:ring-blue-500 transition-all text-gray-900" placeholder="jane@hotel.com" required />
                                 </div>
 
                                 <div className="space-y-2">
-                                    <label className="text-sm font-bold text-gray-700">Phone Number</label>
+                                    <label className="text-sm font-bold text-gray-700">{strings.phone}</label>
                                     <input type="tel" className="w-full px-6 py-4 rounded-xl bg-gray-50 border-none focus:ring-2 focus:ring-blue-500 transition-all text-gray-900" placeholder="+1 (555) 000-0000" required />
                                 </div>
 
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                     <div className="space-y-2">
-                                        <label className="text-sm font-bold text-gray-700">Property Name</label>
+                                        <label className="text-sm font-bold text-gray-700">{strings.propertyName}</label>
                                         <input type="text" className="w-full px-6 py-4 rounded-xl bg-gray-50 border-none focus:ring-2 focus:ring-blue-500 transition-all text-gray-900" placeholder="Grand Hotel" required />
                                     </div>
                                     <div className="space-y-2">
-                                        <label className="text-sm font-bold text-gray-700">Job Title</label>
+                                        <label className="text-sm font-bold text-gray-700">{strings.jobTitle}</label>
                                         <select className="w-full px-6 py-4 rounded-xl bg-gray-50 border-none focus:ring-2 focus:ring-blue-500 transition-all text-gray-900 appearance-none">
-                                            <option>General Manager</option>
-                                            <option>Owner</option>
-                                            <option>IT Manager</option>
-                                            <option>Revenue Manager</option>
-                                            <option>Other</option>
+                                            {strings.jobOptions.map(option => (
+                                                <option key={option}>{option}</option>
+                                            ))}
                                         </select>
                                     </div>
                                 </div>
 
                                 <div className="space-y-4 pt-4">
-                                    <label className="text-sm font-bold text-gray-700">Number of Rooms</label>
+                                    <label className="text-sm font-bold text-gray-700">{strings.numRooms}</label>
                                     <div className="flex flex-wrap gap-3">
                                         {['< 25', '25-50', '51-100', '101-250', '250+'].map((rooms) => (
                                             <button
@@ -120,8 +162,8 @@ export default function DemoForm() {
                                                 type="button"
                                                 onClick={() => setNumRooms(rooms)}
                                                 className={`px-6 py-3 rounded-xl text-sm font-bold border-2 transition-all ${numRooms === rooms
-                                                        ? 'border-blue-600 bg-blue-50 text-blue-600'
-                                                        : 'border-gray-100 text-gray-600 hover:border-blue-200'
+                                                    ? 'border-blue-600 bg-blue-50 text-blue-600'
+                                                    : 'border-gray-100 text-gray-600 hover:border-blue-200'
                                                     }`}
                                             >
                                                 {rooms}
@@ -131,12 +173,12 @@ export default function DemoForm() {
                                 </div>
 
                                 <button type="submit" className="w-full bg-[#0066FF] text-white py-6 rounded-2xl font-bold text-lg hover:bg-blue-700 transition-all shadow-xl shadow-blue-500/20 active:scale-[0.98] flex items-center justify-center gap-3 group mt-8">
-                                    Schedule Your Demo
+                                    {strings.schedule}
                                     <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
                                 </button>
 
                                 <p className="text-center text-xs text-gray-500 mt-6 px-4">
-                                    By clicking "Schedule Your Demo", you agree to our Terms of Service and Privacy Policy.
+                                    {strings.privacy}
                                 </p>
                             </form>
                         </div>
@@ -146,3 +188,5 @@ export default function DemoForm() {
         </section>
     );
 }
+
+export default DemoForm;
