@@ -31,7 +31,6 @@ const DemoForm = () => {
                 'Discover revenue growth and ROI potential',
                 'Custom success path mapping for your property'
             ],
-            trustedBy: 'Trusted by hotels worldwide',
             personalize: 'Personalize your demo',
             firstName: 'First Name',
             lastName: 'Last Name',
