@@ -9,12 +9,7 @@ const DemoForm = () => {
     const { locale } = useLanguage();
     const [numRooms, setNumRooms] = useState('');
 
-    const logos = [
-        { name: 'NUVO Suites', path: '/HOTELS/image.png' },
-        { name: 'ExplorUS', path: '/HOTELS/image copy.png' },
-        { name: 'Harrison Hall', path: '/HOTELS/image copy 2.png' },
-        { name: 'Seaboard Hotels', path: '/HOTELS/image copy 3.png' }
-    ];
+
 
     const strings = {
         en: {
@@ -27,7 +22,6 @@ const DemoForm = () => {
                 'Discover revenue growth and ROI potential',
                 'Custom success path mapping for your property'
             ],
-            trustedBy: 'Trusted by hoteliers worldwide',
             personalize: 'Personalize your demo',
             firstName: 'First Name',
             lastName: 'Last Name',
@@ -101,13 +95,7 @@ const DemoForm = () => {
 
                         <div className="pt-12 border-t border-white/10">
                             <p className="text-sm font-bold uppercase tracking-widest text-blue-200 mb-8">{strings.trustedBy}</p>
-                            <div className="flex flex-wrap gap-8 items-center opacity-70">
-                                {logos.map((logo, idx) => (
-                                    <div key={idx} className="relative h-8 w-32 filter grayscale brightness-200">
-                                        <span className="font-bold text-lg text-white">{logo.name}</span>
-                                    </div>
-                                ))}
-                            </div>
+                            
                         </div>
                     </div>
 
@@ -120,22 +108,22 @@ const DemoForm = () => {
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                     <div className="space-y-2">
                                         <label className="text-sm font-bold text-gray-700">{strings.firstName}</label>
-                                        <input type="text" className="w-full px-6 py-4 rounded-xl bg-gray-50 border-none focus:ring-2 focus:ring-blue-500 transition-all text-gray-900" placeholder="Jane" required />
+                                        <input type="text" className="w-full px-6 py-4 rounded-xl bg-gray-50 border-none focus:ring-2 focus:ring-blue-500 transition-all text-gray-900" placeholder="Abel" required />
                                     </div>
                                     <div className="space-y-2">
                                         <label className="text-sm font-bold text-gray-700">{strings.lastName}</label>
-                                        <input type="text" className="w-full px-6 py-4 rounded-xl bg-gray-50 border-none focus:ring-2 focus:ring-blue-500 transition-all text-gray-900" placeholder="Doe" required />
+                                        <input type="text" className="w-full px-6 py-4 rounded-xl bg-gray-50 border-none focus:ring-2 focus:ring-blue-500 transition-all text-gray-900" placeholder="Habtamu" required />
                                     </div>
                                 </div>
 
                                 <div className="space-y-2">
                                     <label className="text-sm font-bold text-gray-700">{strings.email}</label>
-                                    <input type="email" className="w-full px-6 py-4 rounded-xl bg-gray-50 border-none focus:ring-2 focus:ring-blue-500 transition-all text-gray-900" placeholder="jane@hotel.com" required />
+                                    <input type="email" className="w-full px-6 py-4 rounded-xl bg-gray-50 border-none focus:ring-2 focus:ring-blue-500 transition-all text-gray-900" placeholder="Abel@hotel.com" required />
                                 </div>
 
                                 <div className="space-y-2">
                                     <label className="text-sm font-bold text-gray-700">{strings.phone}</label>
-                                    <input type="tel" className="w-full px-6 py-4 rounded-xl bg-gray-50 border-none focus:ring-2 focus:ring-blue-500 transition-all text-gray-900" placeholder="+1 (555) 000-0000" required />
+                                    <input type="tel" className="w-full px-6 py-4 rounded-xl bg-gray-50 border-none focus:ring-2 focus:ring-blue-500 transition-all text-gray-900" placeholder="+251988054408" required />
                                 </div>
 
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">

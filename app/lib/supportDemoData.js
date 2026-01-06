@@ -9,9 +9,9 @@ export const supportContactMethods = [
         title: 'Immediate Assistance',
         description: 'Available 24/7 for critical operational issues and emergency front desk support.',
         icon: 'Phone',
-        value: '+1 (813) 288-4900',
+        value: '+251929839303',
         action: 'Call Now',
-        href: 'tel:+18132884900',
+        href: 'tel:+251929839303',
         badge: 'Critical Support',
         color: 'bg-red-50',
         textColor: 'text-red-600'
@@ -20,9 +20,9 @@ export const supportContactMethods = [
         title: 'General Support',
         description: 'For feature questions, training, and non-critical technical inquiries. Typical response: 2 hours.',
         icon: 'MessageCircle',
-        value: 'support@weleba.com',
+        value: 'info@weleba.com',
         action: 'Email Us',
-        href: 'mailto:support@weleba.com',
+        href: 'mailto:info@weleba.com',
         color: 'bg-blue-50',
         textColor: 'text-blue-600'
     },
@@ -30,9 +30,9 @@ export const supportContactMethods = [
         title: 'Billing & Account',
         description: 'For subscription updates, billing inquiries, and contract management. Typical response: 1 business day.',
         icon: 'CreditCard',
-        value: 'billing@weleba.com',
+        value: 'info@weleba.com',
         action: 'Email Billing',
-        href: 'mailto:billing@weleba.com',
+        href: 'mailto:info@weleba.com',
         color: 'bg-green-50',
         textColor: 'text-green-600'
     }
@@ -43,7 +43,7 @@ export const supportResources = [
         title: 'Knowledge Base',
         description: 'Access 500+ articles, step-by-step guides, and technical documentation.',
         icon: 'BookOpen',
-        href: '/docs',
+        href: '/knowledge-base',
         cta: 'Browse Articles'
     },
     {

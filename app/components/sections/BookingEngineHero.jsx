@@ -3,6 +3,7 @@
 import { useState, useMemo } from 'react';
 import { Plus, X, ChevronRight } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
+import Link from 'next/link';
 
 const BookingEngineHero = ({ children, heroContent, faqs = [] }) => {
   const { locale } = useLanguage();
@@ -51,9 +52,11 @@ const BookingEngineHero = ({ children, heroContent, faqs = [] }) => {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:bg-blue-700 hover:-translate-y-1 transition-all active:scale-95 flex items-center justify-center gap-2">
-                  {heroContent?.cta || 'Book A Demo'}
-                </button>
+                <Link href="/book-a-demo">
+                  <button className="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:bg-blue-700 hover:-translate-y-1 transition-all active:scale-95 flex items-center justify-center gap-2">
+                    {heroContent?.cta || 'Book A Demo'}
+                  </button>
+                </Link>
               </div>
             </div>
 
@@ -162,10 +165,12 @@ const BookingEngineHero = ({ children, heroContent, faqs = [] }) => {
                       {locale === 'am' ? 'የጥያቄዎን መልስ አላገኙም?' : "Don't see your question answered?"}<br />
                       {locale === 'am' ? 'ቡድናችን ግላዊ መልሶችን እና መመሪያዎችን ሊሰጥዎ ይችላል።' : 'Our team can provide personalized answers and guidance.'}
                     </p>
-                    <button className="bg-white text-[#0a1628] px-10 py-5 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all active:scale-95 flex items-center gap-3">
-                      {locale === 'am' ? 'ያግኙን' : 'Contact Us'}
-                      <ChevronRight size={20} />
-                    </button>
+                    <Link href="/support">
+                      <button className="bg-white text-[#0a1628] px-10 py-5 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all active:scale-95 flex items-center gap-3">
+                        {locale === 'am' ? 'ያግኙን' : 'Contact Us'}
+                        <ChevronRight size={20} />
+                      </button>
+                    </Link>
                     <div className="absolute -bottom-4 right-16 w-10 h-10 bg-[#eeede8] rotate-45 rounded-sm" />
                   </div>
                 </div>
@@ -184,10 +189,12 @@ const BookingEngineHero = ({ children, heroContent, faqs = [] }) => {
           <p className="text-lg text-gray-400 mb-10 max-w-2xl mx-auto">
             {locale === 'am' ? 'ያለ ኮሚሽን ቀጥታ ቦታ ማስያዣዎችን ለመቀበል welebaን የሚጠቀሙ በሺዎች የሚቆጠሩ ሆቴሎችን ይቀላቀሉ' : 'Join thousands of hoteliers using weleba Booking Engine to capture commission-free direct bookings.'}
           </p>
-          <button className="bg-white text-[#0a1628] px-8 py-4 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all active:scale-95 flex items-center gap-3 mx-auto">
-            {locale === 'am' ? 'ማሳያ ያስይዙ' : 'Book A Demo'}
-            <ChevronRight size={20} />
-          </button>
+          <Link href="/book-a-demo">
+            <button className="bg-white text-[#0a1628] px-8 py-4 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all active:scale-95 flex items-center gap-3 mx-auto">
+              {locale === 'am' ? 'ማሳያ ያስይዙ' : 'Book A Demo'}
+              <ChevronRight size={20} />
+            </button>
+          </Link>
         </div>
       </section>
     </div>

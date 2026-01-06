@@ -5,10 +5,11 @@ import { Plus, X } from 'lucide-react';
 import { faqContent as enFaq } from '../../lib/constants';
 import { faqContent as amFaq } from '../../lib/constants.am';
 import { useLanguage } from '../../context/LanguageContext';
+import Link from 'next/link';
 
 const FAQSection = () => {
   const { locale } = useLanguage();
-  const content = locale  === 'am' ? amFaq : enFaq;
+  const content = locale === 'am' ? amFaq : enFaq;
   const [openIndex, setOpenIndex] = useState(null);
   const [activeTab, setActiveTab] = useState(content.categories[0].id);
 
@@ -43,9 +44,11 @@ const FAQSection = () => {
               <p className="text-gray-600 text-base leading-relaxed mb-8">
                 {locale === 'am' ? 'የጥያቄዎን መልስ አላገኙም? ቡድናችን ግላዊ መልሶችን እና መመሪያዎችን ሊሰጥዎ ይችላል።' : "Don't see your question answered? Our team can provide personalized answers and guidance."}
               </p>
-              <button className="bg-white text-[#0a1628] px-8 py-3 rounded-xl font-semibold text-base shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all active:scale-95">
-                {locale === 'am' ? 'ያግኙን' : 'Contact Us'}
-              </button>
+              <Link href="/support">
+                <button className="bg-white text-[#0a1628] px-8 py-3 rounded-xl font-semibold text-base shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all active:scale-95">
+                  {locale === 'am' ? 'ያግኙን' : 'Contact Us'}
+                </button>
+              </Link>
               {/* Decorative Speech Bubble Tip */}
               <div className="absolute -bottom-4 right-20 w-12 h-12 bg-[#eeede8] rotate-45 rounded-sm" />
             </div>

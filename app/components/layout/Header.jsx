@@ -54,7 +54,7 @@ const productIcons = {
   'Hotel Website Builder': Globe,
   'Revenue Management': LineChart,
   'Payments': CreditCard,
-  'AI Concierge': Bot,
+
   'Guest Communication & Engagement': MessageCircle,
   'Hotel Guest App': Smartphone,
 };
@@ -228,7 +228,14 @@ const Header = () => {
           <div className="max-w-[1320px] mx-auto px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
               {/* Logo */}
-              <Link href="/" className="flex items-center gap-2">
+              <Link href="/" className="flex items-center gap-3 mr-12">
+                <Image
+                  src="/canvas.png"
+                  alt="weleba Logo"
+                  width={90}
+                  height={90}
+                  className="object-contain"
+                />
                 <div className="flex items-center">
                   <span className="text-2xl font-bold text-[#0a1628]">weleba</span>
                 </div>

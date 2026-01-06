@@ -82,12 +82,7 @@ export const navigation = {
             },
         ],
         guest: [
-            {
-                title: 'የኤአይ ኮንሲየር',
-                description: 'እያንዳንዱን ጥሪ ወደ ቦታ ማስያዝ እድል ይለውጡ።',
-                href: '/hotel-ai-agent',
-                badge: 'አዲስ',
-            },
+
             {
                 title: 'የእንግዳ ግንኙነት',
                 description: 'በእንግዳው ጉዞ ሁሉ ግላዊ መልዕክቶችን በራስ-ሰር ይላኩ።',
@@ -187,13 +182,7 @@ export const dailyOperationsContent = {
             href: '/property-management',
             icon: 'LayoutDashboard',
         },
-        {
-            title: 'የኤአይ ኮንሲየር',
-            description: 'እያንዳንዱን ጥሪ የሚመልስ እና ጥያቄዎችን ወደ ቦታ ማስያዝ የሚቀይር የኤአይ ወኪል።',
-            href: '/hotel-ai-agent',
-            icon: 'Bot',
-            badge: 'አዲስ',
-        },
+
         {
             title: 'ክፍያዎች',
             description: 'ያለ ምንም ችግር ለእንግዶች ክፍያ የሚፈጽሙበት ደህንነቱ የተጠበቀ ሂደት።',
@@ -349,7 +338,7 @@ export const faqContent = {
                 },
                 {
                     question: 'weleba በኤአይ የሚሰሩ ባህሪያት አሉት?',
-                    answer: 'አዎ፣ weleba ኤአይ ቴክኖሎጂን በብዙ ቦታዎች ይጠቀማል፦ የኤአይ ኮንሲየር የእንግዳ ጥያቄዎችን 24/7 ያስተናግዳል፣ የገቢ መረጃ ደግሞ ዋጋን በራስ-ሰር ያስተካክላል::',
+                    answer: 'አዎ፣ weleba ኤአይ ቴክኖሎጂን በብዙ ቦታዎች ይጠቀማል፦ የገቢ መረጃ ዋጋን በራስ-ሰር ያስተካክላል::',
                 },
             ]
         },
@@ -414,7 +403,7 @@ export const footerContent = {
             title: 'ምርቶች',
             links: [
                 { text: 'የሆቴል PMS', href: '/property-management' },
-                { text: 'የኤአይ ኮንሲየር', href: '/hotel-ai-agent' },
+
                 { text: 'የቦታ ማስያዣ ሞተር', href: '/booking-engine' },
                 { text: 'የቻናል ማኔጀር', href: '/channel-manager' },
                 { text: 'የገቢ መረጃ', href: '/revenue-management' },

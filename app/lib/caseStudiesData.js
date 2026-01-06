@@ -12,7 +12,7 @@ export const caseStudiesPageContent = {
     card: {
         readMore: 'Read Case Study'
     },
-    trustedBy: 'Trusted by thousands worldwide',
+    trustedBy: 'Trusted by hotels worldwide',
     cta: {
         title: 'Ready to write your own success story?',
         subtitle: 'Explore our platform and see how we can help your property thrive.',

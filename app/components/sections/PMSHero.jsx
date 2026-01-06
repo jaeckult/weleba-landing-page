@@ -13,6 +13,7 @@ import {
   pmCtaContent as amCta
 } from '../../lib/propertyManagementData.am';
 import { useLanguage } from '../../context/LanguageContext';
+import Link from 'next/link';
 
 const PMSHero = ({ children }) => {
   const { locale } = useLanguage();
@@ -58,9 +59,11 @@ const PMSHero = ({ children }) => {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:bg-blue-700 hover:-translate-y-1 transition-all active:scale-95 flex items-center justify-center gap-2">
-                  {content.cta.primary.text}
-                </button>
+                <Link href="/book-a-demo">
+                  <button className="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg hover:bg-blue-700 hover:-translate-y-1 transition-all active:scale-95 flex items-center justify-center gap-2">
+                    {content.cta.primary.text}
+                  </button>
+                </Link>
               </div>
 
             </div>
@@ -168,10 +171,12 @@ const PMSHero = ({ children }) => {
                     {locale === 'am' ? 'የጥያቄዎን መልስ አላገኙም?' : "Don't see your question answered?"}<br />
                     {locale === 'am' ? 'ቡድናችን ግላዊ መልሶችን እና መመሪያዎችን ሊሰጥዎ ይችላል።' : 'Our team can provide personalized answers and guidance.'}
                   </p>
-                  <button className="bg-white text-[#0a1628] px-10 py-5 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all active:scale-95 flex items-center gap-3">
-                    {locale === 'am' ? 'ያግኙን' : 'Contact Us'}
-                    <ChevronRight size={20} />
-                  </button>
+                  <Link href="/support">
+                    <button className="bg-white text-[#0a1628] px-10 py-5 rounded-2xl font-bold text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all active:scale-95 flex items-center gap-3">
+                      {locale === 'am' ? 'ያግኙን' : 'Contact Us'}
+                      <ChevronRight size={20} />
+                    </button>
+                  </Link>
                   {/* The "Bubble Tip" decoration - positioned to bottom right corner */}
                   <div className="absolute -bottom-4 right-16 w-10 h-10 bg-[#eeede8] rotate-45 rounded-sm" />
                 </div>
@@ -192,10 +197,12 @@ const PMSHero = ({ children }) => {
           <p className="text-lg text-gray-400 mb-10 max-w-2xl mx-auto">
             {ctaContent.subtitle}
           </p>
-          <button className="bg-white text-[#0a1628] px-8 py-4 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all active:scale-95 flex items-center gap-3 mx-auto">
-            {ctaContent.buttonText}
-            <ChevronRight size={20} />
-          </button>
+          <Link href="/book-a-demo">
+            <button className="bg-white text-[#0a1628] px-8 py-4 rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all active:scale-95 flex items-center gap-3 mx-auto">
+              {ctaContent.buttonText}
+              <ChevronRight size={20} />
+            </button>
+          </Link>
         </div>
       </section>
     </div>

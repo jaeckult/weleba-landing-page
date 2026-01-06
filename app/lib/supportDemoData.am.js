@@ -9,9 +9,9 @@ export const supportContactMethods = [
         title: 'አስቸኳይ እርዳታ',
         description: 'ለአስቸኳይ የስራ ችግሮች እና ለድንገተኛ የፍሮንት ዴስክ ድጋፍ 24/7 ዝግጁ ነን።',
         icon: 'Phone',
-        value: '+1 (813) 288-4900',
+        value: '+251929839303',
         action: 'አሁን ይደውሉ',
-        href: 'tel:+18132884900',
+        href: 'tel:+251929839303',
         badge: 'አስቸኳይ ድጋፍ',
         color: 'bg-red-50',
         textColor: 'text-red-600'
@@ -20,9 +20,9 @@ export const supportContactMethods = [
         title: 'ጠቅላላ ድጋፍ',
         description: 'ስለ ባህሪያት፣ ስልጠና እና አስቸኳይ ላልሆኑ ቴክኒካዊ ጥያቄዎች። መልስ ለመስጠት የምንፈጅበት ጊዜ፡ 2 ሰዓት።',
         icon: 'MessageCircle',
-        value: 'support@weleba.com',
+        value: 'info@weleba.com',
         action: 'ኢሜል ይላኩልን',
-        href: 'mailto:support@weleba.com',
+        href: 'mailto:info@weleba.com',
         color: 'bg-blue-50',
         textColor: 'text-blue-600'
     },
@@ -30,9 +30,9 @@ export const supportContactMethods = [
         title: 'ክፍያ እና አካውንት',
         description: 'ስለ ምዝገባ ማሻሻያ፣ የክፍያ ጥያቄዎች እና ውል አስተዳደር። መልስ ለመስጠት የምንፈጅበት ጊዜ፡ 1 የሥራ ቀን።',
         icon: 'CreditCard',
-        value: 'billing@weleba.com',
+        value: 'info@weleba.com',
         action: 'ለክፍያ ክፍል ይላኩ',
-        href: 'mailto:billing@weleba.com',
+        href: 'mailto:info@weleba.com',
         color: 'bg-green-50',
         textColor: 'text-green-600'
     }
@@ -43,7 +43,7 @@ export const supportResources = [
         title: 'የእውቀት መሰረት (Knowledge Base)',
         description: 'ከ500 በላይ ጽሁፎችን፣ ዝርዝር መመሪያዎችን እና ቴክኒካዊ መረጃዎችን ያግኙ።',
         icon: 'BookOpen',
-        href: '/docs',
+        href: '/knowledge-base',
         cta: 'ጽሁፎችን ይመልከቱ'
     },
     {

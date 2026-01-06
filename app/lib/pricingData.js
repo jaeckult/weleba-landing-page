@@ -17,10 +17,10 @@ export const pricingFormContent = {
         buttonText: 'Send another message'
     },
     fields: {
-        firstName: { label: 'First Name', placeholder: 'John' },
-        lastName: { label: 'Last Name', placeholder: 'Doe' },
-        email: { label: 'Work Email', placeholder: 'john@hotel.com' },
-        property: { label: 'Property Name', placeholder: 'Blue Ocean Resort' },
+        firstName: { label: 'First Name', placeholder: 'Fuad' },
+        lastName: { label: 'Last Name', placeholder: 'Abdu' },
+        email: { label: 'Work Email', placeholder: 'fuad@hotel.com' },
+        property: { label: 'Property Name', placeholder: 'Gambella hotel' },
         rooms: {
             label: 'Number of Rooms',
             placeholder: 'Select range...',

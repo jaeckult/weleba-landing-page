@@ -82,12 +82,7 @@ export const navigation = {
       },
     ],
     guest: [
-      {
-        title: 'AI Concierge',
-        description: 'Turn every call into a booking opportunity.',
-        href: '/hotel-ai-agent',
-        badge: 'New',
-      },
+
       {
         title: 'Guest Communication & Engagement',
         description: 'Automate personalized messaging throughout guest journey.',
@@ -127,7 +122,6 @@ export const navigation = {
   ],
   company: [
     { title: 'About Us', description: 'The hospitality experts behind weleba technology.', href: '/about-us' },
-    { title: 'Careers', description: 'Join our team of hospitality technology experts.', href: '/careers' },
   ],
 };
 
@@ -188,13 +182,7 @@ export const dailyOperationsContent = {
       href: '/property-management',
       icon: 'LayoutDashboard',
     },
-    {
-      title: 'AI Concierge',
-      description: 'AI voice agent that answers every call, handles bookings, and turns inquiries into confirmed reservations.',
-      href: '/hotel-ai-agent',
-      icon: 'Bot',
-      badge: 'New',
-    },
+
     {
       title: 'Payments',
       description: 'Secure, fast payment processing for hassle-free guest transactions.',
@@ -337,7 +325,7 @@ export const faqContent = {
         },
         {
           question: 'Does weleba offer AI-powered features?',
-          answer: 'Yes, weleba incorporates AI technology in multiple areas: our AI Concierge handles guest calls and bookings 24/7, Revenue Intelligence automatically optimizes pricing based on demand patterns, and smart automation reduces manual tasks by up to 80%.',
+          answer: 'Yes, weleba incorporates AI technology in multiple areas: Revenue Intelligence automatically optimizes pricing based on demand patterns, and smart automation reduces manual tasks by up to 80%.',
         },
       ]
     },
@@ -422,7 +410,7 @@ export const footerContent = {
       title: 'Products',
       links: [
         { text: 'Hotel PMS', href: '/property-management' },
-        { text: 'AI Concierge', href: '/hotel-ai-agent' },
+
         { text: 'Booking Engine', href: '/booking-engine' },
         { text: 'Channel Manager', href: '/channel-manager' },
         { text: 'Revenue Intelligence', href: '/revenue-management' },

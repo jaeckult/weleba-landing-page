@@ -14,8 +14,7 @@ const WhyChoose = () => {
   // Map icons to labels
   const iconMap = {
     'PMS': Clipboard,
-    'AI Concierge': Bot,
-    'የኤአይ ኮንሲየር': Bot,
+
     'Payments': CreditCard,
     'ክፍያዎች': CreditCard,
     'Hotel Guest App': Smartphone,

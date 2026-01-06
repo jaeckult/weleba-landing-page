@@ -67,7 +67,7 @@ export default function SupportContent({ contactMethods, resources }) {
                                 Master the weleba platform at your own pace with our comprehensive library of technical guides, video tutorials, and industry best practices.
                             </p>
                             <div className="flex flex-wrap gap-4">
-                                <Link href="/docs" className="px-10 py-5 bg-[#0a1628] text-white rounded-2xl font-bold hover:bg-blue-900 transition-all flex items-center gap-2">
+                                <Link href="/knowledge-base" className="px-10 py-5 bg-[#0a1628] text-white rounded-2xl font-bold hover:bg-blue-900 transition-all flex items-center gap-2">
                                     Go to Knowledge Base
                                     <ExternalLink size={18} />
                                 </Link>

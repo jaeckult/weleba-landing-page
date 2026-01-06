@@ -13,12 +13,11 @@ const LogoSlideshow = ({ showHeader = true }) => {
 
   // Partner/Client logos
   const logos = [
-    { name: 'Partner 1', url: '/image copy 2.png' },
-    { name: 'Partner 2', url: '/image copy 3.png' },
-    { name: 'Partner 3', url: '/image copy 4.png' },
-    { name: 'Partner 4', url: '/image copy 5.png' },
-    { name: 'Partner 5', url: '/image copy 6.png' },
-    { name: 'Partner 6', url: '/image copy 7.png' },
+    { name: 'Sheraton Addis', url: '/logos/sheraton.png' },
+    { name: 'Ethiopian Skylight Hotel', url: '/logos/skylight.png' },
+    { name: 'Hilton Addis Ababa', url: '/logos/hilton.png' },
+    { name: 'Capital Hotel & Spa', url: '/logos/capital.png' },
+    { name: 'Haile Hotels & Resorts', url: '/logos/haile.png' },
   ];
 
   // Duplicate logos for infinite scroll effect

@@ -12,7 +12,7 @@ const PropertyTypes = () => {
   const content = locale === 'am' ? amProps : enProps;
 
   const propertyImages = {
-    'Independent Hotels': '/HOTELS/image.png',
+    'Independent Hotels': '/HOTELS/image copy 5.png',
     'Hotel Groups': '/HOTELS/image copy.png',
     'B & B and Inns': '/HOTELS/image copy 2.png',
     'Parks': '/HOTELS/image copy 3.png',
