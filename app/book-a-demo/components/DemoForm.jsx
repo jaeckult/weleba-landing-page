@@ -12,13 +12,6 @@ const DemoForm = () => {
     const [submitted, setSubmitted] = useState(false);
     const [error, setError] = useState(null);
 
-    const logos = [
-        { name: 'Sheraton Addis', path: '/logos/sheraton.png' },
-        { name: 'Ethiopian Skylight Hotel', path: '/logos/skylight.png' },
-        { name: 'Hilton Addis Ababa', path: '/logos/hilton.png' },
-        { name: 'Capital Hotel & Spa', path: '/logos/capital.png' },
-        { name: 'Haile Hotels & Resorts', path: '/logos/haile.png' },
-    ];
 
     const strings = {
         en: {
@@ -146,18 +139,7 @@ const DemoForm = () => {
 
                         <div className="pt-12 border-t border-white/10">
                             <p className="text-sm font-bold uppercase tracking-widest text-blue-200 mb-8">{strings.trustedBy}</p>
-                            <div className="flex flex-wrap gap-6 items-center">
-                                {logos.map((logo, idx) => (
-                                    <div key={idx} className="relative h-12 w-32 bg-white/10 rounded-lg p-2 hover:bg-white/20 transition-all">
-                                        <Image
-                                            src={logo.path}
-                                            alt={logo.name}
-                                            fill
-                                            className="object-contain"
-                                        />
-                                    </div>
-                                ))}
-                            </div>
+                           
                         </div>
                     </div>
 
