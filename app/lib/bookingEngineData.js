@@ -1,14 +1,14 @@
 export const beHeroContent = {
     tag: 'Booking Engine',
     title: 'Commission-Free Direct Hotel Booking Engine for Hotels',
-    description: 'Hoteliers use roommaster Booking Engine to create guest-friendly booking pages with clear rate calendars for choosing dates and rooms. Customize to match your brand, add upsell options, and sync with your PMS.',
+    description: 'Hoteliers use Weleba Booking Engine to create guest-friendly booking pages with clear rate calendars for choosing dates and rooms. Customize to match your brand, add upsell options, and sync with your PMS.',
     cta: 'Book A Demo',
     videoPoster: '/videos/booking-engine-poster.jpg', // Placeholder
     videoSrc: '/hero-video.mp4', // Placeholder
 };
 
 export const beBenefits = {
-    title: 'Benefits of roommaster Booking Engine',
+    title: 'Benefits of Weleba Booking Engine',
     subtitle: 'Zero Commission Bookings + Fully Branded Experience + PCI-Compliant Payment Processing + Multi-Currency & Multi-Language Support',
     features: [
         {
@@ -23,7 +23,7 @@ export const beBenefits = {
         },
         {
             title: 'PCI-Compliant Payment Processing',
-            description: 'Capture guest credit cards securely with roommaster booking engine, passing details to the PMS for trusted processing.',
+            description: 'Capture guest credit cards securely with Weleba booking engine, passing details to the PMS for trusted processing.',
             icon: 'ShieldCheck',
         },
         {
@@ -100,12 +100,12 @@ export const beOptimizeStrategy = {
     features: [
         {
             title: 'Advanced Rate Checker',
-            description: 'Use roommaster’s AI-driven technology to display competitive rates in real time, keeping guests on your site.',
+            description: 'Use Weleba’s AI-driven technology to display competitive rates in real time, keeping guests on your site.',
             icon: 'BarChart',
         },
         {
             title: 'Competitor Price Tracking',
-            description: 'Monitor rival pricing and market trends with roommaster’s insights, empowering smarter rate adjustments.',
+            description: 'Monitor rival pricing and market trends with Weleba’s insights, empowering smarter rate adjustments.',
             icon: 'LineChart',
         },
         {
@@ -124,7 +124,7 @@ export const beOptimizeStrategy = {
 export const beFaqs = [
     {
         category: 'General',
-        question: 'How does roommaster booking engine increase direct bookings?',
+        question: 'How does Weleba booking engine increase direct bookings?',
         answer: 'Our intuitive calendar and streamlined checkout process were designed based on extensive user research. Features like "popular choice" indicators can lift conversion by up to 15%, while our mobile-first design ensures seamless booking across all devices.',
     },
     {
@@ -155,11 +155,11 @@ export const beFaqs = [
     {
         category: 'Selection',
         question: 'How do I choose the best hotel booking engine?',
-        answer: 'Look for commission-free pricing, seamless PMS integration, customization options, mobile responsiveness, secure payments, and robust support. roommaster excels in all these areas.',
+        answer: 'Look for commission-free pricing, seamless PMS integration, customization options, mobile responsiveness, secure payments, and robust support. Weleba excels in all these areas.',
     },
     {
         category: 'Selection',
         question: 'What is the best booking engine for an independent hotel?',
-        answer: 'roommaster is ideal for independent hotels, offering commission-free bookings, full customization, and dedicated support tailored to smaller properties.',
+        answer: 'Weleba is ideal for independent hotels, offering commission-free bookings, full customization, and dedicated support tailored to smaller properties.',
     },
 ];

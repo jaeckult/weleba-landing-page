@@ -175,20 +175,20 @@ const Footer = () => {
                   </div>
                 </Link>
 
-                <h4 className="text-xl font-medium mb-5">{footerContent.subscribe.title}</h4>
-                <form className="flex gap-2 max-w-md bg-white rounded-2xl p-2 mb-10 shadow-xl" onSubmit={handleSubscribe}>
+                <h4 className="text-lg sm:text-xl font-medium mb-4 sm:mb-5">{footerContent.subscribe.title}</h4>
+                <form className="flex flex-col sm:flex-row gap-2 max-w-md bg-white rounded-xl sm:rounded-2xl p-2 mb-6 sm:mb-10 shadow-xl" onSubmit={handleSubscribe}>
                   <input
                     type="email"
                     placeholder={footerContent.subscribe.placeholder}
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="flex-1 bg-transparent px-5 text-gray-900 outline-none placeholder:text-gray-400 font-medium"
+                    className="flex-1 bg-transparent px-4 sm:px-5 py-3 sm:py-0 text-gray-900 outline-none placeholder:text-gray-400 font-medium text-sm sm:text-base"
                     required
                   />
                   <button
                     type="submit"
                     disabled={status === 'loading'}
-                    className="bg-blue-600 text-white px-8 py-3.5 rounded-xl font-bold hover:bg-blue-700 transition-all hover:shadow-lg active:scale-95 disabled:opacity-70 disabled:cursor-not-allowed"
+                    className="bg-blue-600 text-white px-6 sm:px-8 py-3 sm:py-3.5 rounded-lg sm:rounded-xl font-bold text-sm sm:text-base hover:bg-blue-700 transition-all hover:shadow-lg active:scale-95 disabled:opacity-70 disabled:cursor-not-allowed whitespace-nowrap"
                   >
                     {status === 'loading' ? '...' : footerContent.subscribe.buttonText}
                   </button>

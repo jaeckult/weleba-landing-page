@@ -18,6 +18,11 @@ const LogoSlideshow = ({ showHeader = true }) => {
     { name: 'Hilton Addis Ababa', url: '/logos/hilton.png' },
     { name: 'Capital Hotel & Spa', url: '/logos/capital.png' },
     { name: 'Haile Hotels & Resorts', url: '/logos/haile.png' },
+    { name: 'Sheraton Addis', url: '/logos/sheraton.png' },
+    { name: 'Ethiopian Skylight Hotel', url: '/logos/skylight.png' },
+    { name: 'Hilton Addis Ababa', url: '/logos/hilton.png' },
+    { name: 'Capital Hotel & Spa', url: '/logos/capital.png' },
+    { name: 'Haile Hotels & Resorts', url: '/logos/haile.png' },
   ];
 
   // Duplicate logos for infinite scroll effect

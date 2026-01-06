@@ -1,14 +1,14 @@
 export const beHeroContent = {
     tag: 'የቦታ ማስያዣ ሞተር (Booking Engine)',
     title: 'ለሆቴሎች ያለ ኮሚሽን ቀጥታ የቦታ ማስያዣ ሞተር',
-    description: 'የሆቴል ባለቤቶች የቀን መቁጠሪያዎችን፣ ክፍሎችን እና ቀናትን በመምረጥ ለእንግዶች ምቹ የሆኑ የቦታ ማስያዣ ገጾችን ለመፍጠር የroommaster የቦታ ማስያዣ ሞተርን ይጠቀማሉ። ከሆቴልዎ የንግድ ምልክት ጋር ያስማሙት፣ ተጨማሪ ሽያጮችን ይጨምሩ እና ከእርስዎ PMS ጋር ያገናኙት።',
+    description: 'የሆቴል ባለቤቶች የቀን መቁጠሪያዎችን፣ ክፍሎችን እና ቀናትን በመምረጥ ለእንግዶች ምቹ የሆኑ የቦታ ማስያዣ ገጾችን ለመፍጠር  የቦታ ማስያዣ ሞተርን ይጠቀማሉ። ከሆቴልዎ የንግድ ምልክት ጋር ያስማሙት፣ ተጨማሪ ሽያጮችን ይጨምሩ እና ከእርስዎ PMS ጋር ያገናኙት።',
     cta: 'ማሳያ ያስይዙ',
     videoPoster: '/videos/booking-engine-poster.jpg', // Placeholder
     videoSrc: '/hero-video.mp4', // Placeholder
 };
 
 export const beBenefits = {
-    title: 'የroommaster የቦታ ማስያዣ ሞተር ጥቅሞች',
+    title: 'የቦታ ማስያዣ ሞተር ጥቅሞች',
     subtitle: 'ዜሮ ኮሚሽን + ሙሉ በሙሉ በሆቴልዎ ስም የተዘጋጀ + ደህንነቱ የተጠበቀ ክፍያ + ባለብዙ ምንዛሪ እና ባለብዙ ቋንቋ ድጋፍ',
     features: [
         {
@@ -124,7 +124,7 @@ export const beOptimizeStrategy = {
 export const beFaqs = [
     {
         category: 'ጠቅላላ',
-        question: 'የroommaster የቦታ ማስያዣ ሞተር ቀጥታ ቦታ ማስያዣዎችን እንዴት ይጨምራል?',
+        question: 'የቦታ ማስያዣ ሞተር ቀጥታ ቦታ ማስያዣዎችን እንዴት ይጨምራል?',
         answer: 'የእኛ ቀላል የቀን መቁጠሪያ እና ፈጣን የክፍያ ሂደት የተመሰረተው በብዙ ተጠቃሚዎች ጥናት ላይ ነው። እንደ "ታዋቂ ምርጫ" ያሉ ምልክቶች የተጠቃሚዎችን ቁጥር እስከ 15% ሊያሳድጉ ይችላሉ።',
     },
     {

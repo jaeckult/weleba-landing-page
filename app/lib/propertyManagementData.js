@@ -1,9 +1,9 @@
 export const pmHeroContent = {
     announcement: {
-        text: 'Hospitality Management Simplified',
+        text: '',
         href: '#',
     },
-    title: 'roommaster’s cloud PMS makes operations effortless, guests happy, and revenue soar.',
+    title: 'Weleba cloud PMS makes operations effortless, guests happy, and revenue soar.',
     subtitle: 'Powerful, intuitive, and reliable. The property management system used by over 3,000 hotels worldwide to streamline operations and drive growth.',
     cta: {
         primary: { text: 'Book A Demo', href: '/book-a-demo' },
