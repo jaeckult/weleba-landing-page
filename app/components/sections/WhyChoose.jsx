@@ -34,27 +34,27 @@ const WhyChoose = () => {
   const currentFeature = features.find(f => f.id === activeFeature) || features[0];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-gray-50">
-      <div className="container mx-auto px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+    <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-white to-gray-50">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center max-w-7xl mx-auto">
 
           {/* Left Side - Content */}
           <div>
-            <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-sm font-medium mb-6">
-              <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+            <div className="inline-flex items-center gap-2 bg-blue-50 text-blue-600 px-2.5 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium mb-4 sm:mb-6">
+              <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-600 rounded-full"></div>
               {currentFeature.tag}
             </div>
 
-            <h2 className="text-4xl lg:text-5xl font-bold text-[#0a1628] mb-4">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-[#0a1628] mb-3 sm:mb-4">
               {content.title}
             </h2>
 
-            <p className="text-gray-600 text-lg mb-8">
+            <p className="text-gray-600 text-sm sm:text-base lg:text-lg mb-6 sm:mb-8">
               {content.subtitle}
             </p>
 
             {/* Feature Cards */}
-            <div className="space-y-3">
+            <div className="space-y-2 sm:space-y-3">
               {features.map((feature) => {
                 const Icon = feature.icon;
                 const isActive = activeFeature === feature.id;
@@ -63,37 +63,37 @@ const WhyChoose = () => {
                   <button
                     key={feature.id}
                     onClick={() => setActiveFeature(feature.id)}
-                    className={`w-full text-left p-5 rounded-2xl transition-all duration-300 ${isActive
+                    className={`w-full text-left p-3 sm:p-4 lg:p-5 rounded-xl sm:rounded-2xl transition-all duration-300 ${isActive
                       ? 'bg-[#0066FF] text-white shadow-xl scale-[1.02]'
                       : 'bg-white hover:bg-gray-50 text-gray-800 border border-gray-200 hover:border-gray-300'
                       }`}
                   >
-                    <div className="flex items-center gap-4">
-                      <div className={`p-3 rounded-xl ${isActive ? 'bg-white/20' : 'bg-blue-50'
+                    <div className="flex items-center gap-3 sm:gap-4">
+                      <div className={`p-2 sm:p-3 rounded-lg sm:rounded-xl ${isActive ? 'bg-white/20' : 'bg-blue-50'
                         }`}>
-                        <Icon className={`w-6 h-6 ${isActive ? 'text-white' : 'text-[#0066FF]'
+                        <Icon className={`w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 ${isActive ? 'text-white' : 'text-[#0066FF]'
                           }`} />
                       </div>
-                      <div className="flex-1">
-                        <h3 className={`text-lg font-semibold mb-1 ${isActive ? 'text-white' : 'text-[#0a1628]'
+                      <div className="flex-1 min-w-0">
+                        <h3 className={`text-sm sm:text-base lg:text-lg font-semibold mb-0.5 sm:mb-1 ${isActive ? 'text-white' : 'text-[#0a1628]'
                           }`}>
                           {feature.title}
                         </h3>
                         {isActive && (
-                          <p className="text-sm text-white/90">
+                          <p className="text-xs sm:text-sm text-white/90 line-clamp-2">
                             {feature.description}
                           </p>
                         )}
                       </div>
                       {isActive && (
-                        <div className="flex items-center gap-2">
-                          <span className="text-sm font-medium">{locale === 'am' ? 'ተጨማሪ ዕወቅ' : 'Learn More'}</span>
-                          <ArrowRight className="w-4 h-4" />
+                        <div className="hidden sm:flex items-center gap-2 flex-shrink-0">
+                          <span className="text-xs sm:text-sm font-medium">{locale === 'am' ? 'ተጨማሪ ዕወቅ' : 'Learn More'}</span>
+                          <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
                         </div>
                       )}
                       {isActive && (
-                        <div className="w-6 h-6 rounded-full border-2 border-white flex items-center justify-center">
-                          <div className="w-3 h-3 bg-white rounded-full"></div>
+                        <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full border-2 border-white flex items-center justify-center flex-shrink-0">
+                          <div className="w-2 h-2 sm:w-3 sm:h-3 bg-white rounded-full"></div>
                         </div>
                       )}
                     </div>
@@ -105,8 +105,8 @@ const WhyChoose = () => {
 
           {/* Right Side - Image Display */}
           <div className="relative">
-            <div className="bg-gradient-to-br from-blue-100 to-blue-200 rounded-3xl p-8 lg:p-12 shadow-2xl">
-              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-white shadow-xl">
+            <div className="bg-gradient-to-br from-blue-100 to-blue-200 rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 xl:p-12 shadow-2xl">
+              <div className="relative aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden bg-white shadow-xl">
                 <Image
                   src={currentFeature.image}
                   alt={currentFeature.title}
@@ -118,8 +118,8 @@ const WhyChoose = () => {
             </div>
 
             {/* Decorative Elements */}
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-blue-500/10 rounded-full blur-2xl"></div>
-            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-teal-500/10 rounded-full blur-2xl"></div>
+            <div className="absolute -top-4 -right-4 w-16 sm:w-24 h-16 sm:h-24 bg-blue-500/10 rounded-full blur-2xl"></div>
+            <div className="absolute -bottom-4 -left-4 w-20 sm:w-32 h-20 sm:h-32 bg-teal-500/10 rounded-full blur-2xl"></div>
           </div>
 
         </div>
