@@ -27,10 +27,10 @@ export default function RootLayout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
         <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.11/dist/dotlottie-wc.js" type="module" async />
       </head>
-      <body className={`${inter.variable} antialiased bg-[#F7F6F3]`}>
+      <body className={`${inter.variable} antialiased bg-[#F7F6F3] overflow-x-hidden`}>
         <LanguageProvider>
           <Header />
-          <div className="max-w-[1320px] mx-auto">
+          <div className="max-w-[1320px] mx-auto overflow-x-hidden">
             {children}
             <Analytics />
             <Footer />

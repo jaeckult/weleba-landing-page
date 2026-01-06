@@ -47,6 +47,7 @@
 html {
   overflow-x: hidden;
   width: 100%;
+  max-width: 100vw;
 }
 
 body {
@@ -57,7 +58,25 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   width: 100%;
+  max-width: 100vw;
   min-height: 100vh;
+  position: relative;
+}
+
+/* Prevent horizontal overflow from any element */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Ensure all sections and containers respect viewport width */
+section,
+main,
+article,
+aside,
+div {
+  max-width: 100vw;
 }
 
 h1,
