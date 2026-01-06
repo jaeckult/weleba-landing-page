@@ -13,6 +13,12 @@ export const labels = {
             guest: 'እንግዳ',
             byProperty: 'በንብረት ዓይነት',
             byRole: 'በስራ ድርሻ',
+            resourceType: 'የግብዓት ዓይነት',
+            featuredArticles: 'ተለይተው የቀረቡ ጽሑፎች',
+            marketingDistribution: 'ግብይት እና ስርጭት',
+            revenueFinance: 'ገቢ እና ፋይናንስ',
+            guestExperience: 'የእንግዳ ተሞክሮ',
+            featured: 'ተለይቶ የቀረበ',
         }
     },
     blog: {
@@ -24,10 +30,12 @@ export const labels = {
         getStarted: 'ይጀምሩ',
         getFreeDemo: 'የነጻ ማሳያ ያግኙ',
         subscribe: 'ይመዝገቡ',
+        readAllStories: 'ሁሉንም ታሪኮች ያንብቡ',
     },
     common: {
         allRightsReserved: 'መብቱ በህግ የተጠበቀ ነው።',
         trustText: 'በዓለም ዙሪያ በሚገኙ ታዋቂ ሆቴሎች የታመነ',
+        customerStory: 'የደንበኛ ታሪክ',
     },
     legal: {
         privacyPolicy: 'የግላዊነት ፖሊሲ',

@@ -13,6 +13,12 @@ export const labels = {
       guest: 'Guest',
       byProperty: 'By Property Type',
       byRole: 'By Role',
+      resourceType: 'Resource Type',
+      featuredArticles: 'Featured Articles',
+      marketingDistribution: 'Marketing & Distribution',
+      revenueFinance: 'Revenue & Finance',
+      guestExperience: 'Guest Experience',
+      featured: 'Featured',
     }
   },
   blog: {
@@ -24,10 +30,12 @@ export const labels = {
     getStarted: 'Get Started',
     getFreeDemo: 'Get A Free Demo',
     subscribe: 'Subscribe',
+    readAllStories: 'Read All Stories',
   },
   common: {
     allRightsReserved: 'All Rights Reserved.',
     trustText: 'Trusted by leading hotels worldwide',
+    customerStory: 'Customer Story',
   },
   legal: {
     privacyPolicy: 'Privacy Policy',

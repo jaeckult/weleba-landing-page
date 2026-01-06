@@ -244,9 +244,6 @@ const Footer = () => {
             <div className="py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 text-sm text-gray-400">
               {[
                 { loc: "Bole Road, Demble", country: "Addis Ababa" },
-                { loc: "19321 US Hwy 19 N, Suite 407, FL, 33764", country: "United States" },
-                { loc: "7405 Rte Transcanadienne, QC, H4T 1Z2", country: "Canada" },
-                { loc: "20-22 Wenlock Road, London, N1 7GU", country: "UK" }
               ].map((item, i) => (
                 <div key={i} className="flex gap-4 group">
                   <div className="w-10 h-10 shrink-0 rounded-xl bg-white/5 flex items-center justify-center text-blue-500 group-hover:bg-blue-600 group-hover:text-white transition-all">

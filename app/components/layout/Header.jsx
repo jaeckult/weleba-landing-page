@@ -306,7 +306,7 @@ const Header = () => {
 
                             {/* Marketing & Distribution */}
                             <div>
-                              <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-6">Marketing & Distribution</h4>
+                              <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-6">{labels.navigation.categories.marketingDistribution}</h4>
                               <div className="space-y-1">
                                 {navigation.products.marketing.map((product) => {
                                   const Icon = productIcons[product.title] || Calendar;
@@ -339,7 +339,7 @@ const Header = () => {
 
                             {/* Revenue & Finance */}
                             <div>
-                              <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-6">Revenue & Finance</h4>
+                              <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-6">{labels.navigation.categories.revenueFinance}</h4>
                               <div className="space-y-1">
                                 {navigation.products.revenue.map((product) => {
                                   const Icon = productIcons[product.title] || LineChart;
@@ -372,7 +372,7 @@ const Header = () => {
 
                             {/* Guest Experience */}
                             <div>
-                              <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-6">Guest Experience</h4>
+                              <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-6">{labels.navigation.categories.guestExperience}</h4>
                               <div className="space-y-1">
                                 {navigation.products.guest.map((product) => {
                                   const Icon = productIcons[product.title] || Bot;
@@ -509,7 +509,7 @@ const Header = () => {
 
                             {/* Featured Card */}
                             <div>
-                              <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-6">Featured</h4>
+                              <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-6">{labels.navigation.categories.featured}</h4>
                               <div className="bg-gray-50 rounded-2xl overflow-hidden group/card relative shadow-sm border border-gray-100">
                                 <div className="aspect-[4/3] relative overflow-hidden">
                                   <Image
@@ -520,7 +520,7 @@ const Header = () => {
                                   />
                                   <div className="absolute top-4 left-4">
                                     <div className="px-3 py-1 bg-blue-100 text-[#0066FF] text-[10px] font-bold rounded-full uppercase tracking-wider backdrop-blur-md">
-                                      Customer Story
+                                      {labels.common.customerStory}
                                     </div>
                                   </div>
                                 </div>
@@ -533,7 +533,7 @@ const Header = () => {
                                     onClick={closeMenus}
                                     className="text-[#0066FF] text-sm font-bold flex items-center gap-2 group/btn"
                                   >
-                                    Read All Stories
+                                    {labels.buttons.readAllStories}
                                     <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
                                   </Link>
                                 </div>
@@ -555,7 +555,7 @@ const Header = () => {
                   <button
                     className="flex items-center gap-1 px-4 py-2 text-gray-700 hover:text-[#0a1628] font-medium transition-colors whitespace-nowrap"
                   >
-                    Resources
+                    {labels.navigation.resources}
                     <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'resources' ? 'rotate-180' : ''}`} />
                   </button>
 
@@ -573,7 +573,7 @@ const Header = () => {
                           <div className="grid grid-cols-2 gap-12">
                             {/* Resource Type */}
                             <div>
-                              <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-6">Resource Type</h4>
+                              <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-6">{labels.navigation.categories.resourceType}</h4>
                               <div className="grid grid-cols-2 gap-2">
                                 {navigation.resources.map((item) => {
                                   const iconMap = {
@@ -608,7 +608,7 @@ const Header = () => {
 
                             {/* Featured Articles */}
                             <div>
-                              <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-6">Featured Articles</h4>
+                              <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-6">{labels.navigation.categories.featuredArticles}</h4>
                               <div className="space-y-6">
                                 {/* Article 1 */}
                                 <Link
@@ -694,7 +694,7 @@ const Header = () => {
                         style={{ width: 'min(320px, 95vw)' }}
                       >
                         <div className="bg-white rounded-2xl shadow-2xl border border-gray-100 p-6">
-                          <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-5">Company</h4>
+                          <h4 className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-5">{labels.navigation.company}</h4>
                           <div className="space-y-2">
                             {navigation.company.map((item) => (
                               <Link
