@@ -4,6 +4,30 @@ export const supportHero = {
     description: 'የእኛ የመስተንግዶ ባለሙያዎች ቴክኖሎጂዎ ያለችግር መሥራቱን ያረጋግጣሉ፤ በዚህም እርስዎ በእንግዶችዎ ላይ ማተኮር ይችላሉ። የሚያስፈልግዎትን እርዳታ በሚፈልጉበት ጊዜ ያግኙ።'
 };
 
+export const webinars = [
+    {
+        title: 'የገቢ አስተዳደር መሰረታዊ',
+        date: 'መጋቢት 15, 2016',
+        description: 'የሆቴል ገቢ አስተዳደር መሰረታዊ ነገሮችን ይማሩ።',
+        image: '/images/webinars/revenue-management.png',
+        link: '/knowledge-base'
+    },
+    {
+        title: 'የእንግዳ ተሞክሮን ማሻሻል',
+        date: 'መጋቢት 22, 2016',
+        description: 'የእንግዳ እርካታ ውጤቶችን ለማሻሻል ስልቶች።',
+        image: '/images/webinars/guest-experience.png',
+        link: '/knowledge-base'
+    },
+    {
+        title: 'የሆቴል ስራዎች ማሻሻል',
+        date: 'መጋቢት 29, 2016',
+        description: 'ለዕለታዊ ስራዎችዎ ቅልጥፍናን ያሻሽሉ።',
+        image: '/images/webinars/operations.png',
+        link: '/knowledge-base'
+    }
+];
+
 export const supportContactMethods = [
     {
         title: 'አስቸኳይ እርዳታ',

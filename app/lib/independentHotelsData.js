@@ -69,7 +69,7 @@ export const ihPlatform = {
 export const ihGuestExperience = {
     title: 'Personalized Guest Experience',
     description: 'Remember guest preferences, dietary restrictions, and special occasions for truly personalized service delivery.',
-    image: '/ih-guest-experience.png', // Placeholder
+    image: '/HOTELS/image copy 3.png', // Independent hotels guest experience
     lists: [
         'Comprehensive Guest Profiles',
         'Mobile Guest App with Digital Keys',

@@ -128,11 +128,11 @@ export const navigation = {
 // Hero Section
 export const heroContent = {
     announcement: {
-        text: 'innQuest ስሙን ወደ weleba ቀይሯል - ሆስፒታሊቲ፣ የቀለለ።',
+        text: 'innQuest ስሙን ወደ ወለባ ቀይሯል - ሆስፒታሊቲ፣ የቀለለ።',
         href: '/hospitality-simplified',
     },
     title: 'ትክክለኛ ስራዎን በሚደግፍ መልኩ የተሰራ የተሟላ የሆስፒታሊቲ መድረክ',
-    subtitle: 'weleba ቡድንዎ ልዩ የእንግዳ ተሞክሮ በመፍጠር ላይ እንዲያተኩር ነጻ ያደርገዋል፤ የኛ ዘመናዊ መሳሪያዎች ደግሞ ገቢዎን እና የስራ ቅልጥፍናዎን ለማሳደግ ከጀርባ ይሰሩልዎታል።',
+    subtitle: 'ወለባ ቡድንዎ ልዩ የእንግዳ ተሞክሮ በመፍጠር ላይ እንዲያተኩር ነጻ ያደርገዋል፤ የኛ ዘመናዊ መሳሪያዎች ደግሞ ገቢዎን እና የስራ ቅልጥፍናዎን ለማሳደግ ከጀርባ ይሰሩልዎታል።',
     cta: {
         primary: { text: 'ማሳያ ያስይዙ', href: '/book-a-demo' },
         secondary: { text: 'ዋጋን ይመልከቱ', href: '/pricing' },
@@ -141,7 +141,7 @@ export const heroContent = {
 
 // Why Choose Section
 export const whyChooseContent = {
-    title: 'የሆቴል ባለቤቶች ለምን welebaን የአስተዳደር ሶፍትዌራቸው አድርገው ይመርጣሉ?',
+    title: 'የሆቴል ባለቤቶች ለምን ወለባን የአስተዳደር ሶፍትዌራቸው አድርገው ይመርጣሉ?',
     features: [
         {
             title: 'ገቢን ለማሳደግ ይረዳል',
@@ -150,7 +150,7 @@ export const whyChooseContent = {
         },
         {
             title: 'በሆቴል ባለሙያዎች ለሆቴል ባለሙያዎች የተሰራ',
-            description: 'በ30+ ዓመታት የሆስፒታሊቲ ሶፍትዌር ልምዳችን መሰረት፣ weleba የእርስዎን ተግዳሮቶች ይረዳል።',
+            description: 'በ30+ ዓመታት የሆስፒታሊቲ ሶፍትዌር ልምዳችን መሰረት፣ ወለባ የእርስዎን ተግዳሮቶች ይረዳል።',
             icon: 'Users',
         },
         {
@@ -248,22 +248,28 @@ export const customerStoriesContent = {
     title: 'ደንበኞቻችን ስለ እኛ የሚመሰክሩት',
     stories: [
         {
-            title: 'ሀሪሰን ሆል ሆቴል ለ25 ዓመታት ከweleba ጋር በመሆን ስራውን እንዴት እንዳቀላጠፈ',
+            title: 'ሀሪሰን ሆል ሆቴል ለ25 ዓመታት ከወለባ ጋር በመሆን ስራውን እንዴት እንዳቀላጠፈ',
             name: 'ስቴሲ ዳድሰን',
             role: 'ስራ አስኪያጅ',
             videoId: 'CE1FbxwX0po',
         },
         {
-            title: 'ኑቮ ስዊትስ (NUVO Suites) የእንግዳ ተሞክሮውን ለማሳደግ weleba PMSን እንዴት እንደተጠቀመ',
-            name: 'ጆርጅ ቬኔጋስ',
+            title: 'ኑቮ ስዊትስ (NUVO Suites) የእንግዳ ተሞክሮውን ለማሳደግ ወለባ PMSን እንዴት እንደተጠቀመ',
+            name: 'ያምላክ ነጋሽ',
             role: 'የኑቮ ስዊትስ ስራ አስኪያጅ',
             videoId: '21iGVj1UGq8',
         },
         {
-            title: 'ዉድ ሪቨር ኢን (Wood River Inn) ከweleba ጋር ስራውን በልበ ሙሉነት እንዴት እየመራ እንደሆነ',
+            title: 'ዉድ ሪቨር ኢን (Wood River Inn) ከወለባ ጋር ስራውን በልበ ሙሉነት እንዴት እየመራ እንደሆነ',
             name: 'ራያን ኤሊሰን',
             role: 'የዉድ ሪቨር ኢን ባለቤት',
             videoId: 'Wo-D4it48lI',
+        },
+        {
+            title: 'ሲቦርድ ሆቴሎች (Seaboard Hotels) በወለባ ሁሉንም ንብረቶች በማስተዳደር ስራውን በተቀላጠፈ ሁኔታ ያካሂዳል',
+            name: 'አሌክስ ሙር',
+            role: 'የሲቦርድ ሆቴሎች ፕሬዝዳንት እና ዋና ስራ አስፈፃሚ',
+            videoId: 'ioXFopWwXG4',
         },
     ],
 };
@@ -271,8 +277,8 @@ export const customerStoriesContent = {
 // Integrations Section
 export const integrationsContent = {
     title: 'ፍጹም የቴክኖሎጂ ስብስብዎን ይፍጠሩ',
-    subtitle: 'welebaን ከ100 በላይ ከሚሆኑ እንደ በር ቁልፎች፣ የሽያጭ ነጥቦች እና የሂሳብ አያያዝ መሳሪያዎች ጋር ያገናኙ።',
-    cta: { text: 'የገበያ ቦታውን ይጎብኙ', href: '/integrations' },
+    subtitle: 'ወለባን ከ100 በላይ ከሚሆኑ እንደ በር ቁልፎች፣ የሽያጭ ነጥቦች እና የሂሳብ አያያዝ መሳሪያዎች ጋር ያገናኙ።',
+    cta: { text: 'የገበያ ቦታውን ይጎብኙ', href: '/marketplace' },
     logos: [
         'Expedia', 'Booking.com', 'Airbnb', 'TripAdvisor', 'Google', 'Stripe',
         'QuickBooks', 'Xero', 'Mailchimp', 'Zapier', 'Slack', 'HubSpot',
@@ -280,16 +286,16 @@ export const integrationsContent = {
 };
 
 export const getStartedContent = {
-    tag: 'welebaን ይለማመዱ',
-    title: 'በሶስት ቀላል ደረጃዎች በweleba ይጀምሩ',
+    tag: 'ወለባን ይለማመዱ',
+    title: 'በሶስት ቀላል ደረጃዎች በወለባ ይጀምሩ',
     steps: [
         {
             number: '01',
-            title: 'ከweleba ባለሙያ ጋር የ30 ደቂቃ ጥሪ ያድርጉ።',
+            title: 'ከወለባ ባለሙያ ጋር የ30 ደቂቃ ጥሪ ያድርጉ።',
         },
         {
             number: '02',
-            title: 'weleba ለእርስዎ ምን ሊያደርግ እንደሚችል የሚያሳይ የግል ማሳያ ይመልከቱ።',
+            title: 'ወለባ ለእርስዎ ምን ሊያደርግ እንደሚችል የሚያሳይ የግል ማሳያ ይመልከቱ።',
         },
         {
             number: '03',
@@ -314,31 +320,31 @@ export const supportContent = {
         },
     ],
     steps: [
-        { number: '01', title: 'ከweleba ባለሙያ ጋር የ30 ደቂቃ ጥሪ ያድርጉ::' },
-        { number: '02', title: 'weleba ለእርስዎ ምን ሊያደርግ እንደሚችል የሚያሳይ የግል ማሳያ ይመልከቱ::' },
+        { number: '01', title: 'ከወለባ ባለሙያ ጋር የ30 ደቂቃ ጥሪ ያድርጉ::' },
+        { number: '02', title: 'ወለባ ለእርስዎ ምን ሊያደርግ እንደሚችል የሚያሳይ የግል ማሳያ ይመልከቱ::' },
         { number: '03', title: 'በባለሙያዎቻችን ድጋፍ በፍጥነት ስራ ይጀምሩ እና ገቢ ማግኘት ይጀምሩ::' },
     ],
 };
 
 // FAQ Section
 export const faqContent = {
-    title: 'ስለ weleba ለሚነሱ ጥያቄዎችዎ መልሶች',
+    title: 'ስለ ወለባ ለሚነሱ ጥያቄዎችዎ መልሶች',
     categories: [
         {
             id: 'features',
             name: 'ባህሪያት',
             items: [
                 {
-                    question: 'weleba ከሌሎች የንብረት አስተዳደር ስርዓቶች በምን ይለያል?',
-                    answer: 'weleba የተገነባው በተለይ ለሆቴሎች ነው:: እኛ ስራዎችን በማቅለል እና የአስተዳደር ሸክምን በማስቀረት ላይ እናተኩራለን:: የእኛ የተቀናጀ መድረክ PMS፣ የቦታ ማስያዣ ሞተር፣ የቻናል ማኔጀር እና ክፍያዎችን በአንድ ላይ ያመጣል::',
+                    question: 'ወለባ ከሌሎች የንብረት አስተዳደር ስርዓቶች በምን ይለያል?',
+                    answer: 'ወለባ የተገነባው በተለይ ለሆቴሎች ነው:: እኛ ስራዎችን በማቅለል እና የአስተዳደር ሸክምን በማስቀረት ላይ እናተኩራለን:: የእኛ የተቀናጀ መድረክ PMS፣ የቦታ ማስያዣ ሞተር፣ የቻናል ማኔጀር እና ክፍያዎችን በአንድ ላይ ያመጣል::',
                 },
                 {
-                    question: 'weleba አሁን ካለን የሆቴል ቴክኖሎጂ ጋር መገናኘት ይችላል?',
-                    answer: 'አዎ፣ weleba ከ100 በላይ ከሆኑ የሶስተኛ ወገን ስርዓቶች ጋር ይገናኛል:: ይህም የገቢ አስተዳደር መሳሪያዎችን፣ የእንግዳ መገናኛ መድረኮችን እና የሽያጭ ቦታዎችን ይጨምራል::',
+                    question: 'ወለባ አሁን ካለን የሆቴል ቴክኖሎጂ ጋር መገናኘት ይችላል?',
+                    answer: 'አዎ፣ ወለባ ከ100 በላይ ከሆኑ የሶስተኛ ወገን ስርዓቶች ጋር ይገናኛል:: ይህም የገቢ አስተዳደር መሳሪያዎችን፣ የእንግዳ መገናኛ መድረኮችን እና የሽያጭ ቦታዎችን ይጨምራል::',
                 },
                 {
-                    question: 'weleba በኤአይ የሚሰሩ ባህሪያት አሉት?',
-                    answer: 'አዎ፣ weleba ኤአይ ቴክኖሎጂን በብዙ ቦታዎች ይጠቀማል፦ የገቢ መረጃ ዋጋን በራስ-ሰር ያስተካክላል::',
+                    question: 'ወለባ በኤአይ የሚሰሩ ባህሪያት አሉት?',
+                    answer: 'አዎ፣ ወለባ ኤአይ ቴክኖሎጂን በብዙ ቦታዎች ይጠቀማል፦ የገቢ መረጃ ዋጋን በራስ-ሰር ያስተካክላል::',
                 },
             ]
         },
@@ -347,8 +353,8 @@ export const faqContent = {
             name: 'አቀዳጅ',
             items: [
                 {
-                    question: 'ከአሁኑ ስርዓታችን ወደ weleba መቀየር ምን ያህል አስቸጋሪ ነው?',
-                    answer: 'ወደ weleba የሚደረገው ሽግግር ቀላል እና ቀልጣፋ ነው:: የእኛ የአተገባበር ቡድን የመረጃ ሽግግርን (ቦታ ማስያዣዎች፣ የእንግዳ መገለጫዎች) ያስተናግዳል::',
+                    question: 'ከአሁኑ ስርዓታችን ወደ ወለባ መቀየር ምን ያህል አስቸጋሪ ነው?',
+                    answer: 'ወደ ወለባ የሚደረገው ሽግግር ቀላል እና ቀልጣፋ ነው:: የእኛ የአተገባበር ቡድን የመረጃ ሽግግርን (ቦታ ማስያዣዎች፣ የእንግዳ መገለጫዎች) ያስተናግዳል::',
                 },
                 {
                     question: 'አተገባበሩ ምን ያህል ጊዜ ይወስዳል?',
@@ -373,8 +379,8 @@ export const faqContent = {
                     answer: 'አዎ፣ የእኛ ዓለም አቀፍ የድጋፍ ቡድን 24/7/365 ይሰራል:: ይህም ሁልጊዜ የቀጥታ ድጋፍ ወኪል ማግኘት እንደሚችሉ ያረጋግጣል::',
                 },
                 {
-                    question: 'weleba የንግድ ስራችንን ወቅታዊ ለውጦች ማስተናገድ ይችላል?',
-                    answer: 'አዎ፣ weleba ለሆስፒታሊቲ ስራዎች ተለዋዋጭ ባህሪ ተደርጎ የተሰራ ነው:: ወቅታዊ ሰራተኞች ስራውን በፍጥነት እንዲለምዱ ይረዳል::',
+                    question: 'ወለባ የንግድ ስራችንን ወቅታዊ ለውጦች ማስተናገድ ይችላል?',
+                    answer: 'አዎ፣ ወለባ ለሆስፒታሊቲ ስራዎች ተለዋዋጭ ባህሪ ተደርጎ የተሰራ ነው:: ወቅታዊ ሰራተኞች ስራውን በፍጥነት እንዲለምዱ ይረዳል::',
                 },
             ]
         }
@@ -384,8 +390,8 @@ export const faqContent = {
 // Footer Content
 export const footerContent = {
     cta: {
-        title: 'welebaን በመጠቀም ስኬታማ የሆኑ በሺዎች የሚቆጠሩ ሆቴሎችን ይቀላቀሉ',
-        subtitle: "የweleba የተቀናጀ መድረክ ለንብረትዎ እንዴት እንደሚሰራ ይመልከቱ። ቡድናችን እንደ ፍላጎትዎ የተዘጋጁ ባህሪያትን ያሳየዎታል።",
+        title: 'ወለባን በመጠቀም ስኬታማ የሆኑ በሺዎች የሚቆጠሩ ሆቴሎችን ይቀላቀሉ',
+        subtitle: "የወለባ የተቀናጀ መድረክ ለንብረትዎ እንዴት እንደሚሰራ ይመልከቱ። ቡድናችን እንደ ፍላጎትዎ የተዘጋጁ ባህሪያትን ያሳየዎታል።",
         buttonText: 'ማሳያ ያስይዙ',
         features: [
             '100% አስተማማኝ እና ደህንነቱ የተጠበቀ',
@@ -439,7 +445,7 @@ export const footerContent = {
                 { text: 'ስለ እኛ', href: '/about-us' },
                 { text: 'ስራዎች', href: '/careers' },
                 { text: 'ድጋፍ', href: '/support' },
-                { text: 'የገበያ ቦታ', href: '/integrations' },
+                { text: 'የገበያ ቦታ', href: '/marketplace' },
                 { text: 'ዋጋ', href: '/pricing' },
             ],
         },

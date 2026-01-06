@@ -69,7 +69,7 @@ export const parksPlatform = {
 export const parksReporting = {
     title: 'Government Compliance & Reporting',
     description: 'Our reporting suite includes detailed analytics on visitor demographics and revenue metrics for regulatory needs.',
-    image: '/parks-reporting.png', // Placeholder
+    image: '/HOTELS/image copy.png', // Parks reporting
     lists: [
         'Occupancy Pattern Analysis',
         'Visitor Demographic Tracking',

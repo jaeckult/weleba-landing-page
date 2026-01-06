@@ -69,7 +69,7 @@ export const paymentsPainless = {
 export const paymentsGroupBilling = {
     title: 'Group Billing & Deposits Made Easy',
     description: 'Handle event and group payments without breaking a sweat. Set flexible deposit schedules based on room type or booking date.',
-    image: '/payment-group-billing.png', // Placeholder
+    image: '/image copy 12.png', // Payments group billing
     lists: [
         'Flexible Deposit Schedules',
         'Simplified Group Billing',

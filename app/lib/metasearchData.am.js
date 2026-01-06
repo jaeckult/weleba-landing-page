@@ -69,7 +69,7 @@ export const msPositioning = {
 export const msMarketing = {
     title: 'የሜታሰርች ማርኬቲንግዎን ያሻሽሉ',
     description: 'እንግዶች በሚፈልጉባቸው ቦታዎች ሁሉ ሆቴልዎን ያሳዩ። የእኛ የዋጋ ማቅረቢያ መድረክ ለሆቴልዎ ምስል ከፍተኛ ቦታን ያረጋግጣል።',
-    image: '/metasearch-marketing.png', // Placeholder
+    image: '/image copy 9.png', // Metasearch marketing
     lists: [
         'የተሻሻሉ የዋጋ ማቅረቢያ መፍትሄዎች',
         'የበጀት ማስተዳደሪያ መሳሪያዎች',

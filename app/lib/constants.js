@@ -56,12 +56,12 @@ export const navigation = {
         description: 'Manage inventory & sync rates across hundreds of OTAs.',
         href: '/channel-manager',
       },
-      {
-        title: 'Hotel Metasearch',
-        description: 'Boost visibility on search engines & aggregators.',
-        href: '/hotel-metasearch',
-        badge: 'New',
-      },
+      // {
+      //   title: 'Hotel Metasearch',
+      //   description: 'Boost visibility on search engines & aggregators.',
+      //   href: '/hotel-metasearch',
+      //   badge: 'New',
+      // },
       {
         title: 'Hotel Website Builder',
         description: 'Get help creating stunning websites.',
@@ -114,11 +114,11 @@ export const navigation = {
   resources: [
     { title: 'Blogs', description: 'Expert insights to optimize your property performance.', href: '/blog' },
     { title: 'News', description: 'Stay ahead with the latest hospitality trends.', href: '/news' },
-    { title: 'Templates', description: 'Download ready-to-use operational tools and forms.', href: '/templates' },
+    // { title: 'Templates', description: 'Download ready-to-use operational tools and forms.', href: '/templates' },
     { title: 'Webinars', description: 'Access exclusive webinars for smarter hotel management.', href: '/webinar' },
-    { title: 'Calculators', description: 'Calculate ROI, pricing, and revenue potential instantly.', href: '/calculators' },
-    { title: 'eBooks & Guides', description: 'Complete strategies for hospitality business growth.', href: '/ebooks' },
-    { title: 'Alternatives', description: 'Compare hotel software solutions to find your perfect fit.', href: '/alternative' },
+    // { title: 'Calculators', description: 'Calculate ROI, pricing, and revenue potential instantly.', href: '/calculators' },
+    // { title: 'eBooks & Guides', description: 'Complete strategies for hospitality business growth.', href: '/ebooks' },
+    // { title: 'Alternatives', description: 'Compare hotel software solutions to find your perfect fit.', href: '/alternative' },
   ],
   company: [
     { title: 'About Us', description: 'The hospitality experts behind weleba technology.', href: '/about-us' },
@@ -278,7 +278,7 @@ export const customerStoriesContent = {
 export const integrationsContent = {
   title: 'Create your perfect technology ecosystem',
   subtitle: 'Connect weleba with 100+ third-party solutions from door locks, and point of sale to accounting systems, and marketing tools, so your hotel runs like a well-oiled machine.',
-  cta: { text: 'Visit Marketplace', href: '/integrations' },
+  cta: { text: 'Visit Marketplace', href: '/marketplace' },
   logos: [
     'Expedia', 'Booking.com', 'Airbnb', 'TripAdvisor', 'Google', 'Stripe',
     'QuickBooks', 'Xero', 'Mailchimp', 'Zapier', 'Slack', 'HubSpot',
@@ -444,9 +444,8 @@ export const footerContent = {
       title: 'Company',
       links: [
         { text: 'About', href: '/about-us' },
-        { text: 'Careers', href: '/careers' },
         { text: 'Support', href: '/support' },
-        { text: 'Marketplace', href: '/integrations' },
+        { text: 'Marketplace', href: '/marketplace' },
         { text: 'Pricing', href: '/pricing' },
       ],
     },

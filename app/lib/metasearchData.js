@@ -69,7 +69,7 @@ export const msPositioning = {
 export const msMarketing = {
     title: 'Optimize Your Hotel Metasearch Marketing',
     description: 'Establish your property where guests are searching. Our proprietary bidding platform participates in live auctions for guest impressions.',
-    image: '/metasearch-marketing.png', // Placeholder
+    image: '/image copy 9.png', // Metasearch marketing
     lists: [
         'Customized Bidding Solutions',
         'Budget Management Tools',

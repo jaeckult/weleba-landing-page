@@ -2,6 +2,7 @@
 
 import { Phone, MessageCircle, CreditCard, BookOpen, PlayCircle, Sparkles, ArrowRight, ExternalLink } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const iconMap = {
     Phone,

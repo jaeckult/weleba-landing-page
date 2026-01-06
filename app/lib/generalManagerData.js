@@ -69,7 +69,7 @@ export const gmPlatform = {
 export const gmPerformance = {
     title: 'Performance Insights for Executives',
     description: 'Comprehensive business intelligence that gives you complete control over every aspect of your operations.',
-    image: '/gm-performance.png', // Placeholder
+    image: '/image copy 14.png', // GM performance
     lists: [
         'Real-time ADR and RevPAR Tracking',
         'Staff Performance Metrics',

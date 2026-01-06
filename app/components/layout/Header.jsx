@@ -225,24 +225,27 @@ const Header = () => {
 
         {/* Main Navigation */}
         <nav>
-          <div className="max-w-[1320px] mx-auto px-6 lg:px-8">
+          <div className="max-w-[1500px] mx-auto px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
               {/* Logo */}
-              <Link href="/" className="flex items-center gap-3 mr-12">
+              <Link href="/" className="flex items-center gap-1 mr-8">
                 <Image
-                  src="/canvas.png"
+                  src="/logo/canvas.png"
                   alt="weleba Logo"
                   width={90}
                   height={90}
-                  className="object-contain"
+                  className="object-contain translate-y-1"
                 />
                 <div className="flex items-center">
-                  <span className="text-2xl font-bold text-[#0a1628]">weleba</span>
+                  <span className="text-2xl font-bold text-[#0a1628]">
+                    {locale === 'am' ? 'ወለባ' : 'Weleba'}
+                  </span>
                 </div>
               </Link>
 
+
               {/* Desktop Navigation */}
-              <div className="hidden lg:flex items-center gap-1">
+              <div className="hidden lg:flex items-center gap-4">
                 {/* {labels.navigation.products} Dropdown */}
                 <div
                   className="relative"
@@ -250,7 +253,7 @@ const Header = () => {
                   onMouseLeave={handleMouseLeave}
                 >
                   <button
-                    className="flex items-center gap-1 px-4 py-2 text-gray-700 hover:text-[#0a1628] font-medium transition-colors"
+                    className="flex items-center gap-1 px-4 py-2 text-gray-700 hover:text-[#0a1628] font-medium transition-colors whitespace-nowrap"
                   >
                     {labels.navigation.products}
                     <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'products' ? 'rotate-180' : ''}`} />
@@ -409,7 +412,7 @@ const Header = () => {
                                   <ArrowLeftRight className="w-5 h-5 text-[#0a1628]" />
                                 </div>
                                 <div className="min-w-max">
-                                  <Link href="/integrations" onClick={closeMenus} className="font-bold text-gray-900 hover:text-[#0066FF] transition-colors block leading-tight">
+                                  <Link href="/marketplace" onClick={closeMenus} className="font-bold text-gray-900 hover:text-[#0066FF] transition-colors block leading-tight">
                                     All Integrations
                                   </Link>
                                   <p className="text-[11px] text-gray-400 font-medium uppercase tracking-wider mt-0.5">Connect Your Stack</p>
@@ -440,7 +443,7 @@ const Header = () => {
                   onMouseLeave={handleMouseLeave}
                 >
                   <button
-                    className="flex items-center gap-1 px-4 py-2 text-gray-700 hover:text-[#0a1628] font-medium transition-colors"
+                    className="flex items-center gap-1 px-4 py-2 text-gray-700 hover:text-[#0a1628] font-medium transition-colors whitespace-nowrap"
                   >
                     {labels.navigation.solutions}
                     <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'solutions' ? 'rotate-180' : ''}`} />
@@ -550,7 +553,7 @@ const Header = () => {
                   onMouseLeave={handleMouseLeave}
                 >
                   <button
-                    className="flex items-center gap-1 px-4 py-2 text-gray-700 hover:text-[#0a1628] font-medium transition-colors"
+                    className="flex items-center gap-1 px-4 py-2 text-gray-700 hover:text-[#0a1628] font-medium transition-colors whitespace-nowrap"
                   >
                     Resources
                     <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'resources' ? 'rotate-180' : ''}`} />
@@ -609,35 +612,35 @@ const Header = () => {
                               <div className="space-y-6">
                                 {/* Article 1 */}
                                 <Link
-                                  href="/blog/ai-front-desk"
+                                  href="/blog/ai-transforming-hotel-operations-2026"
                                   onClick={closeMenus}
                                   className="flex gap-5 items-center group/art transition-all"
                                 >
                                   <div className="w-24 h-24 rounded-2xl bg-gray-100 flex-shrink-0 overflow-hidden relative shadow-sm">
-                                    <Image src="/HOTELS/image.png" alt="AI Front Desk" fill className="object-cover group-hover/art:scale-110 transition-transform duration-500" />
+                                    <Image src="/image copy 9.png" alt="AI Transforming Hotel Operations" fill className="object-cover group-hover/art:scale-110 transition-transform duration-500" />
                                   </div>
                                   <div className="flex-1 min-w-0">
                                     <h5 className="font-bold text-gray-900 text-[15px] mb-2 leading-snug group-hover/art:text-[#0066FF] transition-colors">
-                                      AI Front Desk: How weleba Concierge Makes It Easy
+                                      How AI is Transforming Hotel Operations in 2026
                                     </h5>
-                                    <p className="text-xs text-gray-400 font-medium">July 18, 2025</p>
+                                    <p className="text-xs text-gray-400 font-medium">December 18, 2025</p>
                                   </div>
                                 </Link>
 
                                 {/* Article 2 */}
                                 <Link
-                                  href="/blog/hotel-ai-agents"
+                                  href="/blog/revenue-management-strategies-small-hotels"
                                   onClick={closeMenus}
                                   className="flex gap-5 items-center group/art transition-all"
                                 >
                                   <div className="w-24 h-24 rounded-2xl bg-gray-100 flex-shrink-0 overflow-hidden relative shadow-sm">
-                                    <Image src="/HOTELS/image copy.png" alt="AI Agents" fill className="object-cover group-hover/art:scale-110 transition-transform duration-500" />
+                                    <Image src="/image copy 10.png" alt="Revenue Management Strategies" fill className="object-cover group-hover/art:scale-110 transition-transform duration-500" />
                                   </div>
                                   <div className="flex-1 min-w-0">
                                     <h5 className="font-bold text-gray-900 text-[15px] mb-2 leading-snug group-hover/art:text-[#0066FF] transition-colors">
-                                      How Hotel AI Agents Improve Service And Bookings in 2025?
+                                      Revenue Management Strategies for Small Hotels
                                     </h5>
-                                    <p className="text-xs text-gray-400 font-medium">July 15, 2025</p>
+                                    <p className="text-xs text-gray-400 font-medium">December 17, 2025</p>
                                   </div>
                                 </Link>
                               </div>
@@ -653,7 +656,7 @@ const Header = () => {
                 <Link
                   href="/pricing"
                   onMouseEnter={() => setActiveDropdown(null)}
-                  className="px-4 py-2 text-gray-700 hover:text-[#0a1628] font-medium transition-colors"
+                  className="px-4 py-2 text-gray-700 hover:text-[#0a1628] font-medium transition-colors whitespace-nowrap"
                 >
                   {labels.navigation.pricing}
                 </Link>
@@ -662,7 +665,7 @@ const Header = () => {
                 <Link
                   href="/case-studies"
                   onMouseEnter={() => setActiveDropdown(null)}
-                  className="px-4 py-2 text-gray-700 hover:text-[#0a1628] font-medium transition-colors"
+                  className="px-4 py-2 text-gray-700 hover:text-[#0a1628] font-medium transition-colors whitespace-nowrap"
                 >
                   {labels.navigation.caseStudies}
                 </Link>
@@ -674,7 +677,7 @@ const Header = () => {
                   onMouseLeave={handleMouseLeave}
                 >
                   <button
-                    className="flex items-center gap-1 px-4 py-2 text-gray-700 hover:text-[#0a1628] font-medium transition-colors"
+                    className="flex items-center gap-1 px-4 py-2 text-gray-700 hover:text-[#0a1628] font-medium transition-colors whitespace-nowrap"
                   >
                     {labels.navigation.company}
                     <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'company' ? 'rotate-180' : ''}`} />

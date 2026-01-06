@@ -69,7 +69,7 @@ export const motelPlatform = {
 export const motelCommunication = {
     title: 'Personalized Guest Communication',
     description: 'Automate essential guest communications from booking confirmations to review requests, maintaining your personal voice.',
-    image: '/motel-communication.png', // Placeholder
+    image: '/HOTELS/image copy 2.png', // Motel communication
     lists: [
         'Pre-Arrival Welcome Emails',
         'Post-Stay Review Requests',

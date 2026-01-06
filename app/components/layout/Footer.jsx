@@ -9,6 +9,8 @@ import {
 import { footerContent as enFooterContent, labels as enLabels } from '../../lib/constants';
 import { footerContent as amFooterContent, labels as amLabels } from '../../lib/constants.am';
 import { useLanguage } from '../../context/LanguageContext';
+import Image from 'next/image';
+
 
 
 const Footer = () => {
@@ -18,13 +20,81 @@ const Footer = () => {
 
   const [openIndex, setOpenIndex] = useState(null);
 
+  const [email, setEmail] = useState('');
+  const [status, setStatus] = useState('idle'); // idle, loading, success, error
+  const [message, setMessage] = useState('');
+
+  const handleSubscribe = async (e) => {
+    e.preventDefault();
+    setStatus('loading');
+
+    try {
+      const res = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email })
+      });
+
+      if (res.ok) {
+        setStatus('success');
+        setMessage('Thank you for subscribing! Please check your email for a welcome message.');
+        setEmail('');
+      } else {
+        setStatus('error');
+        setMessage('Something went wrong. Please try again later.');
+      }
+    } catch (error) {
+      setStatus('error');
+      setMessage('Network error. Please try again.');
+    }
+  };
+
+  const closePopup = () => {
+    setStatus('idle');
+    setMessage('');
+  };
+
   return (
-    <div className="bg-[#f9f7f2] font-sans">
+    <div className="bg-[#f9f7f2] font-sans relative">
+
+      {/* Status Popup Modal */}
+      {(status === 'success' || status === 'error') && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center px-4 bg-black/50 backdrop-blur-sm animate-in fade-in duration-200">
+          <div className="bg-white rounded-3xl p-8 max-w-md w-full shadow-2xl transform scale-100 animate-in zoom-in-95 duration-200 text-center relative">
+            <button
+              onClick={closePopup}
+              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
+            >
+              <Plus className="rotate-45" size={24} />
+            </button>
+
+            <div className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 ${status === 'success' ? 'bg-green-100 text-green-600' : 'bg-red-100 text-red-600'}`}>
+              {status === 'success' ? <Shield size={32} /> : <Minus size={32} />}
+            </div>
+
+            <h3 className="text-2xl font-serif font-bold text-[#0a1628] mb-3">
+              {status === 'success' ? 'Subscription Successful!' : 'Subscription Failed'}
+            </h3>
+
+            <p className="text-gray-600 mb-8 leading-relaxed">
+              {message}
+            </p>
+
+            <button
+              onClick={closePopup}
+              className="bg-[#0066FF] text-white px-8 py-3 rounded-xl font-bold hover:bg-blue-700 transition-all w-full"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
 
 
       {/* CTA SECTION */}
       <section className="relative px-6 pb-32">
         <div className="container mx-auto max-w-7xl">
+          {/* ... (existing CTA content) ... */}
           <div className="bg-[#0066FF] rounded-[3rem] relative overflow-hidden min-h-[580px] flex items-center shadow-2xl">
 
             {/* Background Illustration - Replica of the Room Blueprint */}
@@ -90,23 +160,41 @@ const Footer = () => {
 
               {/* Branding & Newsletter */}
               <div className="lg:col-span-2">
-                <div className="flex items-center gap-3 mb-10">
-                  <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center font-bold text-2xl shadow-lg shadow-blue-600/20">m</div>
-                  <span className="text-4xl font-bold tracking-tighter">weleba</span>
-                </div>
+                <Link href="/" className="flex items-center gap-1 mr-8">
+                  <Image
+                    src="/logo/canvas.png"
+                    alt="weleba Logo"
+                    width={90}
+                    height={90}
+                    className="object-contain translate-y-1"
+                  />
+                  <div className="flex items-center">
+                    <span className="text-2xl font-bold text-[#0a1628]">
+                      {locale === 'am' ? 'ወለባ' : 'Weleba'}
+                    </span>
+                  </div>
+                </Link>
 
                 <h4 className="text-xl font-medium mb-5">{footerContent.subscribe.title}</h4>
-                <div className="flex gap-2 max-w-md bg-white rounded-2xl p-2 mb-10 shadow-xl">
+                <form className="flex gap-2 max-w-md bg-white rounded-2xl p-2 mb-10 shadow-xl" onSubmit={handleSubscribe}>
                   <input
                     type="email"
                     placeholder={footerContent.subscribe.placeholder}
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                     className="flex-1 bg-transparent px-5 text-gray-900 outline-none placeholder:text-gray-400 font-medium"
+                    required
                   />
-                  <button className="bg-blue-600 text-white px-8 py-3.5 rounded-xl font-bold hover:bg-blue-700 transition-all hover:shadow-lg active:scale-95">
-                    {footerContent.subscribe.buttonText}
+                  <button
+                    type="submit"
+                    disabled={status === 'loading'}
+                    className="bg-blue-600 text-white px-8 py-3.5 rounded-xl font-bold hover:bg-blue-700 transition-all hover:shadow-lg active:scale-95 disabled:opacity-70 disabled:cursor-not-allowed"
+                  >
+                    {status === 'loading' ? '...' : footerContent.subscribe.buttonText}
                   </button>
-                </div>
+                </form>
 
+                {/* ... rest of footer ... */}
                 {/* Utility Links */}
                 <div className="space-y-2 max-w-[280px]">
                   <Link href="/marketplace" className="flex items-center justify-between group border-b border-white/5 py-3.5 hover:border-white/20 transition-all">

@@ -69,7 +69,7 @@ export const itPlatform = {
 export const itIntegrations = {
     title: 'የራስዎን የቴክኖሎጂ ስነ-ምህዳር ይገንቡ',
     description: 'የእኛ ዘመናዊ የAPI ስነ-ምህዳር ሌሎች ስርዓቶችን በቀላሉ እና በአስተማማኝ ሁኔታ ለማስተሳሰር ይረዳል።',
-    image: '/it-integrations.png', // Placeholder
+    image: '/HOTELS/image.png', // IT integrations
     lists: [
         'ዝርዝር የAPI መረጃዎች (Documentation)',
         'ወቅታዊ የWebhook ድጋፍ',

@@ -69,7 +69,7 @@ export const gaFeatures = {
 export const gaOperations = {
     title: 'አንድ መተግበሪያ፣ ማለቂያ የሌላቸው አማራጮች',
     description: 'ተጨማሪ ሽያጮችን በማቅረብ ገቢዎን ያሳድጉ እና የእንግዶችን ፍላጎት በመተንተን የሆቴል ስራዎን ያሻሽሉ።',
-    image: '/guest-app-ops.png', // Placeholder
+    image: '/image copy 10.png', // Guest app operations
     lists: [
         'የተመረጡ የመተግበሪያ ውስጥ ተጨማሪ ሽያጮች',
         'የእውነተኛ ጊዜ የአገልግሎት መከታተያ',

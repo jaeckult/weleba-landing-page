@@ -57,7 +57,7 @@ export const aiAgentControl = {
 export const aiAgentStaffFreedom = {
     title: 'Let Staff Focus on High-Value Interaction',
     description: 'Your human team is freed from repetitive questions and routine booking tasks, allowing them to dedicate their time and energy to high-touch guest service.',
-    image: '/ai-staff-freedom.png', // Placeholder
+    image: '/image copy 8.png', // AI staff freedom
     lists: [
         'Reduce Administrative Burden',
         'Handle 95% of Guest Queries',

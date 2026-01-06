@@ -10,7 +10,7 @@ export const blogPosts = [
         image: '/blog/image.png',
         featured: true,
         author: {
-            name: 'Mayela Lozano',
+            name: 'Abel Ashine',
             avatar: '/avatars/mayela.jpg',
         },
     },
@@ -25,7 +25,7 @@ export const blogPosts = [
         image: '/image copy 7.png',
         featured: false,
         author: {
-            name: 'Sarah Johnson',
+            name: 'Ebisa Fufi',
             avatar: '/avatars/sarah.jpg',
         },
     },
@@ -40,7 +40,7 @@ export const blogPosts = [
         image: '/image copy 8.png',
         featured: false,
         author: {
-            name: 'Michael Chen',
+            name: 'Yitbarek Alemu',
             avatar: '/avatars/michael.jpg',
         },
     },
@@ -55,7 +55,7 @@ export const blogPosts = [
         image: '/image copy 9.png',
         featured: false,
         author: {
-            name: 'Emily Rodriguez',
+            name: 'Ebisa Fufi',
             avatar: '/avatars/emily.jpg',
         },
     },
@@ -70,7 +70,7 @@ export const blogPosts = [
         image: '/image copy 10.png',
         featured: false,
         author: {
-            name: 'David Park',
+            name: 'Ebisa Fufi   ',
             avatar: '/avatars/david.jpg',
         },
     },
@@ -85,7 +85,7 @@ export const blogPosts = [
         image: '/image copy 11.png',
         featured: false,
         author: {
-            name: 'Lisa Thompson',
+            name: 'Abel Ashine',
             avatar: '/avatars/lisa.jpg',
         },
     },
@@ -100,7 +100,7 @@ export const blogPosts = [
         image: '/image copy 12.png',
         featured: false,
         author: {
-            name: 'James Wilson',
+            name: 'Abel Ashine',
             avatar: '/avatars/james.jpg',
         },
     },
@@ -115,7 +115,7 @@ export const blogPosts = [
         image: '/image copy 13.png',
         featured: false,
         author: {
-            name: 'Maria Garcia',
+            name: 'Kiya',
             avatar: '/avatars/maria.jpg',
         },
     },
@@ -130,7 +130,7 @@ export const blogPosts = [
         image: '/image copy 14.png',
         featured: false,
         author: {
-            name: 'Alex Kumar',
+            name: 'Yitbarek Alemu',
             avatar: '/avatars/alex.jpg',
         },
     },

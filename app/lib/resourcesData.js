@@ -69,32 +69,32 @@ export const webinarsList = [
         description: 'Learn proven strategies to maintain occupancy and ADR during slower months.',
         category: 'Revenue',
         date: 'Oct 24, 2025',
-        image: '/webinars/low-season.jpg',
-        href: '/webinars/low-season'
+        image: '/images/webinars/revenue-management.png',
+        href: '/knowledge-base'
     },
     {
         title: 'The AI Revolution in Guest Communication',
         description: 'How AI voice agents and chatbots are transforming the guest journey and front desk operations.',
         category: 'Technology',
         date: 'Sep 12, 2025',
-        image: '/webinars/ai-guest.jpg',
-        href: '/webinars/ai-guest'
+        image: '/images/webinars/guest-experience.png',
+        href: '/knowledge-base'
     },
     {
         title: 'Direct Bookings: Beating the OTAs in 2026',
         description: 'The latest tactics for reducing commission costs and building a loyal direct booking base.',
         category: 'Distribution',
         date: 'Aug 05, 2025',
-        image: '/webinars/direct-bookings.jpg',
-        href: '/webinars/direct-bookings'
+        image: '/images/webinars/operations.png',
+        href: '/knowledge-base'
     },
     {
         title: 'Streamlining Staff Onboarding with weleba',
         description: 'How to reduce training time by 50% while improving operational consistency.',
         category: 'Product',
         date: 'Jul 18, 2025',
-        image: '/webinars/onboarding.jpg',
-        href: '/webinars/onboarding'
+        image: '/images/webinars/revenue-management.png',
+        href: '/knowledge-base'
     }
 ];
 

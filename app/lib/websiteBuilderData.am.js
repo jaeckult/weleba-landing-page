@@ -69,7 +69,7 @@ export const wbJourney = {
 export const wbAnalytics = {
     title: 'ውጤትዎን አብሮ በተሰራ ትንተና ይከታተሉ',
     description: 'የድረ-ገጽዎን አፈጻጸም በተቀናጀ ዳሽቦርድ ይከታተሉ። የጎብኝዎችን ቁጥር እና የቦታ ማስያዝ ፍጥነትን በእውነተኛ ጊዜ ይለኩ።',
-    image: '/website-analytics.png', // Placeholder
+    image: '/image copy 4.png', // Website analytics
     lists: [
         'የእውነተኛ ጊዜ የአፈጻጸም ግንዛቤዎች',
         'የጎግል አናሊቲክስ (Google Analytics) ትስስር',

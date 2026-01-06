@@ -57,7 +57,7 @@ export const rmBoundaries = {
 export const rmMachineLearning = {
     title: 'ለብልህ የገቢ አስተዳደር የኤአይ (AI) ማመቻቸት',
     description: 'የእኛ የኤአይ ስርዓቶች ከገበያ ሁኔታዎች እና ከቦታ ማስያዝ ልምዶች በየጊዜው በመማር በጊዜ ሂደት የተሻሉ የዋጋ ምክሮችን ይሰጣሉ።',
-    image: '/revenue-ai-vis.png', // Placeholder
+    image: '/image copy 7.png', // Revenue AI visualization
     lists: [
         'ብልህ የማሽን ላርኒንግ ስልቶች',
         'ትክክለኛ የፍላጎት ትንበያ',

@@ -69,7 +69,7 @@ export const paymentsPainless = {
 export const paymentsGroupBilling = {
     title: 'የቡድን ሒሳብ እና ቅድመ-ክፍያ በቅለት',
     description: 'የክስተት እና የቡድን ክፍያዎችን ያለ ምንም መጨነቅ ያስተዳድሩ። እንደ ክፍል አይነት ወይም እንደ ቦታ ማስያዣ ቀን ተለዋዋጭ የቅድመ-ክፍያ እቅዶችን ያውጡ።',
-    image: '/payment-group-billing.png', // Placeholder
+    image: '/image copy 12.png', // Payments group billing
     lists: [
         'ተለዋዋጭ የቅድመ-ክፍያ እቅዶች',
         'ቀላል የቡድን ሒሳብ አያያዝ',

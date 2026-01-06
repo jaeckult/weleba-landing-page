@@ -69,7 +69,7 @@ export const gmPlatform = {
 export const gmPerformance = {
     title: 'የአፈጻጸም ግንዛቤዎች',
     description: 'ሁሉንም የስራዎን ዘርፎች ሙሉ በሙሉ እንዲቆጣጠሩ የሚያስችል የተሟላ የቢዝነስ ኢንተለጀንስ።',
-    image: '/gm-performance.png', // Placeholder
+    image: '/image copy 14.png', // GM performance
     lists: [
         'የወቅታዊ ADR እና RevPAR ክትትል',
         'የሰራተኞች የስራ አፈጻጸም መለኪያ',

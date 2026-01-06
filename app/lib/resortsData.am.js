@@ -69,7 +69,7 @@ export const resortsPlatform = {
 export const resortsGuestApp = {
     title: 'የእንግዳ መተግበሪያ ተሞክሮ',
     description: 'የweleba የእንግዳ መተግበሪያ እንግዶች ሪዞርት ቆይታቸውን ሙሉ በሙሉ እንዲያስተዳድሩ የሚያስችል የሞባይል መተግበሪያ ነው።',
-    image: '/resorts-guest-app.png', // Placeholder
+    image: '/HOTELS/image copy 2.png', // Resort guest app
     lists: [
         'የዲጂታል ክፍል ቁልፍ መዳረሻ',
         'የመተግበሪያ ውስጥ ስፓ እና እንቅስቃሴ ማስያዣ',

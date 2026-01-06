@@ -69,7 +69,7 @@ export const resortsPlatform = {
 export const resortsGuestApp = {
     title: 'Branded Mobile Experience',
     description: 'The weleba Guest App provides a branded mobile portal where guests can manage their entire resort journey.',
-    image: '/resorts-guest-app.png', // Placeholder
+    image: '/HOTELS/image copy 2.png', // Resort guest app
     lists: [
         'Digital Room Key Access',
         'In-App Spa & Activity Booking',

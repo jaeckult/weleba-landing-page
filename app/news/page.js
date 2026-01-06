@@ -3,6 +3,7 @@
 import NewsHero from './components/NewsHero';
 import NewsList from './components/NewsList';
 import NewsletterSubscribe from './components/NewsletterSubscribe';
+import RelatedNews from './components/RelatedNews';
 import {
     newsArticles as enArticles,
     newsCategories as enCategories
@@ -23,6 +24,7 @@ export default function NewsPage() {
         <main>
             <NewsHero />
             <NewsList articles={articles} categories={categories} />
+            <RelatedNews articles={articles} />
             <NewsletterSubscribe />
         </main>
     );

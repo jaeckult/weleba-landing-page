@@ -69,7 +69,7 @@ export const itPlatform = {
 export const itIntegrations = {
     title: 'Build Your Perfect Tech Ecosystem',
     description: 'Our modern API ecosystem and RESTful webhooks make custom integrations simple and reliable.',
-    image: '/it-integrations.png', // Placeholder
+    image: '/HOTELS/image.png', // IT integrations
     lists: [
         'RESTful API Documentation',
         'Real-Time Webhook Support',

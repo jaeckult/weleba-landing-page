@@ -69,7 +69,7 @@ export const rmPlatform = {
 export const rmAnalytics = {
     title: 'በመረጃ ላይ የተመሰረተ ውሳኔ',
     description: 'የADR፣ RevPAR እና የቦታ ማስያዝ ፍጥነት መረጃዎችን በአንድ የተቀናጀ የገቢ ማዕከል ያግኙ።',
-    image: '/rm-analytics.png', // Placeholder
+    image: '/image copy 13.png', // Revenue manager analytics
     lists: [
         'አውቶማቲክ የተፎካካሪዎች መረጃ',
         'የገበያ ክፍፍል መሳሪያዎች',

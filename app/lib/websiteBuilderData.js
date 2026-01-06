@@ -69,7 +69,7 @@ export const wbJourney = {
 export const wbAnalytics = {
     title: 'Track Your Success with Built-In Analytics',
     description: 'Monitor your website\'s performance with our integrated dashboard. Track visitor traffic and measure conversion rates in real-time.',
-    image: '/website-analytics.png', // Placeholder
+    image: '/image copy 4.png', // Placeholder
     lists: [
         'Real-Time Performance Insights',
         'Google Analytics Integration',

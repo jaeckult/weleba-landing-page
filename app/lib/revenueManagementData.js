@@ -57,7 +57,7 @@ export const rmBoundaries = {
 export const rmMachineLearning = {
     title: 'AI Optimization for Smarter Revenue Management',
     description: 'Our AI systems continuously learn from market conditions and booking patterns to deliver increasingly effective pricing recommendations over time.',
-    image: '/revenue-ai-vis.png', // Placeholder
+    image: '/image copy 7.png', // Revenue AI visualization
     lists: [
         'Smarter Machine Learning Strategies',
         'Accurate Demand Forecasting',

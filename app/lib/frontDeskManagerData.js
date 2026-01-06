@@ -69,7 +69,7 @@ export const fdmPlatform = {
 export const fdmCoordination = {
     title: 'Effortless Departmental Coordination',
     description: 'Provide your team with instant access to guest preferences and real-time status across all departments.',
-    image: '/fdm-coordination.png', // Placeholder
+    image: '/HOTELS/image copy 5.png', // Front desk coordination
     lists: [
         'Live Room Occupancy & Status',
         'Direct Guest Messaging via App',

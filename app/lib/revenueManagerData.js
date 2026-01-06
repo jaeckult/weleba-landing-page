@@ -69,7 +69,7 @@ export const rmPlatform = {
 export const rmAnalytics = {
     title: 'Data-Driven Decision Making',
     description: 'Access real-time ADR, RevPAR, and booking pace analytics from one unified revenue hub.',
-    image: '/rm-analytics.png', // Placeholder
+    image: '/image copy 13.png', // Revenue manager analytics
     lists: [
         'Automated Competitive Intelligence',
         'Market Segmentation Tools',

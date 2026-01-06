@@ -69,7 +69,7 @@ export const hgPlatform = {
 export const hgIntegration = {
     title: 'Connect with Your Corporate Ecosystem',
     description: 'We offer robust integration with accounting systems, HR platforms, and BI tools commonly used by hotel groups.',
-    image: '/hg-integration.png', // Placeholder
+    image: '/HOTELS/image copy 4.png', // Hotel groups integration
     lists: [
         'Enterprise Resource Planning (ERP)',
         'Business Intelligence Tools',

@@ -38,6 +38,30 @@ export const supportContactMethods = [
     }
 ];
 
+export const webinars = [
+    {
+        title: 'Revenue Management Essentials',
+        date: 'March 15, 2024',
+        description: 'Learn the basics of hotel revenue management.',
+        image: '/images/webinars/revenue-management.png',
+        link: '/knowledge-base'
+    },
+    {
+        title: 'Enhancing Guest Experience',
+        date: 'March 22, 2024',
+        description: 'Strategies to improve guest satisfaction scores.',
+        image: '/images/webinars/guest-experience.png',
+        link: '/knowledge-base'
+    },
+    {
+        title: 'Optimizing Hotel Operations',
+        date: 'March 29, 2024',
+        description: 'Streamline your daily operations for efficiency.',
+        image: '/images/webinars/operations.png',
+        link: '/knowledge-base'
+    }
+];
+
 export const supportResources = [
     {
         title: 'Knowledge Base',

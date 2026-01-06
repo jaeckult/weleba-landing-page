@@ -69,7 +69,7 @@ export const parksPlatform = {
 export const parksReporting = {
     title: 'የመንግስት ሪፖርቶች እና ተገዢነት',
     description: 'የእኛ የሪፖርት ክፍል ስለ ጎብኝዎች እና ስለ ገቢ ሁኔታዎች ዝርዝር ትንታኔዎችን ያካትታል።',
-    image: '/parks-reporting.png', // Placeholder
+    image: '/HOTELS/image copy.png', // Parks reporting
     lists: [
         'የክፍል መያዝ ሁኔታ ትንታኔ',
         'የጎብኝዎች መረጃ ክትትል',

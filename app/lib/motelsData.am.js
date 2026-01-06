@@ -69,7 +69,7 @@ export const motelPlatform = {
 export const motelCommunication = {
     title: 'ለእንግዶች የሚላኩ መልእክቶች',
     description: 'ከቦታ ማስያዣ ማረጋገጫ እስከ ግምገማ መጠየቂያ ድረስ ያሉ ግንኙነቶችን በራስ-ሰር ያከናውኑ።',
-    image: '/motel-communication.png', // Placeholder
+    image: '/HOTELS/image copy 2.png', // Motel communication
     lists: [
         'የእንኳን ደህና መጡ ኢሜይሎች',
         'የቆይታ ማጠቃለያ እና ግምገማ መጠየቂያ',

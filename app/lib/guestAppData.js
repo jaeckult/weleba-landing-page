@@ -69,7 +69,7 @@ export const gaFeatures = {
 export const gaOperations = {
     title: 'One App, Endless Possibilities',
     description: 'Boost revenue per guest with targeted upsells and optimize hotel operations with real-time behavior analytics.',
-    image: '/guest-app-ops.png', // Placeholder
+    image: '/image copy 10.png', // Guest app operations
     lists: [
         'Targeted In-App Upsells',
         'Real-Time Service Recovery',

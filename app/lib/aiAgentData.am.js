@@ -57,7 +57,7 @@ export const aiAgentControl = {
 export const aiAgentStaffFreedom = {
     title: 'ሰራተኞች በከፍተኛ ደረጃ አገልግሎቶች ላይ እንዲያተኩሩ ያድርጉ',
     description: 'የሰው ኃይል ቡድንዎ ከተደጋጋሚ ጥያቄዎች እና ከተለመዱ የቦታ ማስያዝ ስራዎች ነጻ ይሆናል፣ ይህም ጊዜያቸውን እና ጉልበታቸውን ልዩ ትኩረት ለሚሹ የእንግዳ አገልግሎቶች እንዲያውሉ ያስችላቸዋል።',
-    image: '/ai-staff-freedom.png', // Placeholder
+    image: '/image copy 8.png', // AI staff freedom
     lists: [
         'አስተዳደራዊ ጫናን መቀነስ',
         '95% የሚሆኑ የእንግዳ ጥያቄዎችን ማስተናገድ',

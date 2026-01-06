@@ -69,7 +69,7 @@ export const ihPlatform = {
 export const ihGuestExperience = {
     title: 'ለእንግዶች የተበጀ ተሞክሮ',
     description: 'የእንግዶችን ፍላጎት፣ የምግብ ምርጫ እና ልዩ ቀናትን በመመዝገብ ለእያንዳንዱ እንግዳ ልዩ አገልግሎት ይስጡ።',
-    image: '/ih-guest-experience.png', // Placeholder
+    image: '/HOTELS/image copy 3.png', // Independent hotels guest experience
     lists: [
         'ዝርዝር የእንግዳ መረጃ',
         'የዲጂታል ቁልፎች መተግበሪያ',

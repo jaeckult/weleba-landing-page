@@ -69,7 +69,7 @@ export const geTransform = {
 export const gePersonalTouch = {
     title: 'Automated Communication That Feels Personal',
     description: 'Our integrated CRM helps you create personalized messaging campaigns throughout the guest journey.',
-    image: '/ge-personal-touch.png', // Placeholder
+    image: '/image copy 8.png', // Placeholder
     lists: [
         'Pre-Arrival Welcome Messaging',
         'In-Stay Service Enhancements',

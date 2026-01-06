@@ -69,32 +69,32 @@ export const webinarsList = [
         description: 'በቀዝቃዛ ወራት የክፍል መያዝ ሁኔታን እና ገቢን ለመጠበቅ የሚረዱ የተረጋገጡ ስልቶች።',
         category: 'ገቢ',
         date: 'ጥቅምት 14 ቀን 2018',
-        image: '/webinars/low-season.jpg',
-        href: '/webinars/low-season'
+        image: '/images/webinars/revenue-management.png',
+        href: '/knowledge-base'
     },
     {
         title: 'ኤአይ (AI) በእንግዳ ግንኙነት ላይ የሚያመጣው ለውጥ',
         description: 'የኤአይ የድምፅ ረዳቶች እና ቻትቦቶች የእንግዳ ጉዞን እና የፍሮንት ዴስክ ስራን እንዴት እንደሚለውጡ።',
         category: 'ቴክኖሎጂ',
         date: 'ነሐሴ 07 ቀን 2017',
-        image: '/webinars/ai-guest.jpg',
-        href: '/webinars/ai-guest'
+        image: '/images/webinars/guest-experience.png',
+        href: '/knowledge-base'
     },
     {
         title: 'ቀጥታ ቦታ ማስያዝ፡ በ 2026 ደላሎችን ማሸነፍ',
         description: 'የኮሚሽን ወጪን ለመቀነስ እና ታማኝ የቀጥታ ደንበኞችን ለማፍራት የሚረዱ ስልቶች።',
         category: 'ስርጭት',
         date: 'ሐምሌ 30 ቀን 2017',
-        image: '/webinars/direct-bookings.jpg',
-        href: '/webinars/direct-bookings'
+        image: '/images/webinars/operations.png',
+        href: '/knowledge-base'
     },
     {
         title: 'የሰራተኞች የሥራ ልምምድን በweleba ማቀላጠፍ',
         description: 'የሥራ ወጥነትን በሚጠብቁበት ጊዜ የስልጠና ጊዜን በ50% እንዴት መቀነስ እንደሚቻል።',
         category: 'ምርት',
         date: 'ሐምሌ 12 ቀን 2017',
-        image: '/webinars/onboarding.jpg',
-        href: '/webinars/onboarding'
+        image: '/images/webinars/revenue-management.png',
+        href: '/knowledge-base'
     }
 ];
 

@@ -69,7 +69,7 @@ export const fdmPlatform = {
 export const fdmCoordination = {
     title: 'የክፍሎች ቀላል ቅንጅት',
     description: 'ለቡድንዎ የእንግዳ ፍላጎቶችን እና የሁሉንም ክፍሎች ወቅታዊ ሁኔታ ወዲያውኑ እንዲያዩ ያስችላቸዋል።',
-    image: '/fdm-coordination.png', // Placeholder
+    image: '/HOTELS/image copy 5.png', // Front desk coordination
     lists: [
         'ወቅታዊ የክፍል መያዝ ሁኔታ',
         'ከእንግዶች ጋር መተግበሪያ ላይ መልእክት መለዋወጥ',

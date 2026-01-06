@@ -69,7 +69,7 @@ export const hgPlatform = {
 export const hgIntegration = {
     title: 'ከኮርፖሬት ስርዓቶች ጋር ይተሳሰሩ',
     description: 'ከሒሳብ አያያዝ፣ ከሰው ኃይል እና ከሌሎች የቢዝነስ ኢንተለጀንስ መሳሪያዎች ጋር ጠንካራ ትስስር እናቀርባለን።',
-    image: '/hg-integration.png', // Placeholder
+    image: '/HOTELS/image copy 4.png', // Hotel groups integration
     lists: [
         'የኢንተርፕራይዝ ሪሶርስ ፕላኒንግ (ERP)',
         'የቢዝነስ ኢንተለጀንስ (BI) መሳሪያዎች',
