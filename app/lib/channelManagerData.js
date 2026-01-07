@@ -69,7 +69,7 @@ export const cmTakeControl = {
 export const cmRevenueManagement = {
     title: 'Maximize revenue with integrated channel and revenue management',
     description: 'Adjust rates automatically based on demand signals, competitor pricing, and market trends then instantly distribute those optimized rates to every OTA, GDS, and direct booking channel.',
-    image: '/image copy 15.png', // Placeholder
+    image: '/image copy 10.png', // Placeholder
     lists: [
         'Instant Channel Synchronization',
         'AI-powered Rate Management',

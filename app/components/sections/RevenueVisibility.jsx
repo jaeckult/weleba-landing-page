@@ -25,13 +25,12 @@ const RevenueVisibility = () => {
   };
 
   const tabs = content.features.map((f, i) => {
-    // Default alternating images
-    let imageSrc = `/image copy ${13 + (i % 2)}.png`;
-
-    // Specific override for Revenue Intelligence (index 2)
-    if (i === 2) {
-      imageSrc = '/revenue-intelligence-no-dollars.png';  
-    }
+    // Default images based on index
+    let imageSrc;
+    if (i === 0) imageSrc = '/image-copy-13-no-money.png';
+    else if (i === 1) imageSrc = '/image copy 14.png';
+    else if (i === 2) imageSrc = '/revenue-intelligence-no-dollars.png';
+    else imageSrc = '/image copy 14.png';
 
     return {
       ...f,

@@ -37,7 +37,7 @@ export const beBenefits = {
 export const bePowerhouse = {
     title: 'Turn Your Hotel Website into a Direct Booking Powerhouse',
     description: 'Design Branded Booking Pages. You can easily adjust the colors, fonts, and layout of the booking page to match the style of your hotel.',
-    image: '/image copy 13.png', // Placeholder
+    image: '/image-copy-13-no-money.png', // Placeholder
     lists: ['Custom Colors & Fonts', 'Seamless Integration', 'Responsive Layouts'],
     imageLeft: true,
 };

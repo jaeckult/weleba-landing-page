@@ -56,7 +56,7 @@ export const pmTabbedFeatures = {
             id: 0,
             title: 'Reservation Management',
             description: 'Drag-and-drop calendar makes managing bookings intuitive and fast. View availability, modify dates, and assign rooms in seconds.',
-            image: '/image copy 13.png',
+            image: '/image-copy-13-no-money.png',
             icon: 'Calendar',
         },
         {

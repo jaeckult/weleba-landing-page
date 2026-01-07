@@ -56,7 +56,7 @@ export const pmTabbedFeatures = {
             id: 0,
             title: 'የቦታ ማስያዝ አስተዳደር',
             description: 'በቀላሉ የሚንቀሳቀስ የቀን መቁጠሪያ ቦታ ማስያዝን ፈጣን እና ቀላል ያደርገዋል። ክፍት ቦታዎችን ይመልከቱ፣ ቀናትን ያስተካክሉ እና ክፍሎችን በጥቂት ሰከንዶች ውስጥ ይመድቡ።',
-            image: '/image copy 13.png',
+            image: '/image-copy-13-no-money.png',
             icon: 'Calendar',
         },
         {

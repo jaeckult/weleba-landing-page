@@ -31,29 +31,29 @@ export default function FeaturesGrid() {
     top: [
       {
         ...features[0],
-        image: '/image copy 5.png',
+        image: '/image copy 4.png',
         alt: features[0].title,
       },
       {
         ...features[1],
-        image: '/image copy 6.png',
+        image: '/geminirm.png',
         alt: features[1].title,
       },
     ],
     middle: {
       ...features[2],
-      image: '/image copy 7.png',
+      image: '/image-copy-11-no-money.png',
       alt: features[2].title,
     },
     bottom: [
       {
         ...features[3],
-        image: '/image copy 9.png',
+        image: '/image-copy-13-no-money.png',
         alt: features[3].title,
       },
       {
         ...features[4],
-        image: '/image copy 8.png',
+        image: '/image copy 12.png',
         alt: features[4].title,
       },
     ],
@@ -62,11 +62,11 @@ export default function FeaturesGrid() {
   const Card = ({ title, description, image, alt, notchSide }) => (
     <article
       className={`bg-[#E8E6E1] flex flex-col justify-between min-h-[400px] md:min-h-[560px] relative overflow-hidden rounded-lg transition-all duration-300 hover:shadow-lg group ${isMobile ? 'p-8' :
-          notchSide === 'left'
-            ? 'p-10 md:p-12 md:pl-28 lg:p-14 lg:pl-32'
-            : notchSide === 'right'
-              ? 'p-10 md:p-12 md:pr-28 lg:p-14 lg:pr-32'
-              : 'p-10 md:p-12 lg:p-14'
+        notchSide === 'left'
+          ? 'p-10 md:p-12 md:pl-28 lg:p-14 lg:pl-32'
+          : notchSide === 'right'
+            ? 'p-10 md:p-12 md:pr-28 lg:p-14 lg:pr-32'
+            : 'p-10 md:p-12 lg:p-14'
         }`}
       style={{
         clipPath: isMobile ? 'none' : (

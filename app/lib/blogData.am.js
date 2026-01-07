@@ -82,7 +82,7 @@ export const blogPosts = [
         date: 'ታህሳስ 07 ቀን 2018',
         readTime: 'የ14 ደቂቃ ንባብ',
         category: 'የመስመር ላይ ቦታ ማስያዝ',
-        image: '/image copy 11.png',
+        image: '/image-copy-11-no-money.png',
         featured: false,
         author: {
             name: 'ሊዛ ቶምፕሰን',
@@ -112,7 +112,7 @@ export const blogPosts = [
         date: 'ታህሳስ 05 ቀን 2018',
         readTime: 'የ10 ደቂቃ ንባብ',
         category: 'የሆቴል አስተዳደር',
-        image: '/image copy 13.png',
+        image: '/image-copy-13-no-money.png',
         featured: false,
         author: {
             name: 'ማሪያ ጋርሲያ',

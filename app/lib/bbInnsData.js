@@ -69,7 +69,7 @@ export const bbPlatform = {
 export const bbPersonalTouch = {
     title: 'The Personal Touch, Automated',
     description: 'Remember guest preferences, dietary restrictions, and special requests to ensure every stay is memorable.',
-    image: '/image copy 11.png', // B&B personal touch
+    image: '/image-copy-11-no-money.png', // B&B personal touch
     lists: [
         'Detailed Guest Profiles',
         'Customizable Email Templates',

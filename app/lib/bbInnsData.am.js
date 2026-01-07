@@ -69,7 +69,7 @@ export const bbPlatform = {
 export const bbPersonalTouch = {
     title: 'ልዩ አገልግሎትን በራስ-ሰር ያግኙ',
     description: 'የእንግዶችን ፍላጎት፣ የምግብ ምርጫ እና ልዩ ጥያቄዎችን በመመዝገብ እያንዳንዱ ቆይታ የማይረሳ እንዲሆን ያድርጉ።',
-    image: '/image copy 11.png', // B&B personal touch
+    image: '/image-copy-11-no-money.png', // B&B personal touch
     lists: [
         'ዝርዝር የእንግዳ መረጃ',
         'ሊስተካከሉ የሚችሉ የኢሜይል ንድፎች',

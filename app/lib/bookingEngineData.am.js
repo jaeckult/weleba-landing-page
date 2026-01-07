@@ -37,7 +37,7 @@ export const beBenefits = {
 export const bePowerhouse = {
     title: 'የሆቴልዎን ድረ-ገጽ ወደ ቦታ ማስያዣ ማዕከል ይለውጡት',
     description: 'የሆቴልዎን ዘይቤ እንዲያንፀባርቁ ቀለሞችን፣ ፊደላትን እና ገጾችን በቀላሉ ማስተካከል ይችላሉ።',
-    image: '/image copy 13.png', // Placeholder
+    image: '/image-copy-13-no-money.png', // Placeholder
     lists: ['የተመረጡ ቀለሞች እና ፊደላት', 'ቀላል ግንኙነት', 'ለማንኛውም ስክሪን የሚመጥን'],
     imageLeft: true,
 };

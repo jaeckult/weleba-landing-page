@@ -82,7 +82,7 @@ export const blogPosts = [
         date: 'December 16, 2025',
         readTime: '14 min read',
         category: 'Online Bookings',
-        image: '/image copy 11.png',
+        image: '/image-copy-11-no-money.png',
         featured: false,
         author: {
             name: 'Abel Ashine',
@@ -112,7 +112,7 @@ export const blogPosts = [
         date: 'December 14, 2025',
         readTime: '10 min read',
         category: 'Hotel Management',
-        image: '/image copy 13.png',
+        image: '/image-copy-13-no-money.png',
         featured: false,
         author: {
             name: 'Kiya',

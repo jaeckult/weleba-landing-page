@@ -25,7 +25,7 @@ const WhyChoose = () => {
     ...f,
     id: `feat-${i}`,
     icon: iconMap[f.title] || Clipboard,
-    image: `/image copy ${9 + i}.png`, // Assuming same order for images
+    image: i === 2 ? '/image-copy-11-no-money.png' : `/image copy ${9 + i}.png`, // Handle no-money image for index 2
     tag: locale === 'am' ? 'የእለት ተእለት አስፈላጊ ነገሮች' : 'Day-to-Day Essentials'
   }));
 
