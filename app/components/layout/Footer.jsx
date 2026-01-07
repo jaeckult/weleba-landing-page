@@ -169,7 +169,7 @@ const Footer = () => {
                     className="object-contain translate-y-1"
                   />
                   <div className="flex items-center">
-                    <span className="text-2xl font-bold text-[#0a1628]">
+                    <span className="text-2xl font-bold text-[#0]">
                       {locale === 'am' ? 'ወለባ' : 'Weleba'}
                     </span>
                   </div>
