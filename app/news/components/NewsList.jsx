@@ -66,19 +66,27 @@ const NewsList = ({ articles, categories }) => {
                     </div>
 
                     {/* Category Filter */}
+                    {/* Category Filter */}
                     <div className="flex flex-wrap gap-3">
-                        {categories.map((category) => (
-                            <button
-                                key={category.slug}
-                                onClick={() => setSelectedCategory(category.slug)}
-                                className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all ${selectedCategory === category.slug
-                                    ? 'bg-blue-600 text-white shadow-md'
-                                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                                    }`}
-                            >
-                                {category.name} ({category.count})
-                            </button>
-                        ))}
+                        {categories.map((category) => {
+                            // Calculate count dynamically
+                            const count = category.slug === 'all'
+                                ? articles.length
+                                : articles.filter(a => a.category === category.name || a.category === category.slug).length;
+
+                            return (
+                                <button
+                                    key={category.slug}
+                                    onClick={() => setSelectedCategory(category.slug)}
+                                    className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all ${selectedCategory === category.slug
+                                        ? 'bg-blue-600 text-white shadow-md'
+                                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                                        }`}
+                                >
+                                    {category.name} ({count})
+                                </button>
+                            );
+                        })}
                     </div>
                 </div>
 

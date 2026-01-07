@@ -24,13 +24,23 @@ const RevenueVisibility = () => {
     'የሆቴል ድረ-ገጽ ግንቢ': Globe,
   };
 
-  const tabs = content.features.map((f, i) => ({
-    ...f,
-    id: i,
-    icon: iconMap[f.title] || Calendar,
-    image: `/image copy ${13 + (i % 2)}.png`, // Alternating images 13 and 14
-    link: f.href
-  }));
+  const tabs = content.features.map((f, i) => {
+    // Default alternating images
+    let imageSrc = `/image copy ${13 + (i % 2)}.png`;
+
+    // Specific override for Revenue Intelligence (index 2)
+    if (i === 2) {
+      imageSrc = '/revenue-intelligence-no-dollars.png';  
+    }
+
+    return {
+      ...f,
+      id: i,
+      icon: iconMap[f.title] || Calendar,
+      image: imageSrc,
+      link: f.href
+    };
+  });
 
   return (
     <section className="py-24 bg-white">

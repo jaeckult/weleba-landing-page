@@ -158,7 +158,7 @@ export const whyChooseContent = {
     },
     {
       title: 'Built by Hoteliers for Hoteliers',
-      description: 'Building on our 30+ years of providing hospitality software, weleba understands your operational challenges because we\'ve lived them.',
+      description: 'Building on our years of providing hospitality software, weleba understands your operational challenges because we\'ve lived them.',
       icon: 'Users',
     },
     {

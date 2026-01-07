@@ -1,32 +1,80 @@
 export const newsArticles = [
     {
         id: 1,
-        title: 'weleba Invites Independent Hoteliers to IHS 2026',
-        slug: 'weleba-invites-independent-hoteliers-ihs-2026',
-        excerpt: 'Join us at the International Hotel Show 2026 to discover how weleba is revolutionizing hotel management for independent properties.',
-        content: 'Full article content here...',
+        title: 'weleba Showcases Innovation at Addis Hospitality Expo 2026',
+        slug: 'weleba-showcases-innovation-addis-hospitality-expo-2026',
+        excerpt: 'We were thrilled to connect with hundreds of Ethiopian hoteliers at the Millennium Hall, demonstrating how weleba simplifies operations for local properties.',
+        content: `
+# weleba at Addis Hospitality Expo 2026
+
+The Addis Hospitality Expo at Millennium Hall was a resounding success this year, and weleba was proud to be at the center of it all. As Ethiopia's tourism sector continues to grow, the need for modern, locally-relevant technology has never been greater.
+
+## Connecting with Local Hoteliers
+
+Over the course of three days, our team met with general managers and owners from across the country—from boutique hotels in Bole to resort owners in Bishoftu and Hawassa. The feedback was unanimous: existing international solutions are often too expensive and complex for the local market, while local solutions sometimes lack the robust features needed to compete globally.
+
+weleba bridges this gap.
+
+## Key Demonstrations
+
+Our booth featured live demos of our most popular features for the Ethiopian market:
+
+### 1. Telebirr Integration
+We showed how seamless it is to accept payments directly through Telebirr, a feature that drew significant attention given the platform's ubiquity in Ethiopia.
+
+### 2. Amharic Interface
+Seeing a world-class PMS interface entirely in Amharic was a "game-changer" for many attendees, who cited staff training as a major bottleneck with English-only software.
+
+### 3. Offline-First Capabilities
+Recognizing that internet connectivity can be intermittent, we demonstrated how weleba handles temporary outages without disrupting front-desk operations.
+
+## Looking Ahead
+
+We left the expo energized and committed to our mission. We aren't just building software; we're building the digital infrastructure for Ethiopian hospitality to thrive. Thank you to everyone who stopped by!
+        `,
         date: 'January 2, 2026',
         publishedAt: '2026-01-02',
-        readTime: '3 min read',
+        readTime: '4 min read',
         category: 'Company News',
-        image: '/image copy 10.png',
+        image: '/news/image-1.png',
         featured: true,
         author: {
-            name: 'weleba Team',
+            name: 'weleba Ethiopia Team',
             role: 'Marketing',
         },
     },
     {
         id: 2,
-        title: 'weleba Launches AI-Powered Revenue Intelligence',
-        slug: 'weleba-launches-ai-powered-revenue-intelligence',
-        excerpt: 'Our new AI-driven revenue management system helps hotels optimize pricing in real-time based on market demand and competitor analysis.',
-        content: 'Full article content here...',
+        title: 'Strategic Partnership with Telebirr to Streamline Hotel Payments',
+        slug: 'weleba-partners-telebirr-streamline-payments',
+        excerpt: 'We are excited to announce a direct integration with Telebirr, allowing guests to pay for bookings and services instantly using Ethiopia\'s leading mobile money platform.',
+        content: `
+# weleba x Telebirr: Simplifying Payments for Ethiopian Hotels
+
+In a major move to digitize hospitality payments in Ethiopia, weleba has officially integrated with Telebirr. This strategic partnership removes friction from the guest experience and ensures hoteliers get paid faster and more securely.
+
+## Why This Matters
+
+Cash has long been king in Ethiopia, but the tide is turning. With millions of Telebirr users, guests expect digital convenience. Previously, accepting mobile money often meant manual transfers and manual reconciliation at the front desk—a recipe for errors and fraud.
+
+## How It Works
+
+With the new integration:
+1.  **Direct Booking Payment:** Guests booking through your weleba-powered website can select Telebirr at checkout.
+2.  **POS Integration:** Front desk agents can push a payment request directly to a guest's phone during check-in or checkout.
+3.  **Automatic Reconciliation:** Every transaction is automatically recorded in the PMS. No more end-of-day headaches trying to match SMS alerts with guest folios.
+
+## Empowering a Cashless Future
+
+"This integration is about trust and efficiency," says our Country Manager. "Hoteliers can trust their financial data, and guests can trust the payment process."
+
+The feature is available immediately for all weleba customers in Ethiopia. Contact support to enable it for your property today.
+        `,
         date: 'December 28, 2025',
         publishedAt: '2025-12-28',
-        readTime: '5 min read',
+        readTime: '3 min read',
         category: 'Product Updates',
-        image: '/image copy 11.png',
+        image: '/news/image-2.png',
         featured: true,
         author: {
             name: 'Product Team',
@@ -35,104 +83,42 @@ export const newsArticles = [
     },
     {
         id: 3,
-        title: 'weleba Reaches 5,000 Hotel Milestone',
-        slug: 'weleba-reaches-5000-hotel-milestone',
-        excerpt: 'We\'re proud to announce that over 5,000 hotels worldwide now trust weleba to power their operations.',
-        content: 'Full article content here...',
+        title: 'Celebrating 500 Partner Hotels Across Ethiopia',
+        slug: 'weleba-reaches-500-hotels-ethiopia',
+        excerpt: 'From the historic routes of Lalibela to the bustling avenues of Addis Ababa, 500 properties now run on weleba. Thank you for your trust!',
+        content: `
+# A Milestone for Ethiopian Hospitality: 500 Hotels Strong
+
+We are incredibly proud to announce that the weleba family in Ethiopia has grown to 500 partner hotels. This milestone is not just a number; it represents 500 businesses that have chosen to modernize their operations and deliver better guest experiences.
+
+## A Journey Across the Country
+
+Our growth reflects the diversity of Ethiopia's hospitality landscape:
+*   **Addis Ababa:** Business hotels serving international delegates and diplomats.
+*   **Lalibela & Gondar:** Historic lodges preserving culture while offering modern comforts.
+*   **Bishoftu & Hawassa:** Resorts providing weekend escapes for locals and tourists alike.
+*   **Arba Minch:** Eco-lodges serving as gateways to the southern nations.
+
+## What Our Partners Are Saying
+
+> "Before weleba, we managed everything on paper. Now, I can see my hotel's occupancy from my phone while I'm in Addis for meetings." 
+> — *Ato Kebede, Owner of a lodge in Bahir Dar*
+
+## Building for the Next 500
+
+We are just getting started. Our roadmap for the coming year includes even more localized features, including integrations with local tour operators and banks. We remain dedicated to empowering independent Ethiopian hoteliers to compete on a global stage.
+
+Here's to the next 500!
+        `,
         date: 'December 20, 2025',
         publishedAt: '2025-12-20',
-        readTime: '4 min read',
-        category: 'Company News',
-        image: '/image copy 12.png',
-        featured: false,
-        author: {
-            name: 'weleba Team',
-            role: 'Marketing',
-        },
-    },
-    {
-        id: 4,
-        title: 'New Mobile Check-in Feature Now Available',
-        slug: 'new-mobile-check-in-feature-available',
-        excerpt: 'Guests can now check in, access digital keys, and manage their stay entirely from their mobile devices.',
-        content: 'Full article content here...',
-        date: 'December 15, 2025',
-        publishedAt: '2025-12-15',
         readTime: '3 min read',
-        category: 'Product Updates',
-        image: '/image copy 13.png',
-        featured: false,
-        author: {
-            name: 'Product Team',
-            role: 'Product Management',
-        },
-    },
-    {
-        id: 5,
-        title: 'weleba Partners with Leading Payment Processors',
-        slug: 'weleba-partners-leading-payment-processors',
-        excerpt: 'New integrations with Stripe, Square, and PayPal make payment processing even more seamless for our hotel partners.',
-        content: 'Full article content here...',
-        date: 'December 10, 2025',
-        publishedAt: '2025-12-10',
-        readTime: '4 min read',
-        category: 'Partnerships',
-        image: '/image copy 14.png',
-        featured: false,
-        author: {
-            name: 'Business Development',
-            role: 'Partnerships',
-        },
-    },
-    {
-        id: 6,
-        title: 'Hospitality Industry Trends Report 2026',
-        slug: 'hospitality-industry-trends-report-2026',
-        excerpt: 'Our annual report reveals key trends shaping the future of hotel technology and guest expectations.',
-        content: 'Full article content here...',
-        date: 'December 5, 2025',
-        publishedAt: '2025-12-05',
-        readTime: '8 min read',
-        category: 'Industry Insights',
-        image: '/image copy 15.png',
-        featured: false,
-        author: {
-            name: 'Research Team',
-            role: 'Market Research',
-        },
-    },
-    {
-        id: 7,
-        title: 'weleba Wins Best Hotel PMS Award 2025',
-        slug: 'weleba-wins-best-hotel-pms-award-2025',
-        excerpt: 'We\'re honored to receive the Hotel Tech Awards\' Best Property Management System for the third consecutive year.',
-        content: 'Full article content here...',
-        date: 'November 28, 2025',
-        publishedAt: '2025-11-28',
-        readTime: '2 min read',
         category: 'Company News',
-        image: '/image copy 16.png',
+        image: '/news/image-3.png',
         featured: false,
         author: {
-            name: 'weleba Team',
-            role: 'Marketing',
-        },
-    },
-    {
-        id: 8,
-        title: 'Enhanced Security Features Rollout',
-        slug: 'enhanced-security-features-rollout',
-        excerpt: 'New two-factor authentication and advanced encryption protect your hotel data better than ever.',
-        content: 'Full article content here...',
-        date: 'November 20, 2025',
-        publishedAt: '2025-11-20',
-        readTime: '5 min read',
-        category: 'Product Updates',
-        image: '/image copy 2.png',
-        featured: false,
-        author: {
-            name: 'Security Team',
-            role: 'Engineering',
+            name: 'Yitbarek T.',
+            role: 'CEO',
         },
     },
 ];
@@ -144,8 +130,9 @@ export const newsCategories = [
     { name: 'Partnerships', slug: 'Partnerships', count: 1 },
     { name: 'Industry Insights', slug: 'Industry Insights', count: 1 },
 ];
+
 export const newsHeroContent = {
     tag: 'News',
-    title: 'Latest<br />News &<br />Updates',
-    description: 'Stay informed with the latest weleba product updates, company announcements, and hospitality industry news.'
+    title: 'Stories from<br />Ethiopian<br />Hospitality',
+    description: 'Updates from weleba, insights on the Ethiopian market, and stories from our partner hotels.'
 };
