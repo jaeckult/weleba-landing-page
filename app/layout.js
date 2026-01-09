@@ -13,6 +13,10 @@ export const metadata = {
   title: "All-in-one Hotel Management Software | weleba",
   description: "The complete hospitality platform. Streamline operations, enhance guest experiences, and maximize revenue with our unified PMS & AI Concierge.",
   keywords: "hotel management software, PMS, property management system, hospitality software, booking engine, channel manager",
+  icons: {
+    icon: '/logo/canvas.png',
+    apple: '/logo/canvas.png',
+  },
   openGraph: {
     title: "All-in-one Hotel Management Software | weleba",
     description: "The complete hospitality platform. Streamline operations, enhance guest experiences, and maximize revenue with our unified PMS & AI Concierge.",

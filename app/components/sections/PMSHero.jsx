@@ -68,23 +68,17 @@ const PMSHero = ({ children }) => {
 
             </div>
 
-            {/* Right Video - Styled like Home Hero */}
+            {/* Right Image - Styled like Home Hero */}
             <div className="lg:w-1/2 mt-8 lg:mt-16 px-0 sm:px-4">
               <div className="relative" style={{
                 WebkitMaskImage: 'radial-gradient(ellipse 100% 90% at 50% 40%, black 20%, transparent 80%)',
                 maskImage: 'radial-gradient(ellipse 100% 90% at 50% 40%, black 20%, transparent 80%)'
               }}>
-                <video
+                <img
+                  src="/image copy 8.png"
+                  alt="Hotel Property Management System"
                   className="w-full aspect-[16/9] object-cover rounded-xl sm:rounded-2xl shadow-2xl"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  poster="/videos/hotel-pms-video-poster.jpg"
-                >
-                  <source src="/hero-video.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+                />
               </div>
             </div>
           </div>

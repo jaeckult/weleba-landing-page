@@ -62,17 +62,12 @@ const Hero = ({ content: propContent }) => {
               WebkitMaskImage: 'radial-gradient(ellipse 100% 90% at 50% 40%, black 20%, transparent 80%)',
               maskImage: 'radial-gradient(ellipse 100% 90% at 50% 40%, black 20%, transparent 80%)'
             }}>
-              {/* Dashboard Preview Video */}
-              <video
+              {/* Dashboard Preview Image */}
+              <img
+                src="/image copy 8.png"
+                alt="Hotel Management Dashboard"
                 className="w-full aspect-[16/9] object-cover"
-                autoPlay
-                loop
-                muted
-                playsInline
-              >
-                <source src="/hero-video.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
+              />
             </div>
           </div>
         </div>
