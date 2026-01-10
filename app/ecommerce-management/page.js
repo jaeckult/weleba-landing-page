@@ -10,15 +10,15 @@ import GetStarted from '../components/sections/GetStarted';
 import {
     bbHeroContent as enHero,
     bbAdvantages as enAdvantages,
-    bbFeatures as enPlatform,
-    bbOperations as enReporting,
+    bbPlatform as enPlatform,
+    bbPersonalTouch as enReporting,
     bbFaqs as enFaqs
 } from '../lib/ecommerceData';
 import {
     bbHeroContent as amHero,
     bbAdvantages as amAdvantages,
-    bbFeatures as amPlatform,
-    bbOperations as amReporting,
+    bbPlatform as amPlatform,
+    bbPersonalTouch as amReporting,
     bbFaqs as amFaqs
 } from '../lib/ecommerceData.am';
 import { useLanguage } from '../context/LanguageContext';

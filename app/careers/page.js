@@ -1,7 +1,7 @@
 'use client';
 
-import AboutHero from './components/AboutHero';
-import ScrollStack from './components/ScrollStack';
+import AboutHero from '../about-us/components/AboutHero';
+import ScrollStack from '../about-us/components/ScrollStack';
 import Testimonials from '../components/sections/Testimonials';
 import GetStarted from '../components/sections/GetStarted';
 import ScrollReveal from '../components/ui/ScrollReveal';
