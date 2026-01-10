@@ -1,9 +1,9 @@
 export const pricingHeroContent = {
     tag: 'Pricing',
     title: 'Request Your \n<span className="text-[#0066FF]">Personalized Quote</span>',
-    description: "Our pricing scales with your property's size and needs. Tell us a bit about your hotel, and we'll build a tailored package that helps you save time and grow revenue.",
+    description: "Our pricing scales with your organization's size and needs. Tell us a bit about your business, and we'll build a tailored package that helps you save time and grow revenue.",
     benefits: [
-        'All-in-one platform for property management',
+        'All-in-one platform for business management',
         '97% client retention rate',
         '24/7 world-class support',
         'Seamless integrations with top tools'
@@ -19,10 +19,10 @@ export const pricingFormContent = {
     fields: {
         firstName: { label: 'First Name', placeholder: 'Fuad' },
         lastName: { label: 'Last Name', placeholder: 'Abdu' },
-        email: { label: 'Work Email', placeholder: 'fuad@hotel.com' },
-        property: { label: 'Property Name', placeholder: 'Gambella hotel' },
+        email: { label: 'Work Email', placeholder: 'fuad@business.com' },
+        property: { label: 'Business Name', placeholder: 'Elite Enterprise' },
         rooms: {
-            label: 'Number of Rooms',
+            label: 'Business Scale (Units/Rooms)',
             placeholder: 'Select range...',
             options: [
                 { value: '<25', label: 'Less than 25' },
@@ -39,10 +39,10 @@ export const pricingFormContent = {
 };
 
 export const pricingPageContent = {
-    trustedBy: 'Trusted by leading hotels worldwide',
+    trustedBy: 'Trusted by leading organizations worldwide',
     cta: {
-        title: 'Ready to transform your property operations?',
-        subtitle: 'Join thousands of hotels that use weleba to increase efficiency and revenue.',
+        title: 'Ready to transform your business operations?',
+        subtitle: 'Join thousands of businesses that use weleba to increase efficiency and revenue.',
         buttonText: 'Get Started Now'
     }
 };

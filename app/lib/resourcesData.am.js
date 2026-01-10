@@ -1,14 +1,14 @@
 // Templates Data
 export const templatesHeader = {
     tag: 'ንድፎች እና የፍተሻ ዝርዝሮች (Templates & Checklists)',
-    title: 'ለዘመናዊ ሆቴሎች የሚሆን የአሠራር ብቃት',
-    description: 'የሆቴል ስራዎ ውጤታማ እንዲሆን የሚያግዙ ዝግጁ የሥራ መመሪያዎችን፣ የፍተሻ ዝርዝሮችን እና አሠራሮችን እዚህ ያግኙ።'
+    title: 'ለዘመናዊ ንግዶች የሚሆን የአሠራር ብቃት',
+    description: 'የድርጅትዎ ስራ ውጤታማ እንዲሆን የሚያግዙ ዝግጁ የሥራ መመሪያዎችን፣ የፍተሻ ዝርዝሮችን እና አሠራሮችን እዚህ ያግኙ።'
 };
 
 export const templatesList = [
     {
-        title: 'የሆቴል ጽዳት እና ቁጥጥር ዝርዝር',
-        description: 'እያንዳንዱ ክፍል ከፍተኛ የጥራት ደረጃን እንዲያሟላ የሚያረጋግጥ የተሟላ የጽዳት እና የፍተሻ ዝርዝር።',
+        title: 'የስራ አፈጻጸም እና ጥገና ቁጥጥር ዝርዝር',
+        description: 'እያንዳንዱ የድርጅትዎ ክፍል ከፍተኛ የጥራት ደረጃን እንዲያሟላ የሚያረጋግጥ የተሟላ የቁጥጥር እና የፍተሻ ዝርዝር።',
         category: 'ሥራዎች',
         image: '/templates/housekeeping.jpg',
         href: '/templates/housekeeping-checklist',
@@ -23,8 +23,8 @@ export const templatesList = [
         type: 'ንድፍ'
     },
     {
-        title: 'ሆቴል ከመከፈቱ በፊት የሚደረግ የዝግጅት መመሪያ',
-        description: 'አዲስ ሆቴል በተሳካ ሁኔታ ለመክፈት የሚረዱ የ12 ወራት ዝርዝር የዝግጅት እርከኖች።',
+        title: 'ድርጅት ከመከፈቱ በፊት የሚደረግ የዝግጅት መመሪያ',
+        description: 'አዲስ ድርጅት በተሳካ ሁኔታ ለመክፈት የሚረዱ የ12 ወራት ዝርዝር የዝግጅት እርከኖች።',
         category: 'አስተዳደር',
         image: '/templates/pre-opening.jpg',
         href: '/templates/pre-opening-guide',
@@ -39,16 +39,16 @@ export const templatesList = [
         type: 'የፍተሻ ዝርዝር'
     },
     {
-        title: 'የእንግዳ ቅሬታ መፍቻ ቅጽ',
-        description: 'ሰራተኞች የእንግዳ ቅሬታዎችን በሙያዊ ብቃት እንዲፈቱ እና እንዲመዘግቡ የሚያስችል መሳሪያ።',
-        category: 'የእንግዳ ተሞክሮ',
+        title: 'የደንበኛ ቅሬታ መፍቻ ቅጽ',
+        description: 'ሰራተኞች የደንበኛ ቅሬታዎችን በሙያዊ ብቃት እንዲፈቱ እና እንዲመዘግቡ የሚያስችል መሳሪያ።',
+        category: 'የደንበኛ ተሞክሮ',
         image: '/templates/complaint-form.jpg',
         href: '/templates/complaint-form',
         type: 'ቅጽ'
     },
     {
-        title: 'የሆቴሎች ዲጂታል ማርኬቲንግ ኦዲት',
-        description: 'በይነመረብ ላይ ያለዎትን መገኘት በመገምገም የቀጥታ ቦታ ማስያዝ እድሎችን ይለዩ።',
+        title: 'የድርጅቶች ዲጂታል ማርኬቲንግ ኦዲት',
+        description: 'በይነመረብ ላይ ያለዎትን መገኘት በመገምገም የቀጥታ ሽያጭ እድሎችን ይለዩ።',
         category: 'ማርኬቲንግ',
         image: '/templates/marketing-audit.jpg',
         href: '/templates/marketing-audit',
@@ -59,8 +59,8 @@ export const templatesList = [
 // Webinars Data
 export const webinarsHeader = {
     tag: 'ቪዲዮ ትምህርቶች (Webinars)',
-    title: 'የመስተንግዶ መረጃዎች ከኢንዱስትሪ ባለሙያዎች',
-    description: 'የሆቴል አስተዳደር የወደፊት ዕጣ ፈንታን የሚወስኑ አዝማሚያዎችን እና ስልቶችን ከባለሙያዎቻችን ጋር ይወያዩ።'
+    title: 'የቢዝነስ መረጃዎች ከኢንዱስትሪ ባለሙያዎች',
+    description: 'የድርጅት አስተዳደር የወደፊት ዕጣ ፈንታን የሚወስኑ አዝማሚያዎችን እና ስልቶችን ከባለሙያዎቻችን ጋር ይወያዩ።'
 };
 
 export const webinarsList = [
@@ -73,15 +73,15 @@ export const webinarsList = [
         href: '/knowledge-base'
     },
     {
-        title: 'ኤአይ (AI) በእንግዳ ግንኙነት ላይ የሚያመጣው ለውጥ',
-        description: 'የኤአይ የድምፅ ረዳቶች እና ቻትቦቶች የእንግዳ ጉዞን እና የፍሮንት ዴስክ ስራን እንዴት እንደሚለውጡ።',
+        title: 'ኤአይ (AI) በደንበኛ ግንኙነት ላይ የሚያመጣው ለውጥ',
+        description: 'የኤአይ ረዳቶች እና ቻትቦቶች የደንበኛ ጉዞን እና የድርጅት ስራን እንዴት እንደሚለውጡ።',
         category: 'ቴክኖሎጂ',
         date: 'ነሐሴ 07 ቀን 2017',
         image: '/images/webinars/guest-experience.png',
         href: '/knowledge-base'
     },
     {
-        title: 'ቀጥታ ቦታ ማስያዝ፡ በ 2026 ደላሎችን ማሸነፍ',
+        title: 'ቀጥታ ሽያጭ፡ በ 2026 የገበያ ቦታዎችን ማሸነፍ',
         description: 'የኮሚሽን ወጪን ለመቀነስ እና ታማኝ የቀጥታ ደንበኞችን ለማፍራት የሚረዱ ስልቶች።',
         category: 'ስርጭት',
         date: 'ሐምሌ 30 ቀን 2017',
@@ -101,14 +101,14 @@ export const webinarsList = [
 // Calculators Data
 export const calculatorsHeader = {
     tag: 'የአስተዳደር መሳሪያዎች',
-    title: 'የሆቴልዎን አፈጻጸም የሚያሻሽሉ ማስሊያዎች',
-    description: 'የእድገት አቅምዎን ለመመልከት እና ዋና ዋና የሆቴል አፈጻጸም መለኪያዎችን በፍጥነት ለማስላት የእኛን ነጻ መሳሪያዎች ይጠቀሙ።'
+    title: 'የድርጅትዎን አፈጻጸም የሚያሻሽሉ ማስሊያዎች',
+    description: 'የእድገት አቅምዎን ለመመልከት እና ዋና ዋና የንግድ አፈጻጸም መለኪያዎችን በፍጥነት ለማስላት የእኛን ነጻ መሳሪያዎች ይጠቀሙ።'
 };
 
 export const calculatorsList = [
     {
-        title: 'RevPAR እና ADR ማስሊያ',
-        description: 'የፋይናንስ ሁኔታዎን ለመከታተል የክፍል ገቢዎን እና አማካይ የዕለት ተዕለት ዋጋዎን በፍጥነት ያሰሉ።',
+        title: 'የገቢ እና የዋጋ ማስሊያ',
+        description: 'የፋይናንስ ሁኔታዎን ለመከታተል ገቢዎን እና አማካይ የሽያጭ ዋጋዎን በፍጥነት ያሰሉ።',
         category: 'ፋይናንስ',
         image: '/calculators/revpar.jpg',
         href: '/calculators/revpar'
@@ -122,14 +122,14 @@ export const calculatorsList = [
     },
     {
         title: 'የሰራተኞች ምርታማነት ROI መሳሪያ',
-        description: 'አሰልቺ የሆኑ የሆቴል ስራዎችን በራስ-ሰር በመስራት የሚያገኙትን የሰው ኃይል ወጪ ቁጠባ ያሰሉ።',
+        description: 'አሰልቺ የሆኑ የቢዝነስ ስራዎችን በራስ-ሰር በመስራት የሚያገኙትን የሰው ኃይል ወጪ ቁጠባ ያሰሉ።',
         category: 'ውጤታማነት',
         image: '/calculators/roi.jpg',
         href: '/calculators/staff-productivity'
     },
     {
-        title: 'የክፍል መያዝ ትንበያ መሳሪያ',
-        description: 'ቀደምት መረጃዎችን እና የወቅቱን ሁኔታ በማየት የወደፊት የክፍል መያዝ ሁኔታን የሚገምቱበት ቀላል መንገድ።',
+        title: 'የፍላጎት ትንበያ መሳሪያ',
+        description: 'ቀደምት መረጃዎችን እና የወቅቱን ሁኔታ በማየት የወደፊት የንግድ ሁኔታን የሚገምቱበት ቀላል መንገድ።',
         category: 'ሥራዎች',
         image: '/calculators/forecast.jpg',
         href: '/calculators/occupancy-forecast'
@@ -139,29 +139,29 @@ export const calculatorsList = [
 // eBooks Data
 export const ebooksHeader = {
     tag: 'ኢ-መጽሐፍት እና ጥናቶች',
-    title: 'ለመስተንግዶ ስኬት የሚሆኑ ዝርዝር ስልቶች',
-    description: 'የገቢ አስተዳደርን፣ የእንግዳ ተሞክሮን እና የሆቴል ቴክኖሎጂን ለመቆጣጠር በዝርዝር የተዘጋጁ መመሪያዎችን ያውርዱ።'
+    title: 'ለቢዝነስ ስኬት የሚሆኑ ዝርዝር ስልቶች',
+    description: 'የገቢ አስተዳደርን፣ የደንበኛ ተሞክሮን እና የንግድ ቴክኖሎጂን ለመቆጣጠር በዝርዝር የተዘጋጁ መመሪያዎችን ያውርዱ።'
 };
 
 export const ebooksList = [
     {
-        title: 'ለዘመናዊ ሆቴሎች የሚሆን የገቢ አስተዳደር መመሪያ',
-        description: 'ስለ ተለዋዋጭ ዋጋ አወጣጥ፣ የሽያጭ ቻናሎች እና የADR ማመቻቸት የሚመረምር ባለ 50 ገጽ መጽሐፍ።',
+        title: 'ለዘመናዊ ድርጅቶች የሚሆን የገቢ አስተዳደር መመሪያ',
+        description: 'ስለ ተለዋዋጭ ዋጋ አወጣጥ፣ የሽያጭ ቻናሎች እና የገቢ ማመቻቸት የሚመረምር ባለ 50 ገጽ መጽሐፍ።',
         category: 'ገቢ',
         date: 'ህዳር 2018',
         image: '/ebooks/revenue-guide.jpg',
         href: '/ebooks/revenue-management-guide'
     },
     {
-        title: 'ንክኪ አልባ መስተንግዶ፡ አዲሱ መስፈርት',
-        description: 'የሞባይል ቼክ-ኢን እና ዲጂታል ቁልፎች ለገለልተኛ ሆቴሎች ለምን የግድ አስፈላጊ እንደሆኑ።',
+        title: 'ንክኪ አልባ አገልግሎት፡ አዲሱ መስፈርት',
+        description: 'የዲጂታል ምዝገባ እና የሞባይል ተደራሽነት ለገለልተኛ ድርጅቶች ለምን የግድ አስፈላጊ እንደሆኑ።',
         category: 'ቴክኖሎጂ',
         date: 'ጥቅምት 2018',
         image: '/ebooks/contactless.jpg',
         href: '/ebooks/contactless-hospitality'
     },
     {
-        title: 'የሆቴል ግሩፕዎን ማሳደግ፡ የብዙ ንብረቶች መመሪያ',
+        title: 'ድርጅትዎን ማሳደግ፡ የብዙ ቅርንጫፎች መመሪያ',
         description: 'ለማዕከላዊ አስተዳደር፣ ለሪፖርት እና ለሥራ ወጥነት የሚሆኑ የአሠራር እርከኖች።',
         category: 'አስተዳደር',
         date: 'ነሐሴ 2017',
@@ -174,7 +174,7 @@ export const ebooksList = [
 export const alternativesHeader = {
     tag: 'ንጽጽር',
     title: 'ወደ ቀላልነት ይሸጋገሩ። ወደ weleba ይሸጋገሩ።',
-    description: 'weleba ከሌሎች የሆቴል አስተዳደር ስርዓቶች ጋር እንዴት እንደሚወዳደር ይመልከቱ። በሺዎች የሚቆጠሩ የሆቴል ባለሙያዎች ለምን ወደ እኛ እንደሚመጡ ይወቁ።'
+    description: 'weleba ከሌሎች የድርጅት አስተዳደር ስርዓቶች ጋር እንዴት እንደሚወዳደር ይመልከቱ። በሺዎች የሚቆጠሩ የቢዝነስ ባለሙያዎች ለምን ወደ እኛ እንደሚመጡ ይወቁ።'
 };
 
 export const alternativesList = [
@@ -188,7 +188,7 @@ export const alternativesList = [
     },
     {
         title: 'weleba ከ Mews ጋር',
-        description: 'የእንግዳ ጉዞን፣ አውቶማቲክ አሠራሮችን እና የትግበራ ጊዜን መሠረት ያደረገ ንጽጽር።',
+        description: 'የደንበኛ ጉዞን፣ አውቶማቲክ አሠራሮችን እና የትግበራ ጊዜን መሠረት ያደረገ ንጽጽር።',
         category: 'ንጽጽር',
         comparisonLogos: ['weleba', 'Mews'],
         image: '/alternatives/mews.jpg',
@@ -196,7 +196,7 @@ export const alternativesList = [
     },
     {
         title: 'weleba ከ Little Hotelier ጋር',
-        description: 'እያደጉ ያሉ B&Bዎች እና ሆቴሎች ለምን የweleba የላቁ መሳሪያዎችን እንደሚመርጡ።',
+        description: 'እያደጉ ያሉ ድርጅቶች ለምን የweleba የላቁ መሳሪያዎችን እንደሚመርጡ።',
         category: 'ንጽጽር',
         comparisonLogos: ['weleba', 'Little Hotelier'],
         image: '/alternatives/little-hotelier.jpg',
@@ -204,7 +204,7 @@ export const alternativesList = [
     },
     {
         title: 'weleba ከ Opera ጋር',
-        description: 'በደመና ላይ የሚሰራ PMS ከቆዩ ስርዓቶች (legacy systems) ያለውን ብልጫ ይመልከቱ።',
+        description: 'በደመና ላይ የሚሰራ ሲስተም ከቆዩ ስርዓቶች (legacy systems) ያለውን ብልጫ ይመልከቱ።',
         category: 'ንጽጽር',
         comparisonLogos: ['weleba', 'Opera'],
         image: '/alternatives/opera.jpg',

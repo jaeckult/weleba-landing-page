@@ -1,14 +1,14 @@
 // Templates Data
 export const templatesHeader = {
     tag: 'Templates & Checklists',
-    title: 'Operational Excellence for Modern Hoteliers',
-    description: 'Download our collection of ready-to-use templates, checklists, and standard operating procedures designed to help you run a more efficient property.'
+    title: 'Operational Excellence for Modern Businesses',
+    description: 'Download our collection of ready-to-use templates, checklists, and standard operating procedures designed to help you run a more efficient organization.'
 };
 
 export const templatesList = [
     {
-        title: 'Ultimate Hotel Housekeeping Checklist',
-        description: 'Ensure every room meets elite standards with our comprehensive housekeeping and inspection checklist.',
+        title: 'Ultimate Operations & Maintenance Checklist',
+        description: 'Ensure every aspect of your business meets elite standards with our comprehensive operations and inspection checklist.',
         category: 'Operations',
         image: '/templates/housekeeping.jpg',
         href: '/templates/housekeeping-checklist',
@@ -23,8 +23,8 @@ export const templatesList = [
         type: 'Template'
     },
     {
-        title: 'Hotel Pre-Opening Countdown Guide',
-        description: 'A step-by-step 12-month timeline for successfully launching your new property.',
+        title: 'Business Pre-Opening Countdown Guide',
+        description: 'A step-by-step 12-month timeline for successfully launching your new organization.',
         category: 'Management',
         image: '/templates/pre-opening.jpg',
         href: '/templates/pre-opening-guide',
@@ -39,16 +39,16 @@ export const templatesList = [
         type: 'Checklist'
     },
     {
-        title: 'Guest Complaint Resolution Form',
-        description: 'Empower your staff to handle and document guest issues consistently and professionally.',
-        category: 'Guest Experience',
+        title: 'Customer Complaint Resolution Form',
+        description: 'Empower your staff to handle and document customer issues consistently and professionally.',
+        category: 'Customer Experience',
         image: '/templates/complaint-form.jpg',
         href: '/templates/complaint-form',
         type: 'Form'
     },
     {
-        title: 'Digital Marketing Audit for Hotels',
-        description: 'Evaluate your online presence and identify growth opportunities for direct bookings.',
+        title: 'Digital Marketing Audit for Businesses',
+        description: 'Evaluate your online presence and identify growth opportunities for direct sales.',
         category: 'Marketing',
         image: '/templates/marketing-audit.jpg',
         href: '/templates/marketing-audit',
@@ -59,8 +59,8 @@ export const templatesList = [
 // Webinars Data
 export const webinarsHeader = {
     tag: 'On-Demand Webinars',
-    title: 'Hospitality Insights from Industry Experts',
-    description: 'Join our team and industry leaders as we discuss the latest trends, strategies, and technologies shaping the future of hotel management.'
+    title: 'Business Insights from Industry Experts',
+    description: 'Join our team and industry leaders as we discuss the latest trends, strategies, and technologies shaping the future of business management.'
 };
 
 export const webinarsList = [
@@ -73,16 +73,16 @@ export const webinarsList = [
         href: '/knowledge-base'
     },
     {
-        title: 'The AI Revolution in Guest Communication',
-        description: 'How AI voice agents and chatbots are transforming the guest journey and front desk operations.',
+        title: 'The AI Revolution in Customer Communication',
+        description: 'How AI agents and chatbots are transforming the customer journey and business operations.',
         category: 'Technology',
         date: 'Sep 12, 2025',
         image: '/images/webinars/guest-experience.png',
         href: '/knowledge-base'
     },
     {
-        title: 'Direct Bookings: Beating the OTAs in 2026',
-        description: 'The latest tactics for reducing commission costs and building a loyal direct booking base.',
+        title: 'Direct Sales: Beating the Marketplace in 2026',
+        description: 'The latest tactics for reducing commission costs and building a loyal direct sales base.',
         category: 'Distribution',
         date: 'Aug 05, 2025',
         image: '/images/webinars/operations.png',
@@ -101,8 +101,8 @@ export const webinarsList = [
 // Calculators Data
 export const calculatorsHeader = {
     tag: 'Management Tools',
-    title: 'Calculators to Optimize Your Property Performance',
-    description: 'Use our free interactive tools to visualize your potential growth and calculate key hotel performance metrics instantly.'
+    title: 'Calculators to Optimize Your Business Performance',
+    description: 'Use our free interactive tools to visualize your potential growth and calculate key performance metrics instantly.'
 };
 
 export const calculatorsList = [
@@ -122,7 +122,7 @@ export const calculatorsList = [
     },
     {
         title: 'Staff Productivity ROI Tool',
-        description: 'Calculate the labor cost savings associated with automating manual hotel tasks.',
+        description: 'Calculate the labor cost savings associated with automating manual business tasks.',
         category: 'Efficiency',
         image: '/calculators/roi.jpg',
         href: '/calculators/staff-productivity'
@@ -139,29 +139,29 @@ export const calculatorsList = [
 // eBooks Data
 export const ebooksHeader = {
     tag: 'E-Books & Whitepapers',
-    title: 'In-Depth Strategies for Hospitality Success',
-    description: 'Download our comprehensive guides to mastering revenue management, guest experience, and hotel technology.'
+    title: 'In-Depth Strategies for Business Success',
+    description: 'Download our comprehensive guides to mastering revenue management, customer experience, and business technology.'
 };
 
 export const ebooksList = [
     {
-        title: 'The Modern Hotelier\'s Guide to Revenue Management',
-        description: 'A 50-page deep dive into dynamic pricing, channel mix, and ADR optimization.',
+        title: 'The Modern Owner\'s Guide to Revenue Management',
+        description: 'A 50-page deep dive into dynamic pricing, distribution mix, and revenue optimization.',
         category: 'Revenue',
         date: 'Nov 2025',
         image: '/ebooks/revenue-guide.jpg',
         href: '/ebooks/revenue-management-guide'
     },
     {
-        title: 'Contactless Hospitality: The New Standard',
-        description: 'Why mobile check-in and digital keys are no longer optional for independent hotels.',
+        title: 'Contactless Service: The New Standard',
+        description: 'Why digital registration and mobile access are no longer optional for independent businesses.',
         category: 'Technology',
         date: 'Oct 2025',
         image: '/ebooks/contactless.jpg',
         href: '/ebooks/contactless-hospitality'
     },
     {
-        title: 'Scaling Your Hotel Group: The Multi-Property Playbook',
+        title: 'Scaling Your Enterprise: The Multi-Location Playbook',
         description: 'Frameworks for centralized management, reporting, and operational consistency.',
         category: 'Management',
         date: 'Sep 2025',
@@ -174,13 +174,13 @@ export const ebooksList = [
 export const alternativesHeader = {
     tag: 'Compare Solutions',
     title: 'Switch to Ease. Switch to weleba.',
-    description: 'See how weleba compares to other property management systems. Discover why thousands of hoteliers are making the switch to a simpler, more powerful platform.'
+    description: 'See how weleba compares to other business management systems. Discover why thousands of owners are making the switch to a simpler, more powerful platform.'
 };
 
 export const alternativesList = [
     {
         title: 'weleba vs. Cloudbeds',
-        description: 'A detailed comparison of ease-of-use, pricing, and integrated features for independent hotels.',
+        description: 'A detailed comparison of ease-of-use, pricing, and integrated features for independent businesses.',
         category: 'Comparison',
         comparisonLogos: ['weleba', 'Cloudbeds'],
         image: '/alternatives/cloudbeds.jpg',
@@ -188,7 +188,7 @@ export const alternativesList = [
     },
     {
         title: 'weleba vs. Mews',
-        description: 'Comparing guest journey focus, automation capabilities, and implementation timelines.',
+        description: 'Comparing customer journey focus, automation capabilities, and implementation timelines.',
         category: 'Comparison',
         comparisonLogos: ['weleba', 'Mews'],
         image: '/alternatives/mews.jpg',
@@ -196,7 +196,7 @@ export const alternativesList = [
     },
     {
         title: 'weleba vs. Little Hotelier',
-        description: 'Why growing B&Bs and boutique hotels choose weleba for more advanced management tools.',
+        description: 'Why growing businesses and boutique organizations choose weleba for more advanced management tools.',
         category: 'Comparison',
         comparisonLogos: ['weleba', 'Little Hotelier'],
         image: '/alternatives/little-hotelier.jpg',
@@ -204,7 +204,7 @@ export const alternativesList = [
     },
     {
         title: 'weleba vs. Opera',
-        description: 'The advantages of a cloud-native PMS over traditional legacy systems for modern hotel groups.',
+        description: 'The advantages of a cloud-native system over traditional legacy platforms for modern enterprise groups.',
         category: 'Comparison',
         comparisonLogos: ['weleba', 'Opera'],
         image: '/alternatives/opera.jpg',

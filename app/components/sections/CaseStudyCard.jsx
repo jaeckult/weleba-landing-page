@@ -27,10 +27,10 @@ const CaseStudyCard = ({ study }) => {
             <div className="p-8 flex flex-col flex-1">
                 <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 bg-gray-50 rounded-lg p-1.5 border border-gray-100 flex items-center justify-center">
-                        <span className="text-[10px] font-bold text-gray-400">{study.hotel.split(' ')[0]}</span>
+                        <span className="text-[10px] font-bold text-gray-400">{study.company.split(' ')[0]}</span>
                     </div>
                     <div>
-                        <h4 className="font-bold text-gray-900 text-sm leading-tight">{study.hotel}</h4>
+                        <h4 className="font-bold text-gray-900 text-sm leading-tight">{study.company}</h4>
                         <p className="text-[11px] text-gray-500">{study.location}</p>
                     </div>
                 </div>

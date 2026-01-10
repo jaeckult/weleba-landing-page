@@ -116,11 +116,9 @@ const Testimonials = () => {
               key={index}
               className="bg-[#E8E6E1] rounded-2xl sm:rounded-3xl p-6 sm:p-8 flex flex-col items-start justify-center"
             >
-              <img
-                src={review.logo}
-                alt={review.name}
-                className="h-6 sm:h-8 mb-3 sm:mb-4 object-contain"
-              />
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">
+                {review.name}
+              </h3>
               <div className="flex items-center gap-2">
                 {renderStars(review.rating)}
                 <span className="text-base sm:text-lg font-bold text-gray-900 ml-1">

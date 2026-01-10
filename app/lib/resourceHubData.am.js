@@ -1,7 +1,7 @@
 export const resourceHubHero = {
     tag: 'የእውቀት ማዕከል (Resource Centre)',
-    title: 'የዘመናዊ መስተንግዶ መረጃ ማዕከል',
-    description: 'የሆቴል አስተዳደርን በብቃት ለመምራት የሚያግዙ የባለሙያ ግንዛቤዎችን፣ የኢንዱስትሪ አዝማሚያዎችን፣ የአሠራር ንድፎችን እና ስልታዊ መመሪያዎችን እዚህ ያግኙ።'
+    title: 'የዘመናዊ ንግድ መረጃ ማዕከል',
+    description: 'የድርጅት አስተዳደርን በብቃት ለመምራት የሚያግዙ የባለሙያ ግንዛቤዎችን፣ የኢንዱስትሪ አዝማሚያዎችን፣ የአሠራር ንድፎችን እና ስልታዊ መመሪያዎችን እዚህ ያግኙ።'
 };
 
 export const resourceCategories = [
@@ -47,7 +47,7 @@ export const resourceCategories = [
     },
     {
         title: 'ኢ-መጽሐፍት (E-Books)',
-        description: 'ዝርዝር የመስተንግዶ መመሪያ መጽሐፍት።',
+        description: 'ዝርዝር የቢዝነስ መመሪያ መጽሐፍት።',
         icon: 'BookOpen',
         href: '/ebooks',
         color: 'bg-indigo-50',

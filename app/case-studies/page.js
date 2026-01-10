@@ -39,12 +39,14 @@ export default function CaseStudiesPage() {
                         {/* Featured Video Placeholder */}
                         <div className="max-w-4xl mx-auto relative group cursor-pointer">
                             <div className="aspect-video bg-gray-900 rounded-[2rem] overflow-hidden relative shadow-2xl">
-                                <Image
-                                    src={hero.featured.image}
-                                    alt={hero.featured.title}
-                                    fill
-                                    className="object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
-                                />
+                                {hero.featured.image && (
+                                    <Image
+                                        src={hero.featured.image}
+                                        alt={hero.featured.title}
+                                        fill
+                                        className="object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
+                                    />
+                                )}
                                 <div className="absolute inset-0 flex items-center justify-center">
                                     <div className="w-20 h-20 bg-[#0066FF] rounded-full flex items-center justify-center text-white shadow-xl group-hover:scale-110 transition-transform">
                                         <Play className="w-8 h-8 fill-current ml-1" />

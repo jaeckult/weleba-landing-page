@@ -1,6 +1,6 @@
 export const rmHeroContent = {
     tag: 'Solutions for Revenue Managers',
-    title: 'Unlock Your Hotel\'s True Revenue Potential with AI Intelligence',
+    title: 'Unlock Your Business\'s True Revenue Potential with AI Intelligence',
     description: 'Empower your pricing strategy with AI-driven intelligence, automated competitor monitoring, and demand forecasting built by revenue professionals.',
     cta: 'Book A Demo',
     videoPoster: '/images/posters/rm-hero.png',
@@ -17,8 +17,8 @@ export const rmAdvantages = {
             icon: 'TrendingUp',
         },
         {
-            title: '35% RevPAR Improvement',
-            description: 'Hotels typically see a 15-35% RevPAR improvement in the first year through intelligent rate optimization.',
+            title: '35% Revenue Improvement',
+            description: 'Businesses typically see a 15-35% revenue improvement in the first year through intelligent price optimization.',
             icon: 'CircleDollarSign',
         },
         {
@@ -35,13 +35,13 @@ export const rmPlatform = {
     features: [
         {
             title: 'Real-Time Demand Forecast',
-            description: 'Advanced algorithms predict demand patterns and manage overbooking strategies based on travel trends.',
+            description: 'Advanced algorithms predict demand patterns and manage strategies based on market trends.',
             icon: 'LineChart',
             className: 'bg-[#eeede8] col-span-1 md:col-span-8 lg:col-span-8 min-h-[350px]'
         },
         {
             title: 'Ancillary Revenue',
-            description: 'Optimize beyond room rates with intelligent package pricing, spa services, and F&B upsell opportunities.',
+            description: 'Optimize beyond base prices with intelligent package pricing, service services, and upsell opportunities.',
             icon: 'Plus',
             className: 'bg-[#dce6f2] col-span-1 md:col-span-4 lg:col-span-4 min-h-[350px]'
         },
@@ -53,7 +53,7 @@ export const rmPlatform = {
         },
         {
             title: 'Revenue Manager Reports',
-            description: 'Executive-level reporting with RevPAR analysis, ADR trends, and ROI attribution that proves your impact.',
+            description: 'Executive-level reporting with revenue analysis, price trends, and ROI attribution that proves your impact.',
             icon: 'BarChart3',
             className: 'bg-[#f4f1ea] col-span-1 md:col-span-6 lg:col-span-6 min-h-[350px]'
         }
@@ -68,7 +68,7 @@ export const rmPlatform = {
 
 export const rmAnalytics = {
     title: 'Data-Driven Decision Making',
-    description: 'Access real-time ADR, RevPAR, and booking pace analytics from one unified revenue hub.',
+    description: 'Access real-time metrics, revenue, and sales pace analytics from one unified revenue hub.',
     image: '/image-copy-13-no-money.png', // Revenue manager analytics
     lists: [
         'Automated Competitive Intelligence',
@@ -82,7 +82,7 @@ export const rmFaqs = [
     {
         category: 'Intelligence',
         question: 'How does AI pricing compare to manual revenue management?',
-        answer: 'Our AI analyzes hundreds of data points simultaneously and makes continuous optimizations that would be impossible manually, typically improving RevPAR by 15-20%.',
+        answer: 'Our AI analyzes hundreds of data points simultaneously and makes continuous optimizations that would be impossible manually, typically improving revenue by 15-20%.',
     },
     {
         category: 'Control',
@@ -102,6 +102,6 @@ export const rmFaqs = [
     {
         category: 'Performance',
         question: 'What is the typically ROI of AI-powered revenue management?',
-        answer: 'Hotels typically see a 15-25% RevPAR improvement and significant time savings by automating routine rate adjustments.',
+        answer: 'Businesses typically see a 15-25% revenue improvement and significant time savings by automating routine price adjustments.',
     },
 ];

@@ -1,29 +1,29 @@
 export const gaHeroContent = {
-    tag: 'Hotel Guest App',
-    title: 'Put Your Front Desk in Your Guests’ Pockets',
-    description: 'Empower guests to manage their stay right from their smartphones. Fast, personalized service with digital check-in, room keys, and service requests.',
+    tag: 'Customer App',
+    title: 'Put Your Service in Your Customers’ Pockets',
+    description: 'Empower customers to manage their experience right from their smartphones. Fast, personalized service with digital registration, secure access, and service requests.',
     cta: 'Book A Demo',
     videoPoster: '/videos/guest-app-poster.jpg', // Placeholder
     videoSrc: '/hero-video.mp4', // Placeholder
 };
 
 export const gaAdvantages = {
-    title: 'How the weleba Hotel Guest App Works',
-    subtitle: 'Pre-Arrival + Digital Key + During Stay + Post-Stay',
+    title: 'How the weleba Customer App Works',
+    subtitle: 'Pre-Arrival + Digital Access + During Visit + Post-Visit',
     features: [
         {
-            title: 'Pre-Arrival Check-In',
-            description: 'Guests complete check-in, get property details, directions, and local recommendations before they even arrive.',
+            title: 'Pre-Engagement Registration',
+            description: 'Customers complete registration, get details, directions, and recommendations before they even start.',
             icon: 'Smartphone',
         },
         {
-            title: 'Digital Room Keys',
-            description: 'Activate secure digital room keys directly in the app; no physical cards needed. Works with major lock systems.',
+            title: 'Digital Access Control',
+            description: 'Activate secure digital access directly in the app; no physical cards or keys needed. Works with major security systems.',
             icon: 'Lock',
         },
         {
-            title: 'On-Demand Concierge',
-            description: 'Request room service, housekeeping, or spa treatments with real-time updates and seamless messaging.',
+            title: 'On-Demand Service Desk',
+            description: 'Request services, maintenance, or appointments with real-time updates and seamless messaging.',
             icon: 'Bot',
         },
     ],
@@ -31,7 +31,7 @@ export const gaAdvantages = {
 
 export const gaFeatures = {
     tag: 'Competitive Advantage',
-    title: 'Turn Guest Experience Into Your Edge',
+    title: 'Turn Customer Experience Into Your Edge',
     features: [
         {
             title: 'Fully Branded Interfaced',
@@ -40,26 +40,26 @@ export const gaFeatures = {
             className: 'bg-[#eeede8] col-span-1 md:col-span-4 lg:col-span-4 min-h-[350px]'
         },
         {
-            title: 'Streamlined Arrival',
-            description: 'Guests can complete arrival and departure formalities in minutes via the app, eliminating front desk queues.',
+            title: 'Streamlined Experience',
+            description: 'Customers can complete engagement and payment formalities in minutes via the app, eliminating queues.',
             icon: 'Zap',
             className: 'bg-[#dce6f2] col-span-1 md:col-span-8 lg:col-span-8 min-h-[350px]'
         },
         {
             title: 'Multi-Language Support',
-            description: 'Detects the phone\'s native language automatically and displays the app in that language for global travelers.',
+            description: 'Detects the phone\'s native language automatically and displays the app in that language for global customers.',
             icon: 'Languages',
             className: 'bg-[#eeede8] col-span-1 md:col-span-6 lg:col-span-6 min-h-[350px]'
         },
         {
             title: 'Trip Planning Tools',
-            description: 'Offer itinerary builders, packing lists, and local recommendations to help guests plan their perfect stay.',
+            description: 'Offer itinerary builders, packing lists, and local recommendations to help customers plan their perfect experience.',
             icon: 'Map',
             className: 'bg-[#f4f1ea] col-span-1 md:col-span-6 lg:col-span-6 min-h-[350px]'
         }
     ],
     cta: {
-        title: 'Ready to provide a modern, mobile-first experience for your guests?',
+        title: 'Ready to provide a modern, mobile-first experience for your customers?',
         buttonText: 'Book A Demo',
         icon: 'Smartphone',
         className: 'bg-[#dce6f2] col-span-1 md:col-span-12 lg:col-span-12 min-h-[300px]'
@@ -68,7 +68,7 @@ export const gaFeatures = {
 
 export const gaOperations = {
     title: 'One App, Endless Possibilities',
-    description: 'Boost revenue per guest with targeted upsells and optimize hotel operations with real-time behavior analytics.',
+    description: 'Boost revenue per customer with targeted upsells and optimize operations with real-time behavior analytics.',
     image: '/image copy 10.png', // Guest app operations
     lists: [
         'Targeted In-App Upsells',
@@ -81,27 +81,27 @@ export const gaOperations = {
 export const gaFaqs = [
     {
         category: 'Satisfaction',
-        question: 'How does the Hotel Guest App improve satisfaction?',
-        answer: 'By offering contactless check-in, digital keys, and real-time service requests, it eliminates common pain points and delivers a modern experience.',
+        question: 'How does the Customer App improve satisfaction?',
+        answer: 'By offering contactless registration, digital access, and real-time service requests, it eliminates common pain points and delivers a modern experience.',
     },
     {
         category: 'Integration',
-        question: 'How does the app integrate with my hotel’s systems?',
-        answer: 'The app seamlessly syncs with weleba PMS, providing real-time updates for reservations, service requests, and guest profiles.',
+        question: 'How does the app integrate with my systems?',
+        answer: 'The app seamlessly syncs with weleba platform, providing real-time updates for sales, service requests, and customer profiles.',
     },
     {
         category: 'General',
-        question: 'What is a hotel guest app?',
-        answer: 'A mobile solution that allows guests to manage their stay via smartphone, offering features like check-in, service requests, and digital keys.',
+        question: 'What is a customer app?',
+        answer: 'A mobile solution that allows customers to manage their experience via smartphone, offering features like registration, service requests, and digital access.',
     },
     {
         category: 'Necessity',
-        question: 'Does my hotel need a guest app?',
-        answer: 'Yes, it meets modern traveler expectations, reduces front desk workload, and drives revenue through upsells.',
+        question: 'Does my business need a customer app?',
+        answer: 'Yes, it meets modern expectations, reduces workload, and drives revenue through upsells.',
     },
     {
         category: 'Features',
-        question: 'What are the most important guest app features?',
-        answer: 'Key features include mobile check-in/out, digital room keys, real-time messaging, and seamless PMS integration.',
+        question: 'What are the most important customer app features?',
+        answer: 'Key features include mobile registration, digital access, real-time messaging, and seamless system integration.',
     },
 ];

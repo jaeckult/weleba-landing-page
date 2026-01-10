@@ -1,19 +1,19 @@
 export const rmHeroContent = {
     tag: 'Revenue Management',
     title: 'Put Your Pricing Optimization on Autopilot with AI',
-    description: 'Leverage enterprise-level yield management with dynamic pricing, rate management, competitor analysis, and demand forecasting all seamlessly integrated with your PMS.',
+    description: 'Leverage enterprise-level yield management with dynamic pricing, rate management, competitor analysis, and demand forecasting all seamlessly integrated with your management system.',
     cta: 'Book A Demo',
     videoPoster: '/videos/revenue-management-poster.jpg', // Placeholder
     videoSrc: '/hero-video.mp4', // Placeholder
 };
 
 export const rmWhyTrust = {
-    title: 'Why hoteliers trust roommaster Revenue Management',
+    title: 'Why business owners trust weleba Revenue Management',
     subtitle: 'Real-time Price Optimization + Competitor Analysis + Event Data Analysis',
     features: [
         {
             title: 'Real-time Price Optimization',
-            description: 'Our intelligent pricing engine analyzes current market conditions to recommend optimal rates that maximize revenue without sacrificing occupancy.',
+            description: 'Our intelligent pricing engine analyzes current market conditions to recommend optimal prices that maximize revenue without sacrificing utilization.',
             icon: 'TrendingUp',
         },
         {
@@ -35,7 +35,7 @@ export const rmBoundaries = {
     features: [
         {
             title: 'Pricing Limits',
-            description: 'Set minimum and maximum rates for each room type to ensure recommendations always align with your brand standards.',
+            description: 'Set minimum and maximum prices for each product/service to ensure recommendations always align with your brand standards.',
             icon: 'Lock',
             className: 'bg-[#eeede8] col-span-1 md:col-span-6 lg:col-span-6 min-h-[350px]'
         },
@@ -56,7 +56,7 @@ export const rmBoundaries = {
 
 export const rmMachineLearning = {
     title: 'AI Optimization for Smarter Revenue Management',
-    description: 'Our AI systems continuously learn from market conditions and booking patterns to deliver increasingly effective pricing recommendations over time.',
+    description: 'Our AI systems continuously learn from market conditions and sales patterns to deliver increasingly effective pricing recommendations over time.',
     image: '/image copy 7.png', // Revenue AI visualization
     lists: [
         'Smarter Machine Learning Strategies',
@@ -72,7 +72,7 @@ export const rmHowItWorks = {
     features: [
         {
             title: 'Collect',
-            description: 'Our system continuously gathers data on market demand, competitor rates, and booking patterns.',
+            description: 'Our system continuously gathers data on market demand, competitor rates, and sales patterns.',
             icon: 'Plus', // Using Plus as a generic gather icon or maybe zap
         },
         {
@@ -91,28 +91,28 @@ export const rmHowItWorks = {
 export const rmFaqs = [
     {
         category: 'Revenue',
-        question: 'How does roommaster’s revenue management software increase revenue?',
-        answer: 'Our AI-driven dynamic pricing and competitor analysis optimize rates in real-time, boosting RevPAR by up to 35% in the first year, based on industry insights.',
+        question: 'How does weleba’s revenue management software increase revenue?',
+        answer: 'Our AI-driven dynamic pricing and competitor analysis optimize prices in real-time, boosting revenue by up to 35% in the first year.',
     },
     {
         category: 'General',
         question: 'What is revenue management software?',
-        answer: 'Revenue management software optimizes hotel pricing and inventory based on demand, competitor rates, and market trends to maximize revenue and occupancy.',
+        answer: 'Revenue management software optimizes pricing and supply based on demand, competitor rates, and market trends to maximize revenue.',
     },
     {
         category: 'Data',
-        question: 'What data does roommaster revenue management software use to make pricing decisions?',
-        answer: 'Our AI analyzes multiple data sources including historical booking patterns, competitor rates, local events, market demand signals, weather data, and real-time reservation pickup.',
+        question: 'What data does weleba revenue management software use to make pricing decisions?',
+        answer: 'Our AI analyzes multiple data sources including historical sales patterns, competitor prices, local events, market demand signals, and real-time sales pickup.',
     },
     {
         category: 'Integration',
-        question: 'Does roommaster revenue management integrate with my existing PMS?',
-        answer: 'Yes, roommaster revenue management integrates seamlessly with roommaster PMS. Integration ensures automatic rate updates and eliminates manual data entry.',
+        question: 'Does weleba revenue management integrate with my existing system?',
+        answer: 'Yes, weleba revenue management integrates seamlessly with the weleba platform. Integration ensures automatic price updates and eliminates manual data entry.',
     },
     {
         category: 'Automation',
-        question: 'Can roommaster provide real-time price optimization?',
-        answer: 'Absolutely. Our AI-powered system continuously monitors market conditions and adjusts rates in real-time based on demand fluctuations and booking velocity.',
+        question: 'Can weleba provide real-time price optimization?',
+        answer: 'Absolutely. Our AI-powered system continuously monitors market conditions and adjusts prices in real-time based on demand fluctuations and sales velocity.',
     },
     {
         category: 'Forecasting',

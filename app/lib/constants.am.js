@@ -8,16 +8,16 @@ export const labels = {
         company: 'ድርጅት',
         categories: {
             operations: 'ስራዎች',
-            marketing: 'ግብይት',
-            revenue: 'ገቢ',
-            guest: 'እንግዳ',
-            byProperty: 'በንብረት ዓይነት',
+            marketing: 'ሽያጭ እና ግብይት',
+            revenue: 'ገቢ እና ፋይናንስ',
+            guest: 'የደንበኛ ተሞክሮ',
+            byProperty: 'በንግድ ዓይነት',
             byRole: 'በስራ ድርሻ',
             resourceType: 'የግብዓት ዓይነት',
             featuredArticles: 'ተለይተው የቀረቡ ጽሑፎች',
-            marketingDistribution: 'ግብይት እና ስርጭት',
+            marketingDistribution: 'ሽያጭ እና ስርጭት',
             revenueFinance: 'ገቢ እና ፋይናንስ',
-            guestExperience: 'የእንግዳ ተሞክሮ',
+            guestExperience: 'የደንበኛ ተሞክሮ',
             featured: 'ተለይቶ የቀረበ',
         }
     },
@@ -34,7 +34,7 @@ export const labels = {
     },
     common: {
         allRightsReserved: 'መብቱ በህግ የተጠበቀ ነው።',
-        trustText: 'በዓለም ዙሪያ በሚገኙ ታዋቂ ሆቴሎች የታመነ',
+        trustText: 'በዓለም ዙሪያ በሚገኙ ታዋቂ ንግዶች የታመነ',
         customerStory: 'የደንበኛ ታሪክ',
     },
     legal: {
@@ -48,32 +48,26 @@ export const navigation = {
     products: {
         operations: [
             {
-                title: 'PMS',
-                description: 'ለሆቴል ስራዎች በሙሉ የሚያገለግል የተዋሃደ መድረክ።',
-                href: '/property-management',
+                title: 'የስራ አስተዳደር',
+                description: 'ለንግድ ስራዎች በሙሉ የሚያገለግል የተዋሀደ መድረክ።',
+                href: '/operations-management',
+            },
+            {
+                title: 'የቻናል ማኔጀር',
+                description: 'ክምችትን ያስተዳድሩ እና በሁሉም የሽያጭ ቻናሎች ላይ ያመሳስሉ።',
+                href: '/channel-manager',
             },
         ],
         marketing: [
             {
-                title: 'የቦታ ማስያዣ ሞተር',
-                description: 'ቀላል እና ያለ ኮሚሽን ቀጥታ ቦታ ማስያዣ።',
+                title: 'የሽያጭ መድረክ',
+                description: 'ቀላል እና ያለ ኮሚሽን ቀጥታ ሽያጭ።',
                 href: '/booking-engine',
             },
             {
-                title: 'የቻናል ማኔጀር',
-                description: 'በመቶዎች በሚቆጠሩ መንገዶች ላይ ክፍሎችን እና ዋጋን ያመሳስሉ።',
-                href: '/channel-manager',
-            },
-            {
-                title: 'የሆቴል ሜታሰርች',
-                description: 'በመፈለጊያ ሞተሮች ላይ የሆቴልዎን ታይነት ያሳድጉ።',
-                href: '/hotel-metasearch',
-                badge: 'አዲስ',
-            },
-            {
-                title: 'የሆቴል ድረ-ገጽ ግንቢ',
+                title: 'የድረ-ገጽ ግንቢ',
                 description: 'ማራኪ ድረ-ገጾችን ለመፍጠር እገዛ ያግኙ።',
-                href: '/hotel-website-builder',
+                href: '/website-builder',
             },
         ],
         revenue: [
@@ -84,48 +78,53 @@ export const navigation = {
             },
             {
                 title: 'ክፍያዎች',
-                description: 'ደህንነቱ የተጠበቀ እና አውቶሜትድ የክፍያ ሂደት።',
+                description: 'ደግሞትዎን የሚያስችሉ የክፍያ ሂደቶች።',
                 href: '/weleba-payments',
                 badge: 'ተሻሽሏል',
             },
         ],
         guest: [
-
             {
-                title: 'የእንግዳ ግንኙነት',
-                description: 'በእንግዳው ጉዞ ሁሉ ግላዊ መልዕክቶችን በራስ-ሰር ይላኩ።',
-                href: '/guest-engagement-software',
+                title: 'የደንበኛ ግንዩኔት',
+                description: 'በደንበኛው ጉዞ ሁሉ ግላዊ መልዕክቶችን በራስ-ሰር ይላኩ።',
+                href: '/customer-engagement-software',
             },
             {
-                title: 'የእንግዳ መተግበሪያ',
-                description: 'ዲጂታል ቁልፍ እና የሞባይል ቼክ-ኢን አገልግሎት።',
-                href: '/hotel-guest-app',
+                title: 'የደንበኛ መተግበሪያ',
+                description: 'ለደንበኞች የሚሆን የሞባይል መተግበሪያ።',
+                href: '/customer-app',
+            },
+            {
+                title: 'የኤአይ ኤጀንት',
+                description: '24/7 በኤአይ የሚሰራ የደንበኛ አገልግሎት።',
+                href: '/customer-ai-agent',
+                badge: 'አዲስ',
             },
         ],
     },
     solutions: {
         byProperty: [
-            { title: 'ገለልተኛ ሆቴሎች', description: 'ለነጠላ ንብረቶች የተዘጋጁ መፍትሄዎች።', href: '/independent-hotels-software' },
-            { title: 'የሆቴል ቡድኖች', description: 'ለበርካታ ቦታዎች የሚሆን ሊያድግ የሚችል መድረክ።', href: '/pms-hotel-groups' },
-            { title: 'ሞቴሎች', description: 'ለፈጣን የእንግዳ ማረፊያዎች ውጤታማ መፍትሄዎች።', href: '/motel' },
-            { title: 'ሪዞርቶች', description: 'ለሪዞርት ንብረቶች የተሟላ የአስተዳደር መድረክ።', href: '/resorts-pms-software' },
-            { title: 'ቤተሰባዊ ሆቴሎች', description: 'ለጥቃቅን ንብረቶች ቀላል የአስተዳደር መፍትሄ።', href: '/bed-breakfast-software' },
-            { title: 'ፓርኮች', description: 'ለፓርክ እና ካምፕ አገልግሎቶች የአስተዳደር መሳሪያዎች።', href: '/parks' },
+            { title: 'የአገልግሎት ንግዶች', description: 'ለሳሎኖች፣ ስፓዎች እና አማካሪዎች የሚሆኑ መፍትሄዎች።', href: '/service-business-software' },
+            { title: 'የችርቻሮ መደብሮች', description: 'ለሱቆች የሚሆን የሽያጭ እና ክምችት አስተዳደር።', href: '/retail-software' },
+            { title: 'ኢ-ኮሜርስ', description: 'የመስመር ላይ መደብሮችን ለማስተዳደር የሚረዱ መሳሪያዎች።', href: '/ecommerce-management' },
+            { title: 'ሆቴሎች እና ሪዞርቶች', description: 'የተሟላ የሆስፒታሊቲ አስተዳደር።', href: '/hotels-software' },
+            { title: 'ምግብ ቤቶች', description: 'የምግብ ቤት አስተዳደር እና የትዕዛዝ ስርዓቶች።', href: '/restaurant-management' },
+            { title: 'ብዙ-ቦታ', description: 'ለሰንሰለት ንግዶች የሚሆን ሊያድግ የሚችል መድረክ።', href: '/multi-location-management' },
         ],
         byRole: [
-            { title: 'ስራ አስኪያጆች', description: 'ስልታዊ ቁጥጥር እና የመረጃ መሳሪያዎች።', href: '/general-managers' },
-            { title: 'የፊት ጠረጴዛ አስተዳዳሪዎች', description: 'የእለት ተእለት ስራዎች እና የእንግዳ አገልግሎት መፍትሄዎች።', href: '/front-desk-managers' },
-            { title: 'የገቢ አስተዳዳሪዎች', description: 'የዋጋ ማመቻቸት እና የፋይናንስ አፈጻጸም መሳሪያዎች።', href: '/revenue-managers' },
-            { title: 'አይቲ (IT) አስተዳዳሪዎች', description: 'የቴክኒክ መድረክ አስተዳዳሪ እና የስርዓት ግንኙነት።', href: '/it-managers' },
+            { title: 'ስራ አስኪያጆች', description: 'ስልታዊ ቁጥር እና የመረጃ መሳሪያዎች።', href: '/general-managers' },
+            { title: 'የስራ ሂደት አስተዳዳሪዎች', description: 'የእለት ተእለት ስራዎች እና የደንበኛ አገልግሎት መፍትሄዎች።', href: '/front-desk-managers' },
+            { title: 'የገቢ አስተዳዳሪዎች', description: 'የዋጋ ማመቻተት እና የፋይናንስ አፈቃጸም መሳሪያዎች።', href: '/revenue-managers' },
+            { title: 'አይቲ (IT) አስተዳዳሪዎች', description: 'የቴክኒክ መድረክ አስተዳዳሪ እና የስርዓት ግንዩኔት።', href: '/it-managers' },
         ],
     },
     resources: [
-        { title: 'ብሎጎች', description: 'የንብረትዎን አፈጻጸም ለማሻሻል የባለሙያ ግንዛቤዎች።', href: '/blog' },
-        { title: 'ዜና', description: 'በቅርብ የሆቴል ኢንዱስትሪ አዝማሚያዎች ቀዳሚ ይሁኑ።', href: '/news' },
+        { title: 'ብሎጎች', description: 'የድርጅትዎን አፈጻጸም ለማሻሻል የባለሙያ ግንዛቤዎች።', href: '/blog' },
+        { title: 'ዜና', description: 'በቅርብ የንግድ እና የቴክኖሎጂ አዝማሚያዎች ቀዳሚ ይሁኑ።', href: '/news' },
         { title: 'ቴምፕሌቶች', description: 'ለስራ የሚያገለግሉ ቁሳቁሶችን እና ቅጾችን ያውርዱ።', href: '/templates' },
-        { title: 'ዌቢናሮች', description: 'ለተሻለ የሆቴል አስተዳደር ልዩ ውይይቶችን ይከታተሉ።', href: '/webinar' },
+        { title: 'ዌቢናሮች', description: 'ለተሻለ የንግድ አስተዳደር ልዩ ውይይቶችን ይከታተሉ።', href: '/webinar' },
         { title: 'ካልኩሌተሮች', description: 'ትርፋማነትዎን እና የገቢ አቅምዎን ወዲያውኑ ያሰሉ።', href: '/calculators' },
-        { title: 'ኢ-መጽሐፍት እና መመሪያዎች', description: 'ለሆቴል ንግድ እድገት የተሟሉ ስልቶች።', href: '/ebooks' },
+        { title: 'ኢ-መጽሐፍት እና መመሪያዎች', description: 'ለንግድ እድገት የተሟሉ ስልቶች።', href: '/ebooks' },
     ],
     company: [
         { title: 'ስለ እኛ', description: 'ከweleba ቴክኖሎጂ ጀርባ ያሉ የዘርፉ ባለሙያዎች።', href: '/about-us' },
@@ -136,11 +135,11 @@ export const navigation = {
 // Hero Section
 export const heroContent = {
     announcement: {
-        text: 'innQuest ስሙን ወደ ወለባ ቀይሯል - ሆስፒታሊቲ፣ የቀለለ።',
-        href: '/hospitality-simplified',
+        text: 'innQuest ስሙን ወደ ወለባ ቀይሯል - የንግድ አስተዳደር፣ የቀለለ።',
+        href: '/about-us',
     },
-    title: 'ትክክለኛ ስራዎን በሚደግፍ መልኩ የተሰራ የተሟላ የሆስፒታሊቲ መድረክ',
-    subtitle: 'ወለባ ቡድንዎ ልዩ የእንግዳ ተሞክሮ በመፍጠር ላይ እንዲያተኩር ነጻ ያደርገዋል፤ የኛ ዘመናዊ መሳሪያዎች ደግሞ ገቢዎን እና የስራ ቅልጥፍናዎን ለማሳደግ ከጀርባ ይሰሩልዎታል።',
+    title: 'ትክክለኛ ስራዎን በሚደግፍ መልኩ የተሰራ የተሟላ የአስተዳደር መድረክ',
+    subtitle: 'ወለባ ቡድንዎ በጣም አስፈላጊ በሆኑ ነገሮች ላይ እንዲያተኩር ያስችላል፤ የኛ ዘመናዊ መሳሪያዎች ደግሞ ገቢዎን እና የስራ ቅልጥፍናዎን በሆቴሎች፣ በኢ-ኮሜርስ፣ በችርቻሮ እና ሌሎች ላይ ለማሳደግ ከጀርባ ይሰሩልዎታል።',
     cta: {
         primary: { text: 'ማሳያ ያስይዙ', href: '/book-a-demo' },
         secondary: { text: 'ዋጋን ይመልከቱ', href: '/pricing' },
@@ -149,21 +148,21 @@ export const heroContent = {
 
 // Why Choose Section
 export const whyChooseContent = {
-    title: 'የሆቴል ባለቤቶች ለምን ወለባን የአስተዳደር ሶፍትዌራቸው አድርገው ይመርጣሉ?',
+    title: 'ንግዶች ለምን ወለባን የአስተዳደር ሶፍትዌራቸው አድርገው ይመርጣሉ?',
     features: [
         {
             title: 'ገቢን ለማሳደግ ይረዳል',
-            description: 'የእኛ የተቀናጁ መፍትሄዎች ያለ ኮሚሽን ቀጥታ ቦታ ማስያዝ እና በኤአይ (AI) በሚመሩ የዋጋ ስልቶች አማካኝነት የRevPAR ገቢን እስከ 35% ለማሳደግ ይረዳሉ።',
+            description: 'የእኛ የተቀናጁ መፍትሄዎች ያለ ኮሚሽን ቀጥታ ሽያጭ፣ በኤአይ (AI) በሚመሩ የዋጋ ስልቶች እና በራስ-ሰር በሚሰሩ የስራ ሂደቶች አማካኝነት ገቢን እስከ 35% ለማሳደግ ይረዳሉ።',
             icon: 'TrendingUp',
         },
         {
-            title: 'በሆቴል ባለሙያዎች ለሆቴል ባለሙያዎች የተሰራ',
-            description: 'በዓመታት የሆስፒታሊቲ ሶፍትዌር ልምዳችን መሰረት፣ ወለባ የእርስዎን ተግዳሮቶች ይረዳል።',
+            title: 'በባለሙያዎች ለንግዶች የተሰራ',
+            description: 'በዓመታት የንግድ አስተዳደር ሶፍትዌር ልምዳችን መሰረት፣ ወለባ በተለያዩ ኢንዱስትሪዎች ውስጥ ያሉትን የእርስዎን ተግዳሮቶች ይረዳል።',
             icon: 'Users',
         },
         {
             title: 'ሁሉንም በአንድ የያዘ መድረክ',
-            description: 'ሆቴልዎን ለማስኬድ የሚያስፈልጉዎትን ነገሮች በሙሉ በአንድ መድረክ ያገናኛል።',
+            description: 'ንግድዎን ለማስኬድ የሚያስፈልጉዎትን ነገሮች በሙሉ በአንድ መድረክ ያገናኛል፤ ስራዎችን፣ ሽያጭን፣ ክምችትን፣ ክፍያዎችን እና የደንበኛ አስተዳደርን።',
             icon: 'Layers',
         },
         {
@@ -173,7 +172,7 @@ export const whyChooseContent = {
         },
         {
             title: 'በማንኛውም ቦታ፣ በማንኛውም ጊዜ ተደራሽ',
-            description: 'የአስተዳደር ስርዓትዎን በማንኛውም መሳሪያ በማንኛውም ቦታ ሆነው በደህንነት ይጠቀሙ።',
+            description: 'የአስተዳደር ስርዓትዎን በማንኛውም መሳሪያ በማንኛውም ቦታ ሆነው በደህንነት ይጠቀሙ። ሁሉም ማሻሻያዎች እና መጠባበቂያዎች በራስ-ሰር ይከናወናሉ።',
             icon: 'Globe',
         },
     ],
@@ -181,26 +180,25 @@ export const whyChooseContent = {
 
 // Daily Operations Section
 export const dailyOperationsContent = {
-    title: 'የእለት ተእለት ስራዎች እና የእንግዳ ተሞክሮ አስተዳደር',
-    subtitle: 'ልዩ የእንግዳ ተሞክሮ እየሰጡ የእለት ተእለት ስራዎን የሚያቀላጥፉ አስፈላጊ መሳሪያዎች።',
+    title: 'የእለት ተእለት ስራዎች እና የደንበኛ ተሞክሮ አስተዳደር',
+    subtitle: 'ልዩ የደንበኛ ተሞክሮ እየሰጡ የእለት ተእለት ስራዎን የሚያቀላጥፉ አስፈላጊ መሳሪያዎች።',
     features: [
         {
-            title: 'PMS',
-            description: 'የንብረት ስራዎችን ያቀላጥፉ፣ ቦታ ማስያዣዎችን ያስተዳድሩ እና የስራ ሂደቶችን ያሻሽሉ።',
-            href: '/property-management',
+            title: 'የስራ አስተዳደር',
+            description: 'የንግድ ስራዎችን ያቀላጥፉ፣ ትዕዛዞችን ያስተዳድሩ እና የስራ ሂደቶችን ያሻሽሉ።',
+            href: '/operations-management',
             icon: 'LayoutDashboard',
         },
-
         {
             title: 'ክፍያዎች',
-            description: 'ያለ ምንም ችግር ለእንግዶች ክፍያ የሚፈጽሙበት ደህንነቱ የተጠበቀ ሂደት።',
+            description: 'ያለ ምንም ችግር ለደንበኞች ክፍያ የሚፈጽሙበት ደህንነቱ የተጠበቀ ሂደት።',
             href: '/weleba-payments',
             icon: 'CreditCard',
         },
         {
-            title: 'የእንግዳ መተግበሪያ',
-            description: 'ለቦታ ማስያዝ እና ለሌሎች ጥያቄዎች የሚሆን የሞባይል መተግበሪያ።',
-            href: '/hotel-guest-app',
+            title: 'የደንበኛ መተግበሪያ',
+            description: 'ለትዕዛዞች እና ለሌሎች ጥያቄዎች የሚሆን የሞባይል መተግበሪያ።',
+            href: '/mobile-app',
             icon: 'Smartphone',
         },
     ],
@@ -208,18 +206,18 @@ export const dailyOperationsContent = {
 
 // Revenue Intelligence Section
 export const revenueIntelligenceContent = {
-    title: 'የኤአይ የገቢ መረጃ እና የሆቴል ታይነት',
+    title: 'የኤአይ የገቢ መረጃ እና የንግድ ታይነት',
     subtitle: 'የገቢ አቅምዎን ለማሳደግ እና በመስመር ላይ ታይነትዎን ለማስፋት የሚረዱ ጠንካራ መሳሪያዎች።',
     features: [
         {
-            title: 'የቦታ ማስያዣ ሞተር',
-            description: 'በድረ-ገጽዎ ላይ ቀጥታ ቦታ ማስያዣዎችን የሚያስችል ምቹ መድረክ።',
-            href: '/booking-engine',
+            title: 'የሽያጭ መድረክ',
+            description: 'ቀጥታ ሽያጮችን የሚያስችል ምቹ መድረክ።',
+            href: '/sales-platform',
             icon: 'Calendar',
         },
         {
-            title: 'የቻናል ማኔጀር',
-            description: 'ትርፋማነትዎን ለማሳደግ ክፍሎችን በተለያዩ የደላላ መንገዶች ላይ ያመሳስሉ።',
+            title: 'የብዙ-ቻናል ማኔጀር',
+            description: 'ገቢዎን ለማሳደግ ክምችትን በሁሉም የሽያጭ ቻናሎች ላይ ያመሳስሉ።',
             href: '/channel-manager',
             icon: 'Share2',
         },
@@ -230,24 +228,24 @@ export const revenueIntelligenceContent = {
             icon: 'LineChart',
         },
         {
-            title: 'የሆቴል ድረ-ገጽ ግንቢ',
-            description: 'እንግዶችን የሚስቡ እና ወደ ደንበኝነት የሚቀይሩ ማራኪ ድረ-ገጾችን ይፍጠሩ።',
-            href: '/hotel-website-builder',
+            title: 'የድረ-ገጽ ግንቢ',
+            description: 'ደንበኞችን የሚስቡ እና ወደ ሽያጭ የሚቀይሩ ማራኪ ድረ-ገጾችን ይፍጠሩ።',
+            href: '/website-builder',
             icon: 'Globe',
         },
     ],
 };
 
-// Property Types Section
+// Business Types Section
 export const propertyTypesContent = {
-    title: 'ለእያንዳንዱ የንብረት አይነት የሚሆን የሆቴል አስተዳደር ሶፍትዌር',
+    title: 'ለእያንዳንዱ የንግድ አይነት የሚሆን የአስተዳደር ሶፍትዌር',
     types: [
-        { title: 'ገለልተኛ ሆቴሎች', href: '/independent-hotels-software', icon: 'Building2' },
-        { title: 'የሆቴል ቡድኖች', href: '/pms-hotel-groups', icon: 'Buildings' },
-        { title: 'ቤተሰባዊ ሆቴሎች', href: '/bed-breakfast-software', icon: 'Home' },
-        { title: 'ፓርኮች', href: '/parks', icon: 'Trees' },
-        { title: 'ሪዞርቶች', href: '/resorts-pms-software', icon: 'Palmtree' },
-        { title: 'ሞቴሎች', href: '/motel', icon: 'Hotel' },
+        { title: 'ሆቴሎች እና ሪዞርቶች', href: '/hotels-software', icon: 'Building2' },
+        { title: 'ኢ-ኮሜርስ', href: '/ecommerce-management', icon: 'ShoppingCart' },
+        { title: 'የችርቻሮ መደብሮች', href: '/retail-software', icon: 'Store' },
+        { title: 'ምግብ ቤቶች', href: '/restaurant-management', icon: 'UtensilsCrossed' },
+        { title: 'የአገልግሎት ንግዶች', href: '/service-business-software', icon: 'Briefcase' },
+        { title: 'ብዙ-ቦታ', href: '/multi-location-management', icon: 'Buildings' },
     ],
 };
 
@@ -256,15 +254,15 @@ export const customerStoriesContent = {
     title: 'ደንበኞቻችን ስለ እኛ የሚመሰክሩት',
     stories: [
         {
-            title: 'ሀሪሰን ሆል ሆቴል ለ25 ዓመታት ከወለባ ጋር በመሆን ስራውን እንዴት እንዳቀላጠፈ',
+            title: 'ሀሪሰን የቢዝነስ ማዕከል ለ25 ዓመታት ከወለባ ጋር በመሆን ስራውን እንዴት እንዳቀላጠፈ',
             name: 'ስቴሲ ዳድሰን',
             role: 'ስራ አስኪያጅ',
             videoId: 'CE1FbxwX0po',
         },
         {
-            title: 'ኑቮ ስዊትስ (NUVO Suites) የእንግዳ ተሞክሮውን ለማሳደግ ወለባ PMSን እንዴት እንደተጠቀመ',
+            title: 'ኑቮ ኢንተርፕራይዝ (NUVO Enterprise) የደንበኛ ተሞክሮውን ለማሳደግ ወለባ ሲስተምን እንዴት እንደተጠቀመ',
             name: 'ያምላክ ነጋሽ',
-            role: 'የኑቮ ስዊትስ ስራ አስኪያጅ',
+            role: 'የኑቮ ኢንተርፕራይዝ ስራ አስኪያጅ',
             videoId: '21iGVj1UGq8',
         },
         {
@@ -274,9 +272,9 @@ export const customerStoriesContent = {
             videoId: 'Wo-D4it48lI',
         },
         {
-            title: 'ሲቦርድ ሆቴሎች (Seaboard Hotels) በወለባ ሁሉንም ንብረቶች በማስተዳደር ስራውን በተቀላጠፈ ሁኔታ ያካሂዳል',
+            title: 'ሲቦርድ ግሩፕ (Seaboard Group) በወለባ ሁሉንም ድርጅቶች በማስተዳደር ስራውን በተቀላጠፈ ሁኔታ ያካሂዳል',
             name: 'አሌክስ ሙር',
-            role: 'የሲቦርድ ሆቴሎች ፕሬዝዳንት እና ዋና ስራ አስፈፃሚ',
+            role: 'የሲቦርድ ግሩፕ ፕሬዝዳንት እና ዋና ስራ አስፈፃሚ',
             videoId: 'ioXFopWwXG4',
         },
     ],
@@ -285,10 +283,10 @@ export const customerStoriesContent = {
 // Integrations Section
 export const integrationsContent = {
     title: 'ፍጹም የቴክኖሎጂ ስብስብዎን ይፍጠሩ',
-    subtitle: 'ወለባን ከ100 በላይ ከሚሆኑ እንደ በር ቁልፎች፣ የሽያጭ ነጥቦች እና የሂሳብ አያያዝ መሳሪያዎች ጋር ያገናኙ።',
+    subtitle: 'ወለባን ከ100 በላይ ከሚሆኑ እንደ የክፍያ ፕሮሰሰሮች፣ የሽያጭ ነጥቦች፣ የሂሳብ አያያዝ መሳሪያዎች እና የሽያጭ ቻናሎች ጋር ያገናኙ።',
     cta: { text: 'የገበያ ቦታውን ይጎብኙ', href: '/marketplace' },
     logos: [
-        'Expedia', 'Booking.com', 'Airbnb', 'TripAdvisor', 'Google', 'Stripe',
+        'Shopify', 'WooCommerce', 'Amazon', 'Stripe', 'PayPal', 'Square',
         'QuickBooks', 'Xero', 'Mailchimp', 'Zapier', 'Slack', 'HubSpot',
     ],
 };
@@ -317,8 +315,8 @@ export const supportContent = {
     title: '24/7 ባለሙያ ድጋፍ በፈለጉት ጊዜ',
     features: [
         {
-            title: 'የሆስፒታሊቲ ባለሙያ ድጋፍ ሰጪዎች',
-            description: 'የእኛ ቡድን በሆቴል ስራዎች ላይ ሰፊ ልምድ ስላለው የንግድ ፈተናዎችዎን ይረዳል::',
+            title: 'የኢንዱስትሪ ባለሙያ ድጋፍ ሰጪዎች',
+            description: 'የእኛ ቡድን በተለያዩ ኢንዱስትሪዎች ላይ ሰፊ ልምድ ስላለው የንግድ ፈተናዎችዎን ይረዳል::',
             icon: 'HeadphonesIcon',
         },
         {
@@ -343,12 +341,12 @@ export const faqContent = {
             name: 'ባህሪያት',
             items: [
                 {
-                    question: 'ወለባ ከሌሎች የንብረት አስተዳደር ስርዓቶች በምን ይለያል?',
-                    answer: 'ወለባ የተገነባው በተለይ ለሆቴሎች ነው:: እኛ ስራዎችን በማቅለል እና የአስተዳደር ሸክምን በማስቀረት ላይ እናተኩራለን:: የእኛ የተቀናጀ መድረክ PMS፣ የቦታ ማስያዣ ሞተር፣ የቻናል ማኔጀር እና ክፍያዎችን በአንድ ላይ ያመጣል::',
+                    question: 'ወለባ ከሌሎች የአስተዳደር ስርዓቶች በምን ይለያል?',
+                    answer: 'ወለባ የተገነባው ለተለያዩ የንግድ ዘርፎች ነው፤ ሆቴሎች፣ ኢ-ኮሜርስ፣ ችርቻሮ እና የአገልግሎት ንግዶችን ጨምሮ። እኛ ስራዎችን በማቅለል እና የአስተዳደር ሸክምን በማስቀረት ላይ እናተኩራለን:: የእኛ የተቀናጀ መድረክ የአሰራር አስተዳደርን፣ ሽያጭን እና ክፍያዎችን በአንድ ላይ ያመጣል::',
                 },
                 {
-                    question: 'ወለባ አሁን ካለን የሆቴል ቴክኖሎጂ ጋር መገናኘት ይችላል?',
-                    answer: 'አዎ፣ ወለባ ከ100 በላይ ከሆኑ የሶስተኛ ወገን ስርዓቶች ጋር ይገናኛል:: ይህም የገቢ አስተዳደር መሳሪያዎችን፣ የእንግዳ መገናኛ መድረኮችን እና የሽያጭ ቦታዎችን ይጨምራል::',
+                    question: 'ወለባ አሁን ካለን የቴክኖሎጂ ስብስብ ጋር መገናኘት ይችላል?',
+                    answer: 'አዎ፣ ወለባ ከ100 በላይ ከሆኑ የሶስተኛ ወገን ስርዓቶች ጋር ይገናኛል:: ይህም የክፍያ ማቀነባበሪያዎችን፣ የሂሳብ ሶፍትዌሮችን እና የግብይት መሳሪያዎችን ይጨምራል::',
                 },
                 {
                     question: 'ወለባ በኤአይ የሚሰሩ ባህሪያት አሉት?',
@@ -362,15 +360,15 @@ export const faqContent = {
             items: [
                 {
                     question: 'ከአሁኑ ስርዓታችን ወደ ወለባ መቀየር ምን ያህል አስቸጋሪ ነው?',
-                    answer: 'ወደ ወለባ የሚደረገው ሽግግር ቀላል እና ቀልጣፋ ነው:: የእኛ የአተገባበር ቡድን የመረጃ ሽግግርን (ቦታ ማስያዣዎች፣ የእንግዳ መገለጫዎች) ያስተናግዳል::',
+                    answer: 'ወደ ወለባ የሚደረገው ሽግግር ቀላል እና ቀልጣፋ ነው:: የእኛ የአተገባበር ቡድን የመረጃ ሽግግርን (የሽያጭ ታሪክ፣ የደንበኛ መገለጫዎች) ያስተናግዳል::',
                 },
                 {
                     question: 'አተገባበሩ ምን ያህል ጊዜ ይወስዳል?',
-                    answer: 'አብዛኛዎቹ ንብረቶች በ 3-5 የስራ ቀናት ውስጥ ሙሉ በሙሉ ስራ መጀመር ይችላሉ:: ለትላልቅ ንብረቶች ከ1-2 ሳምንታት ሊወስድ ይችላል::',
+                    answer: 'አብዛኛዎቹ ንግዶች በ 3-5 የስራ ቀናት ውስጥ ሙሉ በሙሉ ስራ መጀመር ይችላሉ:: ለትላልቅ ድርጅቶች ከ1-2 ሳምንታት ሊወስድ ይችላል::',
                 },
                 {
                     question: 'ለሰራተኞቻችን ስልጠና ትሰጣላችሁ?',
-                    answer: 'አዎ፣ ለእያንዳንዱ የስራ ድርሻ የተዘጋጀ የተሟላ ስልጠና እንሰጣለን:: የፊት ጠረጴዛ ሰራተኞች በጥቂት ሰዓታት ውስጥ ስራውን ሊለምዱ ይችላሉ::',
+                    answer: 'አዎ፣ ለእያንዳንዱ የስራ ድርሻ የተዘጋጀ የተሟላ ስልጠና እንሰጣለን:: ሰራተኞች በጥቂት ሰዓታት ውስጥ ስራውን ሊለምዱ ይችላሉ::',
                 },
             ]
         },
@@ -388,7 +386,7 @@ export const faqContent = {
                 },
                 {
                     question: 'ወለባ የንግድ ስራችንን ወቅታዊ ለውጦች ማስተናገድ ይችላል?',
-                    answer: 'አዎ፣ ወለባ ለሆስፒታሊቲ ስራዎች ተለዋዋጭ ባህሪ ተደርጎ የተሰራ ነው:: ወቅታዊ ሰራተኞች ስራውን በፍጥነት እንዲለምዱ ይረዳል::',
+                    answer: 'አዎ፣ ወለባ ለተለያዩ የንግድ ስራዎች ተለዋዋጭ ባህሪ ተደርጎ የተሰራ ነው:: ወቅታዊ ሰራተኞች ስራውን በፍጥነት እንዲለምዱ ይረዳል::',
                 },
             ]
         }
@@ -398,12 +396,12 @@ export const faqContent = {
 // Footer Content
 export const footerContent = {
     cta: {
-        title: 'ወለባን በመጠቀም ስኬታማ የሆኑ በሺዎች የሚቆጠሩ ሆቴሎችን ይቀላቀሉ',
-        subtitle: "የወለባ የተቀናጀ መድረክ ለንብረትዎ እንዴት እንደሚሰራ ይመልከቱ። ቡድናችን እንደ ፍላጎትዎ የተዘጋጁ ባህሪያትን ያሳየዎታል።",
+        title: 'ወለባን በመጠቀም ስኬታማ የሆኑ በሺዎች የሚቆጠሩ ንግዶችን ይቀላቀሉ',
+        subtitle: "የወለባ የተቀናጀ መድረክ ለድርጅትዎ እንዴት እንደሚሰራ ይመልከቱ። ቡድናችን እንደ ፍላጎትዎ የተዘጋጁ ባህሪያትን ያሳየዎታል።",
         buttonText: 'ማሳያ ያስይዙ',
         features: [
             '100% አስተማማኝ እና ደህንነቱ የተጠበቀ',
-            'የ360 ዲግሪ የንብረት አስተዳደር',
+            'የ360 ዲግሪ የንግድ አስተዳደር',
             'የ24/7 ድጋፍ'
         ]
     },
@@ -416,24 +414,24 @@ export const footerContent = {
         {
             title: 'ምርቶች',
             links: [
-                { text: 'የሆቴል PMS', href: '/property-management' },
+                { text: 'የስራ አስተዳደር', href: '/operations-management' },
 
-                { text: 'የቦታ ማስያዣ ሞተር', href: '/booking-engine' },
+                { text: 'የሽያጭ መድረክ', href: '/booking-engine' },
                 { text: 'የቻናል ማኔጀር', href: '/channel-manager' },
                 { text: 'የገቢ መረጃ', href: '/revenue-management' },
                 { text: 'ክፍያዎች', href: '/weleba-payments' },
-                { text: 'የሆቴል እንግዶች መተግበሪያ', href: '/hotel-guest-app' },
+                { text: 'የደንበኛ መተግበሪያ', href: '/customer-app' },
             ],
         },
         {
             title: 'መፍትሄዎች',
             links: [
-                { text: 'ገለልተኛ ሆቴሎች', href: '/independent-hotels-software' },
-                { text: 'የሆቴል ቡድኖች', href: '/pms-hotel-groups' },
-                { text: 'ቤተሰባዊ ሆቴሎች', href: '/bed-breakfast-software' },
-                { text: 'ፓርኮች', href: '/parks' },
-                { text: 'ሪዞርቶች', href: '/resorts-pms-software' },
-                { text: 'ሞቴሎች', href: '/motel' },
+                { text: 'ገለልተኛ ድርጅቶች', href: '/service-business-software' },
+                { text: 'የንግድ ቡድኖች', href: '/multi-location-management' },
+                { text: 'ትናንሽ ንግዶች', href: '/small-business-software' },
+                { text: 'ሆቴሎች እና ሪዞርቶች', href: '/hotels-software' },
+                { text: 'ምግብ ቤቶች', href: '/restaurant-management' },
+                { text: 'ብዙ-ቦታ', href: '/multi-location-management' },
             ],
         },
         {

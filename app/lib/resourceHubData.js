@@ -1,7 +1,7 @@
 export const resourceHubHero = {
     tag: 'Resource Centre',
-    title: 'Your Knowledge Hub for Modern Hospitality',
-    description: 'Explore our library of expert insights, industry trends, operational templates, and strategic guides to help you master hotel management.'
+    title: 'Your Knowledge Hub for Modern Business',
+    description: 'Explore our library of expert insights, industry trends, operational templates, and strategic guides to help you master business management.'
 };
 
 export const resourceCategories = [
@@ -47,7 +47,7 @@ export const resourceCategories = [
     },
     {
         title: 'E-Books',
-        description: 'In-depth Hospitality guides.',
+        description: 'In-depth business guides.',
         icon: 'BookOpen',
         href: '/ebooks',
         color: 'bg-indigo-50',

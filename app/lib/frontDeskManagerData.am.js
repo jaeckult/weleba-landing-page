@@ -1,14 +1,14 @@
 export const fdmHeroContent = {
-    tag: 'ለፍሮንት ዴስክ ማናጀሮች (Front Desk Managers)',
-    title: 'ሙሉ የፍሮንት ዴስክ ስራዎች በአንድ የተቀናጀ መድረክ',
-    description: 'weleba በሆቴል ባለሙያዎች በተቀረጹ መሳሪያዎች የፍሮንት ዴስክ ስራዎን ያቀላጥፋል። የስልጠና ጊዜን በ50% በመቀነስ ለእንግዶችዎ ትኩረት እንዲሰጡ ያግዝዎታል።',
+    tag: 'ለኦፕሬሽን ማናጀሮች (Operations Managers)',
+    title: 'ሙሉ የኦፕሬሽን ስራዎች በአንድ የተቀናጀ መድረክ',
+    description: 'weleba በንግድ ባለሙያዎች በተቀረጹ መሳሪያዎች የኦፕሬሽን ስራዎን ያቀላጥፋል። የስልጠና ጊዜን በ50% በመቀነስ ለደንበኞችዎ ትኩረት እንዲሰጡ ያግዝዎታል።',
     cta: 'ማሳያ ያስይዙ',
     videoPoster: '/images/posters/fdm-hero.png',
     videoSrc: '/hero-video.mp4', // Placeholder
 };
 
 export const fdmAdvantages = {
-    title: 'ለቼክ-ኢን ጥድፊያ ጊዜ ተብሎ የተሰራ',
+    title: 'ለጥድፊያ ጊዜ ተብሎ የተሰራ',
     subtitle: 'ከሳምንታት ስልጠና ወደ 2 ሰዓት የስራ ብቃት',
     features: [
         {
@@ -17,49 +17,49 @@ export const fdmAdvantages = {
             icon: 'Clock',
         },
         {
-            title: 'በ30% የፈጠነ ቼክ-ኢን',
-            description: 'የተቀናጀ የክፍያ ሂደት እና በአንድ ገጽ ላይ የሚከናወኑ ስራዎች የእንግዶችን ወረፋ ይቀንሳሉ።',
+            title: 'በ30% የፈጠነ አገልግሎት',
+            description: 'የተቀናጀ የክፍያ ሂደት እና በአንድ ገጽ ላይ የሚከናወኑ ስራዎች የደንበኞችን ወረፋ ይቀንሳሉ።',
             icon: 'Zap',
         },
         {
             title: '99.95% አስተማማኝነት',
-            description: 'በጥድፊያ ሰዓታት ሊተማመኑበት የሚችሉት ታማኝነት፤ ፍሮንት ዴስክዎ ስራውን በጭራሽ አያቋርጥም።',
+            description: 'በጥድፊያ ሰዓታት ሊተማመኑበት የሚችሉት ታማኝነት፤ አገልግሎትዎ በጭራሽ አይቋረጥም።',
             icon: 'ShieldCheck',
         },
     ],
 };
 
 export const fdmPlatform = {
-    tag: 'የፍሮንት ኦፊስ ማዕከል',
-    title: 'ቀላል የእንግዳ አገልግሎት አሰጣጥ',
+    tag: 'የኦፕሬሽን ማዕከል',
+    title: 'ቀላል የደንበኛ አገልግሎት አሰጣጥ',
     features: [
         {
-            title: 'ምቹ የPMS ገጽ',
-            description: 'ቦታ ማስያዣዎችን በቀላሉ ያስተዳድሩ። ክፍሎችን ይመድቡ እና የክፍል መገኘትን በአይን ጥቅሻ ይመልከቱ።',
+            title: 'ምቹ የአስተዳደር ገጽ',
+            description: 'ትዕዛዞችን በቀላሉ ያስተዳድሩ። አገልግሎቶችን ይመድቡ እና የአቅርቦትን ሁኔታ በአይን ጥቅሻ ይመልከቱ።',
             icon: 'LayoutDashboard',
             className: 'bg-[#eeede8] col-span-1 md:col-span-4 lg:col-span-4 min-h-[350px]'
         },
         {
-            title: 'የእውነተኛ ጊዜ የክፍል ጽዳት ሁኔታ',
-            description: 'የትኞቹ ክፍሎች ለእንግዳ ዝግጁ እንደሆኑ በየደቂቃው በሚለዋወጥ መረጃ ይረዱ።',
+            title: 'የእውነተኛ ጊዜ የአገልግሎት ሁኔታ',
+            description: 'የትኞቹ አገልግሎቶች ለደንበኛ ዝግጁ እንደሆኑ በየደቂቃው በሚለዋወጥ መረጃ ይረዱ።',
             icon: 'Home',
             className: 'bg-[#dce6f2] col-span-1 md:col-span-8 lg:col-span-8 min-h-[350px]'
         },
         {
-            title: 'የቡድን ማስያዣ አያያዝ',
-            description: 'የሰርግ እና የድርጅት ስብሰባ ቡድኖችን በቀላሉ ያስተዳድሩ። የቡድን ኮዶች እና ማዕከላዊ ሒሳቦች በአንድ ቦታ።',
+            title: 'የቡድን ሽያጭ አያያዝ',
+            description: 'የድርጅት ስራዎችን እና የጅምላ ትዕዛዞችን በቀላሉ ያስተዳድሩ። የቡድን ኮዶች እና ማዕከላዊ ሒሳቦች በአንድ ቦታ።',
             icon: 'Users',
             className: 'bg-[#eeede8] col-span-1 md:col-span-6 lg:col-span-6 min-h-[350px]'
         },
         {
-            title: 'በኤአይ (AI) የሚደገፍ ኮንሲየር',
-            description: 'የእንግዳ ጥያቄዎችን እና በእኩለ ሌሊት የሚነሱ ጉዳዮችን 24/7 የሚከታተል የኤአይ ረዳት።',
+            title: 'በኤአይ (AI) የሚደገፍ ረዳት',
+            description: 'የደንበኛ ጥያቄዎችን እና በማንኛውም ሰዓት የሚነሱ ጉዳዮችን 24/7 የሚከታተል የኤአይ ረዳት።',
             icon: 'Bot',
             className: 'bg-[#f4f1ea] col-span-1 md:col-span-6 lg:col-span-6 min-h-[350px]'
         }
     ],
     cta: {
-        title: 'የፍሮንት ዴስክ ጭንቀትን በማስቀረት ለእንግዶችዎ ምቹ አገልግሎት ለመስጠት ዝግጁ ነዎት?',
+        title: 'የስራ ጭንቀትን በማስቀረት ለደንበኞችዎ ምቹ አገልግሎት ለመስጠት ዝግጁ ነዎት?',
         buttonText: 'ማሳያ ያስይዙ',
         icon: 'Smile',
         className: 'bg-[#dce6f2] col-span-1 md:col-span-12 lg:col-span-12 min-h-[300px]'
@@ -67,12 +67,12 @@ export const fdmPlatform = {
 };
 
 export const fdmCoordination = {
-    title: 'የክፍሎች ቀላል ቅንጅት',
-    description: 'ለቡድንዎ የእንግዳ ፍላጎቶችን እና የሁሉንም ክፍሎች ወቅታዊ ሁኔታ ወዲያውኑ እንዲያዩ ያስችላቸዋል።',
+    title: 'የስራዎች ቀላል ቅንጅት',
+    description: 'ለቡድንዎ የደንበኛ ፍላጎቶችን እና የሁሉንም አገልግሎቶች ወቅታዊ ሁኔታ ወዲያውኑ እንዲያዩ ያስችላቸዋል።',
     image: '/HOTELS/image copy 5.png', // Front desk coordination
     lists: [
-        'ወቅታዊ የክፍል መያዝ ሁኔታ',
-        'ከእንግዶች ጋር መተግበሪያ ላይ መልእክት መለዋወጥ',
+        'ወቅታዊ የአገልግሎት ሁኔታ',
+        'ከደንበኞች ጋር መተግበሪያ ላይ መልእክት መለዋወጥ',
         'ቅጽበታዊ የስራ ሪፖርቶች'
     ],
     imageLeft: true,
@@ -81,8 +81,8 @@ export const fdmCoordination = {
 export const fdmFaqs = [
     {
         category: 'ልዩነት',
-        question: 'weleba ከሌሎች የፍሮንት ዴስክ ሶፍትዌሮች በምን ይለያል?',
-        answer: 'ለገለልተኛ ሆቴሎች ተብሎ የተሰራ በመሆኑ የስልጠና ጊዜን በ50% ይቀንሳል፤ እንዲሁም 90% የዕለት ተዕለት ስራዎችን በሁለት ገጾች ብቻ ያከናውናል።',
+        question: 'weleba ከሌሎች የአስተዳደር ሶፍትዌሮች በምን ይለያል?',
+        answer: 'ለገለልተኛ ድርጅቶች ተብሎ የተሰራ በመሆኑ የስልጠና ጊዜን በ50% ይቀንሳል፤ እንዲሁም 90% የዕለት ተዕለት ስራዎችን በሁለት ገጾች ብቻ ያከናውናል።',
     },
     {
         category: 'ስልጠና',
@@ -96,12 +96,12 @@ export const fdmFaqs = [
     },
     {
         category: 'ቡድኖች',
-        question: 'የቡድን ቦታ ማስያዣዎችን አስተዳደር እንዴት ነው?',
-        answer: 'ለሰርግ እና ለድርጅት ቡድኖች የሚሆኑ ልዩ መሳሪያዎች በፍሮንት ዴስካችሁ ተካተዋል።',
+        question: 'የቡድን ትዕዛዞች አስተዳደር እንዴት ነው?',
+        answer: 'ለጅምላ እና ለድርጅት ቡድኖች የሚሆኑ ልዩ መሳሪያዎች በኦፕሬሽን ላዩ ላይ ተካተዋል።',
     },
     {
         category: 'እርካታ',
-        question: 'የእንግዶችን እርካታ እንዴት ይጨምራል?',
-        answer: 'የቼክ-ኢን ሂደትን በ30% በማፍጠን፣ ደርብ ቦታ ማስያዝን በማስቀረት እና ዘመናዊ የዲጂታል ቁልፎችን በማቅረብ።',
+        question: 'የደንበኞችን እርካታ እንዴት ይጨምራል?',
+        answer: 'የምዝገባ ሂደትን በ30% በማፍጠን እና ዘመናዊ የዲጂታል አማራጮችን በማቅረብ።',
     },
 ];

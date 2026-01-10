@@ -1,7 +1,7 @@
 export const gmHeroContent = {
-    tag: 'ለጄኔራል ማናጀሮች (General Managers)',
-    title: 'የሆቴልዎ የተሟላ የአስተዳደር መቆጣጠሪያ ማዕከል',
-    description: 'የweleba የተቀናጀ መድረክ የጄኔራል ማናጀሮችን የዕለት ተዕለት የአሠራር ችግሮች ይፈታል፤ ከተበታተኑ ስርዓቶች እስከ ገቢ ጫናዎች ድረስ።',
+    tag: 'ለስራ አስኪያጆች (General Managers)',
+    title: 'የድርጅትዎ የተሟላ የአስተዳደር መቆጣጠሪያ ማዕከል',
+    description: 'የweleba የተቀናጀ መድረክ የስራ አስኪያጆችን የዕለት ተዕለት የአሠራር ችግሮች ይፈታል፤ ከተበታተኑ ስርዓቶች እስከ ገቢ ጫናዎች ድረስ።',
     cta: 'ማሳያ ያስይዙ',
     videoPoster: '/images/posters/gm-hero.png',
     videoSrc: '/hero-video.mp4', // Placeholder
@@ -18,11 +18,11 @@ export const gmAdvantages = {
         },
         {
             title: 'የሰራተኞች ምርታማነት',
-            description: 'አውቶማቲክ የአሰራር ሂደቶች የስልጠና ጊዜን በ50% በመቀነስ ሰራተኞች በእንግዳ አገልግሎት ላይ እንዲያተኩሩ ያደርጋል።',
+            description: 'አውቶማቲክ የአሰራር ሂደቶች የስልጠና ጊዜን በ50% በመቀነስ ሰራተኞች በደንበኛ አገልግሎት ላይ እንዲያተኩሩ ያደርጋል።',
             icon: 'Users',
         },
         {
-            title: 'የቀጥታ ቦታ ማስያዝ እድገት',
+            title: 'የቀጥታ ሽያጭ እድገት',
             description: 'ያለ ኮሚሽን የሚሰሩ መሳሪያዎች ቀጥተኛ ገቢን በማሳደግ ትርፍዎን ከደላሎች ጫና ይጠብቃሉ።',
             icon: 'TrendingUp',
         },
@@ -31,11 +31,11 @@ export const gmAdvantages = {
 
 export const gmPlatform = {
     tag: 'የመቆጣጠሪያ ማዕከል',
-    title: 'የሆቴልዎ የአስተዳደር ስነ-ምህዳር',
+    title: 'የድርጅትዎ የአስተዳደር ስነ-ምህዳር',
     features: [
         {
-            title: 'ኢንተርፕራይዝ PMS',
-            description: 'የተቀላጠፈ የስራ ሂደት፣ ወቅታዊ የክፍል ሁኔታዎች እና አውቶማቲክ የተግባር አስተዳደር።',
+            title: 'ኢንተርፕራይዝ ሲስተም',
+            description: 'የተቀላጠፈ የስራ ሂደት፣ ወቅታዊ የአገልግሎት ሁኔታዎች እና አውቶማቲክ የአሰራር አስተዳደር።',
             icon: 'Building2',
             className: 'bg-[#eeede8] col-span-1 md:col-span-8 lg:col-span-8 min-h-[350px]'
         },
@@ -52,14 +52,14 @@ export const gmPlatform = {
             className: 'bg-[#eeede8] col-span-1 md:col-span-6 lg:col-span-6 min-h-[350px]'
         },
         {
-            title: 'የእንግዳ መተግበሪያ',
-            description: 'የዲጂታል ክፍል ቁልፍ እና ፈጣን የአገልግሎት ጥያቄዎች፤ ይህም የእንግዶችን እርካታ በእጅጉ ይጨምራል።',
+            title: 'የደንበኛ መተግበሪያ',
+            description: 'የዲጂታል መዳረሻ እና ፈጣን የአገልግሎት ጥያቄዎች፤ ይህም የደንበኞችን እርካታ በእጅጉ ይጨምራል።',
             icon: 'Smartphone',
             className: 'bg-[#f4f1ea] col-span-1 md:col-span-6 lg:col-span-6 min-h-[350px]'
         }
     ],
     cta: {
-        title: 'ሆቴልዎን በሙሉ እምነት እና ታይነት ለመምራት ተዘጋጅተዋል?',
+        title: 'ድርጅትዎን በሙሉ እምነት እና ታይነት ለመምራት ተዘጋጅተዋል?',
         buttonText: 'ማሳያ ያስይዙ',
         icon: 'Crown',
         className: 'bg-[#dce6f2] col-span-1 md:col-span-12 lg:col-span-12 min-h-[300px]'
@@ -71,7 +71,7 @@ export const gmPerformance = {
     description: 'ሁሉንም የስራዎን ዘርፎች ሙሉ በሙሉ እንዲቆጣጠሩ የሚያስችል የተሟላ የቢዝነስ ኢንተለጀንስ።',
     image: '/image copy 14.png', // GM performance
     lists: [
-        'የወቅታዊ ADR እና RevPAR ክትትል',
+        'የወቅታዊ ዋጋ እና ገቢ ክትትል',
         'የሰራተኞች የስራ አፈጻጸም መለኪያ',
         'የቀጥታ እና የደላላ ሽያጭ ንጽጽር'
     ],
@@ -81,13 +81,13 @@ export const gmPerformance = {
 export const gmFaqs = [
     {
         category: 'ተስማሚነት',
-        question: 'weleba ለተለያዩ የሆቴል አይነቶች እንዴት ውጤታማ ይሆናል?',
-        answer: 'የእኛ ተለዋዋጭ መዋቅር ከትንንሽ ሆቴሎች እስከ ትላልቅ ሪዞርቶች ድረስ ካለው የስራ ሂደት ጋር ራሱን ያጣጥማል።',
+        question: 'weleba ለተለያዩ የንግድ አይነቶች እንዴት ውጤታማ ይሆናል?',
+        answer: 'የእኛ ተለዋዋጭ መዋቅር ከትንንሽ ሱቆች እስከ ትላልቅ ድርጅቶች ድረስ ካለው የስራ ሂደት ጋር ራሱን ያጣጥማል።',
     },
     {
         category: 'በጀት',
-        question: 'ኢንቨስትመንቱ ከሆቴል በጀት ጋር እንዴት ይጣጣማል?',
-        answer: 'ግልጽ እና እንደ ሆቴሉ መጠን የሚሰላ ዋጋ አለን። አብዛኛዎቹ ንብረቶች በውጤታማነት እና በገቢ እድገት አማካኝነት ወጪውን ይመልሳሉ።',
+        question: 'ኢንቨስትመንቱ ከድርጅት በጀት ጋር እንዴት ይጣጣማል?',
+        answer: 'ግልጽ እና እንደ ንግዱ መጠን የሚሰላ ዋጋ አለን። አብዛኛዎቹ ድርጅቶች በውጤታማነት እና በገቢ እድገት አማካኝነት ወጪውን ይመልሳሉ።',
     },
     {
         category: 'ትግበራ',
@@ -101,7 +101,7 @@ export const gmFaqs = [
     },
     {
         category: 'ገቢ',
-        question: 'ሶፍትዌሩ ለጄኔራል ማናጀሮች ገቢን እንዴት ያሻሽላል?',
+        question: 'ሶፍትዌሩ ለስራ አስኪያጆች ገቢን እንዴት ያሻሽላል?',
         answer: 'በተለዋዋጭ የዋጋ ማመቻቸት፣ ያለ ኮሚሽን በሚሰሩ ሞተሮች እና ተጨማሪ ሽያጮችን (upselling) በማመቻቸት።',
     },
 ];

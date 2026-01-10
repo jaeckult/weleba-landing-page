@@ -1,14 +1,14 @@
 export const itHeroContent = {
     tag: 'Solutions for IT Managers',
-    title: 'Enterprise-Grade Hotel Technology Infrastructure That Just Works',
-    description: 'weleba delivers the reliable, secure, and scalable hotel management platform that IT managers can trust. Cloud-native architecture with 99.95% uptime.',
+    title: 'Enterprise-Grade Technology Infrastructure That Just Works',
+    description: 'weleba delivers the reliable, secure, and scalable management platform that IT managers can trust. Cloud-native architecture with 99.95% uptime.',
     cta: 'Book A Demo',
     videoPoster: '/images/posters/it-hero.png',
     videoSrc: '/hero-video.mp4', // Placeholder
 };
 
 export const itAdvantages = {
-    title: 'Infrastructure Built for Modern Hospitality',
+    title: 'Infrastructure Built for Modern Business',
     subtitle: 'Zero Server Maintenance + Maximum Uptime + API-First Architecture',
     features: [
         {
@@ -52,14 +52,14 @@ export const itPlatform = {
             className: 'bg-[#eeede8] col-span-1 md:col-span-6 lg:col-span-6 min-h-[350px]'
         },
         {
-            title: 'Multi-Property Control',
+            title: 'Multi-Location Control',
             description: 'Centralized dashboard for monitoring all locations. Unified user management and standardized integrations.',
             icon: 'LayoutDashboard',
             className: 'bg-[#f4f1ea] col-span-1 md:col-span-6 lg:col-span-6 min-h-[350px]'
         }
     ],
     cta: {
-        title: 'Ready to modernize your hotel IT infrastructure with a platform that just works?',
+        title: 'Ready to modernize your IT infrastructure with a platform that just works?',
         buttonText: 'Book A Demo',
         icon: 'Layers',
         className: 'bg-[#dce6f2] col-span-1 md:col-span-12 lg:col-span-12 min-h-[300px]'

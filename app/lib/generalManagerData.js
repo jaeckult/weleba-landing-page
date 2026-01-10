@@ -1,7 +1,7 @@
 export const gmHeroContent = {
     tag: 'Solutions for General Managers',
-    title: 'Your Complete Hotel Management Command Center',
-    description: 'weleba\'s all-in-one hospitality platform solves the operational challenges that keep GMs up at night—from fragmented systems to revenue pressures.',
+    title: 'Your Complete Business Management Command Center',
+    description: 'weleba\'s all-in-one management platform solves the operational challenges that keep managers up at night—from fragmented systems to revenue pressures.',
     cta: 'Book A Demo',
     videoPoster: '/images/posters/gm-hero.png',
     videoSrc: '/hero-video.mp4', // Placeholder
@@ -18,12 +18,12 @@ export const gmAdvantages = {
         },
         {
             title: 'Staff Productivity',
-            description: 'Automated night audits and workflows reduce training time by 50% and free staff for guest-focused tasks.',
+            description: 'Automated audits and workflows reduce training time by 50% and free staff for customer-focused tasks.',
             icon: 'Users',
         },
         {
-            title: 'Direct Booking Growth',
-            description: 'Commission-free booking tools drive direct revenue and protect your margins from OTA pressure.',
+            title: 'Direct Sales Growth',
+            description: 'Commission-free sales tools drive direct revenue and protect your margins from third-party pressure.',
             icon: 'TrendingUp',
         },
     ],
@@ -31,11 +31,11 @@ export const gmAdvantages = {
 
 export const gmPlatform = {
     tag: 'Command Center',
-    title: 'Your Hotel Management Ecosystem',
+    title: 'Your Business Management Ecosystem',
     features: [
         {
-            title: 'Enterprise PMS',
-            description: 'Streamlined workflows with real-time room status updates and automated task management.',
+            title: 'Enterprise Management',
+            description: 'Streamlined workflows with real-time status updates and automated task management.',
             icon: 'Building2',
             className: 'bg-[#eeede8] col-span-1 md:col-span-8 lg:col-span-8 min-h-[350px]'
         },
@@ -52,14 +52,14 @@ export const gmPlatform = {
             className: 'bg-[#eeede8] col-span-1 md:col-span-6 lg:col-span-6 min-h-[350px]'
         },
         {
-            title: 'Guest App Scaling',
-            description: 'Digital room keys and instant service requests that directly impact guest satisfaction scores.',
+            title: 'Customer App Scaling',
+            description: 'Digital access and instant service requests that directly impact customer satisfaction scores.',
             icon: 'Smartphone',
             className: 'bg-[#f4f1ea] col-span-1 md:col-span-6 lg:col-span-6 min-h-[350px]'
         }
     ],
     cta: {
-        title: 'Ready to run your hotel with complete confidence and real-time visibility?',
+        title: 'Ready to run your business with complete confidence and real-time visibility?',
         buttonText: 'Book A Demo',
         icon: 'Crown',
         className: 'bg-[#dce6f2] col-span-1 md:col-span-12 lg:col-span-12 min-h-[300px]'
@@ -71,9 +71,9 @@ export const gmPerformance = {
     description: 'Comprehensive business intelligence that gives you complete control over every aspect of your operations.',
     image: '/image copy 14.png', // GM performance
     lists: [
-        'Real-time ADR and RevPAR Tracking',
+        'Real-time Revenue Tracking',
         'Staff Performance Metrics',
-        'Direct vs. OTA Revenue Split'
+        'Direct vs. Third-Party Revenue Split'
     ],
     imageLeft: false,
 };
@@ -81,13 +81,13 @@ export const gmPerformance = {
 export const gmFaqs = [
     {
         category: 'Diversity',
-        question: 'What makes weleba effective for diverse property types?',
-        answer: 'Our flexible architecture adapts to various operations, from boutique properties to large resorts, matching specific workflows.',
+        question: 'What makes weleba effective for diverse business types?',
+        answer: 'Our flexible architecture adapts to various operations, from boutique shops to large enterprises, matching specific workflows.',
     },
     {
         category: 'Budget',
-        question: 'How does the investment align with hotel budgets?',
-        answer: 'Transparent pricing that scales with operations. Most properties achieve ROI through efficiency and revenue gains.',
+        question: 'How does the investment align with business budgets?',
+        answer: 'Transparent pricing that scales with operations. Most businesses achieve ROI through efficiency and revenue gains.',
     },
     {
         category: 'Implementation',
@@ -101,7 +101,7 @@ export const gmFaqs = [
     },
     {
         category: 'Revenue',
-        question: 'How does the software improve revenue for GMs?',
+        question: 'How does the software improve revenue for managers?',
         answer: 'Through dynamic pricing optimization, commission-free engines, and automated upselling opportunities.',
     },
 ];

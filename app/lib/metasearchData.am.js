@@ -1,19 +1,19 @@
 export const msHeroContent = {
-    tag: 'ሜታሰርች (Metasearch)',
-    title: 'የቀጥታ ቦታ ማስያዝ ስልትዎን የሚያጠናክር የተቀናጀ የሜታሰርች ሞተር',
-    description: 'ተጓዦች በሚፈልጉባቸው እንደ Google Hotel Ads፣ TripAdvisor እና Trivago ባሉ መድረኮች ላይ ሆቴልዎን ያስተዋውቁ። በብልህ የዋጋ አወጣጥ ቀጥተኛ ቦታ ማስያዝን ያሳድጉ።',
+    tag: 'የንጽጽር ማስታወቂያዎች (Comparison Ads)',
+    title: 'የቀጥታ ሽያጭ ስልትዎን የሚያጠናክር የተቀናጀ የፍለጋ ማስታወቂያ ሞተር',
+    description: 'ደንበኞች በሚፈልጉባቸው እንደ Google Ads እና በዘርፉ ታዋቂ በሆኑ የንጽጽር መድረኮች ላይ ድርጅትዎን ያስተዋውቁ። በብልህ የዋጋ አወጣጥ ቀጥተኛ ሽያጭን ያሳድጉ።',
     cta: 'ማሳያ ያስይዙ',
     videoPoster: '/videos/metasearch-poster.jpg', // Placeholder
     videoSrc: '/hero-video.mp4', // Placeholder
 };
 
 export const msAdvantages = {
-    title: 'ለምን የweleba ሜታሰርች ሞተርን ይመርጣሉ?',
-    subtitle: 'ሰፊ የቻናሎች ተደራሽነት + የተቀናጀ ቁጥጥር + ብልህ ማመቻቸት',
+    title: 'ለምን የweleba የንጽጽር ማስታወቂያዎችን ይመርጣሉ?',
+    subtitle: 'ሰፊ የመድረኮች ተደራሽነት + የተቀናጀ ቁጥጥር + ብልህ ማመቻቸት',
     features: [
         {
-            title: 'ሰፊ የቻናሎች ተደራሽነት',
-            description: 'ሆቴልዎን እንደ Google Hotel Ads፣ TripAdvisor እና Trivago ካሉ ታዋቂ የሜታሰርች መድረኮች ጋር ያገናኙ።',
+            title: 'ሰፊ የመድረኮች ተደራሽነት',
+            description: 'ድርጅትዎን እንደ Google Ads እና ሌሎች በዘርፉ ታዋቂ ከሆኑ የንጽጽር መድረኮች ጋር ያገናኙ።',
             icon: 'Globe',
         },
         {
@@ -23,7 +23,7 @@ export const msAdvantages = {
         },
         {
             title: 'ብልህ ማመቻቸት',
-            description: 'ቀጥተኛ ቦታ ማስያዝን በቀላሉ ለማሳደግ የCPC እና CPA የዋጋ አወጣጥ ሞዴሎችን በብልህነት ማስተዳደር።',
+            description: 'ቀጥተኛ ሽያጭን በቀላሉ ለማሳደግ የዋጋ አወጣጥ ሞዴሎችን በብልህነት ማስተዳደር።',
             icon: 'Zap',
         },
     ],
@@ -31,29 +31,29 @@ export const msAdvantages = {
 
 export const msPositioning = {
     tag: 'ስልታዊ መገኘት',
-    title: 'ሆቴልዎን በዋና ዋና መድረኮች ላይ ያስቀምጡ',
+    title: 'ድርጅትዎን በዋና ዋና መድረኮች ላይ ያስቀምጡ',
     features: [
         {
-            title: 'ቅጽበታዊ የዋጋ ማሳያ',
-            description: 'ከቀጥታ የቦታ ማስያዣ ሞተርዎ የተገኘውን ወቅታዊ ዋጋ እና የክፍል መገኘት ሁኔታ በራስ-ሰር ያሳዩ።',
+            title: 'ቅጽበታዊ የአገልግሎት ማሳያ',
+            description: 'ከቀጥታ የሽያጭ ሞተርዎ የተገኘውን ወቅታዊ ዋጋ እና የአገልግሎት መገኘት ሁኔታ በራስ-ሰር ያሳዩ።',
             icon: 'Clock',
             className: 'bg-[#eeede8] col-span-1 md:col-span-4 lg:col-span-4 min-h-[350px]'
         },
         {
             title: '"ትክክለኛ ድረ-ገጽ" (Official Site) መለያ',
-            description: 'በዝርዝሮችዎ ላይ "ትክክለኛ ድረ-ገጽ" የሚል መለያ በማግኘት እምነትን ይገንቡ እና ሆቴልዎን ከደላሎች (OTAs) ይለዩ።',
+            description: 'በዝርዝሮችዎ ላይ "ትክክለኛ ድረ-ገጽ" የሚል መለያ በማግኘት እምነትን ይገንቡ och ድርጅትዎን ከሌሎች የገበያ ቦታዎች ይለዩ።',
             icon: 'ShieldCheck',
             className: 'bg-[#dce6f2] col-span-1 md:col-span-8 lg:col-span-8 min-h-[350px]'
         },
         {
             title: 'የለውጥ ትንታኔ (Analytics)',
-            description: 'ከመጀመሪያው እይታ እስከ ቦታ ማስያዝ ድረስ ያለውን የእንግዳ ጉዞ ይከታተሉ፤ የትኛው ቻናል ከፍተኛ ትርፍ እንደሚያመጣ ይወቁ።',
+            description: 'ከመጀመሪያው እይታ እስከ ሽያጭ ድረስ ያለውን የደንበኛ ጉዞ ይከታተሉ፤ የትኛው መድረክ ከፍተኛ ትርፍ እንደሚያመጣ ይወቁ።',
             icon: 'LineChart',
             className: 'bg-[#eeede8] col-span-1 md:col-span-6 lg:col-span-6 min-h-[350px]'
         },
         {
             title: 'በአፈጻጸም ላይ የተመሰረተ ክፍያ',
-            description: 'በweleba ሜታሰርች በኩል ለተጠናቀቁ ቦታ ማስያዣዎች ብቻ ይክፈሉ፤ ይህም ከቦታ ማስያዝ መሰረዝ ጋር የተያያዘውን ኪሳራ ያስቀራል።',
+            description: 'በweleba በኩል ለተጠናቀቁ ሽያጮች ብቻ ይክፈሉ፤ ይህም ከሽያጭ መሰረዝ ጋር የተያያዘውን ኪሳራ ያስቀራል።',
             icon: 'CircleDollarSign',
             className: 'bg-[#f4f1ea] col-span-1 md:col-span-6 lg:col-span-6 min-h-[350px]'
         }
@@ -67,13 +67,13 @@ export const msPositioning = {
 };
 
 export const msMarketing = {
-    title: 'የሜታሰርች ማርኬቲንግዎን ያሻሽሉ',
-    description: 'እንግዶች በሚፈልጉባቸው ቦታዎች ሁሉ ሆቴልዎን ያሳዩ። የእኛ የዋጋ ማቅረቢያ መድረክ ለሆቴልዎ ምስል ከፍተኛ ቦታን ያረጋግጣል።',
+    title: 'የማስታወቂያ ስልትዎን ያሻሽሉ',
+    description: 'ደንበኞች በሚፈልጉባቸው ቦታዎች ሁሉ ድርጅትዎን ያሳዩ። የእኛ የዋጋ ማቅረቢያ መድረክ ለድርጅትዎ ምስል ከፍተኛ ቦታን ያረጋግጣል።',
     image: '/image copy 9.png', // Metasearch marketing
     lists: [
         'የተሻሻሉ የዋጋ ማቅረቢያ መፍትሄዎች',
         'የበጀት ማስተዳደሪያ መሳሪያዎች',
-        'የCPA እና CPC ሞዴሎች ድጋፍ'
+        'የCPA እና CPC ድጋፍ'
     ],
     imageLeft: true,
 };
@@ -81,23 +81,23 @@ export const msMarketing = {
 export const msFaqs = [
     {
         category: 'ስልት',
-        question: 'weleba ሜታሰርች እነዚህን ቻናሎች እኔ ራሴ ከማስተዳድረው በምን ይለያል?',
-        answer: 'ሁሉንም በአንድ ዳሽቦርድ፣ በላቁ አልጎሪዝሞች እና ከሁሉም በላይ ደግሞ ለተጠናቀቁ ቆይታዎች ብቻ እንዲከፍሉ እናደርጋለን።',
+        question: 'weleba ማስታወቂያዎችን እኔ ራሴ ከማስተዳድረው በምን ይለያል?',
+        answer: 'ሁሉንም በአንድ ዳሽቦርድ፣ በላቁ አልጎሪዝሞች እና ከሁሉም በላይ ደግሞ ለተጠናቀቁ ሽያጮች ብቻ እንዲከፍሉ እናደርጋለን።',
     },
     {
         category: 'ጠቅላላ',
-        question: 'የሆቴል ሜታሰርች ምንድነው?',
-        answer: 'የሆቴል ሜታሰርች ከተለያዩ ምንጮች የተገኙ ዋጋዎችን እና የክፍል መገኘትን ሰብስቦ እንደ Google Hotel Ads እና TripAdvisor ባሉ መድረኮች ላይ ያሳያል።',
+        question: 'የንጽጽር ማስታወቂያ ምንድነው?',
+        answer: 'ከተለያዩ ምንጮች የተገኙ ዋጋዎችን እና የአገልግሎት መገኘትን ሰብስቦ በተለያዩ የንጽጽር መድረኮች ላይ የሚያሳይ የማስታወቂያ አይነት ነው።',
     },
     {
         category: 'ንጽጽር',
-        question: 'በሜታሰርች እና በደላሎች (OTAs) መካከል ያለው ልዩነት ምንድነው?',
-        answer: 'ሜታሰርች ከተለያዩ ምንጮች ዋጋዎችን ያወዳድራል፤ ደላሎች ግን ክፍሎችን በቀጥታ ይሸጣሉ እና ኮሚሽን ያስከፍላሉ። ሜታሰርች እንግዶችን ወደ ሆቴልዎ ድረ-ገጽ ይመራል።',
+        question: 'በንጽጽር ማስታወቂያ እና በገበያ ቦታዎች መካከል ያለው ልዩነት ምንድነው?',
+        answer: 'የንጽጽር መድረኮች ከተለያዩ ምንጮች ዋጋዎችን ያወዳድራሉ፤ የገበያ ቦታዎች ደግሞ ምርቶችን በቀጥታ ይሸጣሉ እና ኮሚሽን ያስከፍላሉ።',
     },
     {
         category: 'ጥቅሞች',
-        question: 'ሜታሰርችን መጠቀም ለሆቴሌ ምን ጥቅም ይሰጣል?',
-        answer: 'ታይነትን ይጨምራል፣ ቀጥተኛ ቦታ ማስያዝን ያሳድጋል፣ በደላሎች ላይ ያለውን ጥገኝነት ይቀንሳል እና ውጤታማ ማርኬቲንግን ያመቻቻል።',
+        question: 'የንጽጽር ማስታወቂያዎችን መጠቀም ለድርጅቴ ምን ጥቅም ይሰጣል?',
+        answer: 'ታይነትን ይጨምራል፣ ቀጥተኛ ሽያጭን ያሳድጋል፣ በሶስተኛ ወገኖች ላይ ያለውን ጥገኝነት ይቀንሳል እና ውጤታማ ማርኬቲንግን ያመቻቻል።',
     },
     {
         category: 'መድረኮች',

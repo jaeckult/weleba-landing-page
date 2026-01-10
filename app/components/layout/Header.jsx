@@ -513,7 +513,7 @@ const Header = () => {
                               <div className="bg-gray-50 rounded-2xl overflow-hidden group/card relative shadow-sm border border-gray-100">
                                 <div className="aspect-[4/3] relative overflow-hidden">
                                   <Image
-                                    src="/featured/wood-river-inn.png"
+                                    src="/image copy 4"
                                     alt="Customer Story"
                                     fill
                                     className="object-cover group-hover/card:scale-105 transition-transform duration-500"

@@ -1,26 +1,26 @@
 export const supportHero = {
     tag: 'የweleba ድጋፍ',
     title: 'ባለሙያ ድጋፍ በፈለጉት ጊዜ',
-    description: 'የእኛ የመስተንግዶ ባለሙያዎች ቴክኖሎጂዎ ያለችግር መሥራቱን ያረጋግጣሉ፤ በዚህም እርስዎ በእንግዶችዎ ላይ ማተኮር ይችላሉ። የሚያስፈልግዎትን እርዳታ በሚፈልጉበት ጊዜ ያግኙ።'
+    description: 'የእኛ የቢዝነስ ባለሙያዎች ቴክኖሎጂዎ ያለችግር መሥራቱን ያረጋግጣሉ፤ በዚህም እርስዎ በደንበኞችዎ ላይ ማተኮር ይችላሉ። የሚያስፈልግዎትን እርዳታ በሚፈልጉበት ጊዜ ያግኙ።'
 };
 
 export const webinars = [
     {
         title: 'የገቢ አስተዳደር መሰረታዊ',
         date: 'መጋቢት 15, 2016',
-        description: 'የሆቴል ገቢ አስተዳደር መሰረታዊ ነገሮችን ይማሩ።',
+        description: 'የገቢ አስተዳደር መሰረታዊ ነገሮችን ይማሩ።',
         image: '/images/webinars/revenue-management.png',
         link: '/knowledge-base'
     },
     {
-        title: 'የእንግዳ ተሞክሮን ማሻሻል',
+        title: 'የደንበኛ ተሞክሮን ማሻሻል',
         date: 'መጋቢት 22, 2016',
-        description: 'የእንግዳ እርካታ ውጤቶችን ለማሻሻል ስልቶች።',
+        description: 'የደንበኛ እርካታ ውጤቶችን ለማሻሻል ስልቶች።',
         image: '/images/webinars/guest-experience.png',
         link: '/knowledge-base'
     },
     {
-        title: 'የሆቴል ስራዎች ማሻሻል',
+        title: 'የንግድ ስራዎች ማሻሻል',
         date: 'መጋቢት 29, 2016',
         description: 'ለዕለታዊ ስራዎችዎ ቅልጥፍናን ያሻሽሉ።',
         image: '/images/webinars/operations.png',
@@ -31,7 +31,7 @@ export const webinars = [
 export const supportContactMethods = [
     {
         title: 'አስቸኳይ እርዳታ',
-        description: 'ለአስቸኳይ የስራ ችግሮች እና ለድንገተኛ የፍሮንት ዴስክ ድጋፍ 24/7 ዝግጁ ነን።',
+        description: 'ለአስቸኳይ የስራ ችግሮች እና ለድንገተኛ ኦፕሬሽን ድጋፍ 24/7 ዝግጁ ነን።',
         icon: 'Phone',
         value: '+251929839303',
         action: 'አሁን ይደውሉ',
@@ -79,7 +79,7 @@ export const supportResources = [
     },
     {
         title: 'ተጨማሪ ባህሪ ይጠቁሙ',
-        description: 'welebaን የተሻለ ለማድረግ ሀሳብ አለዎት? እኛ የሆቴል ባለቤቶችን ሀሳብ እንሰማለን።',
+        description: 'welebaን የተሻለ ለማድረግ ሀሳብ አለዎት? እኛ የቢዝነስ ባለቤቶችን ሀሳብ እንሰማለን።',
         icon: 'Sparkles',
         href: '/feedback',
         cta: 'ባህሪ ይጠቁሙ'
@@ -89,12 +89,12 @@ export const supportResources = [
 // Demo Page Data
 export const demoHero = {
     title: 'welebaን በተግባር ይመልከቱ',
-    subtitle: 'የእኛ የተቀናጀ መድረክ የሆቴል ስራዎን እና የእንግዳ ተሞክሮዎን እንዴት እንደሚለውጥ ይመልከቱ።',
+    subtitle: 'የእኛ የተቀናጀ መድረክ የድርጅትዎን ስራ እና የደንበኛ ተሞክሮዎን እንዴት እንደሚለውጥ ይመልከቱ።',
     expectations: [
         'የweleba መድረክ ግላዊ የቀጥታ ጉብኝት',
         'ለእርስዎ ልዩ የስራ ጥያቄዎች ቀጥተኛ ምላሾች',
         'የገቢ እድገት እና የትርፍ አቅምን ማወቅ',
-        'ለሆቴልዎ የሚስማማ የስኬት መንገድ ማቀድ'
+        'ለድርጅትዎ የሚስማማ የስኬት መንገድ ማቀድ'
     ],
     trustedLogos: [
         'Nuvo Suites', 'ExplorUS', 'Harrison Hall', 'Seaboard Hotels', 'Wood River Inn'

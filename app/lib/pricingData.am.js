@@ -1,7 +1,7 @@
 export const pricingHeroContent = {
-    tag: 'የሆቴል አስተዳደር ሶፍትዌር',
+    tag: 'የድርጅት አስተዳደር ሶፍትዌር',
     title: 'ለ<span className="text-[#0066FF]">እድገት</span> የሚሆን ኢንቨስትመንት',
-    description: 'እንደ ንብረትዎ መጠን እና ፍላጎት የተበጁ ተለዋዋጭ አማራጮች። ለሆቴልዎ የግል ዋጋ ዛሬ ያግኙ።',
+    description: 'እንደ ድርጅትዎ መጠን እና ፍላጎት የተበጁ ተለዋዋጭ አማራጮች። ለንግድዎ የግል ዋጋ ዛሬ ያግኙ።',
     benefits: [
         'ሁሉንም በአንድ የያዘ መድረክ',
         'ያልተገደበ ድጋፍ',
@@ -18,10 +18,10 @@ export const pricingFormContent = {
     fields: {
         firstName: { label: 'ስም', placeholder: 'ዮሐንስ' },
         lastName: { label: 'የአባት ስም', placeholder: 'ተሰማ' },
-        email: { label: 'የሥራ ኢሜይል', placeholder: 'john@hotel.com' },
-        property: { label: 'የሆቴል ስም', placeholder: 'ታላቁ ሪዞርት' },
+        email: { label: 'የሥራ ኢሜይል', placeholder: 'john@business.com' },
+        property: { label: 'የድርጅት ስም', placeholder: 'ታላቁ ኢንተርፕራይዝ' },
         rooms: {
-            label: 'የክፍሎች ብዛት',
+            label: 'የድርጅቱ መጠን (መቀመጫ/ክፍል/ቅርንጫፍ)',
             placeholder: 'መጠን ይምረጡ...',
             options: [
                 { value: '<25', label: 'ከ25 በታች' },
@@ -38,10 +38,10 @@ export const pricingFormContent = {
 };
 
 export const pricingPageContent = {
-    trustedBy: 'በዓለም ዙሪያ በሚገኙ ታዋቂ ሆቴሎች የታመነ',
+    trustedBy: 'በዓለም ዙሪያ በሚገኙ ታዋቂ ድርጅቶች የታመነ',
     cta: {
-        title: 'የንብረትዎን አሰራር ለመለወጥ ተዘጋጅተዋል?',
-        subtitle: 'ቅልጥፍናን እና ገቢን ለመጨመር weleba የሚጠቀሙ በሺዎች የሚቆጠሩ ሆቴሎችን ይቀላቀሉ።',
+        title: 'የድርጅትዎን አሰራር ለመለወጥ ተዘጋጅተዋል?',
+        subtitle: 'ቅልጥፍናን እና ገቢን ለመጨመር weleba የሚጠቀሙ በሺዎች የሚቆጠሩ ንግዶችን ይቀላቀሉ።',
         buttonText: 'አሁኑኑ ይጀምሩ'
     }
 };

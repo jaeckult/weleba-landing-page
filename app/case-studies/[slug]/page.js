@@ -71,7 +71,7 @@ export default function CaseStudyDetailsPage() {
                             </div>
                             <div>
                                 <div className="font-bold text-[#0a1628]">{study.author}</div>
-                                <div className="text-xs text-gray-500">{study.hotel}</div>
+                                <div className="text-xs text-gray-500">{study.company}</div>
                             </div>
                         </div>
 

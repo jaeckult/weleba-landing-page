@@ -1,13 +1,13 @@
 export const supportHero = {
     tag: 'weleba Support',
     title: '24/7 Expert Support When You Need It Most',
-    description: 'Our team of hospitality experts is here to ensure your technology runs smoothly, so you can focus on your guests. Get the help you need, when you need it.'
+    description: 'Our team of business experts is here to ensure your technology runs smoothly, so you can focus on your customers. Get the help you need, when you need it.'
 };
 
 export const supportContactMethods = [
     {
         title: 'Immediate Assistance',
-        description: 'Available 24/7 for critical operational issues and emergency front desk support.',
+        description: 'Available 24/7 for critical operational issues and emergency support.',
         icon: 'Phone',
         value: '+251929839303',
         action: 'Call Now',
@@ -42,19 +42,19 @@ export const webinars = [
     {
         title: 'Revenue Management Essentials',
         date: 'March 15, 2024',
-        description: 'Learn the basics of hotel revenue management.',
+        description: 'Learn the basics of revenue management.',
         image: '/images/webinars/revenue-management.png',
         link: '/knowledge-base'
     },
     {
-        title: 'Enhancing Guest Experience',
+        title: 'Enhancing Customer Experience',
         date: 'March 22, 2024',
-        description: 'Strategies to improve guest satisfaction scores.',
+        description: 'Strategies to improve customer satisfaction scores.',
         image: '/images/webinars/guest-experience.png',
         link: '/knowledge-base'
     },
     {
-        title: 'Optimizing Hotel Operations',
+        title: 'Optimizing Business Operations',
         date: 'March 29, 2024',
         description: 'Streamline your daily operations for efficiency.',
         image: '/images/webinars/operations.png',
@@ -79,7 +79,7 @@ export const supportResources = [
     },
     {
         title: 'Feature Requests',
-        description: 'Have an idea to make weleba better? We listen to our hotelier community.',
+        description: 'Have an idea to make weleba better? We listen to our business community.',
         icon: 'Sparkles',
         href: '/feedback',
         cta: 'Suggest Feature'
@@ -89,14 +89,14 @@ export const supportResources = [
 // Demo Page Data
 export const demoHero = {
     title: 'Experience weleba Live',
-    subtitle: 'See how our unified platform can transform your property operations and guest experience.',
+    subtitle: 'See how our unified platform can transform your business operations and customer experience.',
     expectations: [
         'Live, personalized tour of the weleba platform',
         'Direct answers to your specific operational questions',
         'Discover revenue growth and ROI potential',
-        'Custom success path mapping for your property'
+        'Custom success path mapping for your business'
     ],
     trustedLogos: [
-        'Nuvo Suites', 'ExplorUS', 'Harrison Hall', 'Seaboard Hotels', 'Wood River Inn'
+        'Elite Commerce', 'Omni Retail', 'Harrison Service', 'Seaboard Enterprise', 'Wood River Inn'
     ]
 };

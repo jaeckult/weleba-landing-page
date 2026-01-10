@@ -1,31 +1,31 @@
 export const aboutHero = {
     tag: 'Who We Are',
-    title: 'Building the Future of <span className="text-blue-600">Hospitality Management</span>',
-    description: "weleba is a global hospitality technology provider dedicated to simplifying hotel operations. We build tools that help hoteliers thrive in a digital world."
+    title: 'Building the Future of <span className="text-blue-600">Business Management</span>',
+    description: "weleba is a global business technology provider dedicated to simplifying organizational operations. We build tools that help business owners thrive in a digital world."
 };
 
 export const aboutSections = [
     {
         title: 'Our Mission',
-        description: 'To empower hotels worldwide with cutting-edge technology that simplifies operations, maximizes revenue, and enhances guest experiences. We believe every hotel deserves tools that work as hard as they do.',
+        description: 'To empower businesses worldwide with cutting-edge technology that simplifies operations, maximizes revenue, and enhances customer experiences. We believe every organization deserves tools that work as hard as they do.',
         image: '/about/image.png',
         lists: [
-            'Simplify complex hotel operations',
+            'Simplify complex business operations',
             'Maximize revenue opportunities',
-            'Enhance guest satisfaction',
-            'Empower hotel teams worldwide',
+            'Enhance customer satisfaction',
+            'Empower teams worldwide',
         ],
         imageLeft: false,
     },
     {
         title: 'Our Team',
-        description: 'Our diverse team of hospitality experts, engineers, and designers work together to create solutions that transform how hotels operate. We combine deep industry knowledge with cutting-edge technology to deliver exceptional results.',
+        description: 'Our diverse team of business experts, engineers, and designers work together to create solutions that transform how organizations operate. We combine deep industry knowledge with cutting-edge technology to deliver exceptional results.',
         image: '/about/image copy.png',
         lists: [
             'Industry-leading experts',
             'Innovative engineers and designers',
             'Dedicated support specialists',
-            'Passionate about hospitality',
+            'Passionate about excellence',
         ],
         imageLeft: true,
     },
@@ -43,13 +43,13 @@ export const aboutSections = [
     },
     {
         title: 'Our Vision',
-        description: 'To become the global leader in hotel management solutions, recognized for innovation, reliability, and exceptional customer support. We envision a future where hotel management is seamless, intuitive, and rewarding.',
+        description: 'To become the global leader in business management solutions, recognized for innovation, reliability, and exceptional customer support. We envision a future where organization management is seamless, intuitive, and rewarding.',
         image: '/about/image copy 3.png',
         lists: [
-            'Global leadership in hotel technology',
+            'Global leadership in business technology',
             'Continuous innovation and improvement',
             'Exceptional customer support',
-            'Seamless hotel operations worldwide',
+            'Seamless operations worldwide',
         ],
         imageLeft: true,
     },

@@ -1,6 +1,6 @@
 export const rmHeroContent = {
     tag: 'ለገቢ ማናጀሮች (Revenue Managers)',
-    title: 'በኤአይ (AI) እገዛ የሆቴልዎን ትክክለኛ የገቢ አቅም ይለዩ',
+    title: 'በኤአይ (AI) እገዛ የንግድዎን ትክክለኛ የገቢ አቅም ይለዩ',
     description: 'በኤአይ በሚመራ ብልህነት፣ በተፎካካሪዎች ክትትል እና በፍላጎት ትንበያ የታገዘ የዋጋ አወጣጥ ስልት ይኑርዎት።',
     cta: 'ማሳያ ያስይዙ',
     videoPoster: '/images/posters/rm-hero.png',
@@ -17,8 +17,8 @@ export const rmAdvantages = {
             icon: 'TrendingUp',
         },
         {
-            title: 'የ35% የRevPAR መሻሻል',
-            description: 'ሆቴሎች በብልህ የዋጋ ማመቻቸት አማካኝነት በመጀመሪያው አመት ከ15-35% የሚደርስ የRevPAR መሻሻል ያሳያሉ።',
+            title: 'የ35% የገቢ መሻሻል',
+            description: 'ድርጅቶች በብልህ የዋጋ ማመቻቸት አማካኝነት በመጀመሪያው አመት ከ15-35% የሚደርስ የገቢ መሻሻል ያሳያሉ።',
             icon: 'CircleDollarSign',
         },
         {
@@ -35,13 +35,13 @@ export const rmPlatform = {
     features: [
         {
             title: 'ቅጽበታዊ የፍላጎት ትንበያ',
-            description: 'የላቁ አልጎሪዝሞች የፍላጎት ሁኔታዎችን በመተንበይ የደርብ ቦታ ማስያዝ ስልቶችን ያስተዳድራሉ።',
+            description: 'የላቁ አልጎሪዝሞች የፍላጎት ሁኔታዎችን በመተንበይ የሽያጭ ስልቶችን ያስተዳድራሉ።',
             icon: 'LineChart',
             className: 'bg-[#eeede8] col-span-1 md:col-span-8 lg:col-span-8 min-h-[350px]'
         },
         {
             title: 'ተጨማሪ ገቢዎች',
-            description: 'ከክፍል ዋጋ በተጨማሪ ስፓን እና የምግብ አገልግሎቶችን በማቀናጀት ገቢዎን ያሳድጉ።',
+            description: 'ከመሠረታዊ ዋጋ በተጨማሪ አገልግሎቶችን እና ምርቶችን በማቀናጀት ገቢዎን ያሳድጉ።',
             icon: 'Plus',
             className: 'bg-[#dce6f2] col-span-1 md:col-span-4 lg:col-span-4 min-h-[350px]'
         },
@@ -53,7 +53,7 @@ export const rmPlatform = {
         },
         {
             title: 'የገቢ ማናጀር ሪፖርቶች',
-            description: 'የRevPAR ትንታኔን፣ የADR ሁኔታዎችን እና የትርፍ መጠንን የሚያሳዩ የላቁ ሪፖርቶች።',
+            description: 'የገቢ ትንታኔን፣ የዋጋ ሁኔታዎችን እና የትርፍ መጠንን የሚያሳዩ የላቁ ሪፖርቶች።',
             icon: 'BarChart3',
             className: 'bg-[#f4f1ea] col-span-1 md:col-span-6 lg:col-span-6 min-h-[350px]'
         }
@@ -67,8 +67,9 @@ export const rmPlatform = {
 };
 
 export const rmAnalytics = {
+    tag: 'የገቢ ግንዛቤዎች',
     title: 'በመረጃ ላይ የተመሰረተ ውሳኔ',
-    description: 'የADR፣ RevPAR እና የቦታ ማስያዝ ፍጥነት መረጃዎችን በአንድ የተቀናጀ የገቢ ማዕከል ያግኙ።',
+    description: 'የዋጋ፣ የገቢ እና የሽያጭ ፍጥነት መረጃዎችን በአንድ የተቀናጀ የገቢ ማዕከል ያግኙ።',
     image: '/image-copy-13-no-money.png', // Revenue manager analytics
     lists: [
         'አውቶማቲክ የተፎካካሪዎች መረጃ',
@@ -82,7 +83,7 @@ export const rmFaqs = [
     {
         category: 'ብልህነት',
         question: 'የኤአይ የዋጋ አወጣጥ በእጅ ከሚሰራ የገቢ አስተዳደር ጋር ሲነጻጸር እንዴት ነው?',
-        answer: 'የእኛ ኤአይ በመቶዎች የሚቆጠሩ መረጃዎችን በአንዴ በመተንተን በእጅ ለመስራት የማይቻሉ ማመቻቸቶችን በየጊዜው ይሰራል፤ ይህም RevPARን ከ15-20% ያሻሽላል።',
+        answer: 'የእኛ ኤአይ በመቶዎች የሚቆጠሩ መረጃዎችን በአንዴ በመተንተን በእጅ ለመስራት የማይቻሉ ማመቻቸቶችን በየጊዜው ይሰራል፤ ይህም ገቢን ከ15-20% ያሻሽላል።',
     },
     {
         category: 'ቁጥጥር',
@@ -102,6 +103,6 @@ export const rmFaqs = [
     {
         category: 'ውጤት',
         question: 'በኤአይ የታገዘ የገቢ አስተዳደር ምን አይነት ትርፍ ያስገኛል?',
-        answer: 'ሆቴሎች በአብዛኛው ከ15-25% የሚደርስ የRevPAR መሻሻል እና ከፍተኛ የጊዜ ቁጠባ ያገኛሉ።',
+        answer: 'ድርጅቶች በአብዛኛው ከ15-25% የሚደርስ የገቢ መሻሻል እና ከፍተኛ የጊዜ ቁጠባ ያገኛሉ።',
     },
 ];

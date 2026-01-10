@@ -1,6 +1,6 @@
 export const itHeroContent = {
     tag: 'ለIT ማናጀሮች (IT Managers)',
-    title: 'የኢንተርፕራይዝ ደረጃ የሆቴል ቴክኖሎጂ መሠረተ ልማት',
+    title: 'የኢንተርፕራይዝ ደረጃ የቴክኖሎጂ መሠረተ ልማት',
     description: 'weleba የIT ማናጀሮች ሊተማመኑበት የሚችሉትን አስተማማኝ፣ ደህንነቱ የተጠበቀ እና ሊያድግ የሚችል መድረክ ያቀርባል። በደመና (cloud) ላይ የተመሠረተ በ99.95% ዝግጁነት።',
     cta: 'ማሳያ ያስይዙ',
     videoPoster: '/images/posters/it-hero.png',
@@ -8,12 +8,12 @@ export const itHeroContent = {
 };
 
 export const itAdvantages = {
-    title: 'ለዘመናዊ መስተንግዶ የተገነባ መሠረተ ልማት',
+    title: 'ለዘመናዊ ንግድ የተገነባ መሠረተ ልማት',
     subtitle: 'ዜሮ የሰርቨር ጥገና + ከፍተኛ ዝግጁነት + በቀላሉ የሚተሳሰር መዋቅር',
     features: [
         {
             title: 'የተቀናጀ የደመና መድረክ',
-            description: 'ለአጠቃላይ ንብረትዎ አንድ ጊዜ ብቻ የሚደረግ መግቢያ (Single sign-on)። ማዕከላዊ የተጠቃሚዎች አስተዳደር እና አውቶማቲክ የመረጃ መጠባበቂያ።',
+            description: 'ለአጠቃላይ ድርጅትዎ አንድ ጊዜ ብቻ የሚደረግ መግቢያ (Single sign-on)። ማዕከላዊ የተጠቃሚዎች አስተዳደር እና አውቶማቲክ የመረጃ መጠባበቂያ።',
             icon: 'Globe',
         },
         {
@@ -52,14 +52,14 @@ export const itPlatform = {
             className: 'bg-[#eeede8] col-span-1 md:col-span-6 lg:col-span-6 min-h-[350px]'
         },
         {
-            title: 'የብዙ ንብረቶች ቁጥጥር',
-            description: 'ሁሉንም ሆቴሎችዎን በአንድ ቦታ የሚቆጣጠሩበት ማዕከላዊ ዳሽቦርድ እና ወጥ የሆነ አሠራር።',
+            title: 'የብዙ ቅርንጫፎች ቁጥጥር',
+            description: 'ሁሉንም ቅርንጫፎችዎን በአንድ ቦታ የሚቆጣጠሩበት ማዕከላዊ ዳሽቦርድ እና ወጥ የሆነ አሠራር።',
             icon: 'LayoutDashboard',
             className: 'bg-[#f4f1ea] col-span-1 md:col-span-6 lg:col-span-6 min-h-[350px]'
         }
     ],
     cta: {
-        title: 'የሆቴልዎን IT መሠረተ ልማት በሚገባ በሚሠራ ዘመናዊ መድረክ ለመተካት ዝግጁ ነዎት?',
+        title: 'የድርጅትዎን IT መሠረተ ልማት በሚገባ በሚሠራ ዘመናዊ መድረክ ለመተካት ዝግጁ ነዎት?',
         buttonText: 'ማሳያ ያስይዙ',
         icon: 'Layers',
         className: 'bg-[#dce6f2] col-span-1 md:col-span-12 lg:col-span-12 min-h-[300px]'

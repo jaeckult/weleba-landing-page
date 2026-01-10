@@ -1,19 +1,19 @@
 export const msHeroContent = {
-    tag: 'Metasearch',
-    title: 'Integrated Hotel Metasearch Engine that Amplifies Your Direct Booking Strategy',
-    description: 'Establish your property on Google Hotel Ads, TripAdvisor, and Trivago where travelers are actively searching. Drive direct bookings and reduce OTA dependency with smart bidding.',
+    tag: 'Comparison Ads',
+    title: 'Integrated Search Ads Engine that Amplifies Your Direct Sales Strategy',
+    description: 'Establish your business on Google Search Ads and industry-specific comparison platforms where customers are actively searching. Drive direct sales and reduce third-party dependency with smart bidding.',
     cta: 'Book A Demo',
     videoPoster: '/videos/metasearch-poster.jpg', // Placeholder
     videoSrc: '/hero-video.mp4', // Placeholder
 };
 
 export const msAdvantages = {
-    title: 'Why Choose weleba Hotel Metasearch Engine?',
-    subtitle: 'Broad Channel Reach + Unified Control + Smart Optimization',
+    title: 'Why Choose weleba Comparison Ads?',
+    subtitle: 'Broad Platform Reach + Unified Control + Smart Optimization',
     features: [
         {
-            title: 'Broad Channel Reach',
-            description: 'Connect your property to top hotel metasearch platforms, including Google Hotel Ads, TripAdvisor, Trivago, and more.',
+            title: 'Broad Platform Reach',
+            description: 'Connect your business to top search and comparison platforms, including Google Ads and industry-specific marketplaces.',
             icon: 'Globe',
         },
         {
@@ -23,7 +23,7 @@ export const msAdvantages = {
         },
         {
             title: 'Smart Optimization',
-            description: 'Managing CPC and CPA bidding models and enabling express booking formats to drive direct bookings with ease.',
+            description: 'Managing bidding models and enabling express conversion formats to drive direct sales with ease.',
             icon: 'Zap',
         },
     ],
@@ -31,29 +31,29 @@ export const msAdvantages = {
 
 export const msPositioning = {
     tag: 'Strategic Presence',
-    title: 'Position Your Hotel on Top Platforms',
+    title: 'Position Your Business on Top Platforms',
     features: [
         {
-            title: 'Real-Time Rate Display',
-            description: 'Automatically display up-to-date rates and availability from your direct booking engine, creating a seamless transition.',
+            title: 'Real-Time Availability Display',
+            description: 'Automatically display up-to-date rates and availability from your direct sales engine, creating a seamless transition.',
             icon: 'Clock',
             className: 'bg-[#eeede8] col-span-1 md:col-span-4 lg:col-span-4 min-h-[350px]'
         },
         {
             title: '"Official Site" Designation',
-            description: 'Get the coveted "Official Site" tag on your listings, building immediate trust and distinguishing your property from OTAs.',
+            description: 'Get the coveted "Official Site" tag on your listings, building immediate trust and distinguishing your business from third-party marketplaces.',
             icon: 'ShieldCheck',
             className: 'bg-[#dce6f2] col-span-1 md:col-span-8 lg:col-span-8 min-h-[350px]'
         },
         {
             title: 'Conversion Analytics',
-            description: 'Track the guest journey from impression to booking with comprehensive reporting that shows which channels deliver the highest ROI.',
+            description: 'Track the customer journey from impression to sale with comprehensive reporting that shows which platforms deliver the highest ROI.',
             icon: 'LineChart',
             className: 'bg-[#eeede8] col-span-1 md:col-span-6 lg:col-span-6 min-h-[350px]'
         },
         {
             title: 'Performance-Based Pricing',
-            description: 'Only pay for completed stays booked through weleba Metasearch—eliminating risk associated with cancellations.',
+            description: 'Only pay for completed transactions through weleba Advertising—eliminating risk associated with cancellations.',
             icon: 'CircleDollarSign',
             className: 'bg-[#f4f1ea] col-span-1 md:col-span-6 lg:col-span-6 min-h-[350px]'
         }
@@ -67,8 +67,8 @@ export const msPositioning = {
 };
 
 export const msMarketing = {
-    title: 'Optimize Your Hotel Metasearch Marketing',
-    description: 'Establish your property where guests are searching. Our proprietary bidding platform participates in live auctions for guest impressions.',
+    title: 'Optimize Your Advertising Strategy',
+    description: 'Establish your business where customers are searching. Our proprietary bidding platform participates in live auctions for customer impressions.',
     image: '/image copy 9.png', // Metasearch marketing
     lists: [
         'Customized Bidding Solutions',
@@ -81,23 +81,23 @@ export const msMarketing = {
 export const msFaqs = [
     {
         category: 'Strategy',
-        question: 'What makes weleba Metasearch different from managing these channels myself?',
-        answer: 'We provide a unified dashboard, advanced bidding algorithms, and most importantly, you only pay for completed stays—not clicks that may never convert.',
+        question: 'What makes weleba different from managing these ads myself?',
+        answer: 'We provide a unified dashboard, advanced bidding algorithms, and most importantly, you only pay for results—not just clicks that may never convert.',
     },
     {
         category: 'General',
-        question: 'What is hotel metasearch?',
-        answer: 'Hotel metasearch aggregates rates and availability from multiple sources, displaying them on comparison platforms like Google Hotel Ads and TripAdvisor.',
+        question: 'What is comparison search advertising?',
+        answer: 'Comparison search aggregates rates and availability from multiple sources, displaying them on comparison platforms and search results.',
     },
     {
         category: 'Comparison',
-        question: 'What is the difference between hotel metasearch and OTAs?',
-        answer: 'Metasearch platforms compare rates from various sources, while OTAs sell rooms directly and charge commissions. Metasearch drives traffic to your own engine.',
+        question: 'What is the difference between comparison search and third-party marketplaces?',
+        answer: 'Comparison platforms compare rates from various sources, while marketplaces sell products directly and charge commissions. Comparison search drives traffic to your own site.',
     },
     {
         category: 'Benefits',
-        question: 'What are the benefits of using metasearch at my hotel?',
-        answer: 'It increases visibility, drives direct bookings, reduces OTA dependency, and offers cost-effective marketing through performance-based pricing.',
+        question: 'What are the benefits of using comparison advertising for my business?',
+        answer: 'It increases visibility, drives direct sales, reduces third-party dependency, and offers cost-effective marketing through performance-based pricing.',
     },
     {
         category: 'Platforms',

@@ -3,14 +3,14 @@ export const testimonialsData = [
         id: 1,
         company: 'NUVO',
         logo: '/nuvo-logo.png',
-        quote: "Weleba makes running our hotel so much easier, everything's in one place, from bookings to housekeeping. It's extremely customisable - they customised everything according to our needs.",
+        quote: "weleba makes running our business so much easier, everything's in one place, from sales to operations. It's extremely customizable - they tailored everything according to our needs.",
         author: 'Yamlak Negash',
         position: 'General Manager',
         avatar: 'data:image/jpeg;base64,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'
     },
     {
         id: 2,
-        company: 'Harrison Hall Hotel',
+        company: 'Harrison Service Center',
         logo: '/harrison-logo.png',
         quote: "We've been using weleba for a while now and it continues to streamline our operations. The support team is exceptional and always there when we need them.",
         author: 'Yetmgeta Ewunetu',
@@ -19,7 +19,7 @@ export const testimonialsData = [
     },
     {
         id: 3,
-        company: 'Wood River Inn',
+        company: 'Wood River Enterprise',
         logo: '/wood-river-logo.png',
         quote: "Weleba gave us the confidence to run our business efficiently. The system is intuitive and the training was quick. Our staff adapted within days.",
         author: 'Ryan Allison',
@@ -30,19 +30,19 @@ export const testimonialsData = [
 
 export const reviewsData = [
     {
-        name: 'Bonanza Addis Hotel',
+        name: 'Capterra',
         logo: 'https://via.placeholder.com/150x40/ffffff/0066FF?text=Capterra',
+        rating: 4.8,
+        totalRating: 5
+    },
+    {
+        name: 'Trustpilot',
+        logo: 'https://via.placeholder.com/150x40/ffffff/666666?text=Trustpilot',
         rating: 4.7,
         totalRating: 5
     },
     {
-        name: 'Raddison blue hotel',
-        logo: 'https://via.placeholder.com/150x40/ffffff/666666?text=HotelTechReport',
-        rating: 4.7,
-        totalRating: 5
-    },
-    {
-        name: 'Gambella Hotel',
+        name: 'Software Advice',
         logo: 'https://via.placeholder.com/150x40/ffffff/FF6B00?text=SoftwareAdvice',
         rating: 4.7,
         totalRating: 5

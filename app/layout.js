@@ -10,16 +10,16 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "All-in-one Hotel Management Software | weleba",
-  description: "The complete hospitality platform. Streamline operations, enhance guest experiences, and maximize revenue with our unified PMS & AI Concierge.",
-  keywords: "hotel management software, PMS, property management system, hospitality software, booking engine, channel manager",
+  title: "All-in-one Business Management Software | weleba",
+  description: "The complete management platform for hotels, ecommerce, retail, and more. Streamline operations, enhance customer experiences, and maximize revenue with our unified system.",
+  keywords: "business management software, management system, ecommerce platform, retail software, hotel management, operations management, inventory management",
   icons: {
     icon: '/logo/canvas.png',
     apple: '/logo/canvas.png',
   },
   openGraph: {
-    title: "All-in-one Hotel Management Software | weleba",
-    description: "The complete hospitality platform. Streamline operations, enhance guest experiences, and maximize revenue with our unified PMS & AI Concierge.",
+    title: "All-in-one Business Management Software | weleba",
+    description: "The complete management platform for hotels, ecommerce, retail, and more. Streamline operations, enhance customer experiences, and maximize revenue with our unified system.",
     type: "website",
   },
 };

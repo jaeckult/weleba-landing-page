@@ -8,16 +8,16 @@ export const labels = {
     company: 'Company',
     categories: {
       operations: 'Operations',
-      marketing: 'Marketing',
-      revenue: 'Revenue',
-      guest: 'Guest',
-      byProperty: 'By Property Type',
+      marketing: 'Sales & Marketing',
+      revenue: 'Revenue & Finance',
+      guest: 'Customer Experience',
+      byProperty: 'By Business Type',
       byRole: 'By Role',
       resourceType: 'Resource Type',
       featuredArticles: 'Featured Articles',
-      marketingDistribution: 'Marketing & Distribution',
+      marketingDistribution: 'Sales & Distribution',
       revenueFinance: 'Revenue & Finance',
-      guestExperience: 'Guest Experience',
+      guestExperience: 'Customer Experience',
       featured: 'Featured',
     }
   },
@@ -34,7 +34,7 @@ export const labels = {
   },
   common: {
     allRightsReserved: 'All Rights Reserved.',
-    trustText: 'Trusted by leading hotels worldwide',
+    trustText: 'Trusted by leading businesses worldwide',
     customerStory: 'Customer Story',
   },
   legal: {
@@ -48,37 +48,31 @@ export const navigation = {
   products: {
     operations: [
       {
-        title: 'PMS',
-        description: 'All-in-one platform for complete hotel operations.',
-        href: '/property-management',
+        title: 'Operations Management',
+        description: 'All-in-one platform for complete business operations.',
+        href: '/operations-management',
+      },
+      {
+        title: 'Channel Manager',
+        description: 'Manage inventory & sync across all sales channels.',
+        href: '/channel-manager',
       },
     ],
     marketing: [
       {
-        title: 'Booking Engine',
-        description: 'Commission-free direct bookings made easy.',
+        title: 'Sales Platform',
+        description: 'Commission-free direct sales made easy.',
         href: '/booking-engine',
       },
       {
-        title: 'Channel Manager',
-        description: 'Manage inventory & sync rates across hundreds of OTAs.',
-        href: '/channel-manager',
-      },
-      // {
-      //   title: 'Hotel Metasearch',
-      //   description: 'Boost visibility on search engines & aggregators.',
-      //   href: '/hotel-metasearch',
-      //   badge: 'New',
-      // },
-      {
-        title: 'Hotel Website Builder',
-        description: 'Get help creating stunning websites.',
-        href: '/hotel-website-builder',
+        title: 'Website Builder',
+        description: 'Create stunning, conversion-optimized websites.',
+        href: '/website-builder',
       },
     ],
     revenue: [
       {
-        title: 'Revenue Management',
+        title: 'Revenue Intelligence',
         description: 'AI-powered pricing optimizes rates automatically.',
         href: '/revenue-management',
       },
@@ -90,57 +84,62 @@ export const navigation = {
       },
     ],
     guest: [
-
       {
-        title: 'Guest Communication & Engagement',
-        description: 'Automate personalized messaging throughout guest journey.',
-        href: '/guest-engagement-software',
+        title: 'Customer Communication',
+        description: 'Automate personalized messaging throughout customer journey.',
+        href: '/customer-engagement-software',
       },
       {
-        title: 'Hotel Guest App',
-        description: 'Hotel services management & mobile check-in with digital keys.',
-        href: '/hotel-guest-app',
+        title: 'Mobile App',
+        description: 'Customer-facing mobile app for seamless experiences.',
+        href: '/customer-app',
+      },
+      {
+        title: 'AI Agent',
+        description: '24/7 AI-powered customer support and assistance.',
+        href: '/customer-ai-agent',
+        badge: 'New',
       },
     ],
   },
   solutions: {
     byProperty: [
-      { title: 'Independent Hotels', description: 'Tailored solutions for standalone properties.', href: '/independent-hotels-software' },
-      { title: 'Hotel Groups', description: 'Scalable platform for multiple locations.', href: '/pms-hotel-groups' },
-      { title: 'Motels', description: 'Efficient solutions for roadside hospitality businesses.', href: '/motel' },
-      { title: 'Resorts', description: 'Comprehensive platform for destination hospitality properties.', href: '/resorts-pms-software' },
-      { title: 'Bed & Breakfast', description: 'Simple hospitality management for smaller properties.', href: '/bed-breakfast-software' },
-      { title: 'Parks', description: 'Management tools for outdoor accommodation facilities.', href: '/parks' },
+      { title: 'Service Businesses', description: 'Solutions for salons, spas, and consultants.', href: '/service-business-software' },
+      { title: 'Retail Stores', description: 'POS and inventory for retail shops.', href: '/retail-software' },
+      { title: 'Ecommerce', description: 'Tools to manage online stores and inventory.', href: '/ecommerce-management' },
+      { title: 'Hotels & Resorts', description: 'Comprehensive hospitality management.', href: '/hotels-software' },
+      { title: 'Restaurants', description: 'Table management and ordering systems.', href: '/restaurant-management' },
+      { title: 'Multi-Location', description: 'Scalable platform for multi-unit enterprises.', href: '/multi-location-management' },
     ],
     byRole: [
       { title: 'General Managers', description: 'Strategic oversight and business intelligence tools.', href: '/general-managers' },
-      { title: 'Front Desk Managers', description: 'Daily operations and guest service solutions.', href: '/front-desk-managers' },
+      { title: 'Operations Managers', description: 'Daily operations and customer service solutions.', href: '/front-desk-managers' },
       { title: 'Revenue Managers', description: 'Pricing optimization and financial performance tools.', href: '/revenue-managers' },
       { title: 'IT Managers', description: 'Technical platform management and system integration.', href: '/it-managers' },
     ],
   },
   resources: [
-    { title: 'Blogs', description: 'Expert insights to optimize your property performance.', href: '/blog' },
-    { title: 'News', description: 'Stay ahead with the latest hospitality trends.', href: '/news' },
+    { title: 'Blogs', description: 'Expert insights to optimize your business performance.', href: '/blog' },
+    { title: 'News', description: 'Stay ahead with the latest business and technology trends.', href: '/news' },
     // { title: 'Templates', description: 'Download ready-to-use operational tools and forms.', href: '/templates' },
-    { title: 'Webinars', description: 'Access exclusive webinars for smarter hotel management.', href: '/webinar' },
+    { title: 'Webinars', description: 'Access exclusive webinars for smarter business management.', href: '/webinar' },
     // { title: 'Calculators', description: 'Calculate ROI, pricing, and revenue potential instantly.', href: '/calculators' },
-    // { title: 'eBooks & Guides', description: 'Complete strategies for hospitality business growth.', href: '/ebooks' },
-    // { title: 'Alternatives', description: 'Compare hotel software solutions to find your perfect fit.', href: '/alternative' },
+    // { title: 'eBooks & Guides', description: 'Complete strategies for business growth.', href: '/ebooks' },
+    // { title: 'Alternatives', description: 'Compare management software solutions to find your perfect fit.', href: '/alternative' },
   ],
   company: [
-    { title: 'About Us', description: 'The hospitality experts behind weleba technology.', href: '/about-us' },
+    { title: 'About Us', description: 'The business management experts behind weleba technology.', href: '/about-us' },
   ],
 };
 
 // Hero Section
 export const heroContent = {
   announcement: {
-    text: 'innQuest is rebranding to weleba - Hospitality, Simplified.',
-    href: '/hospitality-simplified',
+    text: 'innQuest is rebranding to weleba - Business Management, Simplified.',
+    href: '/about-us',
   },
-  title: 'The complete hospitality platform built for the way you actually work',
-  subtitle: 'weleba frees your team to focus on creating exceptional guest experiences while intelligent tools work behind the scenes to maximize your revenue and operational efficiency.',
+  title: 'The complete management platform built for the way your business actually work',
+  subtitle: 'Weleba empowers your team to focus on what matters most while intelligent tools work behind the scenes to maximize your revenue and operational efficiency across hotels, ecommerce, retail, and more.',
   cta: {
     primary: { text: 'Book A Demo', href: '/book-a-demo' },
     secondary: { text: 'View Pricing', href: '/pricing' },
@@ -149,21 +148,21 @@ export const heroContent = {
 
 // Why Choose Section
 export const whyChooseContent = {
-  title: 'Why hoteliers choose weleba as their hotel management software',
+  title: 'Why businesses choose weleba as their management software',
   features: [
     {
       title: 'Helps Boost Revenue',
-      description: 'Our integrated solutions help increase RevPAR by up to 35% with commission-free direct bookings and AI-powered pricing strategies.',
+      description: 'Our integrated solutions help increase revenue by up to 35% with commission-free direct sales, AI-powered pricing strategies, and automated workflows.',
       icon: 'TrendingUp',
     },
     {
-      title: 'Built by Hoteliers for Hoteliers',
-      description: 'Building on our years of providing hospitality software, weleba understands your operational challenges because we\'ve lived them.',
+      title: 'Built by Experts for Businesses',
+      description: 'Building on our years of providing business management software, weleba understands your operational challenges across multiple industries.',
       icon: 'Users',
     },
     {
       title: 'All-in-One Platform',
-      description: 'Everything you need to run your hotel in one seamless platform; connecting PMS, booking engine, channel manager, and payments.',
+      description: 'Everything you need to run your business in one seamless platform; connecting operations, sales, inventory, payments, and customer management.',
       icon: 'Layers',
     },
     {
@@ -173,7 +172,7 @@ export const whyChooseContent = {
     },
     {
       title: 'Accessible Anywhere, Anytime',
-      description: 'Access your property management system securely from anywhere, on any device. All updates and backups happen automatically with 99.95% uptime guaranteed.',
+      description: 'Access your management system securely from anywhere, on any device. All updates and backups happen automatically with 99.95% uptime guaranteed.',
       icon: 'Globe',
     },
   ],
@@ -181,26 +180,25 @@ export const whyChooseContent = {
 
 // Daily Operations Section
 export const dailyOperationsContent = {
-  title: 'Daily Operations & Guest Experience Management',
-  subtitle: 'Essential tools that streamline your day-to-day operations while delivering exceptional guest experiences.',
+  title: 'Daily Operations & Customer Experience Management',
+  subtitle: 'Essential tools that streamline your day-to-day operations while delivering exceptional customer experiences.',
   features: [
     {
-      title: 'PMS',
-      description: 'Streamline property operations, manage reservations, and optimize workflows effortlessly.',
-      href: '/property-management',
+      title: 'Operations Management',
+      description: 'Streamline business operations, manage orders, and optimize workflows effortlessly.',
+      href: '/operations-management',
       icon: 'LayoutDashboard',
     },
-
     {
       title: 'Payments',
-      description: 'Secure, fast payment processing for hassle-free guest transactions.',
+      description: 'Secure, fast payment processing for hassle-free customer transactions.',
       href: '/weleba-payments',
       icon: 'CreditCard',
     },
     {
-      title: 'Hotel Guest App',
-      description: 'Enhance guest experience with a mobile app for bookings, requests, and more.',
-      href: '/hotel-guest-app',
+      title: 'Customer Mobile App',
+      description: 'Enhance customer experience with a mobile app for orders, requests, and more.',
+      href: '/customer-app',
       icon: 'Smartphone',
     },
   ],
@@ -208,46 +206,46 @@ export const dailyOperationsContent = {
 
 // Revenue Intelligence Section
 export const revenueIntelligenceContent = {
-  title: 'AI Revenue Intelligence & Hotel Visibility',
+  title: 'AI Revenue Intelligence & Business Visibility',
   subtitle: 'Powerful tools to maximize your revenue potential and expand your online presence.',
   features: [
     {
-      title: 'Booking Engine',
-      description: 'Enable direct bookings with a seamless, user-friendly interface for guests.',
+      title: 'Sales Platform',
+      description: 'Enable direct sales with a seamless, user-friendly interface for customers.',
       href: '/booking-engine',
       icon: 'Calendar',
     },
     {
-      title: 'Channel Manager',
-      description: 'Sync inventory across OTAs in real-time to maximize occupancy and revenue.',
+      title: 'Multi-Channel Manager',
+      description: 'Sync inventory across all sales channels in real-time to maximize revenue.',
       href: '/channel-manager',
       icon: 'Share2',
     },
     {
       title: 'Revenue Intelligence',
-      description: 'Pricing intelligence that monitors demand & market conditions to adjust your rates in real-time.',
+      description: 'Pricing intelligence that monitors demand & market conditions to adjust your prices in real-time.',
       href: '/revenue-management',
       icon: 'LineChart',
     },
     {
-      title: 'Hotel Website Builder',
-      description: 'Create a stunning, SEO-optimized website to attract and convert guests.',
-      href: '/hotel-website-builder',
+      title: 'Website Builder',
+      description: 'Create a stunning, SEO-optimized website to attract and convert customers.',
+      href: '/website-builder',
       icon: 'Globe',
     },
   ],
 };
 
-// Property Types Section
+// Business Types Section
 export const propertyTypesContent = {
-  title: 'Hotel Management Software for Every Property Type',
+  title: 'Management Software for Every Business Type',
   types: [
-    { title: 'Independent Hotels', href: '/independent-hotels-software', icon: 'Building2' },
-    { title: 'Hotel Groups', href: '/pms-hotel-groups', icon: 'Buildings' },
-    { title: 'B & B and Inns', href: '/bed-breakfast-software', icon: 'Home' },
-    { title: 'Parks', href: '/parks', icon: 'Trees' },
-    { title: 'Resorts', href: '/resorts-pms-software', icon: 'Palmtree' },
-    { title: 'Motels', href: '/motel', icon: 'Hotel' },
+    { title: 'Hotels & Resorts', href: '/hotels-software', icon: 'Building2' },
+    { title: 'Ecommerce', href: '/ecommerce-management', icon: 'ShoppingCart' },
+    { title: 'Retail Stores', href: '/retail-software', icon: 'Store' },
+    { title: 'Restaurants', href: '/restaurant-management', icon: 'UtensilsCrossed' },
+    { title: 'Service Businesses', href: '/service-business-software', icon: 'Briefcase' },
+    { title: 'Multi-Location', href: '/multi-location-management', icon: 'Buildings' },
   ],
 };
 
@@ -256,15 +254,15 @@ export const customerStoriesContent = {
   title: 'Our customers say it the best',
   stories: [
     {
-      title: 'How Harrison Hall Hotel Streamlined Operations With 25 Years Of weleba Partnership',
+      title: 'How Harrison Hall Business Center Streamlined Operations With 25 Years Of weleba Partnership',
       name: 'Stacy Dadson',
       role: 'General Manager',
       videoId: 'CE1FbxwX0po',
     },
     {
-      title: 'How NUVO Suites Used weleba PMS to Elevate Their Guest Experience',
+      title: 'How NUVO Enterprise Used weleba System to Elevate Their Customer Experience',
       name: 'Yamlak Negash',
-      role: 'General Manager at NUVO Suites',
+      role: 'General Manager at NUVO Enterprise',
       videoId: '21iGVj1UGq8',
     },
     {
@@ -285,10 +283,10 @@ export const customerStoriesContent = {
 // Integrations Section
 export const integrationsContent = {
   title: 'Create your perfect technology ecosystem',
-  subtitle: 'Connect weleba with 100+ third-party solutions from door locks, and point of sale to accounting systems, and marketing tools, so your hotel runs like a well-oiled machine.',
+  subtitle: 'Connect weleba with 100+ third-party solutions from payment processors and point of sale to accounting systems, marketing tools, and sales channels, so your business runs like a well-oiled machine.',
   cta: { text: 'Visit Marketplace', href: '/marketplace' },
   logos: [
-    'Expedia', 'Booking.com', 'Airbnb', 'TripAdvisor', 'Google', 'Stripe',
+    'Shopify', 'WooCommerce', 'Amazon', 'Stripe', 'PayPal', 'Square',
     'QuickBooks', 'Xero', 'Mailchimp', 'Zapier', 'Slack', 'HubSpot',
   ],
 };
@@ -298,8 +296,8 @@ export const supportContent = {
   title: '24/7 Available Expert Assistance When You Need It Most',
   features: [
     {
-      title: 'Hospitality-Focused Support Specialists',
-      description: 'Our team has extensive experience in hotel operations, ensuring they understand your business challenges.',
+      title: 'Industry-Focused Support Specialists',
+      description: 'Our team has extensive experience across multiple industries, ensuring they understand your unique business challenges.',
       icon: 'HeadphonesIcon',
     },
     {
@@ -324,16 +322,16 @@ export const faqContent = {
       name: 'Features',
       items: [
         {
-          question: 'What makes weleba different from other property management systems?',
-          answer: 'weleba was built specifically for hotels, not as a scaled-down enterprise system. We focus on reducing clicks and simplifying workflows to eliminate administrative burden. Our unified platform brings together PMS, booking engine, channel manager, and payments in one system giving hoteliers the operational backbone they need without unnecessary complexity or enterprise-level pricing.',
+          question: 'What makes weleba different from other management systems?',
+          answer: 'weleba is a unified platform built for multiple industries including hotels, ecommerce, retail, and service businesses. We focus on reducing clicks and simplifying workflows to eliminate administrative burden. Our platform brings together operations management, sales channels, inventory control, and payments in one system, providing businesses the operational backbone they need without unnecessary complexity or enterprise-level pricing.',
         },
         {
-          question: 'Can weleba integrate with our existing hotel technology stack?',
-          answer: 'Yes, weleba connects with over 100 third-party hospitality systems through our marketplace, including revenue management tools, guest communication platforms, and point-of-sale systems. Our open API architecture also allows for custom integrations tailored to your unique operational needs.',
+          question: 'Can weleba integrate with our existing technology stack?',
+          answer: 'Yes, weleba connects with over 100 third-party systems through our marketplace, including payment processors, ecommerce platforms, accounting software, marketing tools, and point-of-sale systems. Our open API architecture also allows for custom integrations tailored to your unique operational needs.',
         },
         {
           question: 'Does weleba offer AI-powered features?',
-          answer: 'Yes, weleba incorporates AI technology in multiple areas: Revenue Intelligence automatically optimizes pricing based on demand patterns, and smart automation reduces manual tasks by up to 80%.',
+          answer: 'Yes, weleba incorporates AI technology in multiple areas: Revenue Intelligence automatically optimizes pricing based on demand patterns and market conditions, smart automation reduces manual tasks by up to 80%, and predictive analytics help you make data-driven decisions.',
         },
       ]
     },
@@ -342,16 +340,16 @@ export const faqContent = {
       name: 'Setup',
       items: [
         {
-          question: 'How difficult is it to switch from our current PMS to weleba?',
-          answer: 'The transition to weleba is straightforward and efficient. Our implementation team handles data migration including reservations, guest profiles, and historical information. Most front desk staff become proficient with essential functions within a few hours of training.',
+          question: 'How difficult is it to switch from our current system to weleba?',
+          answer: 'The transition to weleba is straightforward and efficient. Our implementation team handles data migration including customer records, transaction history, inventory data, and historical information. Most staff become proficient with essential functions within a few hours of training.',
         },
         {
           question: 'How long does implementation typically take?',
-          answer: 'Most properties are fully operational within 3-5 business days of signing up. Our implementation team handles data migration, system configuration, and staff training. For larger properties or complex integrations, the timeline may extend to 1-2 weeks.',
+          answer: 'Most businesses are fully operational within 3-5 business days of signing up. Our implementation team handles data migration, system configuration, and staff training. For larger organizations or complex integrations, the timeline may extend to 1-2 weeks.',
         },
         {
           question: 'Do you provide training for our staff?',
-          answer: 'Yes, we provide comprehensive training tailored to each role at your property. Front desk staff typically become proficient with essential functions within hours, while managers receive advanced training on reporting and revenue management features.',
+          answer: 'Yes, we provide comprehensive training tailored to each role in your business. Staff typically become proficient with essential functions within hours, while managers receive advanced training on reporting, analytics, and optimization features.',
         },
       ]
     },
@@ -365,11 +363,11 @@ export const faqContent = {
         },
         {
           question: 'Is support available in different time zones?',
-          answer: 'Yes, our global support team operates 24/7/365 with specialists in North America, Europe, and Asia-Pacific regions. This ensures you always reach a live support agent familiar with your local hospitality practices and business hours.',
+          answer: 'Yes, our global support team operates 24/7/365 with specialists in North America, Europe, and Asia-Pacific regions. This ensures you always reach a live support agent familiar with your industry and local business practices.',
         },
         {
           question: 'Can weleba handle seasonal fluctuations in our business?',
-          answer: 'Yes, weleba is designed for the cyclical nature of hospitality businesses. The intuitive interface means seasonal staff can be trained quickly. The system scales to accommodate fluctuations in booking volume.',
+          answer: 'Yes, weleba is designed to handle seasonal variations across all industries. The intuitive interface means seasonal staff can be trained quickly, and the system scales automatically to accommodate fluctuations in transaction volume and customer demand.',
         },
       ]
     }
@@ -399,12 +397,12 @@ export const getStartedContent = {
 // Footer Content
 export const footerContent = {
   cta: {
-    title: 'Join Thousands of Hotels Thriving with weleba',
-    subtitle: "See how weleba's unified platform can work for your property. Our team will walk you through features tailored to your specific needs.",
+    title: 'Join Thousands of Businesses Thriving with weleba',
+    subtitle: "See how weleba's unified platform can work for your organization. Our team will walk you through features tailored to your specific needs.",
     buttonText: 'Book a Demo',
     features: [
       '100% safe & secure',
-      '360° property management',
+      '360° business management',
       '24/7 support'
     ]
   },
@@ -417,24 +415,24 @@ export const footerContent = {
     {
       title: 'Products',
       links: [
-        { text: 'Hotel PMS', href: '/property-management' },
+        { text: 'Operations Management', href: '/operations-management' },
 
         { text: 'Booking Engine', href: '/booking-engine' },
         { text: 'Channel Manager', href: '/channel-manager' },
         { text: 'Revenue Intelligence', href: '/revenue-management' },
         { text: 'Payments', href: '/weleba-payments' },
-        { text: 'Hotel Guest App', href: '/hotel-guest-app' },
+        { text: 'Customer App', href: '/customer-app' },
       ],
     },
     {
       title: 'Solutions',
       links: [
-        { text: 'Independent Hotels', href: '/independent-hotels-software' },
-        { text: 'Hotel Groups', href: '/pms-hotel-groups' },
-        { text: 'Bed & Breakfast', href: '/bed-breakfast-software' },
-        // { text: 'Parks', href: '/parks' },
-        // { text: 'Resorts', href: '/resorts-pms-software' },
-        { text: 'Motels', href: '/motel' },
+        { text: 'Independent Businesses', href: '/service-business-software' },
+        { text: 'Multi-Location Groups', href: '/multi-location-management' },
+        { text: 'Small Businesses', href: '/small-business-software' },
+        // { text: 'Parks', href: '/ecommerce-management' },
+        // { text: 'Resorts', href: '/hotels-software' },
+        { text: 'Retailers', href: '/retail-software' },
       ],
     },
     {
