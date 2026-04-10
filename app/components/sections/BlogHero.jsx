@@ -12,13 +12,13 @@ const BlogHero = () => {
 
                 {/* Title */}
                 <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif text-[#1a1a1a] leading-[1.1] max-w-4xl">
-                    weleba<br />
-                    Blog & News<br />
-                    Updates
+                    Burbly<br />
+                    Blog &amp; Study<br />
+                    Insights
                 </h1>
 
                 <p className="mt-6 sm:mt-8 text-base sm:text-lg lg:text-xl text-gray-600 max-w-2xl text-balance">
-                    Expert insights, industry trends, and practical tips to help you optimize your hotel operations and maximize revenue.
+                    Learning science, study tips, and practical guides to help you master any subject faster using spaced repetition and AI.
                 </p>
             </div>
 

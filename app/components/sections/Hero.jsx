@@ -20,18 +20,18 @@ const Hero = ({ content: propContent }) => {
           <div className="inline-flex items-center gap-1.5 sm:gap-2 bg-blue-50 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full mb-4 sm:mb-6 lg:mb-8">
             <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-600 rounded-full" />
             <span className="text-xs sm:text-sm font-medium text-blue-600">
-              {content?.tag || 'Hospitality Management Software'}
+              {content?.tag || 'Flashcard & Learning App'}
             </span>
           </div>
 
           {/* Main Heading */}
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[56px] font-serif font-normal text-[#1a1a1a] mb-4 sm:mb-6 leading-tight text-center px-2">
-            {content.title.includes('actually work') ? (
-              content.title.split('actually work').map((part, index) => (
+            {content.title.includes('actually learns') ? (
+              content.title.split('actually learns').map((part, index) => (
                 index === 0 ? (
                   <span key={index}>
                     {part}
-                    <span className="text-[#0066FF]">actually work</span>
+                    <span className="text-[#0066FF]">actually learns</span>
                   </span>
                 ) : part
               ))
@@ -58,14 +58,13 @@ const Hero = ({ content: propContent }) => {
         <div className="mt-8 sm:mt-12 lg:mt-16">
           <div className="max-w-5xl mx-auto relative">
             <div className="relative" style={{
-              // Changed 50% to 20% so the fade starts much closer to the center
               WebkitMaskImage: 'radial-gradient(ellipse 100% 90% at 50% 40%, black 20%, transparent 80%)',
               maskImage: 'radial-gradient(ellipse 100% 90% at 50% 40%, black 20%, transparent 80%)'
             }}>
               {/* Dashboard Preview Image */}
               <img
                 src="/image copy 8.png"
-                alt="Hotel Management Dashboard"
+                alt="Burbly Flashcard App Dashboard"
                 className="w-full aspect-[16/9] object-cover"
               />
             </div>

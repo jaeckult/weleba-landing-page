@@ -1,45 +1,37 @@
 'use client';
 
-import PricingHero from '../components/sections/PricingHero';
-import Testimonials from '../components/sections/Testimonials';
-import LogoSlideshow from '../components/sections/LogoSlideshow';
-import CTA from '../components/sections/CTA';
-import ScrollReveal from '../components/ui/ScrollReveal';
-import { pricingPageContent as enPricingData } from '../lib/pricingData';
-import { pricingPageContent as amPricingData } from '../lib/pricingData.am';
-import { useLanguage } from '../context/LanguageContext';
+import PMSHero from '@/app/components/sections/PMSHero';
+import TabbedFeatures from '@/app/components/sections/TabbedFeatures';
+import PMSTransform from '@/app/components/sections/PMSTransform';
+import ContentBlock from '@/app/components/sections/ContentBlock';
+import Testimonials from '@/app/components/sections/Testimonials';
+import LogoSlideshow from '@/app/components/sections/LogoSlideshow';
+import { getGenericData } from '@/app/lib/pageData/genericData';
 
-export default function PricingPage() {
-    const { locale } = useLanguage();
-    const pricingData = locale === 'am' ? amPricingData : enPricingData;
-    const { trustedBy, cta } = pricingData;
-
+export default function GenericFeaturePage() {
+    const data = getGenericData('Simple, Transparent Pricing', '💳');
     return (
-        <main>
-            <ScrollReveal>
-                <PricingHero />
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.1}>
-                <div className="bg-white py-12 border-y border-gray-100">
-                    <div className="text-center mb-8">
-                        <p className="text-sm font-semibold text-gray-400 uppercase tracking-widest">{trustedBy}</p>
-                    </div>
-                    <LogoSlideshow showHeader={false} />
-                </div>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.1}>
+        <main className="bg-white">
+            <PMSHero heroContent={data.heroContent}>
+                <LogoSlideshow />
                 <Testimonials />
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.1}>
-                <CTA
-                    title={cta.title}
-                    subtitle={cta.subtitle}
-                    primaryCTA={{ text: cta.buttonText, href: "/book-a-demo" }}
+                <PMSTransform content={data.transformContent} />
+                <TabbedFeatures
+                    title={data.tabbedContent.title}
+                    subtitle={data.tabbedContent.subtitle}
+                    tabs={data.tabbedContent.tabs}
                 />
-            </ScrollReveal>
+                {data.alternatingContent.map((feature, index) => (
+                    <ContentBlock
+                        key={index}
+                        title={feature.title}
+                        description={feature.description}
+                        image={feature.image}
+                        lists={feature.lists}
+                        imageLeft={feature.imageLeft}
+                    />
+                ))}
+            </PMSHero>
         </main>
     );
 }

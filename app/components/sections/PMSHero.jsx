@@ -3,31 +3,28 @@
 import { useState, useMemo } from 'react';
 import { Plus, X, ChevronRight, Star, Check, Play } from 'lucide-react';
 import {
-  pmHeroContent as enHero,
-  pmFaqContent as enFaq,
-  pmCtaContent as enCta
-} from '../../lib/propertyManagementData';
-import {
-  pmHeroContent as amHero,
-  pmFaqContent as amFaq,
-  pmCtaContent as amCta
-} from '../../lib/propertyManagementData.am';
+  faqContent as fallbackFaq,
+  footerContent as fallbackFooter
+} from '../../lib/constants';
 import { useLanguage } from '../../context/LanguageContext';
 import Link from 'next/link';
 
-const PMSHero = ({ children }) => {
+const PMSHero = ({ children, heroContent, faqContent, ctaContent }) => {
   const { locale } = useLanguage();
-  const content = locale === 'am' ? amHero : enHero;
-  const faqContent = locale === 'am' ? amFaq : enFaq;
-  const ctaContent = locale === 'am' ? amCta : enCta;
+  
+  // Use passed content, or fallback to main landing page generic content
+  const content = heroContent;
+  const faq = faqContent || fallbackFaq;
+  const cta = ctaContent || fallbackFooter.cta;
 
   const [openIndex, setOpenIndex] = useState(null);
-  const [activeTab, setActiveTab] = useState(faqContent.categories[0].id);
+  const [activeTab, setActiveTab] = useState(faq.categories ? faq.categories[0].id : null);
 
   // Filter content based on active tab
   const filteredFaqs = useMemo(() => {
-    return faqContent.categories.find(c => c.id === activeTab)?.items || [];
-  }, [activeTab, faqContent]);
+    if (!faq.categories) return [];
+    return faq.categories.find(c => c.id === activeTab)?.items || [];
+  }, [activeTab, faq]);
 
   // Reset accordion when switching tabs
   const handleTabChange = (tab) => {
@@ -75,8 +72,8 @@ const PMSHero = ({ children }) => {
                 maskImage: 'radial-gradient(ellipse 100% 90% at 50% 40%, black 20%, transparent 80%)'
               }}>
                 <img
-                  src="/image copy 8.png"
-                  alt="Hotel Property Management System"
+                  src={content?.image || "/image copy 8.png"}
+                  alt={content?.title || "Feature Image"}
                   className="w-full aspect-[16/9] object-cover rounded-xl sm:rounded-2xl shadow-2xl"
                 />
               </div>
@@ -100,7 +97,7 @@ const PMSHero = ({ children }) => {
                   <span className="text-xs sm:text-sm font-bold text-[#0a1628] uppercase tracking-wider">{locale === 'am' ? 'ተደጋጋሚ ጥያቄዎች' : 'Frequently Asked Questions'}</span>
                 </div>
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl 2xl:text-[5rem] font-serif text-[#0a1628] leading-[1.05] tracking-tight mb-4">
-                  {faqContent.title}
+                  {faq.title || 'Frequently Asked Questions'}
                 </h2>
               </div>
             </div>
@@ -109,7 +106,7 @@ const PMSHero = ({ children }) => {
             <div className="lg:w-[60%] w-full">
               {/* Custom Styled Tab Bar */}
               <div className="bg-[#eeede8] p-1.5 sm:p-2.5 rounded-xl sm:rounded-[2rem] flex mb-6 sm:mb-8 lg:mb-12 w-full lg:max-w-xl shadow-inner border border-black/5">
-                {faqContent.categories.map((category) => (
+                {faq.categories && faq.categories.map((category) => (
                   <button
                     key={category.id}
                     onClick={() => handleTabChange(category.id)}
@@ -186,14 +183,14 @@ const PMSHero = ({ children }) => {
       <section className="bg-[#0a1628] py-12 sm:py-16 lg:py-20 px-4 sm:px-6 mx-3 sm:mx-4 lg:mx-6 rounded-2xl sm:rounded-[2rem] lg:rounded-[3rem] mb-12 sm:mb-16 lg:mb-24">
         <div className="container mx-auto max-w-[1400px] text-center">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-serif text-white mb-4 sm:mb-6 px-2">
-            {ctaContent.title}
+            {cta.title}
           </h2>
           <p className="text-sm sm:text-base lg:text-lg text-gray-400 mb-6 sm:mb-8 lg:mb-10 max-w-2xl mx-auto px-2">
-            {ctaContent.subtitle}
+            {cta.subtitle}
           </p>
-          <Link href="/book-a-demo">
+          <Link href="/signup">
             <button className="bg-white text-[#0a1628] px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base lg:text-lg shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all active:scale-95 flex items-center gap-2 sm:gap-3 mx-auto">
-              {ctaContent.buttonText}
+              {cta.buttonText || 'Get Started Free'}
               <ChevronRight size={16} className="sm:w-5 sm:h-5" />
             </button>
           </Link>

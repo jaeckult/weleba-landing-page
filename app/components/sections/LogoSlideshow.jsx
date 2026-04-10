@@ -11,18 +11,18 @@ const LogoSlideshow = ({ showHeader = true }) => {
   const labels = locale === 'am' ? amLabels : enLabels;
   const scrollRef = useRef(null);
 
-  // Partner/Client logos
+  // Partner/Integration logos
   const logos = [
-    { name: 'Sheraton Addis', url: '/logos/sheraton.png' },
-    { name: 'Ethiopian Skylight Hotel', url: '/logos/skylight.png' },
-    { name: 'Hilton Addis Ababa', url: '/logos/hilton.png' },
-    { name: 'Capital Hotel & Spa', url: '/logos/capital.png' },
-    { name: 'Haile Hotels & Resorts', url: '/logos/haile.png' },
-    { name: 'Sheraton Addis', url: '/logos/sheraton.png' },
-    { name: 'Ethiopian Skylight Hotel', url: '/logos/skylight.png' },
-    { name: 'Hilton Addis Ababa', url: '/logos/hilton.png' },
-    { name: 'Capital Hotel & Spa', url: '/logos/capital.png' },
-    { name: 'Haile Hotels & Resorts', url: '/logos/haile.png' },
+    { name: 'Anki', url: '/logos/sheraton.png' },
+    { name: 'Quizlet', url: '/logos/skylight.png' },
+    { name: 'Notion', url: '/logos/hilton.png' },
+    { name: 'Google', url: '/logos/capital.png' },
+    { name: 'Duolingo', url: '/logos/haile.png' },
+    { name: 'Anki', url: '/logos/sheraton.png' },
+    { name: 'Quizlet', url: '/logos/skylight.png' },
+    { name: 'Notion', url: '/logos/hilton.png' },
+    { name: 'Google', url: '/logos/capital.png' },
+    { name: 'Duolingo', url: '/logos/haile.png' },
   ];
 
   // Duplicate logos for infinite scroll effect

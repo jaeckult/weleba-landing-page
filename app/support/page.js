@@ -1,41 +1,37 @@
 'use client';
 
-import ResourceHero from '../components/sections/ResourceHero';
-import SupportContent from './components/SupportContent';
-import GetStarted from '../components/sections/GetStarted';
-import {
-    supportHero as enHero,
-    supportContactMethods as enMethods,
-    supportResources as enResources
-} from '../lib/supportDemoData';
-import {
-    supportHero as amHero,
-    supportContactMethods as amMethods,
-    supportResources as amResources
-} from '../lib/supportDemoData.am';
-import { useLanguage } from '../context/LanguageContext';
+import PMSHero from '@/app/components/sections/PMSHero';
+import TabbedFeatures from '@/app/components/sections/TabbedFeatures';
+import PMSTransform from '@/app/components/sections/PMSTransform';
+import ContentBlock from '@/app/components/sections/ContentBlock';
+import Testimonials from '@/app/components/sections/Testimonials';
+import LogoSlideshow from '@/app/components/sections/LogoSlideshow';
+import { getGenericData } from '@/app/lib/pageData/genericData';
 
-export default function SupportPage() {
-    const { locale } = useLanguage();
-
-    const hero = locale === 'am' ? amHero : enHero;
-    const contactMethods = locale === 'am' ? amMethods : enMethods;
-    const resources = locale === 'am' ? amResources : enResources;
-
+export default function GenericFeaturePage() {
+    const data = getGenericData('How Can We Help?', '🛟');
     return (
         <main className="bg-white">
-            <ResourceHero
-                tag={hero.tag}
-                title={hero.title}
-                description={hero.description}
-            />
-
-            <SupportContent
-                contactMethods={contactMethods}
-                resources={resources}
-            />
-
-            <GetStarted />
+            <PMSHero heroContent={data.heroContent}>
+                <LogoSlideshow />
+                <Testimonials />
+                <PMSTransform content={data.transformContent} />
+                <TabbedFeatures
+                    title={data.tabbedContent.title}
+                    subtitle={data.tabbedContent.subtitle}
+                    tabs={data.tabbedContent.tabs}
+                />
+                {data.alternatingContent.map((feature, index) => (
+                    <ContentBlock
+                        key={index}
+                        title={feature.title}
+                        description={feature.description}
+                        image={feature.image}
+                        lists={feature.lists}
+                        imageLeft={feature.imageLeft}
+                    />
+                ))}
+            </PMSHero>
         </main>
     );
 }

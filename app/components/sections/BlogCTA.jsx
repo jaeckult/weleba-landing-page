@@ -10,16 +10,16 @@ const BlogCTA = () => {
                     {/* Left: Content */}
                     <div className="text-white space-y-6">
                         <h2 className="text-4xl md:text-5xl font-serif font-bold leading-tight">
-                            Ready to transform your hotel operations?
+                            Ready to study smarter with Burbly?
                         </h2>
                         <p className="text-xl text-blue-100 leading-relaxed">
-                            Join thousands of hoteliers who trust weleba to streamline their operations and maximize revenue.
+                            Join millions of learners who use Burbly to master new skills faster with AI and spaced repetition.
                         </p>
 
                         <div className="flex flex-wrap gap-4 pt-4">
                             <Link href="/book-a-demo">
                                 <button className="px-8 py-4 bg-white text-blue-600 rounded-xl font-bold hover:bg-blue-50 transition-all hover:scale-105 active:scale-95 shadow-lg">
-                                    Get A Free Demo
+                                 Get Started Free
                                 </button>
                             </Link>
                             <Link href="/pricing">
@@ -36,16 +36,16 @@ const BlogCTA = () => {
                             <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-4">
                                 <Users className="w-6 h-6 text-white" />
                             </div>
-                            <div className="text-4xl font-bold text-white mb-2">5,000+</div>
-                            <div className="text-blue-100">Hotels Worldwide</div>
+                            <div className="text-4xl font-bold text-white mb-2">1M+</div>
+                            <div className="text-blue-100">Active Learners</div>
                         </div>
 
                         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
                             <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-4">
                                 <TrendingUp className="w-6 h-6 text-white" />
                             </div>
-                            <div className="text-4xl font-bold text-white mb-2">35%</div>
-                            <div className="text-blue-100">Revenue Increase</div>
+                            <div className="text-4xl font-bold text-white mb-2">4×</div>
+                            <div className="text-blue-100">Retention Boost</div>
                         </div>
 
                         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
@@ -53,15 +53,15 @@ const BlogCTA = () => {
                                 <BookOpen className="w-6 h-6 text-white" />
                             </div>
                             <div className="text-4xl font-bold text-white mb-2">24/7</div>
-                            <div className="text-blue-100">Expert Support</div>
+                            <div className="text-blue-100">Offline Support</div>
                         </div>
 
                         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
                             <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-4">
                                 <ArrowRight className="w-6 h-6 text-white" />
                             </div>
-                            <div className="text-4xl font-bold text-white mb-2">100+</div>
-                            <div className="text-blue-100">Integrations</div>
+                            <div className="text-4xl font-bold text-white mb-2">100K+</div>
+                            <div className="text-blue-100">Community Decks</div>
                         </div>
                     </div>
 

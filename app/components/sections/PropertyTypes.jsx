@@ -12,19 +12,12 @@ const PropertyTypes = () => {
   const content = locale === 'am' ? amProps : enProps;
 
   const propertyImages = {
-    'Independent Hotels': '/HOTELS/image copy 5.png',
-    'Hotel Groups': '/HOTELS/image copy.png',
-    'B & B and Inns': '/HOTELS/image copy 2.png',
-    'Parks': '/HOTELS/image copy 3.png',
-    'Resorts': '/HOTELS/image copy 4.png',
-    'Motels': '/HOTELS/image copy 5.png',
-    // Amharic keys
-    'ገለልተኛ ሆቴሎች': '/HOTELS/image.png',
-    'የሆቴል ቡድኖች': '/HOTELS/image copy.png',
-    'አልጋ እና ቁርስ (B&B)': '/HOTELS/image copy 2.png',
-    'ፓርኮች': '/HOTELS/image copy 3.png',
-    'ሪዞርቶች': '/HOTELS/image copy 4.png',
-    'ሞቴሎች': '/HOTELS/image copy 5.png'
+    'Language Learners': '/HOTELS/image.png',
+    'Medical Students': '/HOTELS/image copy.png',
+    'Exam Preppers': '/HOTELS/image copy 2.png',
+    'Law Students': '/HOTELS/image copy 3.png',
+    'K–12 Students': '/HOTELS/image copy 4.png',
+    'Professionals': '/HOTELS/image copy 5.png',
   };
 
   const properties = (content.types || []).map(f => ({

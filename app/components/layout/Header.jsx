@@ -230,15 +230,15 @@ const Header = () => {
               {/* Logo */}
               <Link href="/" className="flex items-center gap-1 mr-8">
                 <Image
-                  src="/logo/canvas.png"
-                  alt="weleba Logo"
+                  src="/image copy 6.png"
+                  alt="Burbly Logo"
                   width={90}
                   height={90}
                   className="object-contain translate-y-1"
                 />
                 <div className="flex items-center">
                   <span className="text-2xl font-bold text-[#0a1628]">
-                    {locale === 'am' ? 'ወለባ' : 'Weleba'}
+                    Burbly
                   </span>
                 </div>
               </Link>
@@ -526,7 +526,7 @@ const Header = () => {
                                 </div>
                                 <div className="p-6">
                                   <h5 className="font-bold text-gray-900 text-lg leading-tight mb-4 group-hover/card:text-[#0066FF] transition-colors">
-                                    How Wood River Inn Gained Confidence With weleba
+                                    How Sarah Passed Her Medical Boards Using Burbly's Spaced Repetition
                                   </h5>
                                   <Link
                                     href="/case-studies"
@@ -612,35 +612,35 @@ const Header = () => {
                               <div className="space-y-6">
                                 {/* Article 1 */}
                                 <Link
-                                  href="/blog/ai-transforming-hotel-operations-2026"
+                                  href="/blog/science-of-spaced-repetition"
                                   onClick={closeMenus}
                                   className="flex gap-5 items-center group/art transition-all"
                                 >
                                   <div className="w-24 h-24 rounded-2xl bg-gray-100 flex-shrink-0 overflow-hidden relative shadow-sm">
-                                    <Image src="/image copy 9.png" alt="AI Transforming Hotel Operations" fill className="object-cover group-hover/art:scale-110 transition-transform duration-500" />
+                                    <Image src="/image copy 9.png" alt="Science of Spaced Repetition" fill className="object-cover group-hover/art:scale-110 transition-transform duration-500" />
                                   </div>
                                   <div className="flex-1 min-w-0">
                                     <h5 className="font-bold text-gray-900 text-[15px] mb-2 leading-snug group-hover/art:text-[#0066FF] transition-colors">
-                                      How AI is Transforming Hotel Operations in 2026
+                                      The Science of Spaced Repetition: Why You Forget and How to Stop
                                     </h5>
-                                    <p className="text-xs text-gray-400 font-medium">December 18, 2025</p>
+                                    <p className="text-xs text-gray-400 font-medium">March 20, 2026</p>
                                   </div>
                                 </Link>
 
                                 {/* Article 2 */}
                                 <Link
-                                  href="/blog/revenue-management-strategies-small-hotels"
+                                  href="/blog/learn-language-faster-with-ai"
                                   onClick={closeMenus}
                                   className="flex gap-5 items-center group/art transition-all"
                                 >
                                   <div className="w-24 h-24 rounded-2xl bg-gray-100 flex-shrink-0 overflow-hidden relative shadow-sm">
-                                    <Image src="/image copy 10.png" alt="Revenue Management Strategies" fill className="object-cover group-hover/art:scale-110 transition-transform duration-500" />
+                                    <Image src="/image copy 10.png" alt="Learn Languages Faster with AI" fill className="object-cover group-hover/art:scale-110 transition-transform duration-500" />
                                   </div>
                                   <div className="flex-1 min-w-0">
                                     <h5 className="font-bold text-gray-900 text-[15px] mb-2 leading-snug group-hover/art:text-[#0066FF] transition-colors">
-                                      Revenue Management Strategies for Small Hotels
+                                      How to Learn Any Language 3x Faster Using AI Flashcards
                                     </h5>
-                                    <p className="text-xs text-gray-400 font-medium">December 17, 2025</p>
+                                    <p className="text-xs text-gray-400 font-medium">March 15, 2026</p>
                                   </div>
                                 </Link>
                               </div>
@@ -725,12 +725,12 @@ const Header = () => {
 
               {/* CTA Buttons */}
               <div className="hidden lg:flex items-center gap-3">
-                <LanguageToggle />
+                {/* <LanguageToggle /> */}
                 <Link href="/support">
                   <Button variant="ghost" size="sm">Support</Button>
                 </Link>
-                <Link href="/book-a-demo">
-                  <Button size="sm">Get A Free Demo</Button>
+                <Link href="/signup">
+                  <Button size="sm">Get Started Free</Button>
                 </Link>
               </div>
 
@@ -803,9 +803,9 @@ const Header = () => {
                             {Object.entries(navigation.products).map(([category, products]) => (
                               <div key={category}>
                                 <h5 className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-3">
-                                  {category === 'operations' ? 'Operations' :
-                                    category === 'marketing' ? 'Marketing' :
-                                      category === 'revenue' ? 'Revenue' : 'Experience'}
+                                  {category === 'operations' ? 'Study & Learning' :
+                                    category === 'marketing' ? 'Social & Community' :
+                                      category === 'revenue' ? 'AI & Insights' : 'Progress & Gamification'}
                                 </h5>
                                 <div className="space-y-3">
                                   {products.map((product) => {
@@ -852,7 +852,7 @@ const Header = () => {
                         >
                           <div className="p-4 bg-white space-y-6">
                             <div>
-                              <h5 className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-3">By Property</h5>
+                              <h5 className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-3">By Learner Type</h5>
                               <div className="space-y-3">
                                 {navigation.solutions.byProperty.map(item => (
                                   <Link key={item.title} href={item.href} onClick={closeMenus} className="block text-sm font-medium text-gray-600 hover:text-[#0066FF]">{item.title}</Link>
@@ -860,7 +860,7 @@ const Header = () => {
                               </div>
                             </div>
                             <div>
-                              <h5 className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-3">By Role</h5>
+                              <h5 className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-3">By Goal</h5>
                               <div className="space-y-3">
                                 {navigation.solutions.byRole.map(item => (
                                   <Link key={item.title} href={item.href} onClick={closeMenus} className="block text-sm font-medium text-gray-600 hover:text-[#0066FF]">{item.title}</Link>
@@ -949,14 +949,14 @@ const Header = () => {
                 {/* Footer Buttons */}
                 <div className="p-5 border-t border-gray-100 bg-gray-50">
                   <div className="space-y-3">
-                    <Link href="/book-a-demo" onClick={closeMenus}>
-                      <Button fullWidth size="lg">Get A Free Demo</Button>
+                    <Link href="/signup" onClick={closeMenus}>
+                      <Button fullWidth size="lg">Get Started Free</Button>
                     </Link>
                     <div className="flex items-center justify-between gap-3">
                       <Link href="/support" onClick={closeMenus} className="flex-1">
                         <Button variant="outline" fullWidth size="default">Support</Button>
                       </Link>
-                      <LanguageToggle />
+                      {/* <LanguageToggle /> */}
                     </div>
                   </div>
                 </div>

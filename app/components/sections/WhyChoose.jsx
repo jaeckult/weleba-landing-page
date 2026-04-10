@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import { Clipboard, Bot, CreditCard, Smartphone, ArrowRight } from 'lucide-react';
+import { Clipboard, Bot, CreditCard, Smartphone, ArrowRight, LayoutDashboard } from 'lucide-react';
 import { dailyOperationsContent as enOps } from '../../lib/constants';
 import { dailyOperationsContent as amOps } from '../../lib/constants.am';
 import { useLanguage } from '../../context/LanguageContext';
@@ -11,22 +11,19 @@ const WhyChoose = () => {
   const { locale } = useLanguage();
   const content = locale === 'am' ? amOps : enOps;
 
-  // Map icons to labels
+  // Map feature titles to icons
   const iconMap = {
-    'PMS': Clipboard,
-
-    'Payments': CreditCard,
-    'ክፍያዎች': CreditCard,
-    'Hotel Guest App': Smartphone,
-    'የእንግዳ መተግበሪያ': Smartphone,
+    'Smart Flashcard Review': Clipboard,
+    'AI Card Generator': Bot,
+    'Community Challenges': Smartphone,
   };
 
   const features = content.features.map((f, i) => ({
     ...f,
     id: `feat-${i}`,
-    icon: iconMap[f.title] || Clipboard,
-    image: i === 2 ? '/image-copy-11-no-money.png' : `/image copy ${9 + i}.png`, // Handle no-money image for index 2
-    tag: locale === 'am' ? 'የእለት ተእለት አስፈላጊ ነገሮች' : 'Day-to-Day Essentials'
+    icon: iconMap[f.title] || LayoutDashboard,
+    image: i === 2 ? '/image-copy-11-no-money.png' : `/image copy ${9 + i}.png`,
+    tag: 'Core Features'
   }));
 
   const [activeFeature, setActiveFeature] = useState(features[3]?.id || 'feat-3');

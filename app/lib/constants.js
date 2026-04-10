@@ -1,41 +1,41 @@
 export const labels = {
   navigation: {
-    products: 'Products',
-    solutions: 'Solutions',
+    products: 'Features',
+    solutions: 'For Learners',
     resources: 'Resources',
     pricing: 'Pricing',
-    caseStudies: 'Customer Stories',
+    caseStudies: 'Success Stories',
     company: 'Company',
     categories: {
-      operations: 'Operations',
-      marketing: 'Sales & Marketing',
-      revenue: 'Revenue & Finance',
-      guest: 'Customer Experience',
-      byProperty: 'By Business Type',
-      byRole: 'By Role',
+      operations: 'Study & Review',
+      marketing: 'AI & Automation',
+      revenue: 'Progress & Analytics',
+      guest: 'Social & Community',
+      byProperty: 'By Learning Goal',
+      byRole: 'By Learner Type',
       resourceType: 'Resource Type',
       featuredArticles: 'Featured Articles',
-      marketingDistribution: 'Sales & Distribution',
-      revenueFinance: 'Revenue & Finance',
-      guestExperience: 'Customer Experience',
+      marketingDistribution: 'AI & Automation',
+      revenueFinance: 'Progress & Analytics',
+      guestExperience: 'Social & Community',
       featured: 'Featured',
     }
   },
   blog: {
-    newUpdate: 'New Update:',
+    newUpdate: 'New Post:',
     readPost: 'Read Post',
   },
   buttons: {
-    bookDemo: 'Book A Demo',
-    getStarted: 'Get Started',
-    getFreeDemo: 'Get A Free Demo',
+    bookDemo: 'See It In Action',
+    getStarted: 'Get Started Free',
+    getFreeDemo: 'Try Burbly Free',
     subscribe: 'Subscribe',
     readAllStories: 'Read All Stories',
   },
   common: {
     allRightsReserved: 'All Rights Reserved.',
-    trustText: 'Trusted by leading businesses worldwide',
-    customerStory: 'Customer Story',
+    trustText: 'Trusted by learners worldwide',
+    customerStory: 'Success Story',
   },
   legal: {
     privacyPolicy: 'Privacy Policy',
@@ -48,308 +48,297 @@ export const navigation = {
   products: {
     operations: [
       {
-        title: 'Operations Management',
-        description: 'All-in-one platform for complete business operations.',
-        href: '/operations-management',
+        title: 'Flashcard Study',
+        description: 'Smart flashcard sessions powered by powerful algorithm',
+        href: '/features/flashcards',
       },
       {
-        title: 'Channel Manager',
-        description: 'Manage inventory & sync across all sales channels.',
-        href: '/channel-manager',
+        title: 'Study Planner',
+        description: 'AI-generated study schedules that adapt to your progress.',
+        href: '/features/study-path',
+      },
+      {
+        title: 'Deck Library',
+        description: 'Create, organize, and browse thousands of community decks.',
+        href: '/features/community',
       },
     ],
     marketing: [
       {
-        title: 'Sales Platform',
-        description: 'Commission-free direct sales made easy.',
-        href: '/booking-engine',
+        title: 'AI Card Generator',
+        description: 'Paste any text or topic and let AI build your deck instantly.',
+        href: '/features/ai-tutor',
+        badge: 'New',
       },
       {
-        title: 'Website Builder',
-        description: 'Create stunning, conversion-optimized websites.',
-        href: '/website-builder',
+        title: 'AI Tutor Mode',
+        description: 'Get Socratic hints and explanations while you review.',
+        href: '/features/ai-tutor',
+        badge: 'New',
       },
     ],
     revenue: [
       {
-        title: 'Revenue Intelligence',
-        description: 'AI-powered pricing optimizes rates automatically.',
-        href: '/revenue-management',
+        title: 'Study Analytics',
+        description: 'Detailed stats: retention rate, streaks, accuracy, XP earned.',
+        href: '/features/analytics',
       },
       {
-        title: 'Payments',
-        description: 'Secure processing with automated billing.',
-        href: '/weleba-payments',
+        title: 'Badges & XP',
+        description: 'Earn experience points and unlock achievement badges.',
+        href: '/features/badges',
         badge: 'Updated',
       },
     ],
     guest: [
       {
-        title: 'Customer Communication',
-        description: 'Automate personalized messaging throughout customer journey.',
-        href: '/customer-engagement-software',
+        title: 'Social Feed',
+        description: 'See what your friends are studying and celebrate their wins.',
+        href: '/features/social',
       },
       {
-        title: 'Mobile App',
-        description: 'Customer-facing mobile app for seamless experiences.',
-        href: '/customer-app',
+        title: 'Community Challenges',
+        description: 'Join weekly group challenges and compete on leaderboards.',
+        href: '/features/challenges',
       },
       {
-        title: 'AI Agent',
-        description: '24/7 AI-powered customer support and assistance.',
-        href: '/customer-ai-agent',
-        badge: 'New',
+        title: 'Deck Sharing',
+        description: 'Publish your decks for millions of learners to import.',
+        href: '/features/community',
       },
     ],
   },
   solutions: {
     byProperty: [
-      { title: 'Service Businesses', description: 'Solutions for salons, spas, and consultants.', href: '/service-business-software' },
-      { title: 'Retail Stores', description: 'POS and inventory for retail shops.', href: '/retail-software' },
-      { title: 'Ecommerce', description: 'Tools to manage online stores and inventory.', href: '/ecommerce-management' },
-      { title: 'Hotels & Resorts', description: 'Comprehensive hospitality management.', href: '/hotels-software' },
-      { title: 'Restaurants', description: 'Table management and ordering systems.', href: '/restaurant-management' },
-      { title: 'Multi-Location', description: 'Scalable platform for multi-unit enterprises.', href: '/multi-location-management' },
+      { title: 'Language Learning', description: 'Vocabulary, grammar, and phrases—all in one deck.', href: '/use-cases/languages' },
+      { title: 'Medical Students', description: 'High-volume card review built for USMLE and board exams.', href: '/use-cases/medical' },
+      { title: 'Law Students', description: 'Case law, statutes, and concepts organized by subject.', href: '/use-cases/professionals' },
+      { title: 'Exam Prep', description: 'GRE, SAT, LSAT, MCAT—curated decks to crush your test.', href: '/goals/exams' },
+      { title: 'Professional Skills', description: 'Tech, finance, and certifications for working professionals.', href: '/use-cases/professionals' },
+      { title: 'K–12 Students', description: 'Engaging, gamified review for younger learners.', href: '/use-cases/students' },
     ],
     byRole: [
-      { title: 'General Managers', description: 'Strategic oversight and business intelligence tools.', href: '/general-managers' },
-      { title: 'Operations Managers', description: 'Daily operations and customer service solutions.', href: '/front-desk-managers' },
-      { title: 'Revenue Managers', description: 'Pricing optimization and financial performance tools.', href: '/revenue-managers' },
-      { title: 'IT Managers', description: 'Technical platform management and system integration.', href: '/it-managers' },
+      { title: 'Self-Learners', description: 'Build and master any skillset at your own pace.', href: '/goals/self-learning' },
+      { title: 'Students', description: 'Ace exams with science-backed spaced repetition.', href: '/use-cases/students' },
+      { title: 'Teachers & Educators', description: 'Create and share decks with your entire class.', href: '/goals/educators' },
+      { title: 'Fluency Seekers', description: 'Reach conversational fluency faster than any app.', href: '/use-cases/languages' },
     ],
   },
   resources: [
-    { title: 'Blogs', description: 'Expert insights to optimize your business performance.', href: '/blog' },
-    { title: 'News', description: 'Stay ahead with the latest business and technology trends.', href: '/news' },
-    // { title: 'Templates', description: 'Download ready-to-use operational tools and forms.', href: '/templates' },
-    { title: 'Webinars', description: 'Access exclusive webinars for smarter business management.', href: '/webinar' },
-    // { title: 'Calculators', description: 'Calculate ROI, pricing, and revenue potential instantly.', href: '/calculators' },
-    // { title: 'eBooks & Guides', description: 'Complete strategies for business growth.', href: '/ebooks' },
-    // { title: 'Alternatives', description: 'Compare management software solutions to find your perfect fit.', href: '/alternative' },
+    { title: 'Blog', description: 'Learning science, study tips, and Burbly news.', href: '/blog' },
+    { title: 'Webinars', description: 'Live and on-demand sessions on effective studying.', href: '/webinar' },
+    { title: 'Study Guides', description: 'In-depth guides for every major subject and exam.', href: '/guides' },
+    { title: 'Community', description: 'Connect with millions of Burbly learners worldwide.', href: '/community' },
   ],
   company: [
-    { title: 'About Us', description: 'The business management experts behind weleba technology.', href: '/about-us' },
+    { title: 'About Us', description: 'The team behind Burbly and our mission for better learning.', href: '/about-us' },
+    { title: 'Careers', description: 'Help us build the future of intelligent learning.', href: '/careers' },
   ],
 };
 
 // Hero Section
 export const heroContent = {
-  announcement: {
-    text: 'innQuest is rebranding to weleba - Business Management, Simplified.',
-    href: '/about-us',
-  },
-  title: 'The complete management platform built for the way your business actually work',
-  subtitle: 'Weleba empowers your team to focus on what matters most while intelligent tools work behind the scenes to maximize your revenue and operational efficiency across hotels, ecommerce, retail, and more.',
+  tag: 'Powered by powerful algorithm',
+  title: 'The flashcard app that actually learns with you',
+  subtitle: 'Burbly uses AI and proven memory science to schedule your reviews at exactly the right moment—so you remember more with less effort. Study smarter with adaptive decks, social challenges, and real-time progress analytics.',
   cta: {
-    primary: { text: 'Book A Demo', href: '/book-a-demo' },
-    secondary: { text: 'View Pricing', href: '/pricing' },
+    primary: { text: 'Get Started Free', href: '/signup' },
+    secondary: { text: 'See How It Works', href: '/features' },
   },
 };
 
-// Why Choose Section
+// Why Choose Section (maps to FeaturesGrid via whyChooseContent.features[])
 export const whyChooseContent = {
-  title: 'Why businesses choose weleba as their management software',
+  title: 'Why learners choose Burbly over every other flashcard app',
   features: [
     {
-      title: 'Helps Boost Revenue',
-      description: 'Our integrated solutions help increase revenue by up to 35% with commission-free direct sales, AI-powered pricing strategies, and automated workflows.',
-      icon: 'TrendingUp',
+      title: 'Remembers What You Forget',
+      description: 'Burbly\'s FSRS algorithm predicts exactly when you\'re about to forget each card and schedules it for review before it slips—boosting long-term retention by up to 4×.',
+      icon: 'Brain',
     },
     {
-      title: 'Built by Experts for Businesses',
-      description: 'Building on our years of providing business management software, weleba understands your operational challenges across multiple industries.',
+      title: 'AI Builds Your Decks',
+      description: 'Paste any text, textbook chapter, or topic name and our AI generates polished, well-structured flashcard decks in seconds—no manual card creation required.',
+      icon: 'Sparkles',
+    },
+    {
+      title: 'Study With Friends',
+      description: 'Follow friends, join community challenges, climb weekly leaderboards, and share decks. Learning is more fun—and more effective—when it\'s social.',
       icon: 'Users',
     },
     {
-      title: 'All-in-One Platform',
-      description: 'Everything you need to run your business in one seamless platform; connecting operations, sales, inventory, payments, and customer management.',
-      icon: 'Layers',
+      title: 'Progress That Motivates',
+      description: 'Earn XP, unlock achievement badges, maintain daily streaks, and watch your retention stats climb. Burbly turns every study session into a rewarding experience.',
+      icon: 'Trophy',
     },
     {
-      title: 'Easy to Learn',
-      description: 'Our system is so easy to use that staff can learn essential functions in hours, not weeks, reducing training time by up to 50%.',
-      icon: 'Zap',
-    },
-    {
-      title: 'Accessible Anywhere, Anytime',
-      description: 'Access your management system securely from anywhere, on any device. All updates and backups happen automatically with 99.95% uptime guaranteed.',
+      title: 'Study Anywhere, Anytime',
+      description: 'Full offline support on iOS, Android, and web. Your progress syncs instantly across all devices, so you never lose a review session.',
       icon: 'Globe',
     },
   ],
 };
 
-// Daily Operations Section
+// Daily Operations Section (rendered by WhyChoose.jsx)
 export const dailyOperationsContent = {
-  title: 'Daily Operations & Customer Experience Management',
-  subtitle: 'Essential tools that streamline your day-to-day operations while delivering exceptional customer experiences.',
+  title: 'Everything you need for a complete study routine',
+  subtitle: 'From your first card flip to mastering an entire subject, Burbly guides every step of your learning journey.',
   features: [
     {
-      title: 'Operations Management',
-      description: 'Streamline business operations, manage orders, and optimize workflows effortlessly.',
-      href: '/operations-management',
+      title: 'Smart Flashcard Review',
+      description: 'Review cards scheduled by FSRS at the optimal moment. Flip, rate, and move on—your review queue is always perfectly calibrated.',
+      href: '/features/flashcards',
       icon: 'LayoutDashboard',
     },
     {
-      title: 'Payments',
-      description: 'Secure, fast payment processing for hassle-free customer transactions.',
-      href: '/weleba-payments',
-      icon: 'CreditCard',
+      title: 'AI Card Generator',
+      description: 'generate entire decks from any text, PDF, or topic in seconds. Context-aware AI creates cards that actually help you understand.',
+      href: '/features/ai-generator',
+      icon: 'Sparkles',
     },
     {
-      title: 'Customer Mobile App',
-      description: 'Enhance customer experience with a mobile app for orders, requests, and more.',
-      href: '/customer-app',
+      title: 'Community Challenges',
+      description: 'Join weekly challenges, race on leaderboards, and celebrate milestones with a global community of learners.',
+      href: '/features/challenges',
       icon: 'Smartphone',
     },
   ],
 };
 
-// Revenue Intelligence Section
+// Revenue Intelligence Section (rendered by RevenueVisibility.jsx)
 export const revenueIntelligenceContent = {
-  title: 'AI Revenue Intelligence & Business Visibility',
-  subtitle: 'Powerful tools to maximize your revenue potential and expand your online presence.',
+  title: 'Analytics & AI that accelerate your mastery',
+  subtitle: 'Burbly\'s smart tools do the heavy lifting so you can focus entirely on learning.',
   features: [
     {
-      title: 'Sales Platform',
-      description: 'Enable direct sales with a seamless, user-friendly interface for customers.',
-      href: '/booking-engine',
+      title: 'Adaptive Scheduling',
+      description: 'FSRS calculates each card\'s forgetting curve in real time, serving reviews at the scientifically optimal moment for maximum retention.',
+      href: '/features/flashcards',
       icon: 'Calendar',
     },
     {
-      title: 'Multi-Channel Manager',
-      description: 'Sync inventory across all sales channels in real-time to maximize revenue.',
-      href: '/channel-manager',
+      title: 'AI Deck Builder',
+      description: 'Turn any source material into a structured deck instantly. Supports text, topics, and soon—PDFs and web pages.',
+      href: '/features/ai-generator',
       icon: 'Share2',
     },
     {
-      title: 'Revenue Intelligence',
-      description: 'Pricing intelligence that monitors demand & market conditions to adjust your prices in real-time.',
-      href: '/revenue-management',
+      title: 'Retention Analytics',
+      description: 'Track accuracy, retention rate, XP, streaks, and card maturity across all your decks with beautiful, actionable dashboards.',
+      href: '/features/analytics',
       icon: 'LineChart',
     },
     {
-      title: 'Website Builder',
-      description: 'Create a stunning, SEO-optimized website to attract and convert customers.',
-      href: '/website-builder',
+      title: 'Study Path Planner',
+      description: 'AI generates a personalized study plan so you always know exactly which deck to tackle next.',
+      href: '/features/study-planner',
       icon: 'Globe',
     },
   ],
 };
 
-// Business Types Section
+// "For Every Learner" Section (replaces PropertyTypes)
 export const propertyTypesContent = {
-  title: 'Management Software for Every Business Type',
+  tag: 'Who Uses Burbly',
+  title: 'Built for every kind\nof learner',
   types: [
-    { title: 'Hotels & Resorts', href: '/hotels-software', icon: 'Building2' },
-    { title: 'Ecommerce', href: '/ecommerce-management', icon: 'ShoppingCart' },
-    { title: 'Retail Stores', href: '/retail-software', icon: 'Store' },
-    { title: 'Restaurants', href: '/restaurant-management', icon: 'UtensilsCrossed' },
-    { title: 'Service Businesses', href: '/service-business-software', icon: 'Briefcase' },
-    { title: 'Multi-Location', href: '/multi-location-management', icon: 'Buildings' },
+    { title: 'Language Learners', href: '/for/language-learners', icon: 'Globe' },
+    { title: 'Medical Students', href: '/for/medical-students', icon: 'Building2' },
+    { title: 'Exam Preppers', href: '/for/exam-prep', icon: 'ShoppingCart' },
+    { title: 'Law Students', href: '/for/law-students', icon: 'Store' },
+    { title: 'K–12 Students', href: '/for/students', icon: 'UtensilsCrossed' },
+    { title: 'Professionals', href: '/for/professionals', icon: 'Briefcase' },
   ],
 };
 
 // Customer Stories Section
 export const customerStoriesContent = {
-  title: 'Our customers say it the best',
+  title: 'Our learners say it the best',
   stories: [
     {
-      title: 'How Harrison Hall Business Center Streamlined Operations With 25 Years Of weleba Partnership',
-      name: 'Stacy Dadson',
-      role: 'General Manager',
-      videoId: 'CE1FbxwX0po',
+      title: 'How Sarah Passed Her Medical Boards Using Burbly\'s Spaced Repetition',
+      name: 'Sarah M.',
+      role: 'Medical Student',
+      videoId: '',
     },
     {
-      title: 'How NUVO Enterprise Used weleba System to Elevate Their Customer Experience',
-      name: 'Yamlak Negash',
-      role: 'General Manager at NUVO Enterprise',
-      videoId: '21iGVj1UGq8',
-    },
-    {
-      title: 'How Wood River Inn Gained Confidence In Running Their Business With weleba',
-      name: 'Ryan Allison',
-      role: 'Owner, Wood River Inn',
-      videoId: 'Wo-D4it48lI',
-    },
-    {
-      title: 'Seaboard Hotels keeps operations smooth with weleba managing all properties',
-      name: 'Alex Moore',
-      role: 'President & CEO of Seaboard Hotels',
-      videoId: 'ioXFopWwXG4',
+      title: 'How Marcus Became Conversational in Japanese in 8 Months with Burbly',
+      name: 'Marcus T.',
+      role: 'Language Learner',
+      videoId: '',
     },
   ],
 };
 
-// Integrations Section
+// Integrations Section (repurposed as Ecosystem/Platforms)
 export const integrationsContent = {
-  title: 'Create your perfect technology ecosystem',
-  subtitle: 'Connect weleba with 100+ third-party solutions from payment processors and point of sale to accounting systems, marketing tools, and sales channels, so your business runs like a well-oiled machine.',
-  cta: { text: 'Visit Marketplace', href: '/marketplace' },
+  title: 'Your learning, everywhere you go',
+  subtitle: 'Burbly works seamlessly across all your devices. Study on mobile during your commute, switch to desktop for deep focus sessions—your progress syncs instantly wherever you are.',
+  cta: { text: 'Download the App', href: '/download' },
   logos: [
-    'Shopify', 'WooCommerce', 'Amazon', 'Stripe', 'PayPal', 'Square',
-    'QuickBooks', 'Xero', 'Mailchimp', 'Zapier', 'Slack', 'HubSpot',
+    'iOS', 'Android', 'Web', 'Offline Mode', 'Cloud Sync', 'Dark Mode',
   ],
 };
 
-// Support Section
+// Support / Get Started Section
 export const supportContent = {
-  title: '24/7 Available Expert Assistance When You Need It Most',
+  title: 'Start learning smarter in under 60 seconds',
   features: [
     {
-      title: 'Industry-Focused Support Specialists',
-      description: 'Our team has extensive experience across multiple industries, ensuring they understand your unique business challenges.',
-      icon: 'HeadphonesIcon',
+      title: 'No setup required',
+      description: 'Sign up, pick a subject, and your first AI-generated deck is ready to study instantly.',
+      icon: 'Zap',
     },
     {
-      title: 'Multiple Support Channels',
-      description: 'Get help via chat, phone, email, or our comprehensive online knowledge base.',
-      icon: 'MessageCircle',
+      title: 'Science-backed from day one',
+      description: 'FSRS spaced repetition starts working the moment you flip your first card.',
+      icon: 'Brain',
     },
   ],
   steps: [
-    { number: '01', title: 'Set up a 30-minute call with a weleba expert.' },
-    { number: '02', title: 'See a personalized demo of what weleba can do for you.' },
-    { number: '03', title: 'Get onboarded quickly with support from our experts and start earning revenue.' },
+    { number: '01', title: 'Create your free Burbly account in seconds.' },
+    { number: '02', title: 'Pick a subject or let AI build your first deck from any text.' },
+    { number: '03', title: 'Study daily, earn XP, and watch your retention soar.' },
   ],
 };
 
 // FAQ Section
 export const faqContent = {
-  title: 'Answers to Your Questions About weleba',
+  title: 'Everything you wanted to know about Burbly',
   categories: [
     {
       id: 'features',
       name: 'Features',
       items: [
         {
-          question: 'What makes weleba different from other management systems?',
-          answer: 'weleba is a unified platform built for multiple industries including hotels, ecommerce, retail, and service businesses. We focus on reducing clicks and simplifying workflows to eliminate administrative burden. Our platform brings together operations management, sales channels, inventory control, and payments in one system, providing businesses the operational backbone they need without unnecessary complexity or enterprise-level pricing.',
+          question: 'What makes Burbly different from Anki or Quizlet?',
+          answer: 'Burbly combines the gold-standard FSRS spaced repetition algorithm with AI-powered deck generation, social challenges, and real-time analytics—all in a polished, modern app. Unlike Anki, there\'s no steep learning curve. Unlike Quizlet, your review schedule is adaptive and scientifically optimized, not just a simple timer.',
         },
         {
-          question: 'Can weleba integrate with our existing technology stack?',
-          answer: 'Yes, weleba connects with over 100 third-party systems through our marketplace, including payment processors, ecommerce platforms, accounting software, marketing tools, and point-of-sale systems. Our open API architecture also allows for custom integrations tailored to your unique operational needs.',
+          question: 'What is FSRS spaced repetition?',
+          answer: 'FSRS (Free Spaced Repetition Scheduler) is the most accurate open-source memory algorithm available. It models your personal forgetting curve for each card and schedules reviews at precisely the right time—maximizing retention while minimizing total study time. Burbly uses FSRS so you study smarter, not harder.',
         },
         {
-          question: 'Does weleba offer AI-powered features?',
-          answer: 'Yes, weleba incorporates AI technology in multiple areas: Revenue Intelligence automatically optimizes pricing based on demand patterns and market conditions, smart automation reduces manual tasks by up to 80%, and predictive analytics help you make data-driven decisions.',
+          question: 'Can AI really build good flashcards?',
+          answer: 'Yes. Burbly\'s AI understands context, not just keywords. It generates cards with clear questions, concise answers, and useful hints—not just copy-pasted text. You can always edit, delete, or add cards after generation, giving you full control over your deck quality.',
         },
       ]
     },
     {
       id: 'setup',
-      name: 'Setup',
+      name: 'Getting Started',
       items: [
         {
-          question: 'How difficult is it to switch from our current system to weleba?',
-          answer: 'The transition to weleba is straightforward and efficient. Our implementation team handles data migration including customer records, transaction history, inventory data, and historical information. Most staff become proficient with essential functions within a few hours of training.',
+          question: 'How do I get started with Burbly?',
+          answer: 'Sign up for free at burbly.app—no credit card needed. You can start studying immediately using community decks, or paste any topic into the AI generator to create your first custom deck in seconds. Your review schedule begins automatically from your first session.',
         },
         {
-          question: 'How long does implementation typically take?',
-          answer: 'Most businesses are fully operational within 3-5 business days of signing up. Our implementation team handles data migration, system configuration, and staff training. For larger organizations or complex integrations, the timeline may extend to 1-2 weeks.',
+          question: 'Is Burbly free to use?',
+          answer: 'Burbly offers a generous free tier that includes unlimited flashcard study, community deck access, and social features. Premium unlocks the AI card generator, advanced analytics, prioritized AI tutor responses, and exclusive badge categories.',
         },
         {
-          question: 'Do you provide training for our staff?',
-          answer: 'Yes, we provide comprehensive training tailored to each role in your business. Staff typically become proficient with essential functions within hours, while managers receive advanced training on reporting, analytics, and optimization features.',
+          question: 'Does Burbly work offline?',
+          answer: 'Yes. Burbly caches your decks and review queue locally so you can study without an internet connection. Your progress syncs to the cloud automatically the next time you come online—never losing a session.',
         },
       ]
     },
@@ -358,38 +347,38 @@ export const faqContent = {
       name: 'Support',
       items: [
         {
-          question: 'What kind of support do you provide after implementation?',
-          answer: 'We offer 24/7 technical support via phone, email, and chat. All clients receive access to our knowledge base with video tutorials and guides, regular training webinars for new features, and a dedicated account manager.',
+          question: 'How can I contact Burbly support?',
+          answer: 'Reach us anytime through the in-app help center, via email at support@burbly.app, or in our community Discord. We typically respond within a few hours.',
         },
         {
-          question: 'Is support available in different time zones?',
-          answer: 'Yes, our global support team operates 24/7/365 with specialists in North America, Europe, and Asia-Pacific regions. This ensures you always reach a live support agent familiar with your industry and local business practices.',
+          question: 'Can I import decks from Anki or Quizlet?',
+          answer: 'Burbly supports importing Anki decks (.apkg) and CSV files, making it easy to bring your existing cards over. Quizlet import support is on our roadmap.',
         },
         {
-          question: 'Can weleba handle seasonal fluctuations in our business?',
-          answer: 'Yes, weleba is designed to handle seasonal variations across all industries. The intuitive interface means seasonal staff can be trained quickly, and the system scales automatically to accommodate fluctuations in transaction volume and customer demand.',
+          question: 'Is my data private and secure?',
+          answer: 'Absolutely. Your study data and personal information are encrypted in transit and at rest. We never sell your data to third parties. You can export or delete your account and all associated data at any time from your profile settings.',
         },
       ]
     }
   ]
 };
 
-// SUPPORT ...
+// Get Started Steps
 export const getStartedContent = {
-  tag: 'Experience weleba',
-  title: 'Get started with weleba in three easy steps',
+  tag: 'Experience Burbly',
+  title: 'Start learning smarter in three simple steps',
   steps: [
     {
       number: '01',
-      title: 'Set up a 30-minute call with a weleba expert.',
+      title: 'Create your free account—no card required.',
     },
     {
       number: '02',
-      title: 'See a personalized demo of what weleba can do for you.',
+      title: 'Pick a subject or paste any text to generate your first AI deck.',
     },
     {
       number: '03',
-      title: 'Get onboarded quickly with support from our experts and start earning revenue.',
+      title: 'Study daily, earn XP and badges, and watch your mastery grow.',
     },
   ]
 };
@@ -397,73 +386,69 @@ export const getStartedContent = {
 // Footer Content
 export const footerContent = {
   cta: {
-    title: 'Join Thousands of Businesses Thriving with weleba',
-    subtitle: "See how weleba's unified platform can work for your organization. Our team will walk you through features tailored to your specific needs.",
-    buttonText: 'Book a Demo',
+    title: 'Join millions of learners mastering new skills with Burbly',
+    subtitle: "See how Burbly's adaptive flashcard engine, AI tools, and social challenges can transform the way you learn—starting today.",
+    buttonText: 'Get Started Free',
     features: [
-      '100% safe & secure',
-      '360° business management',
-      '24/7 support'
+      'Free to start',
+      'AI-powered decks',
+      'Science-backed retention'
     ]
   },
   subscribe: {
-    title: 'Subscribe to our newsletter',
-    placeholder: 'Enter email address',
+    title: 'Get learning tips in your inbox',
+    placeholder: 'Enter your email',
     buttonText: 'Subscribe'
   },
   sections: [
     {
-      title: 'Products',
+      title: 'Features',
       links: [
-        { text: 'Operations Management', href: '/operations-management' },
-
-        { text: 'Booking Engine', href: '/booking-engine' },
-        { text: 'Channel Manager', href: '/channel-manager' },
-        { text: 'Revenue Intelligence', href: '/revenue-management' },
-        { text: 'Payments', href: '/weleba-payments' },
-        { text: 'Customer App', href: '/customer-app' },
+        { text: 'Flashcard Study', href: '/features/flashcards' },
+        { text: 'AI Card Generator', href: '/features/ai-generator' },
+        { text: 'Study Planner', href: '/features/study-planner' },
+        { text: 'Analytics', href: '/features/analytics' },
+        { text: 'Social Challenges', href: '/features/challenges' },
+        { text: 'Badges & XP', href: '/features/gamification' },
       ],
     },
     {
-      title: 'Solutions',
+      title: 'For Learners',
       links: [
-        { text: 'Independent Businesses', href: '/service-business-software' },
-        { text: 'Multi-Location Groups', href: '/multi-location-management' },
-        { text: 'Small Businesses', href: '/small-business-software' },
-        // { text: 'Parks', href: '/ecommerce-management' },
-        // { text: 'Resorts', href: '/hotels-software' },
-        { text: 'Retailers', href: '/retail-software' },
+        { text: 'Language Learners', href: '/for/language-learners' },
+        { text: 'Medical Students', href: '/for/medical-students' },
+        { text: 'Exam Prep', href: '/for/exam-prep' },
+        { text: 'K–12 Students', href: '/for/students' },
+        { text: 'Professionals', href: '/for/professionals' },
       ],
     },
     {
       title: 'Resources',
       links: [
-        { text: 'Blogs', href: '/blog' },
-        // { text: 'Templates', href: '/templates' },
+        { text: 'Blog', href: '/blog' },
+        { text: 'Study Guides', href: '/guides' },
         { text: 'Webinars', href: '/webinar' },
-        // { text: 'Calculators', href: '/calculators' },
-        // { text: 'E-books & Guides', href: '/ebooks' },
-        // { text: 'FAQs', href: '/faqs' },
+        { text: 'Community', href: '/community' },
       ],
     },
     {
       title: 'Company',
       links: [
         { text: 'About', href: '/about-us' },
+        { text: 'Careers', href: '/careers' },
         { text: 'Support', href: '/support' },
-        { text: 'Marketplace', href: '/marketplace' },
         { text: 'Pricing', href: '/pricing' },
       ],
     },
   ],
   legal: [
-    { text: 'Privacy Policies', href: '/privacy-policy' },
+    { text: 'Privacy Policy', href: '/privacy-policy' },
     { text: 'Terms of Service', href: '/terms-of-service' },
   ],
   social: [
     { name: 'Twitter', href: '#', icon: 'Twitter' },
     { name: 'LinkedIn', href: '#', icon: 'Linkedin' },
-    { name: 'Facebook', href: '#', icon: 'Facebook' },
+    { name: 'Discord', href: '#', icon: 'MessageCircle' },
     { name: 'YouTube', href: '#', icon: 'Youtube' },
   ],
 };

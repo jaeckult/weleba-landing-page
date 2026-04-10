@@ -10,16 +10,16 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "All-in-one Business Management Software | weleba",
-  description: "The complete management platform for hotels, ecommerce, retail, and more. Streamline operations, enhance customer experiences, and maximize revenue with our unified system.",
-  keywords: "business management software, management system, ecommerce platform, retail software, hotel management, operations management, inventory management",
+  title: "Burbly — The AI Flashcard App Built on Spaced Repetition",
+  description: "Burbly uses FSRS spaced repetition and AI to help you remember more with less effort. Create decks instantly, study with friends, and track your mastery. Free to start.",
+  keywords: "flashcard app, spaced repetition, FSRS, AI flashcards, study app, Anki alternative, Quizlet alternative, learning app, memorization, language learning",
   icons: {
-    icon: '/logo/canvas.png',
-    apple: '/logo/canvas.png',
+    icon: '/image copy 6.png',
+    apple: '/image copy 6.png',
   },
   openGraph: {
-    title: "All-in-one Business Management Software | weleba",
-    description: "The complete management platform for hotels, ecommerce, retail, and more. Streamline operations, enhance customer experiences, and maximize revenue with our unified system.",
+    title: "Burbly — The AI Flashcard App Built on Spaced Repetition",
+    description: "Burbly uses FSRS spaced repetition and AI to help you remember more with less effort. Create decks instantly, study with friends, and track your mastery.",
     type: "website",
   },
 };

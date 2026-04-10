@@ -1,56 +1,44 @@
 export const aboutHero = {
     tag: 'Who We Are',
-    title: 'Building the Future of <span className="text-blue-600">Business Management</span>',
-    description: "weleba is a global business technology provider dedicated to simplifying organizational operations. We build tools that help business owners thrive in a digital world."
+    title: 'Building the Future of <span className="text-blue-600">Learning</span>',
+    description: "Burbly is a science-backed flashcard platform built for learners who want to study smarter, remember longer, and stay motivated every day.",
 };
 
 export const aboutSections = [
     {
         title: 'Our Mission',
-        description: 'To empower businesses worldwide with cutting-edge technology that simplifies operations, maximizes revenue, and enhances customer experiences. We believe every organization deserves tools that work as hard as they do.',
+        description: 'To make effective, science-backed learning accessible to everyone — whether you\'re a student cramming for boards, a professional upskilling, or a curious mind chasing knowledge for the joy of it.',
         image: '/about/image.png',
         lists: [
-            'Simplify complex business operations',
-            'Maximize revenue opportunities',
-            'Enhance customer satisfaction',
-            'Empower teams worldwide',
+            'Democratize effective learning for everyone',
+            'Apply cognitive science to every study session',
+            'Make daily learning feel rewarding and fun',
+            'Build a supportive global learner community',
         ],
         imageLeft: false,
     },
     {
-        title: 'Our Team',
-        description: 'Our diverse team of business experts, engineers, and designers work together to create solutions that transform how organizations operate. We combine deep industry knowledge with cutting-edge technology to deliver exceptional results.',
+        title: 'Our Approach',
+        description: 'Every feature in Burbly is grounded in decades of memory science research. We obsess over spaced repetition, retrieval practice, and motivation so your study sessions are never wasted. The FSRS algorithm underpins our scheduling, and our AI tutor adapts explanations to your level.',
         image: '/about/image copy.png',
         lists: [
-            'Industry-leading experts',
-            'Innovative engineers and designers',
-            'Dedicated support specialists',
-            'Passionate about excellence',
+            'FSRS spaced repetition scheduling',
+            'AI-powered adaptive tutoring',
+            'Gamification that builds real habits',
+            'Progress analytics to close knowledge gaps',
         ],
         imageLeft: true,
     },
     {
-        title: 'Our Values',
-        description: 'At weleba, we operate with integrity, innovation, and a relentless focus on customer success. These core values guide everything we do and shape how we build products and serve our clients.',
+        title: 'Built for Every Learner',
+        description: 'From medical students mastering pharmacology to language learners building vocabulary, Burbly adapts to your goals. Our community decks make it easy to find world-class study material, and our creator tools let you build your own.',
         image: '/about/image copy 2.png',
         lists: [
-            'Customer-first approach',
-            'Continuous innovation',
-            'Transparency and integrity',
-            'Excellence in execution',
+            'Students & exam prep',
+            'Language learning & vocabulary',
+            'Professional certification & upskilling',
+            'Educators & classroom use',
         ],
         imageLeft: false,
-    },
-    {
-        title: 'Our Vision',
-        description: 'To become the global leader in business management solutions, recognized for innovation, reliability, and exceptional customer support. We envision a future where organization management is seamless, intuitive, and rewarding.',
-        image: '/about/image copy 3.png',
-        lists: [
-            'Global leadership in business technology',
-            'Continuous innovation and improvement',
-            'Exceptional customer support',
-            'Seamless operations worldwide',
-        ],
-        imageLeft: true,
     },
 ];

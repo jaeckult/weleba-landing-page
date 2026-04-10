@@ -62,8 +62,8 @@ const IntegrationsMarketplace = () => {
 
             {/* Content */}
             <h3 className="text-3xl lg:text-4xl font-bold mb-6 leading-tight">
-              {locale === 'am' ? 'welebaን ከ 100+ ' : 'Connect weleba with '}
-              <span className="text-white/90">{locale === 'am' ? 'ከሶስተኛ ወገን መፍትሄዎች ጋር ያገናኙ' : '100+ third-party solutions'}</span>
+              {'Study on '}
+              <span className="text-white/90">{'iOS, Android & Web'}</span>
             </h3>
             <p className="text-white/80 text-lg mb-10 leading-relaxed">
               {content.subtitle}
@@ -72,7 +72,7 @@ const IntegrationsMarketplace = () => {
             {/* CTA Section */}
             <div className="border-t border-white/20 pt-8">
               <p className="text-white/90 mb-4 font-medium">
-                {locale === 'am' ? 'weleba ከሚወዷቸው መሳሪያዎች ጋር እንዴት እንደሚገናኝ ይመልከቱ' : 'See how weleba connects with your favorite tools'}
+                {'Burbly syncs your progress across every device—no setup needed.'}
               </p>
               <Link
                 href={content.cta.href}

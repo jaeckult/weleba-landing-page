@@ -162,15 +162,15 @@ const Footer = () => {
               <div className="lg:col-span-2">
                 <Link href="/" className="flex items-center gap-1 mr-8">
                   <Image
-                    src="/logo/canvas.png"
-                    alt="weleba Logo"
+                    src="/image copy 6.png"
+                    alt="Burbly Logo"
                     width={90}
                     height={90}
                     className="object-contain translate-y-1"
                   />
                   <div className="flex items-center">
                     <span className="text-2xl font-bold text-[#0]">
-                      {locale === 'am' ? 'ወለባ' : 'Weleba'}
+                      Burbly
                     </span>
                   </div>
                 </Link>
@@ -259,7 +259,7 @@ const Footer = () => {
 
             {/* Copyright Bar */}
             <div className="flex flex-col md:flex-row justify-between items-center gap-8 text-sm text-gray-500 pt-10 border-t border-white/5">
-              <p>© {new Date().getFullYear()} weleba. {labels.common.allRightsReserved}</p>
+              <p>© {new Date().getFullYear()} Burbly. {labels.common.allRightsReserved}</p>
               <div className="flex gap-10 font-medium">
                 <Link href="/privacy" className="hover:text-white transition-colors">{labels.legal.privacyPolicy}</Link>
                 <Link href="/terms" className="hover:text-white transition-colors">{labels.legal.termsOfService}</Link>

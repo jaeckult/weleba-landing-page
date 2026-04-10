@@ -1,41 +1,37 @@
 'use client';
 
-import AboutHero from '../about-us/components/AboutHero';
-import ScrollStack from '../about-us/components/ScrollStack';
-import Testimonials from '../components/sections/Testimonials';
-import GetStarted from '../components/sections/GetStarted';
-import ScrollReveal from '../components/ui/ScrollReveal';
-import ContentBlock from '../components/sections/ContentBlock';
-import { careersHero as enHero, careersSections as enSections } from '../lib/careersData';
-import { careersHero as amHero, careersSections as amSections } from '../lib/careersData.am';
-import { useLanguage } from '../context/LanguageContext';
+import PMSHero from '@/app/components/sections/PMSHero';
+import TabbedFeatures from '@/app/components/sections/TabbedFeatures';
+import PMSTransform from '@/app/components/sections/PMSTransform';
+import ContentBlock from '@/app/components/sections/ContentBlock';
+import Testimonials from '@/app/components/sections/Testimonials';
+import LogoSlideshow from '@/app/components/sections/LogoSlideshow';
+import { getGenericData } from '@/app/lib/pageData/genericData';
 
-export default function CareersPage() {
-    const { locale } = useLanguage();
-    const heroContent = locale === 'am' ? amHero : enHero;
-    const careersSections = locale === 'am' ? amSections : enSections;
-
+export default function GenericFeaturePage() {
+    const data = getGenericData('Join the Burbly Team', '🚀');
     return (
-        <main>
-            <AboutHero content={heroContent} />
-            {/* <ScrollStack images={aboutImages} /> */}
-            {careersSections.map((section, index) => (
-                <ScrollReveal key={index} delay={0.1}>
-                    <ContentBlock
-                        title={section.title}
-                        description={section.description}
-                        image={section.image}
-                        lists={section.lists}
-                        imageLeft={section.imageLeft}
-                    />
-                </ScrollReveal>
-            ))}
-            <ScrollReveal delay={0.1}>
+        <main className="bg-white">
+            <PMSHero heroContent={data.heroContent}>
+                <LogoSlideshow />
                 <Testimonials />
-            </ScrollReveal>
-            <ScrollReveal delay={0.1}>
-                <GetStarted />
-            </ScrollReveal>
+                <PMSTransform content={data.transformContent} />
+                <TabbedFeatures
+                    title={data.tabbedContent.title}
+                    subtitle={data.tabbedContent.subtitle}
+                    tabs={data.tabbedContent.tabs}
+                />
+                {data.alternatingContent.map((feature, index) => (
+                    <ContentBlock
+                        key={index}
+                        title={feature.title}
+                        description={feature.description}
+                        image={feature.image}
+                        lists={feature.lists}
+                        imageLeft={feature.imageLeft}
+                    />
+                ))}
+            </PMSHero>
         </main>
     );
 }

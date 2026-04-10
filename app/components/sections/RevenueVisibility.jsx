@@ -14,14 +14,10 @@ const RevenueVisibility = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   const iconMap = {
-    'Booking Engine': Calendar,
-    'የቦታ ማስያዣ ሞተር': Calendar,
-    'Channel Manager': Share2,
-    'የቻናል ማኔጀር': Share2,
-    'Revenue Intelligence': LineChart,
-    'የገቢ መረጃ': LineChart,
-    'Hotel Website Builder': Globe,
-    'የሆቴል ድረ-ገጽ ግንቢ': Globe,
+    'Adaptive Scheduling': Calendar,
+    'AI Deck Builder': Share2,
+    'Retention Analytics': LineChart,
+    'Study Path Planner': Globe,
   };
 
   const tabs = content.features.map((f, i) => {
@@ -48,7 +44,7 @@ const RevenueVisibility = () => {
         <div className="mb-12">
           <div className="inline-flex items-center gap-2 bg-blue-50 px-4 py-2 rounded-full mb-6">
             <div className="w-2 h-2 bg-blue-600 rounded-full" />
-            <span className="text-sm font-medium text-blue-600">{locale === 'am' ? 'የገቢ እድገት' : 'Revenue Growth'}</span>
+            <span className="text-sm font-medium text-blue-600">AI & Learning</span>
           </div>
           <h2
             className="text-4xl md:text-5xl text-[#0a1628] mb-6 leading-tight max-w-xl"
